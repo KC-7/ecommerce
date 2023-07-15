@@ -1,17 +1,29 @@
+/* ------------------------------------------------- Color Palette */
+
+:root {
+    --pink: #FF00FF;              /* Electric Pink */
+    --cyan: #00FFFF;              /* Cosmic Cyan */
+    --purple: #800080;            /* Mystical Purple */
+    --teal: #008080;              /* Transcendent Teal */
+    --gold: #FFD700;              /* Divine Gold */
+    --orange: #FFA500;            /* Energetic Orange */
+    --black: #000000;             /* Onyx Black */
+    --grey: #808080;              /* Gun Metal Grey */
+    --white: #FFFFFF;             /* Pearl White */
+  }
+
+/* ------------------------------------------------- General */
+
 html {
     height: 100%;
 }
 
 body {
-    background: url('/media/homepage_background_2.png') no-repeat center center fixed;
+    background: url('/media/homepage_background_4.png') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
-    color: #555;
+    color: var(--grey);
     font-family: 'Lato';
-}
-
-.bg-trans-blue {
-    background-color: rgba(11,197,186, 0.75);
 }
 
 /* from Bulma */
@@ -33,18 +45,18 @@ body {
 
 .shop-now-button {
     background: rgb(11,197,186,0.75);
-    color: white;
+    color: var(--white);
     min-width: 260px;
 }
 
 .btn-black {
-    background: black;
-    color: white;
+    background: var(--black);
+    color: var(--white);
 }
 
 .btn-outline-black {
-    background: white;
-    color: black !important;  /* important is used to overide link colour for <a> elements */
+    background: var(--white);
+    color: var(--black) !important;  /* important is used to overide link colour for <a> elements */
     border: 1px solid black;
 }
 
@@ -52,7 +64,7 @@ body {
 .btn-outline-black:active,
 .btn-outline-black:focus {
     background: black;
-    color: white !important;
+    color:  !important;
 }
 
 .shop-now-button:hover,
@@ -62,19 +74,23 @@ body {
 .btn-black:active,
 .btn-black:focus {
     background: rgb(9, 146, 137);
-    color: white;
+    color: var(--white);
 }
 
 .text-black {
-    color: #000 !important;
+    color: var(--black) !important;
 }
 
 .bg-black {
-    background: #000 !important;
+    background: var(--black) !important;
 }
 
 .border-black {
     border: 1px solid black !important;
+}
+
+.bg-trans-blue {
+    background-color: rgba(11,197,186, 0.75);
 }
 
 .overlay {
@@ -83,13 +99,13 @@ body {
     top: 0;
     left: 0;
     position: fixed;
-    background: white;
+    background: var(--white);
     z-index: -1;  /* sits behind content */
 }
 
 a.category-badge > span.badge:hover {
-    background: #212529 !important;
-    color: #fff !important;
+    background: var(--black) !important;
+    color: var(--white) !important;
 }
 
 .btt-button {
@@ -111,7 +127,7 @@ a.category-badge > span.badge:hover {
 }
 
 input[name='q']::placeholder {
-    color: #aab7c4;
+    color: var(--grey);
 }
 
 /* ------------------------------- bootstrap toasts */
@@ -195,11 +211,11 @@ input[name='q']::placeholder {
 
 .allauth-form-inner-content p {
     margin-top: 1.5rem; /* mt-4 */
-    color: #6c757d; /* text-secondary */
+    color: var(--grey); /* text-secondary */
 }
 
 .allauth-form-inner-content input {
-    border-color: #000;
+    border-color: var(--black);
     border-radius: 0;
 }
 
@@ -208,7 +224,7 @@ input[name='q']::placeholder {
 }
 
 .allauth-form-inner-content input::placeholder {
-    color: #aab7c4;
+    color: var(--grey);
 }
 
 .allauth-form-inner-content button,
@@ -216,14 +232,14 @@ input[name='q']::placeholder {
 	/* btn */
 	display: inline-block;
     font-weight: 400;
-    color: #fff;
+    color: var(--white);
     text-align: center;
     vertical-align: middle;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    background-color: #000;
+    background-color: var(--black);
     border: 1px solid #000;
     padding: .375rem .75rem;
     font-size: 1rem;
@@ -236,13 +252,13 @@ input[name='q']::placeholder {
 
 .allauth-form-inner-content button:hover,
 .allauth-form-inner-content input[type='submit']:hover {	
-	color: #fff;
-    background-color: #222;
-    border-color: #222;
+	color: var(--white);
+    background-color: var(--black);
+    border-color: var(--black);
 }
 
 .allauth-form-inner-content a {
-	color: #17a2b8; /* text-info */
+	color: var(--cyan); /* text-info */
 }
 
 /* Product Form */
@@ -264,12 +280,12 @@ input[name='q']::placeholder {
 
 .custom-checkbox .custom-control-label::before {
     border-radius: 0;
-    border-color: #dc3545;
+    border-color: var(--pink);
 }
 
 .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
-    background-color: #dc3545;
-    border-color: #dc3545;
+    background-color: var(--pink);
+    border-color: var(--pink);
     border-radius: 0;
 }
 
