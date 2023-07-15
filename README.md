@@ -51,3 +51,38 @@ Live Link: TBA
 30. As a Site User, I want to be able to customize my profile so that I can personalize my shopping experience.
 
 ---
+
+## Bugs & Issues
+
+### Allauth Templates Directory Not Found
+
+#### Issue
+
+The following file path used in the Boutique Ado tutorial does not exist in the project directories:
+
+    cp -r ../.pip-modules/lib/python3.7/site-packages/alluth/templates/* ./templates/allauth/
+
+#### Resolution
+
+To find the correct file path for the allauth packages, follow these steps:
+
+1. Open a terminal or command prompt.
+
+2. Start the Python interpreter by running the python command:
+
+    python
+
+3. Once the Python interpreter starts, enter the following command to access the Python help system:
+
+    help('allauth')
+
+4. The help information for the allauth package will be displayed, including the path to the site-packages directory where it is installed.
+
+5. Copy the site-packages path from the output and replace [your site-package path] in the command `cp -r [your site-package path]/allauth/templates/* ./templates/allauth/` with the actual path.
+
+6. Run the modified command to copy the allauth templates to the appropriate directory, I used:
+
+    cp -r /workspace/.pip-modules/lib/python3.8/site-packages/allauth/templates/* ./templates/allauth/
+
+---
+
