@@ -6,7 +6,7 @@
             "name": "Customizable T-Shirt",
             "description": "Design your own t-shirt with our customizable option. Choose from various colors, sizes, and designs to create a unique style. Made with high-quality fabric for comfort and durability.",
             "price": 19.99,
-            "category": 1,
+            "category": 9,
             "rating": 4.6,
             "image_url": "http://example.com/images/custom_tshirt.jpg",
             "image": "t-shirt.png"
@@ -31,10 +31,10 @@
         "model": "products.product",
         "fields": {
             "sku": "pp5001340157",
-            "name": "Clearance Sale - Custom Mousepad",
+            "name": "Custom Mousepad",
             "description": "Get a great deal with our clearance sale on custom mousepads. Add your favorite design or photo to personalize your workspace. Limited stock available, so grab yours now!",
             "price": 9.99,
-            "category": 3,
+            "category": 10,
             "rating": 4.2,
             "image_url": "http://example.com/images/custom_mousepad.jpg",
             "image": "custom_mousepad.jpg"
@@ -45,11 +45,11 @@
         "model": "products.product",
         "fields": {
             "sku": "pp5001340158",
-            "name": "Deal of the Day - Custom Phone Case",
-            "description": "Protect and personalize your phone with our custom phone cases. Choose from a wide range of designs or create your own. Don't miss out on this special deal!",
-            "price": 14.99,
-            "category": 4,
-            "rating": 4.5,
+            "name": "Custom iPhone 14 Case",
+            "description": "Protect and personalize your iPhone 14 with our custom phone cases. Choose from a wide range of designs or create your own. Don't miss out on this custom case!",
+            "price": 19.99,
+            "category": 8,
+            "rating": 4.8,
             "image_url": "http://example.com/images/custom_phone_case.jpg",
             "image": "custom_phone_case.jpg"
         }
@@ -59,10 +59,10 @@
         "model": "products.product",
         "fields": {
             "sku": "pp5001340159",
-            "name": "Custom Engraved Cutting Board",
-            "description": "Add a personal touch to your kitchen with our custom engraved cutting boards. Made from high-quality wood and engraved with your chosen design or message. A perfect gift for any occasion.",
-            "price": 29.99,
-            "category": 5,
+            "name": "Custom Cutting Board",
+            "description": "Add a personal touch to your kitchen with our custom printed cutting boards. Made from high-quality food safe plastic and printed with your chosen design. A perfect gift for any occasion.",
+            "price": 24.99,
+            "category": 7,
             "rating": 4.7,
             "image_url": "http://example.com/images/custom_cutting_board.jpg",
             "image": "custom_cutting_board.jpg"
@@ -87,7 +87,7 @@
         "model": "products.product",
         "fields": {
             "sku": "pp5001340161",
-            "name": "Custom Embroidered Apron",
+            "name": "Custom Printed Apron",
             "description": "Make cooking more fun with our custom embroidered aprons. Add a name or design to personalize your cooking experience. Made with durable fabric for long-lasting use.",
             "price": 19.99,
             "category": 7,
@@ -101,10 +101,10 @@
         "model": "products.product",
         "fields": {
             "sku": "pp5001340162",
-            "name": "New Arrivals - Custom Printed Mug",
-            "description": "Discover our latest arrivals in custom printed mugs. Enjoy your favorite beverage in a mug personalized with your chosen design or message. Stay trendy with your morning coffee!",
+            "name": "Custom Printed Mug",
+            "description": "Discover our latest arrival, our new custom printed mugs, now even better quality. Enjoy your favorite beverage in a mug personalized with your chosen design. Stay trendy with your morning coffee!",
             "price": 12.99,
-            "category": 8,
+            "category": 7,
             "rating": 4.6,
             "image_url": "http://example.com/images/custom_mug.jpg",
             "image": "custom_mug.jpg"
@@ -116,9 +116,9 @@
         "fields": {
             "sku": "pp5001340163",
             "name": "Customized Men's Wallet",
-            "description": "Carry your essentials in style with our customized men's wallets. Personalize it with initials or a monogram for a sophisticated touch. Made with high-quality materials for durability.",
+            "description": "Carry your essentials in style with our customized men's wallets. Personalize it with your custom design for a sophisticated touch. Made with high-quality materials for durability.",
             "price": 34.99,
-            "category": 9,
+            "category": 5,
             "rating": 4.3,
             "image_url": "http://example.com/images/custom_wallet.jpg",
             "image": "custom_wallet.jpg"
@@ -132,10 +132,38 @@
             "name": "Print-On-Demand Art Print",
             "description": "Decorate your walls with our print-on-demand art prints. Choose from a wide selection of designs and sizes to enhance your living space. Printed on high-quality paper for a stunning finish.",
             "price": 29.99,
-            "category": 10,
+            "category": 8,
             "rating": 4.7,
-            "image_url": "http://example.com/images/art_print.jpg",
-            "image": "art_print.jpg"
+            "image_url": "",
+            "image": ""
+        }
+    },
+    {
+        "pk": 11,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5001340165",
+            "name": "Clearance Sale - Custom Keyring",
+            "description": "Get a great deal with our clearance sale on custom keyrings. Add your favorite design or photo to personalize your keychain. Limited stock available, so grab yours now!",
+            "price": 9.99,
+            "category": 3,
+            "rating": 4.2,
+            "image_url": "",
+            "image": ""
+        }
+    },
+    {
+        "pk": 12,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5001340166",
+            "name": "Deal of the Month - Custom Water Bottle",
+            "description": "Get your custom water bottle now, perfect for sports, the gym, your yoga class or even in your car or on your office desk! This monthly deal price is available for a limited time only!",
+            "price": 12.99,
+            "category": 4,
+            "rating": 4.3,
+            "image_url": "",
+            "image": ""
         }
     }
 ]
