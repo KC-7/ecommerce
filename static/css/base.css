@@ -73,8 +73,8 @@ body {
 .btn-outline-black:hover,
 .btn-outline-black:active,
 .btn-outline-black:focus {
-    background: black;
-    color:  !important;
+    background: var(--black);
+    color: var(--white) !important;
 }
 
 .shop-now-button:hover,
