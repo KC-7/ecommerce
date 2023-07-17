@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     # custom
     'home',
     'products',
-    # 'bag',
+    'bag',
     # 'checkout',
     # 'profiles',
     # other
@@ -80,6 +80,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',  # required by allauth
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'bag.contexts.bag_contents'  # required for shopping bag
             ],
         },
     },
@@ -167,3 +168,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Stripe & Delivery
+FREE_DELIVERY_THRESHOLD = 50
+STANDARD_DELIVERY_PERCENTAGE = 10
