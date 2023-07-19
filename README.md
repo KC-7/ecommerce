@@ -55,6 +55,35 @@ Custom Domain: [onlineAI.art](onlineAI.art)
 
 ---
 
+## Custom Features
+
+### Custom Admin Portal
+
+The admin portal was customized by using the following [installation guide for Jazzmin](https://django-jazzmin.readthedocs.io/installation/): 
+
+- Install the latest `pypi` release with `pip install -U django-jazzmin`
+
+- Add jazzmin to your `INSTALLED_APPS` __before__ `django.contrib.admin`, and Voila!
+
+    INSTALLED_APPS = [
+        'jazzmin',
+
+        'django.contrib.admin',
+        [...]
+    ]
+
+---
+
+### Custom Admin Features
+
+The admin panel also allows the amdministrator to: 
+
+- Sort, Filter & Search Products by name, sku and has_sizes
+
+- Batch select products and update if they have sizes or not, this was very useful when setting up the products catalogue
+
+---
+
 ## Bugs & Issues
 
 ### Allauth Templates Directory Not Found
