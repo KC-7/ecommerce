@@ -33,6 +33,9 @@ ALLOWED_HOSTS = ['.herokuapp.com', '.gitpod.io', 'localhost']
 # Application definition
 
 INSTALLED_APPS = [
+    # custom admin
+    'jazzmin',
+    # django
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

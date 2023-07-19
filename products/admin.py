@@ -13,6 +13,9 @@ class ProductAdmin(admin.ModelAdmin):
         'has_sizes',
     )
 
+    
+    search_fields = ['sku', 'name']
+    list_filter = ('category', 'has_sizes')
     ordering = ('sku',)
 
     actions = ['products_have_sizes', 'products_dont_have_sizes']
@@ -31,6 +34,8 @@ class CategoryAdmin(admin.ModelAdmin):
         'friendly_name',
         'name',
     )
+
+    ordering = ('friendly_name',)
 
 
 admin.site.register(Product, ProductAdmin)
