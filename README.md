@@ -121,4 +121,28 @@ To resolve this issue:
 
 ---
 
+### Initialize Heroku Git Remote
+
+#### Issue
+
+Unable to push to Heroku first attempt.
+
+    gitpod /workspace/ecommerce (main) $ git push heroku main
+    fatal: 'heroku' does not appear to be a git repository
+    fatal: Could not read from remote repository.
+    Please make sure you have the correct access rights
+    and the repository exists.
+
+#### Resolution
+
+I initialized the the git remote by using the following code `heroku git:remote -a your-heroku-project-name-here` and was then able to successfully push to Heroku.
+
+    gitpod /workspace/ecommerce (main) $ heroku git:remote -a kc-ecommerce
+    set git remote heroku to https://git.heroku.com/kc-ecommerce.git
+
+    gitpod /workspace/ecommerce (main) $ git push heroku main
+    Enumerating objects: 363, done.
+    ...
+
+---
 
