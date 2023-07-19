@@ -2,7 +2,9 @@
 
 This project is for an E-Commerce Store.
 
-Live Link: TBA
+Live Link: https://kc-ecommerce-434e6f88dca9.herokuapp.com/
+
+Custom Domain: [onlineAI.art](onlineAI.art)
 
 ---
 
@@ -61,33 +63,22 @@ Live Link: TBA
 
 The following file path used in the Boutique Ado tutorial does not exist in the project directories:
 
-    cp -r ../.pip-modules/lib/python3.7/site-packages/alluth/templates/* ./templates/allauth/
+    `cp -r ../.pip-modules/lib/python3.7/site-packages/alluth/templates/* ./templates/allauth/`
 
 #### Resolution
 
 To find the correct file path for the allauth packages, follow these steps:
 
-1. Open a terminal or command prompt.
-
-2. Start the Python interpreter by running the python command:
-
-    python
-
-3. Once the Python interpreter starts, enter the following command to access the Python help system:
-
-    help('allauth')
-
-4. The help information for the allauth package will be displayed, including the path to the site-packages directory where it is installed.
-
-5. Copy the site-packages path from the output and replace [your site-package path] in the command `cp -r [your site-package path]/allauth/templates/* ./templates/allauth/` with the actual path.
-
-6. Run the modified command to copy the allauth templates to the appropriate directory, I used:
-
+1. Start the Python interpreter by running the `python` command in the terminal:
+2. Once the Python interpreter starts, enter the `help('allauth')` command to access the Python help system:
+3. The help information for the allauth package will be displayed, including the path to the site-packages directory where it is installed.
+4. Copy the site-packages path from the output and replace [your site-package path] in the command `cp -r [your site-package path]/allauth/templates/* ./templates/allauth/` with the actual path.
+5. Run the modified command to copy the allauth templates to the appropriate directory, I used:
     `cp -r /workspace/.pip-modules/lib/python3.8/site-packages/allauth/templates/* ./templates/allauth/`
 
 ---
 
-### Heroku Invalid credentials provided
+### Heroku Invalid Credentials Provided
 
 #### Issue
 
@@ -106,17 +97,11 @@ When attempting to login to Heroku via the terminal using `heroku login -i`, it 
 To resolve this issue: 
 
 1. Login to Heroku via terminal using: `heroku login -i`.
-
 2. Enter your email address.
-
 3. Go to your Heroku Dashboard in a new tab.
-
 4. Go to Account Settings --> Applications --> Authorizations.
-
 5. Select `Create Authorization` --> Enter a Description (Project Name) --> Confirm.
-
 6. Copy the `Authorization token` and use it as your password back in the terminal.
-
 7. You should now be able to login and continue with the deployment.
 
 ---
@@ -143,6 +128,27 @@ I initialized the the git remote by using the following code `heroku git:remote 
     gitpod /workspace/ecommerce (main) $ git push heroku main
     Enumerating objects: 363, done.
     ...
+
+---
+
+### Programmatic Access for AWS User
+
+#### Issue
+
+Since the walkthrough Boutique Ado video tutorial and updated text guide by the Code Institute, the AWS layout has changed.
+
+Previously setting up programmatic access was an option during User set up however now you need to set it up after the account has been created so that you can get your `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`.
+
+#### Resolution 
+
+To get an `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` for the user, follow these steps: 
+
+1. Create User
+2. In the IAM section, select Users
+3. Select the user
+4. Select Security Credentials
+5. Select 'Other'
+6. Save your access keys to Heroku config vars
 
 ---
 
