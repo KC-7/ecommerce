@@ -83,7 +83,42 @@ To find the correct file path for the allauth packages, follow these steps:
 
 6. Run the modified command to copy the allauth templates to the appropriate directory, I used:
 
-    cp -r /workspace/.pip-modules/lib/python3.8/site-packages/allauth/templates/* ./templates/allauth/
+    `cp -r /workspace/.pip-modules/lib/python3.8/site-packages/allauth/templates/* ./templates/allauth/`
 
 ---
+
+### Heroku Invalid credentials provided
+
+#### Issue
+
+When attempting to disable static using `heroku config:set DISABLE_COLLECTSTATIC=1 --app kc-ecommerce` as part of the deployment to Heroku, it returned `Invalid credentials provided.` and gives an option to login to CLI via web browser.
+
+When attempting to login through the browser, it directs to a page that says `IP address mismatch`.
+
+When attempting to login to Heroku via the terminal using `heroku login -i`, it would return the following error message when using my accounts email address and password: 
+
+    ›   Error: Invalid credentials provided.
+    ›
+    ›   Error ID: unauthorized
+
+#### Resolution
+
+To resolve this issue: 
+
+1. Login to Heroku via terminal using: `heroku login -i`.
+
+2. Enter your email address.
+
+3. Go to your Heroku Dashboard in a new tab.
+
+4. Go to Account Settings --> Applications --> Authorizations.
+
+5. Select `Create Authorization` --> Enter a Description (Project Name) --> Confirm.
+
+6. Copy the `Authorization token` and use it as your password back in the terminal.
+
+7. You should now be able to login and continue with the deployment.
+
+---
+
 
