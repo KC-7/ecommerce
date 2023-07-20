@@ -25,6 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
+# DEBUG = True
 DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = ['.herokuapp.com', '.gitpod.io', 'localhost']
@@ -243,13 +244,13 @@ JAZZMIN_SETTINGS = {
     "site_brand": "onlineAI.art",
 
     # Welcome text on the login screen
-    "welcome_sign": "Welcome to onlineAI.art Admin Portal",
+    "welcome_sign": "Welcome to the onlineAI.art Admin Portal",
 
     # Copyright on the footer
     "copyright": "onlineAI.art Ltd",
 
     # List of model admins to search from the search bar, search bar omitted if excluded
-    # If you want to use a single search field you dont need to use a list, you can use a simple string 
+    # If you want to use a single search field you dont need to use a list, you can use a simple string
     "search_model": ["auth.User", "auth.Group"],
 
     ############
@@ -278,7 +279,8 @@ JAZZMIN_SETTINGS = {
 
     # Additional links to include in the user menu on the top right ("app" url type is not allowed)
     "usermenu_links": [
+        {"name": "Heroku App", "url": "https://kc-ecommerce-434e6f88dca9.herokuapp.com/", "new_window": True},
+        {"model": "auth.user"},
         {"name": "Developer", "url": "https://github.com/kc-7", "new_window": True},
-        {"model": "auth.user"}
     ],
 }

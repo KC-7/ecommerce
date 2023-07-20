@@ -100,7 +100,11 @@ body {
 }
 
 .bg-trans-blue {
-    background-color: rgba(11, 197, 186, 0.75);
+    background-color: rgba(11, 197, 186, 0.75) !important;
+}
+
+.bg-purple {
+    background: var(--purple) !important;
 }
 
 .overlay {

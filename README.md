@@ -1,10 +1,14 @@
-# E-Commerce Project
+![Banner](/media/banner.gif)
 
-This project is for an E-Commerce Store.
+# onlineAI.art | E-Commerce Project
+
+This is a django project for an E-Commerce Store.
 
 Live Link: https://kc-ecommerce-434e6f88dca9.herokuapp.com/
 
 Custom Domain: [onlineAI.art](onlineAI.art)
+
+<!-- ![Lines of code](https://img.shields.io/tokei/lines/github.com/KC-7/ecommerce?labelColor=cyan&color=yellow) -->
 
 ---
 
@@ -61,13 +65,12 @@ Custom Domain: [onlineAI.art](onlineAI.art)
 
 The admin portal was customized by using the following [installation guide for Jazzmin](https://django-jazzmin.readthedocs.io/installation/): 
 
-- Install the latest `pypi` release with `pip install -U django-jazzmin`
+Step 1 - Install the latest `pypi` release with `pip install -U django-jazzmin`
 
-- Add jazzmin to your `INSTALLED_APPS` __before__ `django.contrib.admin`, and Voila!
+Step 2 - Add jazzmin to your `INSTALLED_APPS` __before__ `django.contrib.admin`:
 
     INSTALLED_APPS = [
         'jazzmin',
-
         'django.contrib.admin',
         [...]
     ]
@@ -111,9 +114,9 @@ To find the correct file path for the allauth packages, follow these steps:
 
 #### Issue
 
-When attempting to disable static using `heroku config:set DISABLE_COLLECTSTATIC=1 --app kc-ecommerce` as part of the deployment to Heroku, it returned `Invalid credentials provided.` and gives an option to login to CLI via web browser.
+When attempting to disable static using `heroku config:set DISABLE_COLLECTSTATIC=1 --app kc-ecommerce` as part of the deployment to Heroku, it returned ___Invalid credentials provided___ and gives an option to login to CLI via web browser.
 
-When attempting to login through the browser, it directs to a page that says `IP address mismatch`.
+When attempting to login through the browser, it directs to a page that says ___IP address mismatch___.
 
 When attempting to login to Heroku via the terminal using `heroku login -i`, it would return the following error message when using my accounts email address and password: 
 
@@ -127,10 +130,10 @@ To resolve this issue:
 
 1. Login to Heroku via terminal using: `heroku login -i`.
 2. Enter your email address.
-3. Go to your Heroku Dashboard in a new tab.
-4. Go to Account Settings --> Applications --> Authorizations.
-5. Select `Create Authorization` --> Enter a Description (Project Name) --> Confirm.
-6. Copy the `Authorization token` and use it as your password back in the terminal.
+3. Go to your __Heroku Dashboard__ in a new tab.
+4. Go to __Account Settings__ --> __Applications__ --> __Authorizations__.
+5. Select __Create Authorization__ --> Enter a Description (Project Name) --> __Confirm__.
+6. Copy the __Authorization token__ and use it as your password back in the terminal.
 7. You should now be able to login and continue with the deployment.
 
 ---
@@ -174,10 +177,33 @@ To get an `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` for the user, follow t
 
 1. Create User
 2. In the IAM section, select Users
-3. Select the user
+3. Select the new user
 4. Select Security Credentials
 5. Select 'Other'
 6. Save your access keys to Heroku config vars
 
 ---
 
+## Resources
+
+### Useful Links
+
+Here is a list of useful links that were used as part of the project. Thanks to all contributers to the below content.
+
+- Django Jazzmin for Admin Panel Customization: https://django-jazzmin.readthedocs.io/
+
+- Canva:
+
+- AWS:
+
+- ElephantSQL:
+
+- Heroku:
+
+- Gitpod Workspaces:
+
+- Django Documentation: 
+
+- Bootstrap Documentation: 
+
+- 
