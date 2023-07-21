@@ -36,6 +36,9 @@ if 'DEVELOPMENT' in os.environ:
 else:
     LIVE_LINK = 'https://kc-ecommerce-434e6f88dca9.herokuapp.com/'
 
+# Site Logo
+
+SITE_LOGO = '{{ MEDIA_URL }}logo1.png'
 
 # Application definition
 INSTALLED_APPS = [
@@ -247,6 +250,15 @@ JAZZMIN_SETTINGS = {
 
     # Title on the brand (19 chars max) (defaults to current_admin_site.site_header if absent or None)
     "site_brand": "onlineAI.art",
+
+    # Logo to use for your site, must be present in static files, used for brand on top left
+    "site_logo": SITE_LOGO,
+
+    # Logo to use for your site, must be present in static files, used for login form logo (defaults to site_logo)
+    "login_logo": SITE_LOGO,
+
+    # Logo to use for login form in dark themes (defaults to login_logo)
+    "login_logo_dark": SITE_LOGO,
 
     # Welcome text on the login screen
     "welcome_sign": "Welcome to the onlineAI.art Admin Portal",
