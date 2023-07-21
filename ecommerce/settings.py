@@ -258,9 +258,7 @@ JAZZMIN_SETTINGS = {
     # If you want to use a single search field you dont need to use a list, you can use a simple string
     "search_model": ["auth.User", "auth.Group"],
 
-    ############
-    # Top Menu #
-    ############
+    # Top Menu:
 
     # Links to put along the top menu
     "topmenu_links": [
@@ -278,9 +276,7 @@ JAZZMIN_SETTINGS = {
         {"app": "products"},
     ],
 
-    #############
-    # User Menu #
-    #############
+    # User Menu:
 
     # Additional links to include in the user menu on the top right ("app" url type is not allowed)
     "usermenu_links": [
