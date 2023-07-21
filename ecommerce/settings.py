@@ -25,14 +25,19 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
-DEBUG = 'DEVELOPMENT' in os.environ
+DEBUG = True
+# DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = ['.herokuapp.com', '.gitpod.io', 'localhost']
 
+# Live Site Link
+if 'DEVELOPMENT' in os.environ:
+    LIVE_LINK = 'https://8000-kc7-ecommerce-fufk6r724j5.ws-eu102.gitpod.io'
+else:
+    LIVE_LINK = 'https://kc-ecommerce-434e6f88dca9.herokuapp.com/'
+
 
 # Application definition
-
 INSTALLED_APPS = [
     # custom admin
     'jazzmin',
@@ -264,7 +269,7 @@ JAZZMIN_SETTINGS = {
         {"name": "Home",  "url": "admin:index", "permissions": ["auth.view_user"]},
 
         # external url that opens in a new window (Permissions can be added)
-        {"name": "Developer", "url": "https://github.com/kc-7", "new_window": True},
+        {"name": "Site Link", "url": LIVE_LINK, "new_window": True},
 
         # model admin to link to (Permissions checked against model)
         {"model": "auth.User"},
@@ -279,7 +284,7 @@ JAZZMIN_SETTINGS = {
 
     # Additional links to include in the user menu on the top right ("app" url type is not allowed)
     "usermenu_links": [
-        {"name": "Heroku App", "url": "https://kc-ecommerce-434e6f88dca9.herokuapp.com/", "new_window": True},
+        {"name": "Site Link", "url": LIVE_LINK, "new_window": True},
         {"model": "auth.user"},
         {"name": "Developer", "url": "https://github.com/kc-7", "new_window": True},
     ],
