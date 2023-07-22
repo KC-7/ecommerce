@@ -369,6 +369,10 @@ input[name='q']::placeholder {
         height: calc(100vh - 116px);
     }
 
+    .responsive-heading {
+        font-size: 2rem;
+    }
+
     .display-4.logo-font.text-black {
         font-size: 2rem;
     }
@@ -404,5 +408,13 @@ input[name='q']::placeholder {
     .increment-qty,
     .decrement-qty {
         padding: .25rem .5rem !important;
+    }
+}
+
+/* Remove left and right padding from navbar elements so that content stays on one row on smaller devices */
+@media (max-width: 400px) {
+    .navbar {
+        padding-left: 0;
+        padding-right: 0;
     }
 }

@@ -571,6 +571,25 @@ To get an `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` for the user, follow t
 
 ---
 
+### Navbar too large
+
+#### Issue
+
+The navbar was too large for small devices, the checkout element was dropping onto a new row. 
+
+#### Resolution
+
+I resolved this issue by adding the following CSS media quiery: 
+
+    @media (max-width: 400px) {
+        .navbar {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+---
+
 ## Resources
 
 ### Technologies Used
