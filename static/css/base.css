@@ -127,8 +127,8 @@ body {
 }
 
 a.category-badge>span.badge:hover {
-    background: var(--black) !important;
-    color: var(--white) !important;
+    background: var(--gold) !important;
+    color: var(--black) !important;
 }
 
 .btt-button {
@@ -304,8 +304,8 @@ input[name='q']::placeholder {
 
 .allauth-form-inner-content button:hover,
 .allauth-form-inner-content input[type='submit']:hover {
-    color: var(--white);
-    background-color: var(--black);
+    color: var(--black);
+    background-color: var(--gold);
     border-color: var(--black);
 }
 

@@ -1,15 +1,17 @@
-[{
+[
+    {
         "pk": 1,
         "model": "products.product",
         "fields": {
             "sku": "pp5001340155",
-            "name": "Customizable T-Shirt",
-            "description": "Design your own t-shirt with our customizable option. Choose from various colors, sizes, and designs to create a unique style. Made with high-quality fabric for comfort and durability.",
-            "price": 19.99,
-            "category": 9,
-            "rating": 4.6,
-            "image_url": "http://example.com/images/custom_tshirt.jpg",
-            "image": "t-shirt.png"
+            "name": "StellarSky Crop Top",
+            "description": "Embrace the stars with our StellarSky Crop Top! This trendy and lightweight garment is a celestial delight, featuring a dreamy design that will make you feel like you're floating among the constellations. Crafted from soft, breathable fabric, it's perfect for sunny days or pairing with your favorite high-waisted jeans. Stand out from the crowd with this cosmic fashion statement!",
+            "has_sizes": "True",
+            "price": 24.99,
+            "category": 1,
+            "rating": 4.7,
+            "image_url": "",
+            "image": "crop-top.jpg"
         }
     },
     {
@@ -17,13 +19,14 @@
         "model": "products.product",
         "fields": {
             "sku": "pp5001340156",
-            "name": "Personalized Bath Towel",
-            "description": "Make bath time special with our personalized bath towel. Add a name or monogram for a unique touch. Soft and absorbent, perfect for a luxurious bath experience.",
-            "price": 24.99,
-            "category": 2,
+            "name": "RetroRevive Hoodie",
+            "description": "Take a trip down memory lane with our RetroRevive Hoodie! Nostalgia meets modern comfort in this iconic sweatshirt, which boasts a fusion of vintage aesthetics and contemporary craftsmanship. Whether you're chilling at home or out and about, this hoodie will keep you cozy and stylish. Revive the past in a bold new way!",
+            "has_sizes": "True",
+            "price": 39.99,
+            "category": 6,
             "rating": 4.8,
-            "image_url": "http://example.com/images/personalized_towel.jpg",
-            "image": "personalized_towel.jpg"
+            "image_url": "",
+            "image": "hoodie2.png"
         }
     },
     {
@@ -31,13 +34,14 @@
         "model": "products.product",
         "fields": {
             "sku": "pp5001340157",
-            "name": "Custom Mousepad",
-            "description": "Get a great deal with our clearance sale on custom mousepads. Add your favorite design or photo to personalize your workspace. Limited stock available, so grab yours now!",
-            "price": 9.99,
-            "category": 10,
-            "rating": 4.2,
-            "image_url": "http://example.com/images/custom_mousepad.jpg",
-            "image": "custom_mousepad.jpg"
+            "name": "ArtisanAura Mug",
+            "description": "Sip your morning brew in style with our ArtisanAura Mug! Each mug is a masterpiece, handcrafted by skilled artisans, making every piece a unique work of art. The blend of earthy tones and elegant brushstrokes will awaken your senses and add a touch of creativity to your daily routine. Elevate your coffee moments with this one-of-a-kind mug!",
+            "has_sizes": "False",
+            "price": 14.99,
+            "category": 7,
+            "rating": 4.6,
+            "image_url": "",
+            "image": "mug.jpg"
         }
     },
     {
@@ -45,13 +49,14 @@
         "model": "products.product",
         "fields": {
             "sku": "pp5001340158",
-            "name": "Custom iPhone 14 Case",
-            "description": "Protect and personalize your iPhone 14 with our custom phone cases. Choose from a wide range of designs or create your own. Don't miss out on this custom case!",
-            "price": 19.99,
-            "category": 8,
-            "rating": 4.8,
-            "image_url": "http://example.com/images/custom_phone_case.jpg",
-            "image": "custom_phone_case.jpg"
+            "name": "Nature's Canvas Chopping Board",
+            "description": "Channel your inner chef with Nature's Canvas Chopping Board! Crafted from sustainable bamboo, this beautiful and durable board is not only a kitchen essential but also a stunning piece of natural art. Its intricate wood grain patterns and smooth texture make food preparation an artistic experience. A functional masterpiece for your culinary adventures!",
+            "has_sizes": "False",
+            "price": 29.99,
+            "category": 7,
+            "rating": 4.7,
+            "image_url": "",
+            "image": "chopping-board.png"
         }
     },
     {
@@ -59,13 +64,14 @@
         "model": "products.product",
         "fields": {
             "sku": "pp5001340159",
-            "name": "Custom Cutting Board",
-            "description": "Add a personal touch to your kitchen with our custom printed cutting boards. Made from high-quality food safe plastic and printed with your chosen design. A perfect gift for any occasion.",
-            "price": 24.99,
-            "category": 7,
-            "rating": 4.7,
-            "image_url": "http://example.com/images/custom_cutting_board.jpg",
-            "image": "custom_cutting_board.jpg"
+            "name": "GT86 Speedster Towel",
+            "description": "Unleash your inner speed demon with the GT86 Speedster Towel! Inspired by the sleek lines and adrenaline-pumping performance of the GT86 sports car, this premium towel boasts exceptional absorbency and softness. Whether you're hitting the gym or the beach, this towel is your ultimate companion for high-speed adventures!",
+            "has_sizes": "False",
+            "price": 19.99,
+            "category": 2,
+            "rating": 4.5,
+            "image_url": "",
+            "image": "towel.jpg"
         }
     },
     {
@@ -73,13 +79,14 @@
         "model": "products.product",
         "fields": {
             "sku": "pp5001340160",
-            "name": "Printed Hooded Sweatshirt",
-            "description": "Stay cozy and stylish with our printed hooded sweatshirts. Choose from a variety of designs and colors to showcase your unique style. Made with soft and comfortable fabric.",
-            "price": 39.99,
-            "category": 6,
-            "rating": 4.4,
-            "image_url": "http://example.com/images/printed_hoodie.jpg",
-            "image": "printed_hoodie.jpg"
+            "name": "Elegance Embroidered Apron",
+            "description": "Cook with grace and elegance wearing our Elegance Embroidered Apron! Crafted from premium fabrics, this apron is not only a shield against splatters but also a stylish accessory for the kitchen. The delicate embroidery adds a touch of sophistication, making you feel like a master chef in your own culinary kingdom!",
+            "has_sizes": "False",
+            "price": 21.99,
+            "category": 2,
+            "rating": 4.9,
+            "image_url": "",
+            "image": "apron.png"
         }
     },
     {
@@ -87,13 +94,14 @@
         "model": "products.product",
         "fields": {
             "sku": "pp5001340161",
-            "name": "Custom Printed Apron",
-            "description": "Make cooking more fun with our custom embroidered aprons. Add a name or design to personalize your cooking experience. Made with durable fabric for long-lasting use.",
-            "price": 19.99,
-            "category": 7,
-            "rating": 4.9,
-            "image_url": "http://example.com/images/custom_apron.jpg",
-            "image": "custom_apron.jpg"
+            "name": "AquaGlow Bikini",
+            "description": "Dive into the waves with our AquaGlow Bikini! This two-piece swimsuit boasts a vibrant color palette that complements your sun-kissed skin. The soft, stretchy fabric ensures a comfortable fit, while the trendy design guarantees you'll make a splash wherever you go. Get ready to shine like a mermaid under the summer sun!",
+            "has_sizes": "True",
+            "price": 29.99,
+            "category": 5,
+            "rating": 4.5,
+            "image_url": "",
+            "image": "bikini.png"
         }
     },
     {
@@ -101,13 +109,14 @@
         "model": "products.product",
         "fields": {
             "sku": "pp5001340162",
-            "name": "Custom Printed Mug",
-            "description": "Discover our latest arrival, our new custom printed mugs, now even better quality. Enjoy your favorite beverage in a mug personalized with your chosen design. Stay trendy with your morning coffee!",
-            "price": 12.99,
-            "category": 7,
-            "rating": 4.6,
-            "image_url": "http://example.com/images/custom_mug.jpg",
-            "image": "custom_mug.jpg"
+            "name": "DreamWeave Blanket",
+            "description": "Wrap yourself in comfort and dreams with our DreamWeave Blanket! The soft, luxurious fabric feels like a gentle caress, and the intricate weave adds a touch of elegance to any room. Whether you're cuddling up on the couch or adding a stylish layer to your bed, this blanket will keep you cozy and chic throughout the seasons.",
+            "has_sizes": "False",
+            "price": 34.99,
+            "category": 2,
+            "rating": 4.7,
+            "image_url": "",
+            "image": "blanket.png"
         }
     },
     {
@@ -115,13 +124,14 @@
         "model": "products.product",
         "fields": {
             "sku": "pp5001340163",
-            "name": "Customized Men's Wallet",
-            "description": "Carry your essentials in style with our customized men's wallets. Personalize it with your custom design for a sophisticated touch. Made with high-quality materials for durability.",
-            "price": 34.99,
-            "category": 5,
-            "rating": 4.3,
-            "image_url": "http://example.com/images/custom_wallet.jpg",
-            "image": "custom_wallet.jpg"
+            "name": "HydroMax Bottle",
+            "description": "Stay hydrated on the go with our HydroMax Bottle! This sleek and leak-proof water bottle is the ultimate companion for your active lifestyle. With its double-walled insulation, it keeps your beverages cold for hours, making it perfect for hikes, workouts, or daily errands. Conquer your thirst with HydroMax!",
+            "has_sizes": "False",
+            "price": 12.99,
+            "category": 7,
+            "rating": 4.6,
+            "image_url": "",
+            "image": "bottle.png"
         }
     },
     {
@@ -129,13 +139,14 @@
         "model": "products.product",
         "fields": {
             "sku": "pp5001340164",
-            "name": "Print-On-Demand Art Print",
-            "description": "Decorate your walls with our print-on-demand art prints. Choose from a wide selection of designs and sizes to enhance your living space. Printed on high-quality paper for a stunning finish.",
+            "name": "Amsterdam Canvas Print",
+            "description": "Bring the beauty of the Amsterdam Canals into your living space with this spectacular Canvas Print! Each print captures the essence of Amsterdam City in stunning detail and vibrant colors. Elevate your home decor with these breathtaking art pieces and immerse yourself in the streets of Amsterdam.",
+            "has_sizes": "False",
             "price": 29.99,
             "category": 8,
-            "rating": 4.7,
+            "rating": 4.8,
             "image_url": "",
-            "image": ""
+            "image": "canvas.png"
         }
     },
     {
@@ -143,13 +154,14 @@
         "model": "products.product",
         "fields": {
             "sku": "pp5001340165",
-            "name": "Clearance Sale - Custom Keyring",
-            "description": "Get a great deal with our clearance sale on custom keyrings. Add your favorite design or photo to personalize your keychain. Limited stock available, so grab yours now!",
-            "price": 9.99,
+            "name": "Wanderlust Duffle Bag",
+            "description": "Embark on unforgettable journeys with our Wanderlust Duffle Bag! Designed for adventurers like you, this spacious and stylish bag accommodates all your travel essentials. Its durable construction ensures your belongings stay safe during your wanderings, while the eye-catching design turns heads wherever you roam. Embrace the call of adventure with Wanderlust!",
+            "has_sizes": "False",
+            "price": 42.99,
             "category": 3,
-            "rating": 4.2,
+            "rating": 4.7,
             "image_url": "",
-            "image": ""
+            "image": "duffle-bag.png"
         }
     },
     {
@@ -157,13 +169,224 @@
         "model": "products.product",
         "fields": {
             "sku": "pp5001340166",
-            "name": "Deal of the Month - Custom Water Bottle",
-            "description": "Get your custom water bottle now, perfect for sports, the gym, your yoga class or even in your car or on your office desk! This monthly deal price is available for a limited time only!",
-            "price": 12.99,
-            "category": 4,
-            "rating": 4.3,
+            "name": "UrbanEdge Hoodie",
+            "description": "Embrace the urban vibe with our UrbanEdge Hoodie! This hoodie combines street style with exceptional comfort, featuring a modern design and premium fabrics that keep you warm and fashionable in any setting. Whether you're strolling through the city or meeting friends for a night out, the UrbanEdge Hoodie is the epitome of casual cool.",
+            "has_sizes": "True",
+            "price": 39.99,
+            "category": 6,
+            "rating": 4.4,
             "image_url": "",
-            "image": ""
+            "image": "hoodie.jpg"
         }
-    }
+    },
+    {
+        "pk": 13,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5001340167",
+            "name": "Lumina iPhone 14 Case",
+            "description": "Illuminate your phone with the Lumina iPhone 14 Case! This sleek and stylish case not only provides maximum protection for your device but also adds a touch of radiance to your everyday life. The translucent back showcases the beauty of your iPhone while keeping it safe from scratches and drops. Shine bright with Lumina!",
+            "has_sizes": "False",
+            "price": 18.99,
+            "category": 10,
+            "rating": 4.8,
+            "image_url": "",
+            "image": "iPhone-case.png"
+        }
+    },
+    {
+        "pk": 14,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5001340168",
+            "name": "SakuraSilk Kimono",
+            "description": "Drift into a world of tranquility and beauty with our SakuraSilk Kimono! Inspired by the elegance of Japanese cherry blossoms, this kimono envelops you in silky-smooth comfort and exquisite floral patterns. Whether you're lounging at home or attending a special event, the SakuraSilk Kimono will make you feel like a graceful blossom in full bloom.",
+            "has_sizes": "True",
+            "price": 36.99,
+            "category": 2,
+            "rating": 4.5,
+            "image_url": "",
+            "image": "kimono.png"
+        }
+    },
+    {
+        "pk": 15,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5001340169",
+            "name": "EnchantedGarden Mouse Mat",
+            "description": "Add a touch of enchantment to your workspace with the EnchantedGarden Mouse Mat! This mouse pad features a mesmerizing botanical design that transports you to a world of magical flora. The smooth surface ensures precise tracking for your mouse, while the stunning visuals spark creativity and imagination. Work becomes a delightful journey in the EnchantedGarden!",
+            "has_sizes": "False",
+            "price": 12.99,
+            "category": 10,
+            "rating": 4.6,
+            "image_url": "",
+            "image": "mouse-mat.png"
+        }
+    },
+    {
+        "pk": 16,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5001340170",
+            "name": "Wanderlust Notebook",
+            "description": "Capture your thoughts and dreams in the Wanderlust Notebook! This elegant and portable journal is the perfect companion for your explorations, providing ample space for your musings, travel plans, and sketches. With its premium paper and sophisticated cover design, the Wanderlust Notebook inspires creativity and wanderlust with every page.",
+            "has_sizes": "False",
+            "price": 15.99,
+            "category": 8,
+            "rating": 4.8,
+            "image_url": "",
+            "image": "notebook.png"
+        }
+    },
+    {
+        "pk": 17,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5001340171",
+            "name": "ArcticBreeze Puffer Jacket",
+            "description": "Brave the cold in style with our ArcticBreeze Puffer Jacket! This ultra-warm and lightweight jacket keeps you snug and fashionable during chilly days. Its modern silhouette and premium insulation make it a must-have for any winter wardrobe. Embrace the frosty winds with confidence in the ArcticBreeze!",
+            "has_sizes": "True",
+            "price": 49.99,
+            "category": 6,
+            "rating": 4.5,
+            "image_url": "",
+            "image": "puffer.png"
+        }
+    },
+    {
+        "pk": 18,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5001340172",
+            "name": "MindfulEscape Jigsaw Puzzle",
+            "description": "Immerse yourself in tranquility with the MindfulEscape Jigsaw Puzzle! This artful puzzle features a captivating landscape that encourages mindfulness and relaxation. With its high-quality pieces and exquisite design, completing the puzzle becomes a meditative journey, allowing you to escape from the bustle of everyday life and find serenity in each piece.",
+            "has_sizes": "False",
+            "price": 22.99,
+            "category": 4,
+            "rating": 4.7,
+            "image_url": "",
+            "image": "puzzle.png"
+        }
+    },
+    {
+        "pk": 19,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5001340173",
+            "name": "PastelBloom Skirt",
+            "description": "Step into a world of delicate beauty with our PastelBloom Skirt! This flowy and feminine skirt boasts a pastel floral print that exudes elegance and charm. Whether you're dressing up for a special occasion or simply enjoying a sunny day, the PastelBloom Skirt will make you feel like you're walking through a garden of blossoms.",
+            "has_sizes": "True",
+            "price": 26.99,
+            "category": 8,
+            "rating": 4.9,
+            "image_url": "",
+            "image": "skirt.png"
+        }
+    },
+    {
+        "pk": 20,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5001340174",
+            "name": "Wanderlust Suitcase",
+            "description": "Satiate your wanderlust with our Wanderlust Suitcase! Designed for adventurers and explorers, this sturdy and stylish suitcase accompanies you on all your journeys. With its spacious interior, smooth wheels, and durable construction, it ensures your belongings travel in comfort and safety. Embark on new adventures with the Wanderlust Suitcase as your loyal companion.",
+            "has_sizes": "False",
+            "price": 99.99,
+            "category": 8,
+            "rating": 4.8,
+            "image_url": "",
+            "image": "suitcase.png"
+        }
+    },
+    {
+        "pk": 21,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5001340175",
+            "name": "SereneScape T-Shirt",
+            "description": "Find peace in simplicity with our SereneScape T-Shirt! This soft and breathable tee features a minimalist design that speaks volumes about your appreciation for calm and harmony. Whether you're out and about or lounging at home, the SereneScape T-Shirt adds a touch of zen to your wardrobe, reminding you to embrace tranquility in every moment.",
+            "has_sizes": "True",
+            "price": 18.99,
+            "category": 9,
+            "rating": 4.7,
+            "image_url": "",
+            "image": "t-shirt.png"
+        }
+    },
+    {
+        "pk": 22,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5001340176",
+            "name": "ZenVibe Yoga Mat",
+            "description": "Elevate your yoga practice with our ZenVibe Yoga Mat! This premium mat combines cushioned support and a calming design, allowing you to find your inner balance during each session. The non-slip surface ensures stability, and the soothing visuals inspire mindfulness and focus. Discover the perfect union of body and mind with the ZenVibe Yoga Mat.",
+            "has_sizes": "False",
+            "price": 28.99,
+            "category": 3,
+            "rating": 4.8,
+            "image_url": "",
+            "image": "yoga-mat.png"
+        }
+    },
+    {
+        "pk": 23,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5001340188",
+            "name": "Wireless Charger",
+            "description": "Embrace the future of charging with our Wireless Charger! Say goodbye to tangled cables and effortlessly power up your compatible devices by simply placing them on the charging pad. The sleek and compact design complements any workspace or bedside table, and the fast charging capabilities ensure your devices are ready to go in no time. Experience the convenience of wireless charging with our cutting-edge technology.",
+            "has_sizes": "False",
+            "price": 26.99,
+            "category": 10,
+            "rating": 4.7,
+            "image_url": "",
+            "image": "charger.png"
+        }
+    },
+    {
+        "pk": 24,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5001340189",
+            "name": "Wireless Earphones",
+            "description": "Elevate your audio experience with our Wireless Earphones! These sleek and ergonomic earbuds deliver crystal-clear sound and deep bass, allowing you to immerse yourself in your favorite music or podcasts. The wireless design offers freedom of movement, while the noise-canceling feature blocks out distractions, providing a truly immersive listening experience. With their long battery life and comfortable fit, our Wireless Earphones are your perfect audio companion on the go.",
+            "has_sizes": "False",
+            "price": 49.99,
+            "category": 10,
+            "rating": 4.9,
+            "image_url": "",
+            "image": "earphones.png"
+        }
+    },
+    {
+        "pk": 25,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5001340190",
+            "name": "SerenityStretch Leggings",
+            "description": "Find comfort and style in our SerenityStretch Leggings! Made from high-quality and stretchy fabric, these leggings offer a perfect fit that moves with you throughout the day. The versatile design makes them ideal for workouts, lounging, or casual outings. Embrace the feeling of serenity and confidence as you slip into our SerenityStretch Leggings, a wardrobe staple that effortlessly complements any outfit.",
+            "has_sizes": "True",
+            "price": 34.99,
+            "category": 1,
+            "rating": 4.8,
+            "image_url": "",
+            "image": "leggings.png"
+        }
+    },
+    {
+        "pk": 26,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5001340187",
+            "name": "Bedside Lamp",
+            "description": "Illuminate your space with our Bedside Lamp! This elegant and versatile lamp adds a touch of warmth and ambiance to your bedroom or living room. The adjustable brightness settings allow you to create the perfect atmosphere for reading, relaxing, or winding down after a long day. With its sleek design and soft glow, the Bedside Lamp is both functional and stylish, enhancing any room with its presence.",
+            "has_sizes": "False",
+            "price": 32.99,
+            "category": 2,
+            "rating": 4.6,
+            "image_url": "",
+            "image": "lamp.png"
+        }
+    }    
 ]

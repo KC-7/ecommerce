@@ -434,6 +434,8 @@ In development, we have been using the sqlite3 database. However, this is only s
 
 - Credit to Code Institute for creating the above guide in their Boutique Ado Walkthrough Project and to github user and CI Alumna, [kera-kudmore](https://github.com/kera-cudmore), for documenting the above deployment and local development process in her [README](https://github.com/kera-cudmore/Boutique-Ado/commit/f0170c57a0d92d80cc14bdefa8f281020469a406) which I have copied and adapted to suit the documentation of this process for this project.
 
+---
+
 </details>
 
 ### Local Development
