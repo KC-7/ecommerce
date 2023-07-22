@@ -2,54 +2,54 @@
     <ul class="navbar-nav ml-auto mr-auto">
         <li class="nav-item d-block d-md-none">
             <a class="nav-link text-white text-center" href="{% url 'home' %}" id="home-link">
-                Home
+                🏠 Home
             </a>
         </li>
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle text-white text-center" href="#" id="all-products-link" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                All Products
+                🛍️ All Products
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
-                <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item">By Rating</a>
-                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item">By Category</a>
-                <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
+                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">💲 By Price</a>
+                <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item">⭐ By Rating</a>
+                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item">📂 By Category</a>
+                <a href="{% url 'products' %}" class="dropdown-item">🛍️ All Products</a>
             </div>
         </li>
 
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle text-white text-center" href="#" id="clothing-link" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Custom Clothing
+                👕 Custom Clothing
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
-                <a href="{% url 'products' %}?category=activewear,essentials" class="dropdown-item">Activewear &amp; Essentials</a>
-                <a href="{% url 'products' %}?category=jackets_hoodies" class="dropdown-item">Jackets &amp; Hoodies</a>
-                <a href="{% url 'products' %}?category=shirts" class="dropdown-item">Shirts</a>
-                <a href="{% url 'products' %}?category=activewear,essentials,jackets_hoodies,shirts" class="dropdown-item">All Clothing</a>
+                <a href="{% url 'products' %}?category=activewear,essentials" class="dropdown-item">🏋️ Activewear &amp; 🛒 Essentials</a>
+                <a href="{% url 'products' %}?category=jackets_hoodies" class="dropdown-item">🧥 Jackets &amp; Hoodies</a>
+                <a href="{% url 'products' %}?category=shirts" class="dropdown-item">👕 Shirts</a>
+                <a href="{% url 'products' %}?category=activewear,essentials,jackets_hoodies,shirts" class="dropdown-item">👔 All Clothing</a>
             </div>
         </li>
 
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle text-white text-center" href="#" id="homeware-link" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Homeware &amp; Technology
+                🏠 Homeware &amp; 🔧 Technology
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="homeware-link">
-                <a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Bed &amp; Bath</a>
-                <a href="{% url 'products' %}?category=kitchen_dining" class="dropdown-item">Kitchen &amp; Dining</a>
-                <a href="{% url 'products' %}?category=electronics_technology" class="dropdown-item">Electronics &amp; Technology</a>
-                <a href="{% url 'products' %}?category=bed_bath,kitchen_dining,electronics_technology" class="dropdown-item">All Homeware</a>
+                <a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">🛏️ Bed &amp; 🛁 Bath</a>
+                <a href="{% url 'products' %}?category=kitchen_dining" class="dropdown-item">🍳 Kitchen &amp; 🍽️ Dining</a>
+                <a href="{% url 'products' %}?category=electronics_technology" class="dropdown-item">📱 Electronics &amp; 📷 Technology</a>
+                <a href="{% url 'products' %}?category=bed_bath,kitchen_dining,electronics_technology" class="dropdown-item">🏠 All Homeware &amp; 🔧 Technology</a>
             </div>
         </li>
 
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle text-white text-center" href="#" id="specials-link" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Special Offers
+                🎁 Special Offers
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="{% url 'products' %}?category=new_arrivals" class="dropdown-item">New Arrivals</a>
-                <a href="{% url 'products' %}?category=deals" class="dropdown-item">Deals</a>
-                <a href="{% url 'products' %}?category=clearance" class="dropdown-item">Clearance</a>
-                <a href="{% url 'products' %}?category=new_arrivals,deals,clearance" class="dropdown-item">All Specials</a>
+                <a href="{% url 'products' %}?category=new_arrivals" class="dropdown-item">🆕 New Arrivals</a>
+                <a href="{% url 'products' %}?category=deals" class="dropdown-item">💰 Deals</a>
+                <a href="{% url 'products' %}?category=clearance" class="dropdown-item">🆓 Clearance</a>
+                <a href="{% url 'products' %}?category=new_arrivals,deals,clearance" class="dropdown-item">🎁 All Specials</a>
             </div>
         </li>
     </ul>

@@ -54,6 +54,14 @@
     </script>
     <!-- Stripe -->
     <script src="https://js.stripe.com/v3/"></script>
+    <!-- Mailchimp Email Pop Up -->
+    <script id="mcjs">
+        ! function (c, h, i, m, p) {
+            m = c.createElement(h), p = c.getElementsByTagName(h)[0], m.async = 1, m.src = i, p.parentNode.insertBefore(
+                m, p)
+        }(document, "script",
+            "https://chimpstatic.com/mcjs-connected/js/users/7fcf7ba076152bf0d67b5af49/dd23ecf8e6cd44d5ce0a44dc4.js");
+    </script>
     {% endblock %}
 
     {% block extra_js %}
@@ -70,7 +78,7 @@
         <div id="topnav" class="row bg-teal text-white pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <h2 class="logo-font text-black my-0"><strong>onlineAI</strong>.art</h2>
+                    <h2 class="logo-font text-black my-0"><strong>onlineAI</strong>.art 👽</h2>
                 </a>
             </div>
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
@@ -101,15 +109,15 @@
                         <div class="dropdown-menu border-0" aria-labelledby="user-options">
                             {% if request.user.is_authenticated %}
                                 {% if request.user.is_superuser %}
-                                <a href="{{ LIVE_LINK }}/admin/" class="dropdown-item">Admin Portal</a>
-                                <a href="{% url 'add_product' %}" class="dropdown-item">Add Product</a>
+                                <a href="{{ LIVE_LINK }}/admin/" class="dropdown-item">🖥️ Admin Portal</a>
+                                <a href="{% url 'add_product' %}" class="dropdown-item">➕ Add Product</a>
                                 <hr>
                                 {% endif %}
-                                <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-                                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                                <a href="{% url 'profile' %}" class="dropdown-item">👤 My Profile</a>
+                                <a href="{% url 'account_logout' %}" class="dropdown-item">🚪 Logout</a>
                             {% else %}
-                                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                                <a href="{% url 'account_signup' %}" class="dropdown-item">📝 Register</a>
+                                <a href="{% url 'account_login' %}" class="dropdown-item">🔑 Login</a>
                             {% endif %}
                         </div>
                     </li>
@@ -143,7 +151,7 @@
         </div>
         <div id="delivery-banner" class="row text-center">
             <div class="col bg-purple text-white">
-                <h4 class="logo-font my-1">Free delivery on orders over €{{ free_delivery_threshold }}!</h4>
+                <h4 class="logo-font my-1">🆓 Free delivery on orders over €{{ free_delivery_threshold }}! 🚚</h4>
             </div>
         </div>
     </header>
@@ -172,67 +180,7 @@
     {% block content %}
     {% endblock %}
 
-    <footer class="small mt-auto py-3 bg-purple text-light footer">
-        <!-- Footer Container -->
-        <div class="container">
-            <div class="row">
-                <!-- Column 1: About -->
-                <div class="col-md-4 p-2">
-                    <h5>Find out more!</h5>
-                    <ul class="social-icons list-inline text-center">
-                        <li class="list-inline-item"><a href="https://www.example-store.com/about" target="_blank"
-                                rel="noopener noreferrer" aria-label="About Us"><i class="fas fa-info-circle fa-2x"></i> About</a></li>
-                        <li class="list-inline-item"><a href="https://www.example-store.com/contact" target="_blank"
-                                rel="noopener noreferrer" aria-label="Contact Us"><i class="fas fa-envelope fa-2x"></i> Contact</a></li>
-                        <li class="list-inline-item"><a href="https://www.example-store.com/faq" target="_blank"
-                                rel="noopener noreferrer" aria-label="FAQ"><i class="fas fa-question-circle fa-2x"></i> FAQ</a></li>
-                        <li class="list-inline-item"><a href="https://www.example-store.com/privacy" target="_blank"
-                                rel="noopener noreferrer" aria-label="Privacy Policy"><i class="fas fa-lock fa-2x"></i> Privacy</a></li>
-                    </ul>
-                </div>
-                <!-- Column 2: Email Sign Up Form -->
-                <div class="col-md-4 p-2">
-                    <h5>Mailing List</h5>
-                    <p>Sign up to our mailing list to receive exclusive deals and access to new products.</p>
-                    
-                    <!-- <p>
-                        If you have any questions, feedback or suggestions, please contact us at <a
-                            href="mailto:contact@cre8ai.art" aria-label="Send an email">contact@onlineai.art</a>, we would
-                        love to hear from you!
-                    </p> -->
-
-                </div>
-                <!-- Column 3: Social Links -->
-                <div class="col-md-4 p-2">
-                    <h5>Follow Us</h5>
-                    <ul class="social-icons list-inline text-center">
-                        <li class="list-inline-item"><a href="https://www.facebook.com/" target="_blank"
-                                rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook fa-2x"></i> Facebook</a>
-                        </li>
-                        <li class="list-inline-item"><a href="https://twitter.com/" target="_blank"
-                                rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter fa-2x"></i> Twitter</a>
-                        </li>
-                        <li class="list-inline-item"><a href="https://www.instagram.com/" target="_blank"
-                                rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram fa-2x"></i> Instagram</a>
-                        </li>
-                        <li class="list-inline-item"><a href="https://www.youtube.com/" target="_blank"
-                                rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube fa-2x"></i> YouTube</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <!-- Logo at end of footer -->
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <p class="text-center text-small mb-0 text-white">
-                        <small>onlineAI.art | est. 2023</small>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </footer>
+    {% include 'includes/footer.html' %}
 
     {% block postloadjs %}
     <script type="text/javascript">
