@@ -33,6 +33,42 @@ body {
     height: calc(100vh - 164px);
     color: var(--grey);
     font-family: 'Audiowide', cursive;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.hide {
+    display: none;
+}
+
+footer {
+    margin-top: auto;
+    /* Set footer position to be fixed at the bottom */
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 0;
+}
+
+a {
+    color: var(--cyan);
+    text-decoration: none;
+    transition: background-color 0.3s;
+    border-radius: 10px;
+}
+
+a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: var(--gold);
+    text-decoration: none;
 }
 
 /* from Bulma */
@@ -409,6 +445,10 @@ input[name='q']::placeholder {
     .decrement-qty {
         padding: .25rem .5rem !important;
     }
+
+    .social-icons {
+        font-size: x-small;
+    }
 }
 
 /* Remove left and right padding from navbar elements so that content stays on one row on smaller devices */
@@ -416,5 +456,9 @@ input[name='q']::placeholder {
     .navbar {
         padding-left: 0;
         padding-right: 0;
+        font-size: small;
+    }
+    .social-icons {
+        font-size: xx-small;
     }
 }
