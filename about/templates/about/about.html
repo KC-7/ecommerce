@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+  <div class="row">
+    <div class="col"></div>
+  </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="bg-white h-100">
+  <div class="container py-5">
+    <div class="row mb-4">
+        {% for about_page in about_pages %}
+        <div class="col-12">
+            <h2><a href="{% url 'about_page_detail' pk=about_page.pk %}">{{ about_page.title }}</a></h2>
+        </div>
+        {% empty %}
+        <div class="col-12">
+            <p>No about pages yet.</p>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="row">
+        <div class="col text-end">
+            {% if user.is_superuser %}
+                <a href="{% url 'create_about_page' %}" class="btn btn-primary">Create New About Page</a>
+            {% endif %}
+        </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

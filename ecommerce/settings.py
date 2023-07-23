@@ -62,9 +62,11 @@ INSTALLED_APPS = [
     'bag',
     'checkout',
     'profiles',
+    'about',
     # other
     'crispy_forms',
     'storages',
+    'ckeditor',  # for editing text input
 ]
 
 MIDDLEWARE = [
@@ -220,8 +222,8 @@ if 'USE_AWS' in os.environ:
     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
 
 # Stripe & Delivery
-FREE_DELIVERY_THRESHOLD = 50
-STANDARD_DELIVERY_PERCENTAGE = 10
+FREE_DELIVERY_THRESHOLD = 80
+STANDARD_DELIVERY_PERCENTAGE = 20
 STRIPE_CURRENCY = 'eur'
 STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')

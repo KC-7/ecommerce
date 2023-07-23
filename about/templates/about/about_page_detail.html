@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="bg-white h-100">
+    <div class="container py-5">
+        <div class="row mb-4">
+            <div class="col-12">
+                <h2>{{ about_page.title }}</h2>
+                <div>{{ about_page.content|safe }}</div>
+                <small>Created at: {{ about_page.created_at }}</small>
+                <hr>
+                {% if user.is_superuser %}
+                <form method="post" action="{% url 'delete_about_page' pk=about_page.pk %}" class="mt-3">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}

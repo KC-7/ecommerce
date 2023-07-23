@@ -147,6 +147,12 @@ For more details on setting up Stripe elements to accept payment, refer to the [
 
 ---
 
+### CKEditor 
+
+https://ckeditor.com/docs/ckeditor5/latest/installation/getting-started/predefined-builds.html#classic-editor
+
+---
+
 ## Python Package Requirements
 
 The table below lists the Python packages and their respective versions required for running this project as per the requirements.txt file. These packages provide essential functionalities and integrations to support various features within the application and are required for running the project.
