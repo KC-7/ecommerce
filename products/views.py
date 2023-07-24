@@ -1,3 +1,4 @@
+from django.core.paginator import Paginator
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -11,11 +12,12 @@ from .forms import ProductForm
 def all_products(request):
     """ A view to show all products, including sorting and search queries """
 
-    products = Product.objects.all()
+    products = Product.objects.order_by('id')
     query = None
     categories = None
     sort = None
     direction = None
+    paginate_by = 12  # Django will paginate by 12 posts
 
     if request.GET:
         if 'sort' in request.GET:
@@ -48,11 +50,17 @@ def all_products(request):
 
     current_sorting = f'{sort}_{direction}'
 
+    paginator = Paginator(products, paginate_by)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+
     context = {
+        'page_obj': page_obj,
         'products': products,
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
+        'is_paginated': page_obj.has_other_pages(),  # Sets the 'is_paginated' variable
     }
 
     return render(request, 'products/products.html', context)

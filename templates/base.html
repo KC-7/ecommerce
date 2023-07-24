@@ -98,12 +98,16 @@
                                 <p class="my-0">My Account</p>
                             </div>
                         </a>
-                        <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                        <div class="dropdown-menu border-1" aria-labelledby="user-options">
                             {% if request.user.is_authenticated %}
                                 {% if request.user.is_superuser %}
-                                <a href="{{ LIVE_LINK }}/admin/" class="dropdown-item">🖥️ Admin Portal</a>
-                                <a href="{% url 'add_product' %}" class="dropdown-item">➕ Add Product</a>
+                                <p class="pl-1">Admin Settings:</p>
+                                <a href="{{ LIVE_LINK }}/admin/" class="dropdown-item"  target="_blank"
+                                    rel="noopener noreferrer" >🖥️ Admin Portal</a>
+                                <a href="{% url 'add_product' %}" class="dropdown-item">➕ Add New Product</a>
+                                <a href="{% url 'create_about_page' %}" class="dropdown-item">➕ Add About Page</a>
                                 <hr>
+                                <p class="pl-1">User Settings:</p>
                                 {% endif %}
                                 <a href="{% url 'profile' %}" class="dropdown-item">👤 My Profile</a>
                                 <a href="{% url 'account_logout' %}" class="dropdown-item">🚪 Logout</a>

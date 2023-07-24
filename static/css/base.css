@@ -42,6 +42,10 @@ body {
     display: none;
 }
 
+.z-index-1 {
+    z-index: 1;
+}
+
 footer {
     margin-top: auto;
     /* Set footer position to be fixed at the bottom */
@@ -209,6 +213,24 @@ a.category-badge>span.badge:hover {
 
 input[name='q']::placeholder {
     color: var(--grey);
+}
+
+/* ------------------------------- paginator */
+
+.page-button {
+    margin-left: 3px;
+    margin-right: 3px;
+    color: var(--teal);
+    transition: color 0.3s, transform 0.3s;
+}
+
+.page-button:hover {
+    color: var(--gold);
+}
+
+.page-info {
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 /* ------------------------------- custom product images */
@@ -409,7 +431,7 @@ input[name='q']::placeholder {
         top: 0;
         right: 0;
         left: 0;
-        z-index: 1030;
+        z-index: 1000;
     }
 
     .header-container {
