@@ -120,7 +120,7 @@ a:hover {
 .btn-black {
     background: var(--black);
     color: var(--white);
-    border-radius: 10px 0 10px 0 !important;
+    border-radius: 10px 0 10px 0;
 }
 
 .btn-outline-black {
@@ -128,7 +128,7 @@ a:hover {
     color: var(--black) !important;
     /* important is used to overide link colour for <a> elements */
     border: 1px solid black;
-    border-radius: 10px 0 10px 0 !important;
+    border-radius: 10px 0 10px 0;
 }
 
 .btn-outline-black:hover,

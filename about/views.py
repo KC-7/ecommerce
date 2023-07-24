@@ -22,6 +22,7 @@ def create_about_page(request):
         form = AboutPageForm(request.POST)
         if form.is_valid():
             form.save()
+            messages.success(request, 'You created a new About Page')
             return redirect('about')
 
     form = AboutPageForm()
@@ -57,6 +58,7 @@ def delete_about_page(request, pk):
 
     if request.method == 'POST':
         about_page.delete()
+        messages.success(request, 'You deleted the About Page')
         return redirect('about')
 
     template = 'about/delete_about_page.html'

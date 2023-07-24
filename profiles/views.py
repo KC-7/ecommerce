@@ -1,3 +1,4 @@
+from django.template.defaultfilters import truncatechars, linebreaksbr
 from django.shortcuts import render, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -39,10 +40,15 @@ def profile(request):
 def order_history(request, order_number):
     order = get_object_or_404(Order, order_number=order_number)
 
-    messages.info(request, (
-        f'This is a past confirmation for order number {order_number}. '
-        'A confirmation email was sent on the order date.'
-    ))
+    # Truncate the order_number to a specified number of characters
+    truncated_order_number = truncatechars(order_number, 16)
+
+    message = (
+        f'This is a past confirmation for order number {truncated_order_number}.'
+        '\nA confirmation email was sent on the order date.'
+    )
+
+    messages.info(request, linebreaksbr(message))
 
     template = 'checkout/checkout_success.html'
     context = {

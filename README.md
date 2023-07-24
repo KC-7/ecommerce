@@ -608,11 +608,21 @@ The order number was too long to be displayed correctly on smaller devices, it w
 
 #### Resolution
 
-I resolved this issue by using the slice feature and restricting it to 16 characters instead of displaying all 32: 
+I resolved this issue by using the truncate feature to restrict it to 16 characters instead of displaying all 32: 
 
-    <div class="col-12 col-md-8 text-md-right">
-        <p class="mb-0">...{{ order.order_number|slice:"-16:" }}</p>
-    </div>
+    `<p class="mb-0">{{ order.order_number|truncatechars:16 }}</p>`
+
+---
+
+### Navbar not displayed correctly on Profile
+
+#### Issue
+
+The navbar was not being displayed correctly on the profiles view, it was being positioned at the end of the container instead of the end of the page like the rest of the site. 
+
+#### Resolution
+
+I identified that a closing div tag, `</div>`, was missing from the end of the `profile.html` template. The navbar was correctly styled after the missing tag was enetered.
 
 ---
 
