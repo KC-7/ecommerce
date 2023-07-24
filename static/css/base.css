@@ -61,7 +61,7 @@ footer {
 
 
 .form-group {
-    max-width: 100%;
+    max-width: 100vw;
 }
 
 .btn-primary {

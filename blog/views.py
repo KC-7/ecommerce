@@ -46,14 +46,14 @@ def blog_page_detail(request, pk):
     return render(request, template, context)
 
 
-
 @login_required
 def delete_blog_page(request, pk):
     blog_page = get_object_or_404(BlogPage, pk=pk)
 
     # Check if the user is a superuser
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only superusers can delete blog posts.')
+        messages.error(
+            request, 'Sorry, only superusers can delete blog posts.')
         return redirect('blog')
 
     if request.method == 'POST':
