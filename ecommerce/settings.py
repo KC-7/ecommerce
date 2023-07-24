@@ -36,9 +36,6 @@ if 'DEVELOPMENT' in os.environ:
 else:
     LIVE_LINK = 'https://kc-ecommerce-434e6f88dca9.herokuapp.com/'
 
-# Site Logo
-
-SITE_LOGO = '/favicon/android-chrome-192x192.png'
 
 # Application definition
 INSTALLED_APPS = [
@@ -241,6 +238,9 @@ else:
     EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASS')
     DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
 
+
+# Site Logo
+SITE_LOGO = 'favicon/android-chrome-192x192.png'
 
 # Custom Jazzmin Settings
 JAZZMIN_SETTINGS = {
