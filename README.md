@@ -149,6 +149,10 @@ For more details on setting up Stripe elements to accept payment, refer to the [
 
 ### CKEditor 
 
+I installed the CKEditor to allow customisable text inputs for the Admins to add About Pages. This allows the site management team to add and update these pages without the need of a web developer. The CKEditor easily allows them to vustomise the text. 
+
+I have customized the editor to only display certain suitable options, for example H1 has been removed as it used for the Title for the page so there is no need to have it in the content section. 
+
 https://ckeditor.com/docs/ckeditor5/latest/installation/getting-started/predefined-builds.html#classic-editor
 
 ---
@@ -596,6 +600,22 @@ I resolved this issue by adding the following CSS media quiery:
 
 ---
 
+### Order number too long
+
+#### Issue
+
+The order number was too long to be displayed correctly on smaller devices, it was impacting the styling for the order confirmation page. 
+
+#### Resolution
+
+I resolved this issue by using the slice feature and restricting it to 16 characters instead of displaying all 32: 
+
+    <div class="col-12 col-md-8 text-md-right">
+        <p class="mb-0">...{{ order.order_number|slice:"-16:" }}</p>
+    </div>
+
+---
+
 ## Resources
 
 ### Technologies Used
@@ -620,7 +640,11 @@ Here is a list of useful links that were used as part of the project. Thanks to 
 | [Pip](https://pypi.org/project/pip/)                                               | A tool for installing Python packages   |
 | [Shields.io](https://shields.io/)                                                  | To add badges to the projects documentation |
 
-### Credits
+-------------CKEDITOR
+
+---
+
+## Credits
 
 I would like to give special thanks to the following: 
 

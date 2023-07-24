@@ -14,18 +14,16 @@
   <div class="container py-5">
     <div class="row mb-4">
         <div class="col-12">
-          <h1>Find out more!</h1>
+          <h1 class="text-black">Find out more!</h1>
           <p>Check out our about us pages to find out more information. Feel free to contact us if you need anything further.</p>
         </div>
-        {% for about_page in about_pages %}
         <div class="col-12">
-            <h2><a href="{% url 'about_page_detail' pk=about_page.pk %}">{{ about_page.title }}</a></h2>
-        </div>
-        {% empty %}
-        <div class="col-12">
+          {% for about_page in about_pages %}
+            <h3 class="pl-3"><a href="{% url 'about_page_detail' pk=about_page.pk %}">{{ about_page.title }}</a></h3>
+          {% empty %}
             <p>No about pages yet.</p>
+          {% endfor %}
         </div>
-        {% endfor %}
     </div>
     <div class="row">
         <div class="col text-end">

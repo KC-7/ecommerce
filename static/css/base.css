@@ -56,17 +56,22 @@ footer {
 }
 
 .btn-primary {
-    background-color: var(--teal);
+    background-color: var(--teal) !important;
+    color: var(--white) !important;
+    /* important is used to overide link colour for <a> elements */
 }
 
 .btn-secondary {
-    background-color: var(--purple);
+    background-color: var(--purple) !important;
+    color: var(--white) !important;
+    /* important is used to overide link colour for <a> elements */
 }
 
 .btn-primary:hover,
 .btn-secondary:hover {
-    background-color: var(--gold);
-    color: var(--black);
+    background-color: var(--gold) !important;
+    color: var(--black) !important;
+    /* important is used to overide link colour for <a> elements */
 }
 
 .social-icons {
@@ -115,7 +120,7 @@ a:hover {
 .btn-black {
     background: var(--black);
     color: var(--white);
-    border-radius: 10px;
+    border-radius: 10px 0 10px 0 !important;
 }
 
 .btn-outline-black {
@@ -123,7 +128,7 @@ a:hover {
     color: var(--black) !important;
     /* important is used to overide link colour for <a> elements */
     border: 1px solid black;
-    border-radius: 10px;
+    border-radius: 10px 0 10px 0 !important;
 }
 
 .btn-outline-black:hover,
