@@ -51,6 +51,24 @@ footer {
     width: 100%;
 }
 
+.form-group {
+    max-width: 100%;
+}
+
+.btn-primary {
+    background-color: var(--teal);
+}
+
+.btn-secondary {
+    background-color: var(--purple);
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+    background-color: var(--gold);
+    color: var(--black);
+}
+
 .social-icons {
     display: flex;
     justify-content: space-between;
@@ -457,6 +475,7 @@ input[name='q']::placeholder {
         padding-right: 0;
         font-size: small;
     }
+
     .social-icons {
         font-size: xx-small;
     }

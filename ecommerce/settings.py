@@ -299,3 +299,24 @@ JAZZMIN_SETTINGS = {
         {"name": "Developer", "url": "https://github.com/kc-7", "new_window": True},
     ],
 }
+
+
+# Set the CKEditor configuration options
+# CKEDITOR_CONFIGS = {
+#     'default': {
+#         'toolbar': 'Full',  # You can customize the toolbar as per your needs
+#         'height': 300,     # Set the height of the editor
+#         'width': '100%',   # Set the width of the editor
+#         'allowedContent': True,  # Allow any HTML content
+#         'extraPlugins': ','.join([
+#             'codemirror',  # If you want to enable the CodeMirror plugin for syntax highlighting
+#             'htmlwriter',  # Enables the HTML Writer plugin for importing HTML
+#         ]),
+#     },
+# }
+# CKEDITOR_UPLOAD_PATH = "uploads/"
+# CKEDITOR_IMAGE_BACKEND = 'pillow'
+# CKEDITOR_BROWSE_SHOW_DIRS = True
+# CKEDITOR_RESTRICT_BY_USER = True
+# CKEDITOR_UPLOAD_SLUGIFY_FILENAME = False
+# CKEDITOR_FILENAME_GENERATOR = 'utils.generate_filename'

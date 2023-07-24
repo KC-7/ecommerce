@@ -13,6 +13,10 @@
 <div class="bg-white h-100">
   <div class="container py-5">
     <div class="row mb-4">
+        <div class="col-12">
+          <h1>Find out more!</h1>
+          <p>Check out our about us pages to find out more information. Feel free to contact us if you need anything further.</p>
+        </div>
         {% for about_page in about_pages %}
         <div class="col-12">
             <h2><a href="{% url 'about_page_detail' pk=about_page.pk %}">{{ about_page.title }}</a></h2>
@@ -28,6 +32,7 @@
             {% if user.is_superuser %}
                 <a href="{% url 'create_about_page' %}" class="btn btn-primary">Create New About Page</a>
             {% endif %}
+            <a href="{% url 'home' %}" class="btn btn-secondary">Home Page</a>
         </div>
     </div>
   </div>
