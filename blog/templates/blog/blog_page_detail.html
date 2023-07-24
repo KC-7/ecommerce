@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+<div class="h-100 mb-4">
+    <div class="container py-5">
+        <div class="row mb-4">
+            <div class="col-12">
+                <h1 class="text-black">{{ blog_page.title }}</h1>
+                <hr>
+                <div class="pl-3 pt-3">{{ blog_page.content|safe }}</div>
+                <div class="text-right">Created: {{ blog_page.created_at }}</div>
+                <hr>
+            </div>
+            <div class="col-6">
+                <a href="{% url 'blog' %}" class="btn btn-secondary">Go Back</a>
+            </div>
+            {% if user.is_superuser %}
+                <div class="col-6 text-right">
+                    <form method="post" action="{% url 'delete_blog_page' pk=blog_page.pk %}">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

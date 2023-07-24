@@ -55,6 +55,11 @@ footer {
     width: 100%;
 }
 
+.text-hover-gold:hover {
+    color: var(--gold) !important;
+}
+
+
 .form-group {
     max-width: 100%;
 }

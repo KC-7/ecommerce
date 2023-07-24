@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+  <div class="row">
+    <div class="col"></div>
+  </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+<div class="h-100">
+  <div class="container py-5">
+    <div class="row mb-4">
+        <div class="col-12">
+          <h1 class="text-black mb-4">Check out our Blog!</h1>
+          <hr>
+          <p>Check out our blog posts to find out more information about AI Technology:</p>
+        </div>
+        <div class="col-12">
+          {% for blog_page in blog_pages %}
+            <h3 class="pl-3"><a href="{% url 'blog_page_detail' pk=blog_page.pk %}">{{ blog_page.title }}</a></h3>
+          {% empty %}
+            <p class="text-danger">No blog posts yet.</p>
+          {% endfor %}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col text-end">
+            {% if user.is_superuser %}
+                <a href="{% url 'create_blog_page' %}" class="btn btn-primary">Create New Blog Page</a>
+            {% endif %}
+            <a href="{% url 'home' %}" class="btn btn-secondary">Home Page</a>
+        </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

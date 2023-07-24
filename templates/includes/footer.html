@@ -4,7 +4,7 @@
         <div class="row">
             <!-- Column 1: About -->
             <div class="col-md-4 p-2">
-                <h5>🔍 Find out more</h5>
+                <h5><a href="{% url 'about' %}" aria-label="About Pages" class="text-white text-hover-gold">🔍 Find out more</a></h5>
                 <ul class="social-icons list-inline text-center">
                     <li class="list-inline-item"><a href="{% url 'about' %}"
                         aria-label="About Us"><i class="fas fa-info-circle fa-2x"></i> About</a></li>
@@ -18,16 +18,17 @@
             </div>
             <!-- Column 2: Email Sign Up Form -->
             <div class="col-md-4 p-2">
-                <h5>📬 Contact Us</h5>
+                <h5><a href="{% url 'blog' %}" aria-label="Blog Posts" class="text-white text-hover-gold">😁 Check out our Blog</a></h5>
                 <p class="pt-3">
-                    Please contact us at <a href="mailto:contact@cre8ai.art" aria-label="Send an email">contact@onlineai.art</a>, 
-                    we would love to hear from you!
+                    Dont forget to check out <a href="{% url 'blog' %}" aria-label="Blog Posts">our blog posts</a>
+                    to stay up to date with all the latest AI Technology!
                 </p>
 
             </div>
             <!-- Column 3: Social Links -->
             <div class="col-md-4 p-2">
-                <h5>📲 Follow Us</h5>
+                <h5><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"
+                    aria-label="Facebook" class="text-white text-hover-gold">📲 Follow Us</a></h5>
                 <ul class="social-icons list-inline text-center">
                     <li class="list-inline-item"><a href="https://www.facebook.com/" target="_blank"
                             rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook fa-2x"></i> Facebook</a>
