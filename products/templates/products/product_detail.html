@@ -95,14 +95,14 @@
                             </div>
                         </div>
 
-                        <div class="col{% if s %}-12 mt-2{% endif %} mt-4 text-center">
+                        <div class="col{% if s %}-12 mt-2{% endif %} mt-4">
                             <a href="{% url 'products' %}" class="btn btn-primary my-2">
                                 <span class="icon">
                                     <i class="fas fa-chevron-left"></i>
                                 </span>
                                 <span>Keep Shopping</span>
                             </a>
-                            <input type="submit" class="btn btn-secondary my-2" value="Add to Bag">
+                            <input type="submit" class="btn btn-secondary my-2 float-right" value="Add to Bag">
                         </div>
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         {% endwith %}
@@ -112,42 +112,6 @@
             </div>
         </div>
     </div>
-    <!-- ADDITIONAL PRODUCTS CAROSEL NOT WORKING
-        <div>
-        <h2>Additional Products</h2>
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                {% for product in products %}
-                <li data-target="#carouselExampleIndicators" data-slide-to="{{ forloop.counter0 }}"
-                    {% if forloop.first %}class="active" {% endif %}></li>
-                {% endfor %}
-            </ol>
-            <div class="carousel-inner">
-                {% for product in products %}
-                <div class="carousel-item {% if forloop.first %}active{% endif %}">
-                    <a href="{% url 'product_detail' product.id %}">
-                        {% if product.image %}
-                        <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
-                        {% else %}
-                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
-                        {% endif %}
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>{{ product.name }}</h5>
-                        </div>
-                    </a>
-                </div>
-                {% endfor %}
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
-    </div> -->
 </div>
 
 {% endblock %}

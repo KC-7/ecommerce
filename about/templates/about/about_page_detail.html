@@ -11,7 +11,7 @@
 
 {% block content %}
 <div class="overlay"></div>
-<div class="h-100 mb-4">
+<div class="mb-4">
     <div class="container py-5">
         <div class="row mb-4">
             <div class="col-12">
@@ -21,16 +21,17 @@
                 <div class="text-right">Created: {{ about_page.created_at }}</div>
                 <hr>
             </div>
-            <div class="col-6">
-                <a href="{% url 'about' %}" class="btn btn-secondary">Go Back</a>
+            <div class="col-4">
+                <a href="{% url 'about' %}" class="btn btn-primary">Back</a>
             </div>
             {% if user.is_superuser %}
-                <div class="col-6 text-right">
+                <div class="col-4 text-center">
                     <form method="post" action="{% url 'delete_about_page' pk=about_page.pk %}">
                         {% csrf_token %}
                         <button type="submit" class="btn btn-danger">Delete</button>
                     </form>
                 </div>
+                <div class="col-4 text-right"><a href="#" class="btn btn-secondary">Edit</a></div>
             {% endif %}
         </div>
     </div>

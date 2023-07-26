@@ -11,8 +11,8 @@
 
 {% block content %}
 <div class="overlay"></div>
-<div class="h-100">
-  <div class="container py-5">
+<div class="container mb-5">
+  <div class="py-5">
     <div class="row mb-4">
         <div class="col-12">
           <h1 class="text-black mb-4">Find out more!</h1>
@@ -29,10 +29,10 @@
     </div>
     <div class="row">
         <div class="col text-end">
+            <a href="{% url 'home' %}" class="btn btn-primary">Home Page</a>
             {% if user.is_superuser %}
-                <a href="{% url 'create_about_page' %}" class="btn btn-primary">Create New About Page</a>
+                <a href="{% url 'create_about_page' %}" class="btn btn-secondary float-right">Create New About Page</a>
             {% endif %}
-            <a href="{% url 'home' %}" class="btn btn-secondary">Home Page</a>
         </div>
     </div>
   </div>

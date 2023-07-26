@@ -1,7 +1,8 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from .models import AboutPage
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
+from django.urls import reverse
+from .models import AboutPage
 from .forms import AboutPageForm
 
 
@@ -46,21 +47,14 @@ def about_page_detail(request, pk):
     return render(request, template, context)
 
 
-
 @login_required
 def delete_about_page(request, pk):
-    about_page = get_object_or_404(AboutPage, pk=pk)
-
-    # Check if the user is a superuser
+    """ Delete an About Page """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only superusers can delete about pages.')
-        return redirect('about')
+        messages.error(request, 'Sorry, only site admins can do that.')
+        return redirect(reverse('about'))
 
-    if request.method == 'POST':
-        about_page.delete()
-        messages.success(request, 'You deleted the About Page')
-        return redirect('about')
-
-    template = 'about/delete_about_page.html'
-    context = {'about_page': about_page}
-    return render(request, template, context)
+    blog = get_object_or_404(AboutPage, pk=pk)
+    blog.delete()
+    messages.success(request, 'About Post Deleted!')
+    return redirect(reverse('about'))

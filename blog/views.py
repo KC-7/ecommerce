@@ -1,14 +1,26 @@
+from django.core.paginator import Paginator
 from django.shortcuts import render, redirect, get_object_or_404
-from .models import BlogPage
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
+from django.urls import reverse
+from .models import BlogPage
 from .forms import BlogPageForm
 
 
 def blog(request):
     blog_pages = BlogPage.objects.all().order_by('-created_at')
     template = 'blog/blog.html'
-    context = {'blog_pages': blog_pages}
+    paginate_by = 2  # paginate by posts (sets posts per page)
+    paginator = Paginator(blog_pages, paginate_by)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+
+    context = {
+        'page_obj': page_obj,
+        'blog_pages': blog_pages,
+        'is_paginated': page_obj.has_other_pages(),  # Sets 'is_paginated'
+        }
+
     return render(request, template, context)
 
 
@@ -48,19 +60,12 @@ def blog_page_detail(request, pk):
 
 @login_required
 def delete_blog_page(request, pk):
-    blog_page = get_object_or_404(BlogPage, pk=pk)
-
-    # Check if the user is a superuser
+    """ Delete a Blog Post """
     if not request.user.is_superuser:
-        messages.error(
-            request, 'Sorry, only superusers can delete blog posts.')
-        return redirect('blog')
+        messages.error(request, 'Sorry, only site admins can do that.')
+        return redirect(reverse('blog'))
 
-    if request.method == 'POST':
-        blog_page.delete()
-        messages.success(request, 'You deleted the Blog Post')
-        return redirect('blog')
-
-    template = 'blog/delete_blog_page.html'
-    context = {'blog_page': blog_page}
-    return render(request, template, context)
+    blog = get_object_or_404(BlogPage, pk=pk)
+    blog.delete()
+    messages.success(request, 'Blog Post Deleted!')
+    return redirect(reverse('blog'))

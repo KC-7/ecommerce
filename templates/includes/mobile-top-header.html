@@ -24,22 +24,43 @@
     <a class="text-black nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <div class="text-center">
             <div><i class="fas fa-user fa-lg"></i></div>
-            <p class="my-0">My Account</p>
+            <p class="my-0">Account</p>
         </div>
     </a>
-    <div class="dropdown-menu border-0" aria-labelledby="user-options">
+    <div class="dropdown-menu border-1" aria-labelledby="user-options">
         {% if request.user.is_authenticated %}
-                {% if request.user.is_superuser %}
-                <a href="{{ LIVE_LINK }}/admin/" class="dropdown-item">Admin Portal</a>
-                <a href="{% url 'add_product' %}" class="dropdown-item">Add Product</a>
-                <hr>
+        <div id="user-settings">
+            {% if request.user.is_superuser %}
+                <div id="admin-settings">
+                    <p class="pl-1">Admin Settings:</p>
+                    <a href="{{ LIVE_LINK }}/admin/" class="dropdown-item" target="_blank" rel="noopener noreferrer">🖥️ Admin Portal</a>
+                    <a href="{% url 'add_product' %}" class="dropdown-item">➕ Add Product</a>
+                    <a href="{% url 'create_about_page' %}" class="dropdown-item">➕ Add About Page</a>
+                    <a href="{% url 'create_blog_page' %}" class="dropdown-item">➕ Add Blog Post</a>
+                    <hr>
+                </div>
             {% endif %}
-            <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-            <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-        {% else %}
-            <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-            <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-        {% endif %}
+            <div id="user-settings-links">
+                <p class="pl-1">User Settings:</p>
+                <a href="{% url 'profile' %}" class="dropdown-item">👤 My Profile</a>
+                <a href="{% url 'account_logout' %}" class="dropdown-item">🚪 Logout</a>
+                <hr>
+            </div>
+        </div>
+    {% else %}
+        <div id="user-settings">
+            <div id="user-settings-links">
+                <p class="pl-1">User Settings:</p>
+                <a href="{% url 'account_signup' %}" class="dropdown-item">📝 Register</a>
+                <a href="{% url 'account_login' %}" class="dropdown-item">🔑 Login</a>
+                <hr>
+            </div>
+        </div>
+    {% endif %}
+    <div id="site-links">
+        <p class="pl-1">Site Links:</p>
+        <a href="{% url 'blog' %}" class="dropdown-item">📰 Blog</a>
+        <a href="{% url 'about' %}" class="dropdown-item">❓ About</a>
     </div>
 </li>
 <li class="list-inline-item">

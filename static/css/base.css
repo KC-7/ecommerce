@@ -1,24 +1,24 @@
 /* ------------------------------------------------- Color Palette */
 
 :root {
-    --pink: #FF00FF;
     /* Electric Pink */
-    --cyan: #00FFFF;
+    --pink: #FF00FF;
     /* Cosmic Cyan */
-    --purple: #800080;
+    --cyan: #00FFFF;
     /* Mystical Purple */
-    --teal: #008080;
+    --purple: #800080;
     /* Transcendent Teal */
-    --gold: #FFD700;
+    --teal: #008080;
     /* Divine Gold */
-    --orange: #FFA500;
+    --gold: #FFD700;
     /* Energetic Orange */
-    --black: #000000;
+    --orange: #FFA500;
     /* Onyx Black */
-    --grey: #808080;
+    --black: #000000;
     /* Gun Metal Grey */
-    --white: #FFFFFF;
+    --grey: #808080;
     /* Pearl White */
+    --white: #FFFFFF;
 }
 
 /* ------------------------------------------------- General */
@@ -218,6 +218,25 @@ a.category-badge>span.badge:hover {
 
 input[name='q']::placeholder {
     color: var(--grey);
+}
+
+/* ------------------------------- blog */
+
+.blog-image-container {
+    max-height: 35vh;
+    overflow: hidden;
+}
+
+.image-crop {
+    height: 35vh;
+    overflow: hidden;
+}
+
+/* Center the image horizontally */
+.image-crop img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
 }
 
 /* ------------------------------- paginator */
@@ -500,7 +519,7 @@ input[name='q']::placeholder {
     }
 }
 
-/* Remove left and right padding from navbar elements so that content stays on one row on smaller devices */
+/* Remove left and right padding from navbar elements so that content stays on one row on smaller devices, reduce social icon size, reduce font size on buttons */
 @media (max-width: 400px) {
     .navbar {
         padding-left: 0;
@@ -510,5 +529,17 @@ input[name='q']::placeholder {
 
     .social-icons {
         font-size: xx-small;
+    }
+
+    .btn-primary, .btn-secondary, .btn-black {
+        font-size: small;
+    }
+}
+
+/* Remove Admin Settings and Site Link Shortcuts from Account dropdown on screens with a display height smaller than 555px, i.e. a rotated mobile device */
+@media (max-height: 555px) {
+    #admin-settings,
+    #site-links {
+        display: none;
     }
 }
