@@ -23,7 +23,7 @@
           {% for about_page in about_pages %}
             <h3 class="pl-3"><a href="{% url 'about_page_detail' pk=about_page.pk %}">{{ about_page.title }}</a></h3>
           {% empty %}
-            <p>No about pages yet.</p>
+            <p class="text-danger">No about pages yet.</p>
           {% endfor %}
         </div>
     </div>

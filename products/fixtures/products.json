@@ -4,8 +4,8 @@
         "model": "products.product",
         "fields": {
             "sku": "pp5001340155",
-            "name": "StellarSky Crop Top",
-            "description": "Embrace the stars with our StellarSky Crop Top! This trendy and lightweight garment is a celestial delight, featuring a dreamy design that will make you feel like you're floating among the constellations. Crafted from soft, breathable fabric, it's perfect for sunny days or pairing with your favorite high-waisted jeans. Stand out from the crowd with this cosmic fashion statement!",
+            "name": "FunkyFusion Crop Top",
+            "description": "Description: Embrace the vibrant energy of our Funky Fusion Crop Top! This bright yellow, blue, and pink crop top is perfect for adding a splash of color to your wardrobe. With its funky design and comfortable fit, it's an ideal choice for any fun-loving fashionista.",
             "has_sizes": "True",
             "price": 24.99,
             "category": 1,
@@ -19,8 +19,8 @@
         "model": "products.product",
         "fields": {
             "sku": "pp5001340156",
-            "name": "RetroRevive Hoodie",
-            "description": "Take a trip down memory lane with our RetroRevive Hoodie! Nostalgia meets modern comfort in this iconic sweatshirt, which boasts a fusion of vintage aesthetics and contemporary craftsmanship. Whether you're chilling at home or out and about, this hoodie will keep you cozy and stylish. Revive the past in a bold new way!",
+            "name": "CosmicChill Hoodie",
+            "description": "Step into the cosmos with our Cosmic Chill Hoodie! This trendy hoodie features a mesmerizing cosmic print that will take your style to another dimension. Stay warm and stylish as you explore the universe of fashion.",
             "has_sizes": "True",
             "price": 39.99,
             "category": 6,
@@ -34,7 +34,7 @@
         "model": "products.product",
         "fields": {
             "sku": "pp5001340157",
-            "name": "ArtisanAura Mug",
+            "name": "CelestialCosmic Mug",
             "description": "Sip your morning brew in style with our ArtisanAura Mug! Each mug is a masterpiece, handcrafted by skilled artisans, making every piece a unique work of art. The blend of earthy tones and elegant brushstrokes will awaken your senses and add a touch of creativity to your daily routine. Elevate your coffee moments with this one-of-a-kind mug!",
             "has_sizes": "False",
             "price": 14.99,
@@ -49,8 +49,8 @@
         "model": "products.product",
         "fields": {
             "sku": "pp5001340158",
-            "name": "Nature's Canvas Chopping Board",
-            "description": "Channel your inner chef with Nature's Canvas Chopping Board! Crafted from sustainable bamboo, this beautiful and durable board is not only a kitchen essential but also a stunning piece of natural art. Its intricate wood grain patterns and smooth texture make food preparation an artistic experience. A functional masterpiece for your culinary adventures!",
+            "name": "UrbandDesign Glass Chopping Board",
+            "description": "Elevate your culinary experience with our UrbanDesign Chopping Board. This artistic masterpiece showcases iconic buildings in a unique and eye-catching design, perfect for adding a touch of charm to your kitchen.",
             "has_sizes": "False",
             "price": 29.99,
             "category": 7,
@@ -79,8 +79,8 @@
         "model": "products.product",
         "fields": {
             "sku": "pp5001340160",
-            "name": "Elegance Embroidered Apron",
-            "description": "Cook with grace and elegance wearing our Elegance Embroidered Apron! Crafted from premium fabrics, this apron is not only a shield against splatters but also a stylish accessory for the kitchen. The delicate embroidery adds a touch of sophistication, making you feel like a master chef in your own culinary kingdom!",
+            "name": "CosmicDreams Apron",
+            "description": "Cook with grace and elegance with our CosmicDreams Apron. The cosmic print adds an artistic touch to your cooking adventures, while keeping you protected and looking fabulous. Crafted from premium fabrics, this apron is not only a shield against splatters but also a stylish accessory for the kitchen. The high quality print adds a touch of sophistication, making you feel like a master chef in your own culinary kingdom!",
             "has_sizes": "False",
             "price": 21.99,
             "category": 2,
@@ -94,8 +94,8 @@
         "model": "products.product",
         "fields": {
             "sku": "pp5001340161",
-            "name": "AquaGlow Bikini",
-            "description": "Dive into the waves with our AquaGlow Bikini! This two-piece swimsuit boasts a vibrant color palette that complements your sun-kissed skin. The soft, stretchy fabric ensures a comfortable fit, while the trendy design guarantees you'll make a splash wherever you go. Get ready to shine like a mermaid under the summer sun!",
+            "name": "FunkyFusion Bikini",
+            "description": "Dive into the waves with confidence in our FunkyFusion Bikini. This lively blue, yellow, and pink bikini is sure to turn heads at the beach or poolside, ensuring you stand out with its funky style.",
             "has_sizes": "True",
             "price": 29.99,
             "category": 5,
@@ -185,7 +185,7 @@
         "fields": {
             "sku": "pp5001340167",
             "name": "Lumina iPhone 14 Case",
-            "description": "Illuminate your phone with the Lumina iPhone 14 Case! This sleek and stylish case not only provides maximum protection for your device but also adds a touch of radiance to your everyday life. The translucent back showcases the beauty of your iPhone while keeping it safe from scratches and drops. Shine bright with Lumina!",
+            "description": "Illuminate your phone with the Lumina iPhone 14 Case! This sleek and stylish case not only provides maximum protection for your device but also adds a touch of radiance to your everyday life. The green and gold back adds to the beauty of your iPhone while keeping it safe from scratches and drops. Shine bright with Lumina!",
             "has_sizes": "False",
             "price": 18.99,
             "category": 10,
@@ -199,8 +199,8 @@
         "model": "products.product",
         "fields": {
             "sku": "pp5001340168",
-            "name": "SakuraSilk Kimono",
-            "description": "Drift into a world of tranquility and beauty with our SakuraSilk Kimono! Inspired by the elegance of Japanese cherry blossoms, this kimono envelops you in silky-smooth comfort and exquisite floral patterns. Whether you're lounging at home or attending a special event, the SakuraSilk Kimono will make you feel like a graceful blossom in full bloom.",
+            "name": "EnchantingStardust Kimono",
+            "description": "Drift into a world of tranquility and beauty with our EnchantingStardust Kimono! This kimono envelops you in silky-smooth comfort and exquisite cosmic patterns. Ideal for lounging around the home.",
             "has_sizes": "True",
             "price": 36.99,
             "category": 2,
@@ -214,10 +214,10 @@
         "model": "products.product",
         "fields": {
             "sku": "pp5001340169",
-            "name": "EnchantedGarden Mouse Mat",
-            "description": "Add a touch of enchantment to your workspace with the EnchantedGarden Mouse Mat! This mouse pad features a mesmerizing botanical design that transports you to a world of magical flora. The smooth surface ensures precise tracking for your mouse, while the stunning visuals spark creativity and imagination. Work becomes a delightful journey in the EnchantedGarden!",
+            "name": "DreamBridge Mouse Mat",
+            "description": "Add a touch of enchantment to your workspace with the DreamBridge Mouse Mat! This mouse pad features a mesmerizing visionary design of a bridge connecting a mountain town will transport you to a world of artistic wonder and relaxation. The smooth surface ensures precise tracking for your mouse, while the stunning visuals spark creativity and imagination.",
             "has_sizes": "False",
-            "price": 12.99,
+            "price": 17.99,
             "category": 10,
             "rating": 4.6,
             "image_url": "",
@@ -229,10 +229,10 @@
         "model": "products.product",
         "fields": {
             "sku": "pp5001340170",
-            "name": "Wanderlust Notebook",
-            "description": "Capture your thoughts and dreams in the Wanderlust Notebook! This elegant and portable journal is the perfect companion for your explorations, providing ample space for your musings, travel plans, and sketches. With its premium paper and sophisticated cover design, the Wanderlust Notebook inspires creativity and wanderlust with every page.",
+            "name": "Galactic Notebook",
+            "description": "Capture your thoughts and dreams in the Galactic Notebook! This elegant and portable journal is the perfect companion for your explorations, providing ample space for your musings, travel plans, and sketches. With its premium paper and sophisticated cover design, the Galactic Notebook inspires creativity and wanderlust with every page.",
             "has_sizes": "False",
-            "price": 15.99,
+            "price": 12.99,
             "category": 8,
             "rating": 4.8,
             "image_url": "",
@@ -244,10 +244,10 @@
         "model": "products.product",
         "fields": {
             "sku": "pp5001340171",
-            "name": "ArcticBreeze Puffer Jacket",
-            "description": "Brave the cold in style with our ArcticBreeze Puffer Jacket! This ultra-warm and lightweight jacket keeps you snug and fashionable during chilly days. Its modern silhouette and premium insulation make it a must-have for any winter wardrobe. Embrace the frosty winds with confidence in the ArcticBreeze!",
+            "name": "InterGalactic Puffer Jacket",
+            "description": "Brave the cold in style with our InterGalactic Puffer Jacket! This ultra-warm and lightweight jacket keeps you snug and fashionable during chilly days. Its modern silhouette and premium insulation make it a must-have for any winter wardrobe. Embrace the frosty winds with confidence in the InterGalactic!",
             "has_sizes": "True",
-            "price": 49.99,
+            "price": 59.99,
             "category": 6,
             "rating": 4.5,
             "image_url": "",
@@ -260,7 +260,7 @@
         "fields": {
             "sku": "pp5001340172",
             "name": "MindfulEscape Jigsaw Puzzle",
-            "description": "Immerse yourself in tranquility with the MindfulEscape Jigsaw Puzzle! This artful puzzle features a captivating landscape that encourages mindfulness and relaxation. With its high-quality pieces and exquisite design, completing the puzzle becomes a meditative journey, allowing you to escape from the bustle of everyday life and find serenity in each piece.",
+            "description": "Immerse yourself in tranquility with the MindfulEscape Jigsaw Puzzle! This artful puzzle features a captivating visionary pattern that encourages mindfulness and relaxation. With its high-quality pieces and exquisite design, completing the puzzle becomes a meditative journey, allowing you to escape from the bustle of everyday life and find serenity in each piece.",
             "has_sizes": "False",
             "price": 22.99,
             "category": 4,
@@ -289,8 +289,8 @@
         "model": "products.product",
         "fields": {
             "sku": "pp5001340174",
-            "name": "Wanderlust Suitcase",
-            "description": "Satiate your wanderlust with our Wanderlust Suitcase! Designed for adventurers and explorers, this sturdy and stylish suitcase accompanies you on all your journeys. With its spacious interior, smooth wheels, and durable construction, it ensures your belongings travel in comfort and safety. Embark on new adventures with the Wanderlust Suitcase as your loyal companion.",
+            "name": "Nightlife Suitcase",
+            "description": "Satiate your wanderlust with our Nightlife Suitcase! Designed for adventurers and explorers, this sturdy and stylish suitcase accompanies you on all your journeys. With its spacious interior, smooth wheels, and durable construction, it ensures your belongings travel in comfort and safety. This suitcase is adorned with a captivating city night theme, making your travels both chic and adventurous. Embark on new adventures with the NightLife Suitcase as your loyal companion.",
             "has_sizes": "False",
             "price": 99.99,
             "category": 8,
@@ -304,10 +304,10 @@
         "model": "products.product",
         "fields": {
             "sku": "pp5001340175",
-            "name": "SereneScape T-Shirt",
-            "description": "Find peace in simplicity with our SereneScape T-Shirt! This soft and breathable tee features a minimalist design that speaks volumes about your appreciation for calm and harmony. Whether you're out and about or lounging at home, the SereneScape T-Shirt adds a touch of zen to your wardrobe, reminding you to embrace tranquility in every moment.",
+            "name": "FunkyFusion T-Shirt",
+            "description": "Express yourself with our Funky Fusion T-Shirt. Its playful pink, blue, and pink design adds a burst of color to your wardrobe, making it a go-to choice for casual outings!",
             "has_sizes": "True",
-            "price": 18.99,
+            "price": 19.99,
             "category": 9,
             "rating": 4.7,
             "image_url": "",
@@ -319,8 +319,8 @@
         "model": "products.product",
         "fields": {
             "sku": "pp5001340176",
-            "name": "ZenVibe Yoga Mat",
-            "description": "Elevate your yoga practice with our ZenVibe Yoga Mat! This premium mat combines cushioned support and a calming design, allowing you to find your inner balance during each session. The non-slip surface ensures stability, and the soothing visuals inspire mindfulness and focus. Discover the perfect union of body and mind with the ZenVibe Yoga Mat.",
+            "name": "CosmicHarmony Yoga Mat",
+            "description": "Elevate your yoga practice with our CosmicHarmony Yoga Mat! This premium mat combines cushioned support and a calming design, allowing you to find your inner balance during each session. The non-slip surface ensures stability, and the soothing visuals inspire mindfulness and focus. The cosmic space design sets the perfect ambiance for your yoga and meditation sessions. Discover the perfect union of body and mind with the CosmicHarmony Yoga Mat.",
             "has_sizes": "False",
             "price": 28.99,
             "category": 3,
@@ -334,8 +334,8 @@
         "model": "products.product",
         "fields": {
             "sku": "pp5001340188",
-            "name": "Wireless Charger",
-            "description": "Embrace the future of charging with our Wireless Charger! Say goodbye to tangled cables and effortlessly power up your compatible devices by simply placing them on the charging pad. The sleek and compact design complements any workspace or bedside table, and the fast charging capabilities ensure your devices are ready to go in no time. Experience the convenience of wireless charging with our cutting-edge technology.",
+            "name": "VisionaryCharge Wireless Charger",
+            "description": "Embrace the future of charging with our Wireless Charger! Say goodbye to tangled cables and effortlessly power up your compatible devices by simply placing them on the charging pad. The sleek and compact design complements any workspace or bedside table, and the fast charging capabilities ensure your devices are ready to go in no time. The design pattern adds a touch of artistry to your charging routine. Experience the convenience of wireless charging with our cutting-edge technology.",
             "has_sizes": "False",
             "price": 26.99,
             "category": 10,
@@ -349,8 +349,8 @@
         "model": "products.product",
         "fields": {
             "sku": "pp5001340189",
-            "name": "Wireless Earphones",
-            "description": "Elevate your audio experience with our Wireless Earphones! These sleek and ergonomic earbuds deliver crystal-clear sound and deep bass, allowing you to immerse yourself in your favorite music or podcasts. The wireless design offers freedom of movement, while the noise-canceling feature blocks out distractions, providing a truly immersive listening experience. With their long battery life and comfortable fit, our Wireless Earphones are your perfect audio companion on the go.",
+            "name": "TranquilTemple Wireless Earphones",
+            "description": "Immerse yourself in music with our Tranquil Temple Wireless Earphones! These sleek and ergonomic earbuds deliver crystal-clear sound and deep bass, allowing you to immerse yourself in your favorite music or podcasts. The wireless design offers freedom of movement, while the noise-canceling feature blocks out distractions, providing a truly immersive listening experience. With their long battery life and comfortable fit, our Wireless Earphones are your perfect audio companion on the go. The visionary temple design adds a touch of serenity to your audio experience.",
             "has_sizes": "False",
             "price": 49.99,
             "category": 10,
@@ -379,7 +379,7 @@
         "model": "products.product",
         "fields": {
             "sku": "pp5001340187",
-            "name": "Bedside Lamp",
+            "name": "DreamBridge Bedside Lamp",
             "description": "Illuminate your space with our Bedside Lamp! This elegant and versatile lamp adds a touch of warmth and ambiance to your bedroom or living room. The adjustable brightness settings allow you to create the perfect atmosphere for reading, relaxing, or winding down after a long day. With its sleek design and soft glow, the Bedside Lamp is both functional and stylish, enhancing any room with its presence.",
             "has_sizes": "False",
             "price": 32.99,
@@ -388,5 +388,20 @@
             "image_url": "",
             "image": "lamp.png"
         }
-    }    
+    },
+    {
+        "pk": 27,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5001340188",
+            "name": "FireFly T-Shirt",
+            "description": "Express yourself with our colourful FireFly T-Shirt. Its dark design with bright fireflies adds a burst of color to your wardrobe, making it stand out wherever you go",
+            "has_sizes": "True",
+            "price": 19.99,
+            "category": 9,
+            "rating": 4.7,
+            "image_url": "",
+            "image": "t-shirt2.png"
+        }
+    }
 ]
