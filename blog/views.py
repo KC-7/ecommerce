@@ -69,3 +69,33 @@ def delete_blog_page(request, pk):
     blog.delete()
     messages.success(request, 'Blog Post Deleted!')
     return redirect(reverse('blog'))
+
+
+@login_required
+def edit_blog_page(request, pk):
+    """ Edit a blog post """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only admins can do that.')
+        return redirect(reverse('blog'))
+
+    blog = get_object_or_404(BlogPage, pk=pk)
+
+    if request.method == 'POST':
+        form = BlogPageForm(request.POST, request.FILES, instance=blog)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated blog post!')
+            return redirect(reverse('blog_page_detail', kwargs={'pk': pk}))
+        else:
+            messages.error(request, 'Failed to update blog page. Please ensure the form is valid.')
+    else:
+        form = BlogPageForm(instance=blog)
+        messages.info(request, f'You are editing {blog.title}')
+
+    template = 'blog/edit_blog_page.html'
+    context = {
+        'form': form,
+        'blog': blog,
+    }
+
+    return render(request, template, context)

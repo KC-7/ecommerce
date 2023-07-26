@@ -38,7 +38,7 @@
                         <button type="submit" class="btn btn-danger">Delete</button>
                     </form>
                 </div>
-                <div class="col-4 text-right"><a href="#" class="btn btn-secondary">Edit</a></div>
+                <div class="col-4 text-right"><a href="{% url 'edit_blog_page' pk=blog_page.pk %}" class="btn btn-secondary">Edit</a></div>
             {% endif %}
         </div>
     </div>

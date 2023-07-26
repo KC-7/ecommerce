@@ -47,7 +47,7 @@ body {
 }
 
 footer {
-    margin-top: auto;
+    margin-top: auto !important;
     /* Set footer position to be fixed at the bottom */
     position: relative;
     left: 0;

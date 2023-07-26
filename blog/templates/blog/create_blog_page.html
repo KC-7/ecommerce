@@ -30,8 +30,8 @@
                     {{ field }}
                 {% endif %}
             {% endfor %}
-          <button type="submit" class="btn btn-primary">Create</button>
-          <a href="{% url 'blog' %}" class="btn btn-secondary">Cancel</a>
+          <button type="submit" class="btn btn-primary float-right mx-2">Create</button>
+          <a href="{% url 'blog' %}" class="btn btn-secondary float-right mx-2">Cancel</a>
         </form>
         {% if error_message %}
         <div class="alert alert-danger mt-3">
