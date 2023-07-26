@@ -5,6 +5,7 @@ from django.contrib import messages
 from django.urls import reverse
 from .models import BlogPage
 from .forms import BlogPageForm
+from datetime import datetime
 
 
 def blog(request):
@@ -46,6 +47,19 @@ def create_blog_page(request):
 def blog_page_detail(request, pk):
     blog_page = get_object_or_404(BlogPage, pk=pk)
 
+    # Get all blog pages ordered by created_at
+    all_blog_pages = BlogPage.objects.all().order_by('created_at')
+
+    # Find the index of the current blog page
+    current_index = list(all_blog_pages).index(blog_page)
+
+    # Calculate the index of the next and previous blog pages
+    next_index = current_index + 1
+    prev_index = current_index - 1
+
+    next_blog_page = all_blog_pages[next_index] if next_index < len(all_blog_pages) else None
+    prev_blog_page = all_blog_pages[prev_index] if prev_index >= 0 else None
+
     if request.method == 'POST':
         form = BlogPageForm(request.POST, instance=blog_page)
         if form.is_valid():
@@ -54,7 +68,12 @@ def blog_page_detail(request, pk):
 
     form = BlogPageForm(instance=blog_page)
     template = 'blog/blog_page_detail.html'
-    context = {'blog_page': blog_page, 'form': form}
+    context = {
+        'blog_page': blog_page,
+        'form': form,
+        'next_blog_page': next_blog_page,
+        'prev_blog_page': prev_blog_page,
+    }
     return render(request, template, context)
 
 

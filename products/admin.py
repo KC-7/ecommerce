@@ -1,16 +1,18 @@
 from django.contrib import admin
 from .models import Product, Category
+from django.utils.html import format_html
 
 
 class ProductAdmin(admin.ModelAdmin):
     list_display = (
+        'pk',
         'sku',
         'name',
         'category',
         'price',
         'rating',
-        'image',
         'has_sizes',
+        'image_preview',
     )
 
     search_fields = ['sku', 'name']
@@ -30,10 +32,17 @@ class ProductAdmin(admin.ModelAdmin):
         self.message_user(
             request, "Sizes have been removed from the selected products."
             )
+    
+    def image_preview(self, obj):
+        if obj.image:
+            return format_html('<img src="{}" style="max-height: 100px; max-width: 100px;" />', obj.image.url)
+        return "No Image"
+    image_preview.short_description = 'Image Preview'
 
 
 class CategoryAdmin(admin.ModelAdmin):
     list_display = (
+        'pk',
         'friendly_name',
         'name',
     )

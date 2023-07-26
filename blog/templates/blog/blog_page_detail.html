@@ -27,6 +27,20 @@
                 <div class="pl-3 pt-3">{{ blog_page.content|safe }}</div>
                 <div class="text-right">Created: {{ blog_page.created_at }}</div>
                 <hr>
+                <!-- Next and Previous Blog Post Buttons -->
+                <div class="row">
+                    <div class="col-6">
+                        {% if prev_blog_page %}
+                            <a href="{% url 'blog_page_detail' pk=prev_blog_page.pk %}">&laquo; Previous Blog</a>
+                        {% endif %}
+                    </div>
+                    <div class="col-6 text-right">
+                        {% if next_blog_page %}
+                            <a href="{% url 'blog_page_detail' pk=next_blog_page.pk %}">Next Blog &raquo;</a>
+                        {% endif %}
+                    </div>
+                </div>
+                <hr>
             </div>
             <div class="col-4">
                 <a href="{% url 'blog' %}" class="btn btn-primary">Back</a>
@@ -41,6 +55,7 @@
                 <div class="col-4 text-right"><a href="{% url 'edit_blog_page' pk=blog_page.pk %}" class="btn btn-secondary">Edit</a></div>
             {% endif %}
         </div>
+        <hr>
     </div>
 </div>
 {% endblock %}

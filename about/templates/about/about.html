@@ -31,7 +31,7 @@
         <div class="col text-end">
             <a href="{% url 'home' %}" class="btn btn-primary">Home Page</a>
             {% if user.is_superuser %}
-                <a href="{% url 'create_about_page' %}" class="btn btn-secondary float-right">Create New About Page</a>
+                <a href="{% url 'create_about_page' %}" class="btn btn-secondary float-right">Create About Page</a>
             {% endif %}
         </div>
     </div>
