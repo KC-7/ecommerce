@@ -143,6 +143,22 @@ def delete_product(request, product_id):
         return redirect(reverse('home'))
 
     product = get_object_or_404(Product, pk=product_id)
-    product.delete()
-    messages.success(request, 'Product deleted!')
-    return redirect(reverse('products'))
+
+    if request.method == "POST":
+        username = request.POST.get("username")
+
+        if username == request.user.username:
+            product.delete()
+            messages.success(request, 'Product deleted!')
+            return redirect(reverse('products'))
+
+        else:
+            messages.error(request, 'Incorrect username. Product was not deleted.')
+            return render(request, 'products/delete_product.html', {'product': product})
+
+    template = 'products/delete_product.html'
+    context = {
+        'product': product,
+    }
+
+    return render(request, template, context)

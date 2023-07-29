@@ -32,7 +32,7 @@ ALLOWED_HOSTS = ['.herokuapp.com', '.gitpod.io', 'localhost']
 
 # Live Site Link
 if 'DEVELOPMENT' in os.environ:
-    LIVE_LINK = 'https://8000-kc7-ecommerce-fufk6r724j5.ws-eu102.gitpod.io'
+    LIVE_LINK = 'https://8000-kc7-ecommerce-lpopmyy4k0s.ws-eu102.gitpod.io/'
 else:
     LIVE_LINK = 'https://kc-ecommerce-434e6f88dca9.herokuapp.com/'
 

@@ -59,6 +59,9 @@ footer {
     color: var(--gold) !important;
 }
 
+.text-hover-purple:hover {
+    color: var(--purple) !important;
+}
 
 .form-group {
     max-width: 100vw;
@@ -101,6 +104,12 @@ a:hover {
     color: var(--gold);
     text-decoration: none;
 }
+
+.hover-bg:hover {
+    background-color: var(--gold);
+    transition: background-color 0.2s ease-in-out;
+    padding: 9px;
+  }
 
 /* from Bulma */
 .icon {
@@ -218,6 +227,11 @@ a.category-badge>span.badge:hover {
 
 input[name='q']::placeholder {
     color: var(--grey);
+}
+
+.responsive-heading {
+    max-width: 100%;
+    overflow: hidden;
 }
 
 /* ------------------------------- blog */
@@ -352,16 +366,7 @@ input[name='q']::placeholder {
     overflow-y: auto;
 }
 
-/* -------------------------------- Media Queries */
-
-/* Slightly larger container on xl screens */
-@media (min-width: 1200px) {
-    .container {
-        max-width: 80%;
-    }
-}
-
-/* Allauth form formatting */
+/* -------------------------------- Allauth form formatting */
 
 .allauth-form-inner-content p {
     margin-top: 1.5rem;
@@ -418,7 +423,7 @@ input[name='q']::placeholder {
     /* text-info */
 }
 
-/* Product Form */
+/* -------------------------------- Product Form */
 
 .btn-file {
     position: relative;
@@ -446,7 +451,14 @@ input[name='q']::placeholder {
     border-radius: 0;
 }
 
+/* -------------------------------- Media Queries */
 
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 80%;
+    }
+}
 
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
@@ -474,11 +486,7 @@ input[name='q']::placeholder {
     }
 
     .responsive-heading {
-        font-size: 2rem;
-    }
-
-    .display-4.logo-font.text-black {
-        font-size: 2rem;
+        font-size: large;
     }
 
     .nav-link {
@@ -519,6 +527,16 @@ input[name='q']::placeholder {
     }
 }
 
+@media (max-width: 450px) {
+    .responsive-heading {
+        font-size: large;
+    }
+    
+    .shop-now-button {
+        font-size: large;
+    }
+}
+
 /* Remove left and right padding from navbar elements so that content stays on one row on smaller devices, reduce social icon size, reduce font size on buttons */
 @media (max-width: 400px) {
     .navbar {
@@ -531,7 +549,7 @@ input[name='q']::placeholder {
         font-size: xx-small;
     }
 
-    .btn-primary, .btn-secondary, .btn-black {
+    .btn-primary, .btn-secondary, .btn-black, .dropdown-item {
         font-size: small;
     }
 }

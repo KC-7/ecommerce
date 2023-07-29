@@ -21,7 +21,9 @@
         </div>
         <div class="col-12">
           {% for about_page in about_pages %}
-            <h3 class="pl-3"><a href="{% url 'about_page_detail' pk=about_page.pk %}">{{ about_page.title }}</a></h3>
+            <li class="list-group-item pl-3">
+              <a class="text-black hover-bg" href="{% url 'about_page_detail' pk=about_page.pk %}">{{ about_page.title }}</a>
+            </li>
           {% empty %}
             <p class="text-danger">No about pages yet.</p>
           {% endfor %}

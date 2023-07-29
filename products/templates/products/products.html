@@ -89,9 +89,11 @@
                                 alt="{{ product.name }}">
                         </a>
                         {% endif %}
-                        <div class="card-body pb-0">
-                            <p class="mb-0">{{ product.name }}</p>
-                        </div>
+                        <a href="{% url 'product_detail' product.id %}">
+                            <div class="card-body pb-0">
+                                <p class="mb-0 text-black text-hover-purple">{{ product.name }}</p>
+                            </div>
+                        </a>
                         <div class="card-footer bg-white pt-0 border-0 text-left">
                             <div class="row">
                                 <div class="col">
@@ -113,8 +115,8 @@
 
                                     {% if request.user.is_superuser %}
                                     <small class="float-right">
-                                        <a href="{% url 'edit_product' product.id %}">Edit</a> |
-                                        <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                                        <a class="text-white btn-black bg-purple p-1" href="{% url 'edit_product' product.id %}">Edit</a> |
+                                        <a class="text-white btn-black bg-danger p-1" href="{% url 'delete_product' product.id %}">Delete</a>
                                     </small>
                                     {% endif %}
                                 </div>
@@ -154,10 +156,10 @@
             </div>
         </div>
     </div>
+    <!-- Pagination -->
     {% if is_paginated %}
-    <div class="row">
+    <div class="row pt-1">
         <div class="col-12">
-            <!-- Pagination -->
             <nav aria-label="Page navigation">
                 <ul class="pagination justify-content-center">
                     {% if page_obj.number|add:"-2" > 0 %}
@@ -201,7 +203,13 @@
         </div>
     </div>
     {% endif %}
+    {% if request.user.is_superuser %}        
+        <!-- Add Product Button -->
+        <a href="{% url 'add_product' %}" class="btn btn-black offset-1">Add Product</a>
+    {% endif %}
 </div>
+
+<!-- Back to top button -->
 <div class="btt-button shadow-sm rounded-2 border border-black bg-teal z-index-1">
     <a class="btt-link d-flex h-100">
         <i class="fas fa-arrow-up text-white mx-auto my-auto"></i>
@@ -213,9 +221,11 @@
 {% block postloadjs %}
 {{ block.super }}
 <script type="text/javascript">
+    // Smooth scroll to top when the button is clicked
     $('.btt-link').click(function (e) {
-        window.scrollTo(0, 0)
-    })
+        e.preventDefault();
+        $('html, body').animate({ scrollTop: 0 }, 'slow');
+    });
 </script>
 
 <script type="text/javascript">
