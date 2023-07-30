@@ -11,7 +11,7 @@ from datetime import datetime
 def blog(request):
     blog_pages = BlogPage.objects.all().order_by('-created_at')
     template = 'blog/blog.html'
-    paginate_by = 2  # paginate by posts (sets posts per page)
+    paginate_by = 3  # paginate by posts (sets posts per page)
     paginator = Paginator(blog_pages, paginate_by)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
@@ -79,15 +79,31 @@ def blog_page_detail(request, pk):
 
 @login_required
 def delete_blog_page(request, pk):
-    """ Delete a Blog Post """
+    """ Delete a blog post """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only site admins can do that.')
-        return redirect(reverse('blog'))
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
 
-    blog = get_object_or_404(BlogPage, pk=pk)
-    blog.delete()
-    messages.success(request, 'Blog Post Deleted!')
-    return redirect(reverse('blog'))
+    blog_page = get_object_or_404(BlogPage, pk=pk)
+
+    if request.method == "POST":
+        username = request.POST.get("username")
+
+        if username == request.user.username:
+            blog_page.delete()
+            messages.success(request, 'Blog post deleted!')
+            return redirect(reverse('blog'))
+
+        else:
+            messages.error(request, 'Incorrect username. Blog post was not deleted.')
+            return render(request, 'blog/delete_blog_page.html', {'blog_page': blog_page})
+
+    template = 'blog/delete_blog_page.html'
+    context = {
+        'blog_page': blog_page,
+    }
+
+    return render(request, template, context)
 
 
 @login_required

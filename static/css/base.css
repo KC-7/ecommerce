@@ -234,6 +234,11 @@ input[name='q']::placeholder {
     overflow: hidden;
 }
 
+.img-preview {
+    max-width: 250px;
+    max-height: 250px;
+}
+
 /* ------------------------------- blog */
 
 .blog-image-container {

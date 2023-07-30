@@ -47,14 +47,73 @@ def about_page_detail(request, pk):
     return render(request, template, context)
 
 
+# @login_required
+# def delete_about_page(request, pk):
+#     """ Delete an About Page """
+#     if not request.user.is_superuser:
+#         messages.error(request, 'Sorry, only site admins can do that.')
+#         return redirect(reverse('about'))
+
+#     about_page = get_object_or_404(AboutPage, pk=pk)
+#     about_page.delete()
+#     messages.success(request, 'About Page Deleted!')
+#     return redirect(reverse('about'))
+
+
 @login_required
 def delete_about_page(request, pk):
-    """ Delete an About Page """
+    """ Delete a about page """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only site admins can do that.')
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
+    about_page = get_object_or_404(AboutPage, pk=pk)
+
+    if request.method == "POST":
+        username = request.POST.get("username")
+
+        if username == request.user.username:
+            about_page.delete()
+            messages.success(request, 'About post deleted!')
+            return redirect(reverse('about'))
+
+        else:
+            messages.error(request, 'Incorrect username. About page was not deleted.')
+            return render(request, 'about/delete_about_page.html', {'about_page': about_page})
+
+    template = 'about/delete_about_page.html'
+    context = {
+        'about_page': about_page,
+    }
+
+    return render(request, template, context)
+
+
+@login_required
+def edit_about_page(request, pk):
+    """ Edit a about page """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only admins can do that.')
         return redirect(reverse('about'))
 
-    blog = get_object_or_404(AboutPage, pk=pk)
-    blog.delete()
-    messages.success(request, 'About Post Deleted!')
-    return redirect(reverse('about'))
+    about = get_object_or_404(AboutPage, pk=pk)
+
+    if request.method == 'POST':
+        form = AboutPageForm(request.POST, request.FILES, instance=about)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated about page!')
+            return redirect(reverse('about_page_detail', kwargs={'pk': pk}))
+        else:
+            messages.error(request, 'Failed to update about page. Please ensure the form is valid.')
+    else:
+        form = AboutPageForm(instance=about)
+        messages.info(request, f'You are editing {about.title}')
+
+    template = 'about/edit_about_page.html'
+    context = {
+        'form': form,
+        'about': about,
+    }
+
+    return render(request, template, context)

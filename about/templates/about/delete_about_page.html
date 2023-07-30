@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+  <div class="row">
+    <div class="col"></div>
+  </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+<div class="container my-5 d-flex justify-content-center align-items-center">
+  <div class="row w-75">
+    <div class="col-md-8 offset-md-2">
+      <div class="alert alert-danger" role="alert">
+        Warning! You are about to delete the following about page:
+      </div>
+      <div class="card mb-3 d-flex justify-content-center align-items-center">
+        <div class="row">
+          <h4 class="logo-font text-black my-4">{{ about_page.title }}</h4>
+        </div>
+      </div>
+      <form method="POST" action="{% url 'delete_about_page' pk=about_page.pk %}">
+        {% csrf_token %}
+        {% if user.is_superuser %}
+        <div class="form-group">
+          <label for="username">To confirm deletion, please type your username, {{ user.username }}, in the following
+            input box:</label>
+          <input type="text" class="form-control" id="username" name="username" required>
+        </div>
+        <a href="{% url 'about' %}" class="btn btn-primary float-left">Cancel</a>
+        <button type="submit" class="btn btn-danger float-right">Delete</button>
+        {% else %}
+        <p>You do not have permission to delete this about page.</p>
+        <a href="{% url 'about' %}" class="btn btn-primary">Back to About</a>
+        {% endif %}
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

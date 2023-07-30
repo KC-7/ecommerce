@@ -18,14 +18,14 @@
     <div class="container my-4">
         <div class="row">
             <div class="col-12 col-md-8 offset-1">
-                <h1 class="my-4 text-black">Edit Blog Page</h1>
+                <h1 class="my-4 text-black">Edit About Page</h1>
                 <hr>
             </div>
         </div>
 
         <div class="row">
             <div class="col-12 col-md-8 offset-1">
-                <form method="POST" action="{% url 'edit_blog_page' pk=blog.id %}" class="form mb-2" enctype="multipart/form-data">
+                <form method="POST" action="{% url 'edit_about_page' pk=about.id %}" class="form mb-2" enctype="multipart/form-data">
                     {% csrf_token %}
                     {% for field in form %}
                         {% if field.name != 'image' %}
@@ -35,8 +35,8 @@
                         {% endif %}
                     {% endfor %}
                     <div class="float-right">
-                        <a class="btn btn-primary" href="{% url 'blog' %}">Cancel</a>
-                        <button class="btn btn-secondary" type="submit">Update Blog</button>
+                        <a class="btn btn-primary" href="{% url 'about' %}">Cancel</a>
+                        <button class="btn btn-secondary" type="submit">Update</button>
                     </div>
                 </form>
             </div>            

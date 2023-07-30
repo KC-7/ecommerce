@@ -15,36 +15,36 @@
   <div class="row w-75">
     <div class="col-md-8 offset-md-2">
       <div class="alert alert-danger" role="alert">
-        Warning! You are about to delete the following product:
+        Warning! You are about to delete the following blog post:
       </div>
       <div class="card mb-3 d-flex justify-content-center align-items-center">
         <div class="row">
-            <h4 class="logo-font text-black my-4">{{ product.name }}</h4>
+            <h4 class="logo-font text-black my-4">{{ blog_page.title }}</h4>
         </div>
         <div class="row mb-4">
-            {% if product.image %}
-                <a href="{% url 'product_detail' product.id %}">
-                    <img class="card-img-top img-fluid img-preview" src="{{ product.image.url }}" alt="Image for {{ product.name }}">
+            {% if blog_page.image %}
+                <a href="#">
+                    <img class="card-img-top img-fluid img-preview" src="{{ blog_page.image.url }}" alt="Image for {{ blog_page.title }}">
                 </a>
                 {% else %}
-                <a href="{% url 'product_detail' product.id %}">
-                    <img class="card-img-top img-fluid img-preview" src="{{ MEDIA_URL }}noimage.png" alt="No image to display for {{ product.name }}">
+                <a href="#">
+                    <img class="card-img-top img-fluid img-preview" src="{{ MEDIA_URL }}noimage.png" alt="No image to display for {{ blog_page.title }}">
                 </a>
             {% endif %}
         </div>
       </div>
-      <form method="POST" action="{% url 'delete_product' product.id %}">
+      <form method="POST" action="{% url 'delete_blog_page' pk=blog_page.pk %}">
         {% csrf_token %}
         {% if user.is_superuser %}
         <div class="form-group">
           <label for="username">To confirm deletion, please type your username, {{ user.username }}, in the following input box:</label>
           <input type="text" class="form-control" id="username" name="username" required>
         </div>
-        <button type="submit" class="btn btn-danger float-left">Delete</button>
-        <a href="{% url 'products' %}" class="btn btn-secondary float-right">Cancel</a>
+        <a href="{% url 'blog' %}" class="btn btn-primary float-left">Cancel</a>
+        <button type="submit" class="btn btn-danger float-right">Delete</button>
         {% else %}
-        <p>You do not have permission to delete this product.</p>
-        <a href="{% url 'products' %}" class="btn btn-secondary">Back to Products</a>
+        <p>You do not have permission to delete this blog post.</p>
+        <a href="{% url 'blog' %}" class="btn btn-primary">Back to Blog</a>
         {% endif %}
       </form>
     </div>
