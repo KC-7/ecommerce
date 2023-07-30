@@ -7,6 +7,7 @@ from .forms import AboutPageForm
 
 
 def about(request):
+    """ Display list of about pages """
     about_pages = AboutPage.objects.all().order_by('-created_at')
     template = 'about/about.html'
     context = {'about_pages': about_pages}
@@ -15,6 +16,7 @@ def about(request):
 
 @login_required
 def create_about_page(request):
+    """ Create an about page """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
@@ -33,6 +35,7 @@ def create_about_page(request):
 
 
 def about_page_detail(request, pk):
+    """ Display an about page """
     about_page = get_object_or_404(AboutPage, pk=pk)
 
     if request.method == 'POST':
@@ -47,22 +50,9 @@ def about_page_detail(request, pk):
     return render(request, template, context)
 
 
-# @login_required
-# def delete_about_page(request, pk):
-#     """ Delete an About Page """
-#     if not request.user.is_superuser:
-#         messages.error(request, 'Sorry, only site admins can do that.')
-#         return redirect(reverse('about'))
-
-#     about_page = get_object_or_404(AboutPage, pk=pk)
-#     about_page.delete()
-#     messages.success(request, 'About Page Deleted!')
-#     return redirect(reverse('about'))
-
-
 @login_required
 def delete_about_page(request, pk):
-    """ Delete a about page """
+    """ Delete an about page """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
@@ -91,7 +81,7 @@ def delete_about_page(request, pk):
 
 @login_required
 def edit_about_page(request, pk):
-    """ Edit a about page """
+    """ Edit an about page """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only admins can do that.')
         return redirect(reverse('about'))

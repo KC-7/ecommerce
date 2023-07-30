@@ -40,11 +40,11 @@
           <label for="username">To confirm deletion, please type your username, {{ user.username }}, in the following input box:</label>
           <input type="text" class="form-control" id="username" name="username" required>
         </div>
-        <button type="submit" class="btn btn-danger float-left">Delete</button>
-        <a href="{% url 'products' %}" class="btn btn-secondary float-right">Cancel</a>
+        <a href="{% url 'products' %}" class="btn btn-primary float-left">Cancel</a>
+        <button type="submit" class="btn btn-danger float-right">Delete</button>
         {% else %}
         <p>You do not have permission to delete this product.</p>
-        <a href="{% url 'products' %}" class="btn btn-secondary">Back to Products</a>
+        <a href="{% url 'products' %}" class="btn btn-primary">Back to Products</a>
         {% endif %}
       </form>
     </div>

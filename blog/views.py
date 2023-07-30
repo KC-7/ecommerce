@@ -9,6 +9,7 @@ from datetime import datetime
 
 
 def blog(request):
+    """ Display list of blog posts """
     blog_pages = BlogPage.objects.all().order_by('-created_at')
     template = 'blog/blog.html'
     paginate_by = 3  # paginate by posts (sets posts per page)
@@ -27,6 +28,7 @@ def blog(request):
 
 @login_required
 def create_blog_page(request):
+    """ Create a blog post """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
@@ -45,6 +47,7 @@ def create_blog_page(request):
 
 
 def blog_page_detail(request, pk):
+    """ Display a blog post """
     blog_page = get_object_or_404(BlogPage, pk=pk)
 
     # Get all blog pages ordered by created_at
