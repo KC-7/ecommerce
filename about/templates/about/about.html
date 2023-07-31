@@ -19,7 +19,7 @@
           <hr>
           <p>Check out our about us pages to find out more information. Feel free to contact us if you need anything further.</p>
         </div>
-        <div class="col-12">
+        <div class="col-10 mx-auto">
           {% for about_page in about_pages %}
             <li class="list-group-item pl-3">
               <a class="text-black hover-bg" href="{% url 'about_page_detail' pk=about_page.pk %}">{{ about_page.title }}</a>
@@ -33,7 +33,7 @@
         <div class="col text-end">
             <a href="{% url 'home' %}" class="btn btn-primary">Home Page</a>
             {% if user.is_superuser %}
-                <a href="{% url 'create_about_page' %}" class="btn btn-secondary float-right">Create About Page</a>
+                <a href="{% url 'create_about_page' %}" class="btn btn-secondary float-right">Create New</a>
             {% endif %}
         </div>
     </div>

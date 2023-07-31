@@ -22,12 +22,14 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-12 col-md-4 d-flex justify-content-center align-items-center">
-                {% if avatar.image %}
-                    <img class="img-fluid rounded-circle" src="{{ avatar.image.url }}" alt="{{ user.username }}'s Avatar">
-                {% else %}
-                    <img class="img-fluid rounded-circle" src="{% static 'profiles/img/noimage.png' %}" alt="No Avatar for {{ user.username }}">
-                {% endif %}
+            <div class="col-12 col-md-4 d-flex justify-content-center align-items-center pb-4">
+                <a href="{% url 'avatar_detail' %}">
+                    {% if avatar.image %}
+                        <img class="img-fluid rounded-circle" src="{{ avatar.image.url }}" alt="{{ user.username }}'s Avatar">
+                    {% else %}
+                        <img class="img-fluid rounded-circle" src="{{ MEDIA_URL }}noimage.png" alt="No Avatar for {{ user.username }}">
+                    {% endif %}
+                </a>
             </div>
             <div class="col-12 col-md-8">
                 <h3 class="text-muted">Default Delivery Information</h3>
@@ -41,7 +43,7 @@
         <div class="row mt-4">
             <div class="col-12">
                 <hr>
-                <h3 class="text-muted text-center">Order History</h3>
+                <h3 class="text-muted text-center pb-3">Order History</h3>
                 <div class="order-history table-responsive">
                     <table class="table table-sm table-borderless">
                         <thead>

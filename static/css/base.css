@@ -55,6 +55,14 @@ footer {
     width: 100%;
 }
 
+.custom-hr {
+    margin: 0 0 5px 0;
+    padding: 0;
+    border: none;
+    height: 1px;
+    background-color: var(--gold);
+}
+
 .text-hover-gold:hover {
     color: var(--gold) !important;
 }
@@ -525,6 +533,14 @@ input[name='q']::placeholder {
     .increment-qty,
     .decrement-qty {
         padding: .25rem .5rem !important;
+    }
+
+    .footer-heading {
+        font-size: medium;
+    }
+
+    .footer-text {
+        font-size: small;
     }
 
     .social-icons {

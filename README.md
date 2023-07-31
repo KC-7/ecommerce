@@ -155,6 +155,26 @@ I have customized the editor to only display certain suitable options, for examp
 
 https://ckeditor.com/docs/ckeditor5/latest/installation/getting-started/predefined-builds.html#classic-editor
 
+
+---
+
+### Custom Blog Posts (CRUD)
+
+
+
+---
+
+### Custom About Pages (CRUD)
+
+
+
+---
+
+### Custom Crypto Punk Style Avatars
+
+https://github.com/snoozesecurity/cryptopunkgenerator 
+
+
 ---
 
 ## Python Package Requirements
@@ -185,6 +205,8 @@ The table below lists the Python packages and their respective versions required
 | sqlparse            | 0.4.4    | SQL parsing and formatting library         |
 | stripe              | 5.5.0    | Stripe API library for Python              |
 | urllib3             | 1.26.16  | HTTP client library for Python             |
+
+numpy ###################
 
 ---
 
