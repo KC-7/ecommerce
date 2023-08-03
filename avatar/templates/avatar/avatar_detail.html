@@ -14,7 +14,7 @@
 <div class="overlay"></div>
 <div class="container my-4">
     <div class="row">
-        <div class="col-12 col-md-8 offset-md-2 text-center">
+        <div class="col-12 col-md-8 offset-md-2">
             <h1 class="my-4 text-black">
                 <i class="fas fa-user-circle"></i> 
                 {{ request.user.username }}'s Avatar
@@ -47,7 +47,6 @@
                 {% endif %}
             </div>
         </div>
-        
         <div class="row float-right py-4">
             <a class="btn btn-primary" href="{% url 'profile' %}">Back to Profile</a>
         </div>

@@ -25,15 +25,57 @@
                 <a href="{% url 'about' %}" class="btn btn-primary">Back</a>
             </div>
             {% if user.is_superuser %}
-                <div class="col-4 text-center">
-                    <form method="post" action="{% url 'delete_about_page' pk=about_page.pk %}">
-                        {% csrf_token %}
-                        <button type="submit" class="btn btn-danger">Delete</button>
-                    </form>
-                </div>
-                <div class="col-4 text-right"><a href="{% url 'edit_about_page' pk=about_page.pk %}" class="btn btn-secondary">Edit</a></div>
+            <div class="col-4 text-center">
+                <form method="post" action="{% url 'delete_about_page' pk=about_page.pk %}">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
+            </div>
+            <div class="col-4 text-right"><a href="{% url 'edit_about_page' pk=about_page.pk %}"
+                    class="btn btn-secondary">Edit</a></div>
             {% endif %}
         </div>
     </div>
 </div>
+<!-- Back to top button -->
+<div class="btt-button shadow-sm rounded-2 border border-black bg-teal z-index-1">
+    <a class="btt-link d-flex h-100">
+        <i class="fas fa-arrow-up text-white mx-auto my-auto"></i>
+    </a>
+</div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+<script>
+    // Smooth scroll to top when the button is clicked
+    $('.btt-link').click(function (e) {
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: 0
+        }, 'slow');
+    });
+
+    // Function to toggle the visibility of the scroll-to-top button
+    function toggleScrollToTopButton() {
+        const button = $('.btt-button');
+        const scrollPosition = $(window).scrollTop();
+
+        // Show the button if the scroll position is greater than 0
+        // Otherwise, hide the button
+        if (scrollPosition > 0) {
+            button.removeClass('hide');
+        } else {
+            button.addClass('hide');
+        }
+    }
+
+    // Check the visibility of the button on page load
+    toggleScrollToTopButton();
+
+    // Check the visibility of the button on scroll
+    $(window).scroll(function () {
+        toggleScrollToTopButton();
+    });
+</script>
 {% endblock %}

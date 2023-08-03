@@ -39,6 +39,8 @@ def create_blog_page(request):
             form.save()
             messages.success(request, 'You created a new Blog Page')
             return redirect('blog')
+        else:
+            messages.error(request, 'Form not valid.')
 
     form = BlogPageForm()
     template = 'blog/create_blog_page.html'
@@ -98,8 +100,10 @@ def delete_blog_page(request, pk):
             return redirect(reverse('blog'))
 
         else:
-            messages.error(request, 'Incorrect username. Blog post was not deleted.')
-            return render(request, 'blog/delete_blog_page.html', {'blog_page': blog_page})
+            messages.error(
+                request, 'Incorrect username. Blog post was not deleted.')
+            return render(
+                request, 'blog/delete_blog_page.html', {'blog_page': blog_page})
 
     template = 'blog/delete_blog_page.html'
     context = {
@@ -125,7 +129,10 @@ def edit_blog_page(request, pk):
             messages.success(request, 'Successfully updated blog post!')
             return redirect(reverse('blog_page_detail', kwargs={'pk': pk}))
         else:
-            messages.error(request, 'Failed to update blog page. Please ensure the form is valid.')
+            messages.error(
+                request,
+                'Failed to update blog page. Please ensure the form is valid.'
+                )
     else:
         form = BlogPageForm(instance=blog)
         messages.info(request, f'You are editing {blog.title}')

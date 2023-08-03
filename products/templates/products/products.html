@@ -220,11 +220,33 @@
 
 {% block postloadjs %}
 {{ block.super }}
-<script type="text/javascript">
+<script>
     // Smooth scroll to top when the button is clicked
     $('.btt-link').click(function (e) {
         e.preventDefault();
         $('html, body').animate({ scrollTop: 0 }, 'slow');
+    });
+
+    // Function to toggle the visibility of the scroll-to-top button
+    function toggleScrollToTopButton() {
+        const button = $('.btt-button');
+        const scrollPosition = $(window).scrollTop();
+
+        // Show the button if the scroll position is greater than 0
+        // Otherwise, hide the button
+        if (scrollPosition > 0) {
+            button.removeClass('hide');
+        } else {
+            button.addClass('hide');
+        }
+    }
+
+    // Check the visibility of the button on page load
+    toggleScrollToTopButton();
+
+    // Check the visibility of the button on scroll
+    $(window).scroll(function () {
+        toggleScrollToTopButton();
     });
 </script>
 

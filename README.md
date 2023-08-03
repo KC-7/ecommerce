@@ -580,6 +580,26 @@ I initialized the the git remote by using the following code `heroku git:remote 
     Enumerating objects: 363, done.
     ...
 
+#### Additional Heroku Tips
+
+Use the following commands to interact with Hroku once logged in: 
+
+1. Make Migrations:
+
+    `heroku run python3 manage.py makemigrations -a -kc-ecommerce`
+
+
+2. Migrate:
+
+    `heroku run python3 manage.py migrate -a -kc-ecommerce`
+
+
+3. Load Fixtures:
+
+    `heroku run python3 manage.py loaddata products/fixtures/products.json -a kc-ecommerce`
+
+    `heroku run python3 manage.py loaddata products/fixtures/categories.json -a kc-ecommerce`
+
 ---
 
 ### Programmatic Access for AWS User

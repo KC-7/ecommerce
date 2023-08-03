@@ -106,7 +106,7 @@ footer {
 }
 
 a {
-    color: var(--cyan);
+    color: var(--teal);
     text-decoration: none;
     transition: background-color 0.3s;
     border-radius: 10px;
@@ -180,6 +180,10 @@ a:hover {
 
 .text-black {
     color: var(--black) !important;
+}
+
+.text-cyan {
+    color: var(--cyan) !important;
 }
 
 .bg-black {
