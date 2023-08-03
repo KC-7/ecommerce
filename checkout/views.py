@@ -19,6 +19,7 @@ import json
 
 @require_POST
 def cache_checkout_data(request):
+    """ Cache checkout """
     try:
         # pid is the payment ID
         pid = request.POST.get('client_secret').split('_secret')[0]

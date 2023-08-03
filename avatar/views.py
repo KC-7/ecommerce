@@ -10,17 +10,18 @@ from .models import Avatar
 class CustomSignupView(SignupView):
     """ Creates custom punk avatar when creating new accounts """
     def form_valid(self, form):
-        response = super().form_valid(form)  # Save the user and get the response
-        user = self.user  # The user object is accessible after the form is saved
-        print('Attempting to create punk')
+        # Save the user and get the response
+        response = super().form_valid(form)
+        # The user object is accessible after the form is saved
+        user = self.user
+        # Generate the custom punk for user
         generate_and_save_punk_for_user(user, self.request)
-        print('Successfully generated punk')
         return response
 
 
 @login_required
 def avatar_detail(request):
-    """ Displays Punk and Stats """
+    """ Displays the user's Punk and Stats """
     user = request.user
     try:
         avatar = Avatar.objects.get(user=user)

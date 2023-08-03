@@ -7,6 +7,7 @@ from django.template.defaultfilters import truncatechars
 from datetime import datetime
 
 class BlogPageAdminForm(forms.ModelForm):
+    """ Add CKEditor to admin for blog page """
     content = forms.CharField(widget=CKEditorWidget())
 
     class Meta:
@@ -14,6 +15,7 @@ class BlogPageAdminForm(forms.ModelForm):
         fields = '__all__'
 
 class BlogPageAdmin(admin.ModelAdmin):
+    """ Admin for blog page """
     form = BlogPageAdminForm
     list_display = ['pk', 'title', 'created_at_days_ago', 'short_content', 'preview_image']
     list_display_links = ['pk', 'title']

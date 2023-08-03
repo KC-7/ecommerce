@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 # DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = ['.herokuapp.com', '.gitpod.io', 'localhost']
@@ -244,6 +244,7 @@ else:
 # Site Logo
 SITE_LOGO = 'favicon/android-chrome-192x192.png'
 
+
 # Custom Jazzmin Settings
 JAZZMIN_SETTINGS = {
     # title of the window (Will default to current_admin_site.site_title if absent or None)
@@ -264,15 +265,18 @@ JAZZMIN_SETTINGS = {
     # Logo to use for login form in dark themes (defaults to login_logo)
     "login_logo_dark": SITE_LOGO,
 
+    # Custom user avatar function to display their Punk
+    "user_avatar": SITE_LOGO,
+
     # Welcome text on the login screen
     "welcome_sign": "Welcome to the onlineAI.art Admin Portal",
 
     # Copyright on the footer
-    "copyright": "onlineAI.art Ltd",
+    "copyright": "onlineAI.art Ltd 2023",
 
     # List of model admins to search from the search bar, search bar omitted if excluded
     # If you want to use a single search field you dont need to use a list, you can use a simple string
-    "search_model": ["auth.User", "auth.Group"],
+    "search_model": ["auth.User", "blog.blogpage", "about.aboutpage"],
 
     # Top Menu:
 
@@ -285,11 +289,11 @@ JAZZMIN_SETTINGS = {
         # external url that opens in a new window (Permissions can be added)
         {"name": "Site Link", "url": LIVE_LINK, "new_window": True},
 
-        # model admin to link to (Permissions checked against model)
-        {"model": "auth.User"},
-
         # App with dropdown menu to all its models pages (Permissions checked against models)
         {"app": "products"},
+
+        # model admin to link to (Permissions checked against model)
+        {"model": "avatar.avatar"},
     ],
 
     # User Menu:
@@ -297,28 +301,12 @@ JAZZMIN_SETTINGS = {
     # Additional links to include in the user menu on the top right ("app" url type is not allowed)
     "usermenu_links": [
         {"name": "Site Link", "url": LIVE_LINK, "new_window": True},
+        {"model": "products.product"},
+        {"model": "products.category"},
         {"model": "auth.user"},
+        {"model": "avatar.avatar"},
+        {"model": "blog.blogpage"},
+        {"model": "about.aboutpage"},
         {"name": "Developer", "url": "https://github.com/kc-7", "new_window": True},
     ],
 }
-
-
-# Set the CKEditor configuration options
-# CKEDITOR_CONFIGS = {
-#     'default': {
-#         'toolbar': 'Full',  # You can customize the toolbar as per your needs
-#         'height': 300,     # Set the height of the editor
-#         'width': '100%',   # Set the width of the editor
-#         'allowedContent': True,  # Allow any HTML content
-#         'extraPlugins': ','.join([
-#             'codemirror',  # If you want to enable the CodeMirror plugin for syntax highlighting
-#             'htmlwriter',  # Enables the HTML Writer plugin for importing HTML
-#         ]),
-#     },
-# }
-# CKEDITOR_UPLOAD_PATH = "uploads/"
-# CKEDITOR_IMAGE_BACKEND = 'pillow'
-# CKEDITOR_BROWSE_SHOW_DIRS = True
-# CKEDITOR_RESTRICT_BY_USER = True
-# CKEDITOR_UPLOAD_SLUGIFY_FILENAME = False
-# CKEDITOR_FILENAME_GENERATOR = 'utils.generate_filename'

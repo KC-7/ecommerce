@@ -60,7 +60,11 @@ footer {
     padding: 0;
     border: none;
     height: 1px;
-    background-color: var(--gold);
+    background-color: var(--teal);
+}
+
+.max-height-50 {
+    max-height: 50px;
 }
 
 .text-hover-gold:hover {

@@ -3,6 +3,7 @@ from ckeditor.fields import RichTextField
 
 
 class BlogPage(models.Model):
+    """ Model for blog page """
     title = models.CharField(max_length=200)
     content = RichTextField(blank=True, null=True)
     image = models.ImageField(null=True, blank=True)

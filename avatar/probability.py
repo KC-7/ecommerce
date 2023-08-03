@@ -254,19 +254,3 @@ uniAttr = {
         'smoke01.png': 0.333
     }
 }
-
-
-# def get_attribute_rarity(entity_type, attribute_category, attribute_item):
-#     try:
-#         # check if the entity_type is in the predefined list
-#         if entity_type in ['ape', 'male', 'zombie', 'female', 'alien', 'uni']:
-#             # get the attribute dictionary for the specific entity_type
-#             attrs_dict = globals()[f"{entity_type}Attr"]
-#             # get the attribute_category dictionary from the attribute dictionary
-#             attr_category_dict = attrs_dict.get(attribute_category, None)
-#             # if the attribute_category exists, get the attribute_item probability
-#             if attr_category_dict is not None:
-#                 return attr_category_dict.get(attribute_item, None)
-#         return None
-#     except Exception as e:
-#         return None

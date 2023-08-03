@@ -4,6 +4,7 @@ from .models import AboutPage
 
 
 class AboutPageForm(forms.ModelForm):
+    """ Form for about page """
     class Meta:
         model = AboutPage
         fields = ['title', 'content']

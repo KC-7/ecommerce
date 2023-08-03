@@ -5,6 +5,7 @@ from .models import BlogPage
 
 
 class BlogPageForm(forms.ModelForm):
+    """ Form for blog page """
     class Meta:
         model = BlogPage
         fields = ['title', 'content', 'image']

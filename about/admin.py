@@ -5,6 +5,7 @@ from .models import AboutPage
 
 
 class AboutPageAdminForm(forms.ModelForm):
+    """ Add CKEditor to admin for about page """
     content = forms.CharField(widget=CKEditorWidget())
 
     class Meta:
@@ -13,6 +14,7 @@ class AboutPageAdminForm(forms.ModelForm):
 
 
 class AboutPageAdmin(admin.ModelAdmin):
+    """ Admin for about page """
     form = AboutPageAdminForm
     list_display = ['pk', 'title', 'created_at']
     list_display_links = ['pk', 'title']
