@@ -25,8 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-# DEBUG = 'DEVELOPMENT' in os.environ
+DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = ['.onlineai.art', '.herokuapp.com', '.gitpod.io', 'localhost']
 
@@ -34,7 +33,7 @@ ALLOWED_HOSTS = ['.onlineai.art', '.herokuapp.com', '.gitpod.io', 'localhost']
 if 'DEVELOPMENT' in os.environ:
     LIVE_LINK = 'https://8000-kc7-ecommerce-lpopmyy4k0s.ws-eu102.gitpod.io/'
 else:
-    LIVE_LINK = 'https://kc-ecommerce-434e6f88dca9.herokuapp.com/'
+    LIVE_LINK = 'https://onlineAI.art/'
 
 
 # Application definition

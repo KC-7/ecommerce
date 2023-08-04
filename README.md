@@ -9,9 +9,9 @@
 
 This is a django project for an E-Commerce Store.
 
-Live Link: https://kc-ecommerce-434e6f88dca9.herokuapp.com/
-
 Custom Domain: [onlineAI.art](onlineAI.art)
+
+Live Link: https://kc-ecommerce-434e6f88dca9.herokuapp.com/
 
 ---
 
@@ -605,6 +605,60 @@ You should now be able to access the application locally.
 
 ---
 
+## Custom Domain & SSL Cert
+
+I set up a custom domain with SSL certification to improve the authencity of the online e-commerce store. The custom domain on Namecheap cost €3 and the Cloudflare account is free.
+
+### Custom Domain Set Up on Namecheap
+
+1. Sign up / login in to Namecheap (or alt domain registrar however please note the following how to is written for Namecheap). Find and purchase suitable domain. While purchasing the domain you should set up Domain Privacy to protect your identity, Namecheap offer this service for free however other registrars charge for this service. 
+
+1. Add your new domain name to `ALLOWED_HOSTS` your `settings.py` file. Your allowed hosts should now look like the following so its accessible locally, on heroku and on the custom domain: 
+
+    `ALLOWED_HOSTS = ['.onlineai.art', '.herokuapp.com', '.gitpod.io', 'localhost']`
+
+1. Use the following in the terminal to check if migrations are required. If needed run as per usual.
+
+    `python3 manage.py makemigrations --dry-run`
+
+    `python3 manage.py migrate --plan`
+
+1. Commit changes to GitHub as per usual: `git add .` ➡️  `git commit -m "Added custom domain to settings.py"` ➡️ `git push`
+
+1. Deploy site on Heroku via the Heroku Dashboard, this will be done automatically when you made the above commit to GitHub if you have Automatic Deploys set up on Heroku.
+
+1. Go to Heroku ➡️ Your App ➡️ Settings ➡️ Domains ➡️ Add Domain ➡️ Enter your custom domain name (eg: customdomain.tdl) ➡️ Sumbit ➡️ Copy the generated "DNS Target"
+
+1. Go to Namecheap (if you have a parking page set up turn it off now) ➡️ Your Domain ➡️ Advanced DNS ➡️ Host Records ➡️ Add New Record ➡️ Type: Alias Record, Host: @, Target: [Paste your Heroku DNS Target Value], TTL: Automatic ➡️ Sumbit
+
+1. Check your new domain URL to see if the page loads (eg. http://customdomain.tdl). Note, we have not set up www. or https yet. 
+
+1. To set up the www. subdomain, go back to Heroku ➡️ Set up new domain as per previous step except this time add www. to the custom domain url (eg. http://customdomain.tdl) ➡️ Copy the new generated "DNS Target"
+
+1. Go back to Namecheap ➡️ Your Domain ➡️ Advanced DNS ➡️ Host Records ➡️ Add New Record ➡️ Type: CNAME, Host: www, Target: [Paste your Heroku DNS Target Value], TTL: 1 min ➡️ Sumbit
+
+1. Test your customdomain with the www. subdomain: (eg. http://www.customdomain.tdl). It may take a couple of minutes to work.
+
+1. Use [DNS Checker](dnschecker.org) website to see if the domain has propegated successfully.
+
+---
+
+### SSL Cert & HTTPS Redirection Set Up on Cloudflare
+
+1. Sign in to / Set up Cloudflare account.
+
+1. From the Cloudflare Home, go to ➡️ Add a site ➡️ Enter your domain name ➡️ Select Free Plan ➡️ Review DNS Records & Continue (No changes required) ➡️ From Change Your Nameservers, copy the Nameservers (1 & 2)
+
+1. Open Namecheap in new tab, go to ➡️ Your domain ➡️ Domain ➡️ Nameservers ➡️ Custom DNS ➡️ Copy the nameservers from Cloudflare in above step to the Nameservers 1 & 2 ➡️ Submit
+
+1. Go back to Cloudfare and click confirm to check the Nameservers ➡️ Configure Domain Settings: Automatic HTTPS = Yes, always use HTTPS = Yes, Optimize preformace with Brotli = Yes ➡️ Done
+
+1. Click "Check Nameservers" to confirm above steps have worked (this may take a while). When ready you will see a "Cloudlflare is protecting your site" confirmation message on the Cloudflare site overview
+
+1. Your site will now redirect to do HTTPS and will have a valid SSL Certificate (eg. https://customdomain.tdl / https://www.customdomain.tdl)
+
+---
+
 ## Bugs & Issues
 
 ### Allauth Templates Directory Not Found
@@ -905,7 +959,7 @@ Throughout the development, I have aimed to meet the following learning outcomes
 
 ## Resources
 
-### Technologies Used
+### Useful Links
 
 Here is a list of useful links that were used as part of the project. Thanks to all contributers to the below content and services.
 
@@ -928,6 +982,16 @@ Here is a list of useful links that were used as part of the project. Thanks to 
 | [Shields.io](https://shields.io/)                                                  | To add badges to the projects documentation |
 
 -------------CKEDITOR
+
+- Custom Domain:
+[Youtube: Use namecheap domain with Heroku hosting](https://www.youtube.com/watch?v=51j_mhje9Kk)
+[Youtube: Free SSL cert with Cloudflare](https://www.youtube.com/watch?v=Y4iHXhRkpO4)
+[YouTube: Gmail Custom Email Domain on Cloudflare using ImprovMX](https://www.youtube.com/watch?v=T4n8EvtVDBE)
+[ImprovMX Website to create free Alias](https://improvmx.com/)
+[]()
+[]()
+[]()
+[]()
 
 ---
 
