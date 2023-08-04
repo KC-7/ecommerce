@@ -6,90 +6,90 @@
 {% endblock %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
-    </div>
+<div class="container header-container">
+  <div class="row">
+    <div class="col"></div>
+  </div>
+</div>
 {% endblock %}
 
 {% block content %}
-    <div class="overlay"></div>
-    <div class="container my-4">
-        <div class="row">
-            <div class="col-12 col-md-8 offset-1">
-                <h1 class="my-4 text-black"><i class="fas fa-blog"></i> Edit Blog Page</h1>
-                <hr>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-12 col-md-8 offset-1">
-                <form method="POST" action="{% url 'edit_blog_page' pk=blog.id %}" class="form mb-2" enctype="multipart/form-data">
-                    {% csrf_token %}
-                    {% for field in form %}
-                        {% if field.name != 'image' %}
-                            {{ field | as_crispy_field }}
-                        {% else %}
-                            {{ field }}
-                        {% endif %}
-                    {% endfor %}
-                    <div class="float-right">
-                        <a class="btn btn-primary" href="{% url 'blog' %}">Cancel</a>
-                        <button class="btn btn-secondary" type="submit">Update Blog</button>
-                    </div>
-                </form>
-            </div>            
-        </div>
+<div class="overlay"></div>
+<div class="container my-4">
+  <div class="row">
+    <div class="col-12 col-md-8 offset-1">
+      <h1 class="my-4 text-black"><i class="fas fa-blog"></i> Edit Blog Page</h1>
+      <hr>
     </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12 col-md-8 offset-1">
+      <form method="POST" action="{% url 'edit_blog_page' pk=blog.id %}" class="form mb-2"
+        enctype="multipart/form-data">
+        {% csrf_token %}
+        {% for field in form %}
+        {% if field.name != 'image' %}
+        {{ field | as_crispy_field }}
+        {% else %}
+        {{ field }}
+        {% endif %}
+        {% endfor %}
+        <div class="float-right">
+          <a class="btn btn-primary" href="{% url 'blog' %}">Cancel</a>
+          <button class="btn btn-secondary" type="submit">Update Blog</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
 {% endblock %}
 
 {% block postloadjs %}
-
 <script>
-    ClassicEditor
-      .create(document.querySelector('#id_content'), {
-        toolbar: ['heading', '|', 'bold', 'italic', 'link', 'bulletedList', 'numberedList', 'blockQuote'],
-        heading: {
-          options: [{
-              model: 'paragraph',
-              title: 'Paragraph',
-              class: 'ck-heading_paragraph'
-            },
-            {
-              model: 'heading2',
-              view: 'h2',
-              title: 'Heading 2',
-              class: 'ck-heading_heading2'
-            },
-            {
-              model: 'heading3',
-              view: 'h3',
-              title: 'Heading 3',
-              class: 'ck-heading_heading3'
-            },
-            {
-              model: 'heading4',
-              view: 'h4',
-              title: 'Heading 4',
-              class: 'ck-heading_heading4'
-            }
-          ]
-        }
-      })
-      .then(editor => {
-        window.editor = editor;
-      })
-      .catch(error => {
-        const errorMessage = 'There was a problem initializing the editor.'
-      });
-  </script>
+  ClassicEditor
+    .create(document.querySelector('#id_content'), {
+      toolbar: ['heading', '|', 'bold', 'italic', 'link', 'bulletedList', 'numberedList', 'blockQuote'],
+      heading: {
+        options: [{
+            model: 'paragraph',
+            title: 'Paragraph',
+            class: 'ck-heading_paragraph'
+          },
+          {
+            model: 'heading2',
+            view: 'h2',
+            title: 'Heading 2',
+            class: 'ck-heading_heading2'
+          },
+          {
+            model: 'heading3',
+            view: 'h3',
+            title: 'Heading 3',
+            class: 'ck-heading_heading3'
+          },
+          {
+            model: 'heading4',
+            view: 'h4',
+            title: 'Heading 4',
+            class: 'ck-heading_heading4'
+          }
+        ]
+      }
+    })
+    .then(editor => {
+      window.editor = editor;
+    })
+    .catch(error => {
+      const errorMessage = 'There was a problem initializing the editor.'
+    });
+</script>
 
-    {{ block.super }}
-    <script type="text/javascript">
-        $('#new-image').change(function() {
-            var file = $('#new-image')[0].files[0];
-            $('#filename').text(`Image will be set to: ${file.name}`);
-        });
-    </script>
+{{ block.super }}
+<script type="text/javascript">
+  $('#new-image').change(function () {
+    var file = $('#new-image')[0].files[0];
+    $('#filename').text(`Image will be set to: ${file.name}`);
+  });
+</script>
 {% endblock %}

@@ -143,8 +143,6 @@ Live Link: https://kc-ecommerce-434e6f88dca9.herokuapp.com/
 ### Colour Scheme
 The below custom colour scheme was designed and set up for the site. 
 
-<details> <summary>Click here to see the colour palatte 🎨</summary> 
-
     :root {
         --pink: #FF00FF;
         /* Electric Pink */
@@ -166,11 +164,12 @@ The below custom colour scheme was designed and set up for the site.
         /* Pearl White */
     }
 
-<img src="media/colors1.png" alt="Color Palette" style="max-width: 66%;"> </details>
+<img src="media/colors1.png" alt="Color Palette" style="max-width: 66%;">
 
 ### Typography
 The font Audiowide has been used throughout the site to give it a modern, futuristic feel. This was imported into the CSS file from the main base template using Google Fonts.
-<details> <summary>Click here to see the custom font 🔤</summary> <img src="media/googleFontsAudiowide.png" alt="Audiowide Font" style="max-width: 66%;"> </details>
+
+</summary> <img src="media/googleFontsAudiowide.png" alt="Audiowide Font" style="max-width: 66%;">
 
 [Go Back Up to Table of Contents 📗](#table-of-contents)
 
@@ -182,7 +181,7 @@ The font Audiowide has been used throughout the site to give it a modern, futuri
 
 The admin portal was customized by using the following [installation guide for Jazzmin](https://django-jazzmin.readthedocs.io/installation/): 
 
-Step 1 - Install the latest `pypi` release with `pip install -U django-jazzmin`
+Step 1 - Install the latest `pypi` release with `pip3 install -U django-jazzmin` in the terminal
 
 Step 2 - Add jazzmin to your `INSTALLED_APPS` __before__ `django.contrib.admin`:
 
@@ -191,6 +190,77 @@ Step 2 - Add jazzmin to your `INSTALLED_APPS` __before__ `django.contrib.admin`:
         'django.contrib.admin',
         [...]
     ]
+
+Step3 - Add custom jazzmin settings to settings.py.
+
+<details> <summary><b> --------------------------------------- Click here to see my custom Jazzmin settings ⬇️</b></summary>
+
+    # Custom Jazzmin Settings
+    JAZZMIN_SETTINGS = {
+        # title of the window (Will default to current_admin_site.site_title if absent or None)
+        "site_title": "onlineAI.art Admin",
+
+        # Title on the login screen (19 chars max) (defaults to current_admin_site.site_header if absent or None)
+        "site_header": "onlineAI.art",
+
+        # Title on the brand (19 chars max) (defaults to current_admin_site.site_header if absent or None)
+        "site_brand": "onlineAI.art",
+
+        # Logo to use for your site, must be present in static files, used for brand on top left
+        "site_logo": SITE_LOGO,
+
+        # Logo to use for your site, must be present in static files, used for login form logo (defaults to site_logo)
+        "login_logo": SITE_LOGO,
+
+        # Logo to use for login form in dark themes (defaults to login_logo)
+        "login_logo_dark": SITE_LOGO,
+
+        # Custom user avatar function to display their Punk
+        "user_avatar": SITE_LOGO,
+
+        # Welcome text on the login screen
+        "welcome_sign": "Welcome to the onlineAI.art Admin Portal",
+
+        # Copyright on the footer
+        "copyright": "onlineAI.art Ltd 2023",
+
+        # List of model admins to search from the search bar, search bar omitted if excluded
+        # If you want to use a single search field you dont need to use a list, you can use a simple string
+        "search_model": ["auth.User", "blog.blogpage", "about.aboutpage"],
+
+        # Top Menu:
+
+        # Links to put along the top menu
+        "topmenu_links": [
+
+            # Url that gets reversed (Permissions can be added)
+            {"name": "Home",  "url": "admin:index", "permissions": ["auth.view_user"]},
+
+            # external url that opens in a new window (Permissions can be added)
+            {"name": "Site Link", "url": LIVE_LINK, "new_window": True},
+
+            # App with dropdown menu to all its models pages (Permissions checked against models)
+            {"app": "products"},
+
+            # model admin to link to (Permissions checked against model)
+            {"model": "avatar.avatar"},
+        ],
+
+        # User Menu:
+
+        # Additional links to include in the user menu on the top right ("app" url type is not allowed)
+        "usermenu_links": [
+            {"name": "Site Link", "url": LIVE_LINK, "new_window": True},
+            {"model": "products.product"},
+            {"model": "products.category"},
+            {"model": "auth.user"},
+            {"model": "avatar.avatar"},
+            {"model": "blog.blogpage"},
+            {"model": "about.aboutpage"},
+            {"name": "Developer", "url": "https://github.com/kc-7", "new_window": True},
+        ],
+    }
+</details>
 
 ---
 
@@ -228,10 +298,52 @@ For more details on setting up Stripe elements to accept payment, refer to the [
 
 I installed the CKEditor to allow customisable text inputs for the Admins to add About Pages. This allows the site management team to add and update these pages without the need of a web developer. The CKEditor easily allows them to vustomise the text. 
 
-I have customized the editor to only display certain suitable options, for example H1 has been removed as it used for the Title for the page so there is no need to have it in the content section. 
+I have customized the editor to only display certain suitable options, for example H1 has been removed as it used for the Title for the page so there is no need to have it in the content section, the customizations are added as a postload js script to the pages where the editor has been implemented, eg create blog and create about pages.
 
 https://ckeditor.com/docs/ckeditor5/latest/installation/getting-started/predefined-builds.html#classic-editor
 
+<details> <summary><b> --------------------------------------- Click here to see my custom CKEditor settings ⬇️</b></summary>
+
+    <script>
+    ClassicEditor
+        .create(document.querySelector('#id_content'), {
+        toolbar: ['heading', '|', 'bold', 'italic', 'link', 'bulletedList', 'numberedList', 'blockQuote'],
+        heading: {
+            options: [{
+                model: 'paragraph',
+                title: 'Paragraph',
+                class: 'ck-heading_paragraph'
+            },
+            {
+                model: 'heading2',
+                view: 'h2',
+                title: 'Heading 2',
+                class: 'ck-heading_heading2'
+            },
+            {
+                model: 'heading3',
+                view: 'h3',
+                title: 'Heading 3',
+                class: 'ck-heading_heading3'
+            },
+            {
+                model: 'heading4',
+                view: 'h4',
+                title: 'Heading 4',
+                class: 'ck-heading_heading4'
+            }
+            ]
+        }
+        })
+        .then(editor => {
+        window.editor = editor;
+        })
+        .catch(error => {
+        const errorMessage = 'There was a problem initializing the editor.'
+        });
+    </script>
+
+</details>
 
 ---
 
@@ -250,7 +362,6 @@ https://ckeditor.com/docs/ckeditor5/latest/installation/getting-started/predefin
 ### Custom Crypto Punk Style Avatars
 
 https://github.com/snoozesecurity/cryptopunkgenerator 
-
 
 [Go Back Up to Table of Contents 📗](#table-of-contents)
 
