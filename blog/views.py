@@ -5,7 +5,7 @@ from django.contrib import messages
 from django.urls import reverse
 from .models import BlogPage
 from .forms import BlogPageForm
-from datetime import datetime
+# from datetime import datetime
 
 
 def blog(request):

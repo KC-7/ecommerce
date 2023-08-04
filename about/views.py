@@ -68,8 +68,12 @@ def delete_about_page(request, pk):
             return redirect(reverse('about'))
 
         else:
-            messages.error(request, 'Incorrect username. About page was not deleted.')
-            return render(request, 'about/delete_about_page.html', {'about_page': about_page})
+            messages.error(
+                request, 'Incorrect username. About page was not deleted.')
+            return render(
+                request,
+                'about/delete_about_page.html',
+                {'about_page': about_page})
 
     template = 'about/delete_about_page.html'
     context = {
@@ -95,7 +99,10 @@ def edit_about_page(request, pk):
             messages.success(request, 'Successfully updated about page!')
             return redirect(reverse('about_page_detail', kwargs={'pk': pk}))
         else:
-            messages.error(request, 'Failed to update about page. Please ensure the form is valid.')
+            messages.error(
+                request,
+                'Failed to update about page. Please ensure the form is valid.'
+                )
     else:
         form = AboutPageForm(instance=about)
         messages.info(request, f'You are editing {about.title}')

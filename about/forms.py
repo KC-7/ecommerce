@@ -9,6 +9,8 @@ class AboutPageForm(forms.ModelForm):
         model = AboutPage
         fields = ['title', 'content']
         widgets = {
-            'title': forms.TextInput(attrs={'class': 'form-control rounded-2'}),
-            'content': CKEditorWidget(attrs={'class': 'form-control rounded-2'}),
+            'title': forms.TextInput(
+                attrs={'class': 'form-control rounded-2'}),
+            'content': CKEditorWidget(
+                attrs={'class': 'form-control rounded-2'}),
         }

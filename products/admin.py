@@ -32,10 +32,12 @@ class ProductAdmin(admin.ModelAdmin):
         self.message_user(
             request, "Sizes have been removed from the selected products."
             )
-    
+
     def image_preview(self, obj):
         if obj.image:
-            return format_html('<img src="{}" style="max-height: 100px; max-width: 100px;" />', obj.image.url)
+            return format_html(
+                '<img src="{}" style="max-height: 100px; max-width: 100px;">',
+                obj.image.url)
         return "No Image"
     image_preview.short_description = 'Image Preview'
 

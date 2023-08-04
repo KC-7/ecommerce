@@ -2,7 +2,7 @@ import os
 from django.conf import settings
 from PIL import Image
 from .models import Avatar
-from django.contrib.auth.models import User
+# from django.contrib.auth.models import User
 import numpy as np
 import hashlib
 from . import probability as prob
@@ -231,6 +231,8 @@ def generate_and_save_punk_for_user(user, request):
     avatar.image.save(punkFilename, File(buff), save=True)
     messages.success(
         request,
-        f"Successfully generated {punkType} punk with {attributeCount} attributes! Ref:({hashDigest})")
+        f"Successfully generated {punkType} punk with "
+        f"{attributeCount} attributes! Ref:({hashDigest})"
+    )
 
     return punkStack

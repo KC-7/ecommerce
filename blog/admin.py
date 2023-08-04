@@ -6,6 +6,7 @@ from django.utils.html import format_html
 from django.template.defaultfilters import truncatechars
 from datetime import datetime
 
+
 class BlogPageAdminForm(forms.ModelForm):
     """ Add CKEditor to admin for blog page """
     content = forms.CharField(widget=CKEditorWidget())
@@ -14,10 +15,12 @@ class BlogPageAdminForm(forms.ModelForm):
         model = BlogPage
         fields = '__all__'
 
+
 class BlogPageAdmin(admin.ModelAdmin):
     """ Admin for blog page """
     form = BlogPageAdminForm
-    list_display = ['pk', 'title', 'created_at_days_ago', 'short_content', 'preview_image']
+    list_display = [
+        'pk', 'title', 'created_at_days_ago', 'short_content', 'preview_image']
     list_display_links = ['pk', 'title']
     readonly_fields = ['preview_image']
 
@@ -32,10 +35,13 @@ class BlogPageAdmin(admin.ModelAdmin):
 
     def preview_image(self, obj):
         if obj.image:
-            return format_html('<img src="{}" style="max-height: 100px; max-width: 100px;" />', obj.image.url)
+            return format_html(
+                '<img src="{}" style="max-height: 100px; max-width: 100px;">',
+                obj.image.url)
         return "No Image"
     preview_image.short_description = 'Preview Image'
 
     ordering = ('-created_at', )
+
 
 admin.site.register(BlogPage, BlogPageAdmin)

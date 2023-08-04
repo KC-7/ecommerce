@@ -4,6 +4,7 @@ from .models import Avatar
 
 
 class AvatarAdmin(admin.ModelAdmin):
+    """ Admin settings for Avatars """
     list_display = ('user', 'show_avatar', 'punk_type', 'show_attributes')
 
     def show_avatar(self, obj):
