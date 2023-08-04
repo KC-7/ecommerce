@@ -1,9 +1,30 @@
-{% load account %}{% user_display user as user_display %}{% load i18n %}{% autoescape off %}{% blocktrans with site_name=current_site.name site_domain=current_site.domain %}Hello from {{ site_name }}!
+{% load account %}{% user_display user as user_display %}{% load i18n %}{% autoescape off %}
 
-You're receiving this e-mail because user {{ user_display }} has given yours as an e-mail address to connect their account.
+{% blocktrans with site_name=current_site.name site_domain=current_site.domain %}
 
-To confirm this is correct, go to {{ activate_url }}
+Hello there, {{ user_display }}! 🎨🌟
+
+We're thrilled that you're joining our vibrant AI art community at {{ site_name }}. We received a request from {{ user_display }} to connect this email address to a brand new account.
+
+Now, here comes the exciting part! As a token of appreciation, we have generated an AI avatar just for you, known as an aiPunk. This avatar will be uniquely yours - it can't be changed or exchanged and reflects a mix of the unexpected and the extraordinary.
+
+Your aiPunk avatar could be a male, female, alien, ape, or zombie, with a vast variety of different attributes, each of which is randomly assigned based on unique probabilities. From funky glasses to stylish hats, and from majestic beards to colorful hairstyles, the possibilities are infinite.
+
+To confirm your account and meet your aiPunk avatar, just click the link to: {{ activate_url }}
+
+Once you've activated your account, you'll officially be part of our vibrant AI art world - a place where creativity, inspiration, and algorithmic wonders know no bounds!
+
 {% endblocktrans %}
-{% blocktrans with site_name=current_site.name site_domain=current_site.domain %}Thank you from {{ site_name }}!
+
+{% blocktrans with site_name=current_site.name site_domain=current_site.domain %}
+Welcome to the journey of a lifetime, where art meets AI. We're over the moon that you've chosen to join {{ site_name }}!
+
+Should you ever need anything, know that we're just a digital brushstroke away.
+
+🖌️ Color Your World, and Shape Your Imagination,
+The {{ site_name }} Family
 {{ site_domain }}{% endblocktrans %}
+
 {% endautoescape %}
+
+Remember, your aiPunk avatar is just the beginning of your adventure. It’s a symbol of your creativity, your uniqueness, and your participation in the burgeoning world of AI-generated art. Welcome aboard, we hope you like your free surprise!

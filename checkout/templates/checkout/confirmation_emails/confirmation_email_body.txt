@@ -1,21 +1,25 @@
-Hello {{ order.full_name }}!
+Hello there, {{ order.full_name }}!
 
-This is a confirmation of your order at onlineAI.art. Your order information is below:
+Greetings from the heart of creativity, onlineAI.art! 🎨✨
 
-Order Number: {{ order.order_number }}
-Order Date: {{ order.date }}
+We're thrilled to confirm your recent expedition into our collection has resulted in a fabulous new find. The details of your unique selection are as follows:
 
-Order Total: €{{ order.order_total }}
-Delivery: €{{ order.delivery_cost }}
-Grand Total: €{{ order.grand_total }}
+🔖 Your Masterpiece's Ticket: {{ order.order_number }}
+📅 Date of Discovery: {{ order.date }}
 
-Your order will be shipped to {{ order.street_address1 }} in {{ order.town_or_city }}, {{ order.country }}.
+Here's a glimpse of the treasure map (don't worry, no hidden costs or mysterious riddles!):
 
-We've got your phone number on file as {{ order.phone_number }}.
+💶 Subtotal of Treasures: €{{ order.order_total }}
+🚚 Voyage Costs (Delivery): €{{ order.delivery_cost }}
+🏷️ Grand Total of Expedition: €{{ order.grand_total }}
 
-If you have any questions, feel free to contact us at {{ contact_email }}.
+Your order is soon to embark on its journey, destined for its new home at {{ order.street_address1 }}, in the vibrant heart of {{ order.town_or_city }}, {{ order.country }}.
 
-Thank you for your order!
+Just so you know, we have jotted down your telephone number, {{ order.phone_number }}, just in case we need to reach out to you during the journey of your masterpiece.
 
-Sincerely,
-onlineAI.art
+Should you have any queries, wonderings, or simply feel like a chat about art, our door is always open at {{ contact_email }}. We would absolutely love to hear from you!
+
+Thank you for letting us add a splash of color to your world. Your order means a lot to us, and we can't wait for you to receive your masterpiece!
+
+Keep Painting Your World,
+The onlineAI.art Family 🌈🎨

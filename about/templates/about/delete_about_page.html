@@ -15,11 +15,11 @@
   <div class="row w-75">
     <div class="col-md-8 offset-md-2">
       <div class="alert alert-danger" role="alert">
-        Warning! You are about to delete the following about page:
+        <i class="fa-solid fa-triangle-exclamation"></i> Warning! You are about to delete the following about page:
       </div>
       <div class="card mb-3 d-flex justify-content-center align-items-center">
         <div class="row">
-          <h4 class="logo-font text-black my-4">{{ about_page.title }}</h4>
+          <h4 class="logo-font text-black my-4"><i class="fa-solid fa-circle-info"></i> {{ about_page.title }}</h4>
         </div>
       </div>
       <form method="POST" action="{% url 'delete_about_page' pk=about_page.pk %}">

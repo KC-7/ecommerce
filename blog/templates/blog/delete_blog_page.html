@@ -15,11 +15,11 @@
   <div class="row w-75">
     <div class="col-md-8 offset-md-2">
       <div class="alert alert-danger" role="alert">
-        Warning! You are about to delete the following blog post:
+        <i class="fa-solid fa-triangle-exclamation"></i> Warning! You are about to delete the following blog post:
       </div>
       <div class="card mb-3 d-flex justify-content-center align-items-center">
         <div class="row">
-            <h4 class="logo-font text-black my-4">{{ blog_page.title }}</h4>
+            <h4 class="logo-font text-black my-4"><i class="fas fa-blog"></i> {{ blog_page.title }}</h4>
         </div>
         <div class="row mb-4">
             {% if blog_page.image %}
