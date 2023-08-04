@@ -28,7 +28,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 DEBUG = False
 # DEBUG = 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = ['.herokuapp.com', '.gitpod.io', 'localhost']
+ALLOWED_HOSTS = ['.onlineai.art', '.herokuapp.com', '.gitpod.io', 'localhost']
 
 # Live Site Link
 if 'DEVELOPMENT' in os.environ:

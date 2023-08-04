@@ -15,6 +15,80 @@ Custom Domain: [onlineAI.art](onlineAI.art)
 
 ---
 
+## Table of Contents
+
+- [onlineAI.art | E-Commerce Project](#onlineaiart---e-commerce-project)
+  * [User Stories](#user-stories)
+    + [View and Navigation](#view-and-navigation)
+    + [Registration and User Accounts](#registration-and-user-accounts)
+    + [Sorting and Searching](#sorting-and-searching)
+    + [Purchasing and Checkout](#purchasing-and-checkout)
+    + [Admin and Store Management](#admin-and-store-management)
+    + [Additional Features](#additional-features)
+  * [Design](#design)
+    + [Colour Scheme](#colour-scheme)
+    + [Typography](#typography)
+  * [Custom Features](#custom-features)
+    + [Custom Admin Portal](#custom-admin-portal)
+    + [Custom Admin Features](#custom-admin-features)
+    + [Stripe Integration](#stripe-integration)
+      - [Test Card Details](#test-card-details)
+    + [CKEditor](#ckeditor)
+    + [Custom Blog Posts (CRUD)](#custom-blog-posts--crud-)
+    + [Custom About Pages (CRUD)](#custom-about-pages--crud-)
+    + [Custom Crypto Punk Style Avatars](#custom-crypto-punk-style-avatars)
+  * [Python Package Requirements](#python-package-requirements)
+  * [Deployment & Local Development](#deployment---local-development)
+    + [Deployment](#deployment)
+      - [**Create the Live Database**](#--create-the-live-database--)
+      - [**Heroku App Setup**](#--heroku-app-setup--)
+      - [**Preparation for Deployment in GitPod**](#--preparation-for-deployment-in-gitpod--)
+      - [**Generate a SECRET KEY & Updating Debug**](#--generate-a-secret-key---updating-debug--)
+      - [**Set up AWS hosting for static and media files**](#--set-up-aws-hosting-for-static-and-media-files--)
+      - [**Creating AWS groups, policies and users**](#--creating-aws-groups--policies-and-users--)
+      - [**Connecting Django to our S3 bucket**](#--connecting-django-to-our-s3-bucket--)
+      - [**Setting up Stripe**](#--setting-up-stripe--)
+    + [Local Development](#local-development)
+      - [How to Fork](#how-to-fork)
+      - [How to Clone](#how-to-clone)
+  * [Bugs & Issues](#bugs---issues)
+    + [Allauth Templates Directory Not Found](#allauth-templates-directory-not-found)
+      - [Issue](#issue)
+      - [Resolution](#resolution)
+    + [Heroku Invalid Credentials Provided](#heroku-invalid-credentials-provided)
+      - [Issue](#issue-1)
+      - [Resolution](#resolution-1)
+    + [Initialize Heroku Git Remote](#initialize-heroku-git-remote)
+      - [Issue](#issue-2)
+      - [Resolution](#resolution-2)
+      - [Additional Heroku Tips](#additional-heroku-tips)
+    + [Programmatic Access for AWS User](#programmatic-access-for-aws-user)
+      - [Issue](#issue-3)
+      - [Resolution](#resolution-3)
+    + [Navbar too large](#navbar-too-large)
+      - [Issue](#issue-4)
+      - [Resolution](#resolution-4)
+    + [Order number too long](#order-number-too-long)
+      - [Issue](#issue-5)
+      - [Resolution](#resolution-5)
+    + [Navbar not displayed correctly on Profile](#navbar-not-displayed-correctly-on-profile)
+      - [Issue](#issue-6)
+      - [Resolution](#resolution-6)
+  * [Learning Outcomes](#learning-outcomes)
+    + [Learning Outcome 1: Integrate an e-commerce payment system and product structure in a cloud-hosted Full-Stack web application](#learning-outcome-1--integrate-an-e-commerce-payment-system-and-product-structure-in-a-cloud-hosted-full-stack-web-application)
+    + [Learning Outcome 2: Employ advanced User Experience Design to build a commercial-grade Full Stack Web Application](#learning-outcome-2--employ-advanced-user-experience-design-to-build-a-commercial-grade-full-stack-web-application)
+    + [Learning Outcome 3: Employ Search Engine Optimisation (SEO) techniques to improve audience reach](#learning-outcome-3--employ-search-engine-optimisation--seo--techniques-to-improve-audience-reach)
+    + [Learning Outcome 4: Create a secure Full Stack Web application with Authentication and role-based Authorization functionality](#learning-outcome-4--create-a-secure-full-stack-web-application-with-authentication-and-role-based-authorization-functionality)
+    + [Learning Outcome 5: Employ marketing techniques to create brand reach](#learning-outcome-5--employ-marketing-techniques-to-create-brand-reach)
+    + [Learning Outcome 6: Understand the fundamentals of E-commerce applications](#learning-outcome-6--understand-the-fundamentals-of-e-commerce-applications)
+  * [Additional Learning Outcomes](#additional-learning-outcomes)
+  * [Additional Learning Outcomes 2](#additional-learning-outcomes-2)
+  * [Resources](#resources)
+    + [Technologies Used](#technologies-used)
+  * [Credits](#credits)
+
+---
+
 ## User Stories
 
 ### View and Navigation
@@ -60,6 +134,8 @@ Custom Domain: [onlineAI.art](onlineAI.art)
 29. As a Site User, I want to be able to sign up for a mailing list so that I can stay up to date with the latest products and deals.
 30. As a Site User, I want to be able to customize my profile so that I can personalize my shopping experience.
 
+[Go Back Up to Table of Contents 📗](#table-of-contents)
+
 ---
 
 ## Design
@@ -96,6 +172,7 @@ The below custom colour scheme was designed and set up for the site.
 The font Audiowide has been used throughout the site to give it a modern, futuristic feel. This was imported into the CSS file from the main base template using Google Fonts.
 <details> <summary>Click here to see the custom font 🔤</summary> <img src="media/googleFontsAudiowide.png" alt="Audiowide Font" style="max-width: 66%;"> </details>
 
+[Go Back Up to Table of Contents 📗](#table-of-contents)
 
 ---
 
@@ -175,6 +252,8 @@ https://ckeditor.com/docs/ckeditor5/latest/installation/getting-started/predefin
 https://github.com/snoozesecurity/cryptopunkgenerator 
 
 
+[Go Back Up to Table of Contents 📗](#table-of-contents)
+
 ---
 
 ## Python Package Requirements
@@ -207,6 +286,8 @@ The table below lists the Python packages and their respective versions required
 | urllib3             | 1.26.16  | HTTP client library for Python             |
 
 numpy ###################
+
+[Go Back Up to Table of Contents 📗](#table-of-contents)
 
 ---
 
@@ -504,6 +585,24 @@ To clone the repository:
     pip3 install -r requirements.txt
     ```
 
+8. Set up required 3rd party accounts.
+
+9. Create a .env file with the required environment variables.
+
+10. Apply database migrations and create a superuser account.
+
+        python manage.py migrate
+
+        python manage.py createsuperuser
+
+11. Run the Django development server.
+
+        python manage.py runserver
+
+You should now be able to access the application locally.
+
+[Go Back Up to Table of Contents 📗](#table-of-contents)
+
 ---
 
 ## Bugs & Issues
@@ -666,6 +765,142 @@ The navbar was not being displayed correctly on the profiles view, it was being 
 
 I identified that a closing div tag, `</div>`, was missing from the end of the `profile.html` template. The navbar was correctly styled after the missing tag was enetered.
 
+[Go Back Up to Table of Contents 📗](#table-of-contents)
+
+---
+
+## Learning Outcomes
+
+Throughout the development, I have aimed to meet the following learning outcomes:
+
+### Learning Outcome 1: Integrate an e-commerce payment system and product structure in a cloud-hosted Full-Stack web application
+
+| Criteria Description                                                                                        | Completion Status |
+|------------------------------------------------------------------------------------------------------------|-------------------|
+| Implement at least one Django app with e-commerce functionality using an online payment processing system (e.g. Stripe). | [ x ]               |
+| Implement a feedback system for successful and unsuccessful purchases with helpful messages.            | [ x ]               |
+| Develop and implement a Full-Stack web application using Django, relational database, and interactive Front-End. | [ x ]               |
+| Implement at least one form with validation for creating and editing models in the backend.               | [ x ]               |
+| Build a Django file structure following Django conventions.                                              | [ x ]               |
+| Write code demonstrating characteristics of 'clean code.'                                                | [ x ]               |
+| Define application URLs consistently.                                                                     | [ x ]               |
+| Incorporate main navigation menu and structured layout.                                                  | [ x ]               |
+| Demonstrate proficiency in Python language with sufficient custom logic.                                 | [ x ]               |
+| Write Python code with compound statements (if conditions, loops, etc.).                                  | [ x ]               |
+| Design a relational database schema with clear relationships between entities.                           | [ x ]               |
+| Create at least THREE original custom Django models.                                                     | [ x ]               |
+| Implement CRUD functionality for models.                                                                  | [ x ]               |
+| Deploy the final version to a hosting platform and test against the development version.                 | [ x ]               |
+| Remove commented-out code and broken internal links from the deployed code.                               | [ x ]               |
+| Ensure security of the deployed version by handling passwords and secret keys properly.                   | [ x ]               |
+| Use a git-based version control system with regular commits and project documentation in README.         | [ x ]               |
+| Document the complete deployment and testing procedures in README, explaining the application's purpose. | [ x ]               |
+
+### Learning Outcome 2: Employ advanced User Experience Design to build a commercial-grade Full Stack Web Application
+
+| Criteria Description                                                                                                                                                                               | Completion Status |
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------|
+| Design a Front-End meeting accessibility guidelines, UX principles, and addressing specific user interactions.                                                                                      | [ x ]               |
+| Document and implement all User Stories in an Agile tool, mapping them to project goals.                                                                                                           | [ ]               |
+| Design and implement manual or automated test procedures to assess functionality, usability, responsiveness, and data management.                                                                   | [ ]               |
+| Present a clear rationale for the development of the project in the README, addressing the needs of the target audience and user stories.                                                         | [ ]               |
+| Document the UX design work, including wireframes, mockups, diagrams, etc., and demonstrate implementation following the design process.                                                             | [ ]               |
+| Use an Agile tool effectively for managing planning and implementation of primary functionality.                                                                                                  | [ ]               |
+| Document and implement all User Stories and map them to the project within an Agile tool.                                                                                                         | [ ]               |
+
+### Learning Outcome 3: Employ Search Engine Optimisation (SEO) techniques to improve audience reach
+
+| Criteria Description                                                                               | Completion Status |
+|---------------------------------------------------------------------------------------------------|-------------------|
+| Ensure all pages can be reached by a link from another findable page.                             | [ x ]               |
+| Include Meta Description tags in the application HTML.                                           | [ ]               |
+| Include a site title on the parent template.                                                     | [ ]               |
+| Use appropriate "nofollow" and "sponsored" attributes for links.                                  | [ ]               |
+| Include a sitemap and robots.txt file for search engine crawling.                                 | [ ]               |
+| Include a 404 response page with appropriate redirect.                                           | [ ]               |
+| Use meaningful text content supporting the application's purpose (no Lorem Ipsum).               | [ ]               |
+
+### Learning Outcome 4: Create a secure Full Stack Web application with Authentication and role-based Authorization functionality
+
+| Criteria Description                                                                                                            | Completion Status |
+|--------------------------------------------------------------------------------------------------------------------------------|-------------------|
+| Implement authentication mechanism allowing user registration and login for specific reasons.                                    | [ ]               |
+| Implement login and registration pages available only to anonymous users.                                                      | [ ]               |
+| Prevent non-admin users from accessing the data store directly without going through the code.                                 | [ ]               |
+| Apply role-based login and registration functionality.                                                                         | [ ]               |
+| Ensure current login state is reflected to the user.                                                                          | [ ]               |
+| Restrict access to restricted content/functionality before role-based login.                                                  | [ ]               |
+
+### Learning Outcome 5: Employ marketing techniques to create brand reach
+
+| Criteria Description                                                       | Completion Status |
+|---------------------------------------------------------------------------|-------------------|
+| Create a Facebook Business Page dedicated to the product.                  | [ ]               |
+| Add a newsletter signup form to the application.                           | [ ]               |
+
+### Learning Outcome 6: Understand the fundamentals of E-commerce applications
+
+| Criteria Description                                                    | Completion Status |
+|------------------------------------------------------------------------|-------------------|
+| Document the e-commerce business model underlying the application.      | [ ]               |
+
+## Additional Learning Outcomes
+
+| Criteria Description                                                                                                                                                                        | Completion Status |
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------|
+| Design and build a real-world full stack MVC e-commerce application with a Front-End that is easy to navigate and intuitive.                                                          | [ ]               |
+| Produce a fully robust codebase with CRUD actions immediately reflected in the user interface.                                                                                             | [ ]               |
+| Follow thorough manual and/or automated test procedures demonstrated in git commits.                                                                                                      | [ ]               |
+| Efficiently configure the project through well-kept Procfile, requirements.txt file, settings files, and data store configuration.                                                        | [ ]               |
+| Fully describe the data schema in the project README file.                                                                                                                                 | [ ]               |
+| Use version control software effectively with a record of the development process.                                                                                                         | [ ]               |
+| Ensure users have full control of their interaction with the application and the site's purpose is immediately evident to new users.                                                       | [ ]               |
+| Control access to sitemap via a robots.txt file and ensure all sitemap links are canonical.                                                                                                 | [ ]               |
+| Use descriptive metadata for SEO that accurately reflects the site's purpose.                                                                                                               | [ ]               |
+| Users only have access to intended views and functionality.                                                                                                                                  | [ ]               |
+| Document the primary marketing strategy behind the application.                                                                                                                             | [ ]               |
+| The solution has a clear, well-defined purpose addressing the needs of a particular target audience.                                                                                      | [ ]               |
+
+## Additional Learning Outcomes 2
+
+| Criteria Description | Completion Status |
+|----------------------|-------------------|
+| The learner has documented a clear, justified rationale for a real-world application. The development of the project has resulted in a fully-functioning, interactive web application. | [ ]               |
+| The finished project is publishable in its current form with an evidenced professional-grade user interface and interaction adhering to current practice. There are no logic errors in the code. | [ ]               |
+| The resulting application is original and not a copy of any walkthrough projects encountered in the unit. | [ ]               |
+| The design of the web application demonstrates the main principles of good UX design. | [ ]               |
+| Information Hierarchy is clear and well-structured. | [ ]               |
+| User Control is maintained throughout the application. | [ ]               |
+| Consistency is evident across all pages/sections and covers interactivity as well as design. | [ ]               |
+| Confirmation and feedback is given at all times. | [ ]               |
+| There is evident conformity to accessibility guidelines across all pages/sections and in all interactivity. | [ ]               |
+| Any design decisions that contravene accepted user interaction, user experience design principles are identified and described. | [ ]               |
+| Code demonstrates characteristics of ‘clean code’. | [ ]               |
+| Consistent and appropriate naming conventions within code and in file naming. | [ ]               |
+| File structure is organized and makes sense. | [ ]               |
+| Code is indented in a consistent manner to ease readability. | [ ]               |
+| Defensive design has been applied. | [ ]               |
+| All custom code files include clear and relevant comments explaining the purpose of code segments. | [ ]               |
+| Code passes through appropriate validators with no issues. | [ ]               |
+| Robust code with no logic errors is found when running code. | [ ]               |
+| The entire design is implemented, providing an excellent solution to the users' demands and expectations and security consideration. | [ ]               |
+| Real-world application has been achieved. | [ ]               |
+| Testing procedures are comprehensive, with a good level of coverage, and have been followed. | [ ]               |
+| SEO and Marketing features are evident. | [ ]               |
+| Security features and practice are evidenced. | [ ]               |
+| Framework conventions are followed and used correctly. | [ ]               |
+| Placing of logic in the most relevant components demonstrates an understanding of the Model-View-Controller(Template) pattern is evident through the placing of logic in the most appropriate components. | [ ]               |
+| Configuration and settings files are well-organised. | [ ]               |
+| Security features and practice are evidenced. | [ ]               |
+| Data is well structured. | [ ]               |
+| Data is fully modelled and matches the schema. | [ ]               |
+| Datastore configuration is kept in a single location where it can be changed easily. | [ ]               |
+| Configuration and dependencies files are kept up to date. Separate versions/branches of these are commits where relevant. Datastore configuration is kept in a single location and can be changed easily. The datastore is not accessible to the regular user without going through the code. | [ ]               |
+| Testing procedures are comprehensive, with a good level of coverage, and have been followed. There is clear evidence of testing, and this is demonstrated in git commits. All noticeable errors have been corrected or documented. | [ ]               |
+
+
+[Go Back Up to Table of Contents 📗](#table-of-contents)
+
 ---
 
 ## Resources
@@ -706,3 +941,4 @@ I would like to give special thanks to the following:
 
 - I have had the same mentor, Rohit, throughtout my course in The Code Institute and get 3 sessions with him for each of the 5 milestone projects, as usual, I have found his insight and time as a very valuble contribution to the project.
 
+[Go Back Up to Table of Contents 📗](#table-of-contents)
