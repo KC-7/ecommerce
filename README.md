@@ -7,11 +7,22 @@
 
 # onlineAI.art | E-Commerce Project
 
-This is a django project for an E-Commerce Store.
+Custom Domain Link: [onlineAI.art](onlineAI.art)
 
-Custom Domain: [onlineAI.art](onlineAI.art)
+Heroku App Link: https://kc-ecommerce-434e6f88dca9.herokuapp.com/
 
-Live Link: https://kc-ecommerce-434e6f88dca9.herokuapp.com/
+This is a django project for an E-Commerce Store with Stripe payments, custom products, blogs, avatars and about pages.
+
+The site is targeted towords Art, Tech, Fashion, Entusiates and Blog Readers interested in AI generation.
+
+---
+
+## Site Preview 
+
+### Main Site Preview
+
+### Admin Portal Preview
+TBC
 
 ---
 
@@ -89,7 +100,11 @@ Live Link: https://kc-ecommerce-434e6f88dca9.herokuapp.com/
 
 ---
 
-## User Stories
+## User Story Test Cases
+
+[Click here to see the Github User Stories Board](#)
+
+<details> <summary><b> --------------------------------------- or click here to see the list of user stories below ⬇️</b></summary>
 
 ### View and Navigation
 1. As a Shopper, I want to be able to view a list of products so that I can select some to purchase.
@@ -127,12 +142,14 @@ Live Link: https://kc-ecommerce-434e6f88dca9.herokuapp.com/
 24. As a Store Owner, I want to be able to delete a product so that I can remove items that are no longer for sale.
 
 ### Additional Features
-25. As a Site User, I want to be able to create custom AI Art so that I can view it or purchase a product made using the custom image.
-26. As a Shopper, I want to be able to leave comments on products so that I can review the item.
-27. As a Shopper, I want to be able to create a wishlist so that I can save my favorite products to purchase later.
-28. As a Shopper, I want to be able to complain or inquire about a product so that I can express my dissatisfaction or find out more information about a product.
-29. As a Site User, I want to be able to sign up for a mailing list so that I can stay up to date with the latest products and deals.
-30. As a Site User, I want to be able to customize my profile so that I can personalize my shopping experience.
+25. As a Site User, I want to be able to sign up for a mailing list so that I can stay up to date with the latest products and deals.
+26. As a Site User, I want to be able to find out more information so that I can find out additional information about the company such as shipping, etc.
+27. As a Site User, I want to be able to navigate the content easily and quickly so that I can find the content that I am looking for.
+28. As a Store Owner, I want to set up a blog so that I can draw more site attention, recommend my products to the target audience, and potentially affiliate marketing and sponsered articles.
+29. As a Store Owner, I want create a unique custom avatar with unique traits for each user so that I can enhance the personalized shopping experience to create increased customer engagement and retention.
+30. As a Store Owner, I want to allow admin to control the products, blogs and about pages via the site and dedicated admin panel so that I can allow admins to run the store without the need for website modifications.
+
+</details>
 
 [Go Back Up to Table of Contents 📗](#table-of-contents)
 
@@ -349,13 +366,13 @@ https://ckeditor.com/docs/ckeditor5/latest/installation/getting-started/predefin
 
 ### Custom Blog Posts (CRUD)
 
-
+TBC
 
 ---
 
 ### Custom About Pages (CRUD)
 
-
+TBC
 
 ---
 
@@ -367,36 +384,39 @@ https://github.com/snoozesecurity/cryptopunkgenerator
 
 ---
 
-## Python Package Requirements
+## Dependencies & Their Use Cases
 
-The table below lists the Python packages and their respective versions required for running this project as per the requirements.txt file. These packages provide essential functionalities and integrations to support various features within the application and are required for running the project.
+The project relies on a range of Python packages to ensure its smooth operation and delivery of features. Here's a brief overview of each dependency in the `requirements.txt` and its use case:
 
-| Name                | Version  | Use                                         |
-| ------------------- | -------- | ------------------------------------------- |
-| asgiref             | 3.7.2    | ASGI (Asynchronous Server Gateway Interface) reference implementation |
-| boto3               | 1.28.5   | AWS SDK for Python (Boto3)                 |
-| botocore            | 1.31.5   | Low-level interface to AWS services        |
-| dj-database-url     | 0.5.0    | Django database configuration from URL     |
-| Django              | 3.2.20   | Web framework for Python                   |
-| django-allauth      | 0.41.0   | Integrated set of Django authentication views, URLs, and more |
-| django-countries    | 7.2.1    | Provides country choices for Django forms  |
-| django-crispy-forms | 1.14.0   | Django forms rendering                    |
-| django-jazzmin      | 2.6.0    | Admin Panel Customization for Django      |
-| django-storages     | 1.13.2   | Custom storage backends for Django         |
-| gunicorn            | 21.1.0   | Python WSGI HTTP Server                    |
-| jmespath            | 1.0.1    | JSON Matching Expressions                  |
-| oauthlib            | 3.2.2    | OAuth library for Python                   |
-| Pillow              | 10.0.0   | Python Imaging Library (PIL) fork          |
-| psycopg2            | 2.9.6    | PostgreSQL adapter for Python              |
-| python3-openid     | 3.2.0    | OpenID support for modern servers and consumers |
-| pytz                | 2023.3   | World timezone definitions for Python      |
-| requests-oauthlib   | 1.3.1    | OAuthlib support for Requests              |
-| s3transfer          | 0.6.1    | S3 Transfer Manager                        |
-| sqlparse            | 0.4.4    | SQL parsing and formatting library         |
-| stripe              | 5.5.0    | Stripe API library for Python              |
-| urllib3             | 1.26.16  | HTTP client library for Python             |
+| **Package**           | **Version** | **Use Case**                                                                                     |
+|-----------------------|-------------|--------------------------------------------------------------------------------------------------|
+| asgiref               | 3.7.2       | Interface between your web service and ASGI server, ensuring asynchronous capabilities.          |
+| boto3                 | 1.28.5      | Amazon Web Services (AWS) SDK for Python, allowing for AWS service integrations.                 |
+| botocore              | 1.31.5      | Core foundation for the AWS SDK for Python, powering `boto3`.                                    |
+| dj-database-url       | 0.5.0       | Utilities to utilize database URLs with Django for configuration simplicity.                     |
+| Django                | 3.2.20      | The core Django framework powering the entire web application.                                   |
+| django-allauth        | 0.41.0      | Provides authentication, registration, and account management features.                          |
+| django-ckeditor       | 6.6.1       | Rich-text WYSIWYG editor for Django models and forms.                                            |
+| django-countries      | 7.2.1       | Utility to handle country fields in Django models and forms.                                     |
+| django-crispy-forms   | 1.14.0      | Enables rendering of Django forms with crispy Bootstrap styles.                                  |
+| django-jazzmin        | 2.6.0       | A fresh take on the Django admin interface, for improved UX.                                     |
+| django-js-asset       | 2.1.0       | Helps with generating URLs for your static files with Django.                                    |
+| django-storages       | 1.13.2      | Collection of custom storage backends for Django, notably for cloud storage.                     |
+| gunicorn              | 21.1.0      | A Python WSGI HTTP Server for deploying Django applications in production environments.          |
+| jmespath              | 1.0.1       | Allows querying JSON documents, used internally by `boto3` and `botocore`.                       |
+| numpy                 | 1.24.4      | Fundamental package for numerical computations in Python.                                        |
+| oauthlib              | 3.2.2       | OAuth library integration for Django, used with `django-allauth`.                                |
+| Pillow                | 10.0.0      | Python Imaging Library, for handling image processing tasks in Django.                           |
+| psycopg2              | 2.9.6       | PostgreSQL adapter for Django, allows using PostgreSQL as the database backend.                  |
+| python3-openid        | 3.2.0       | Provides OpenID support for Python, used in conjunction with `django-allauth` for authentication.|
+| pytz                  | 2023.3      | World timezone definitions for Python, utilized by Django for timezone-aware operations.         |
+| requests-oauthlib     | 1.3.1       | Provides OAuthlib authentication support for Python's `requests` module.                         |
+| s3transfer            | 0.6.1       | Amazon S3 Transfer Manager for Python, used internally by `boto3`.                               |
+| sqlparse              | 0.4.4       | A utility to parse SQL strings, used by Django during database operations.                       |
+| stripe                | 5.5.0       | Enables Stripe payment integrations for Django, allowing secure payment processing.              |
+| urllib3               | 1.26.16     | HTTP client for Python, used internally by several packages for making HTTP requests.            |
 
-numpy ###################
+For installation, simply run `pip3 install -r requirements.txt`.
 
 [Go Back Up to Table of Contents 📗](#table-of-contents)
 
@@ -422,13 +442,13 @@ In development, we have been using the sqlite3 database. However, this is only s
 4. Go to the dashboard and select the newly created database.
 5. Copy the URL (you can click the clipboard icon to copy).
 
-#### **Heroku App Setup**
+#### Heroku App Setup
 
 1. From the [Heroku dashboard](https://dashboard.heroku.com/), click the "New" button in the top right corner and select "Create New App."
 2. Give your app a name (this must be unique), select the region that is closest to you, and then click the "Create App" button at the bottom left.
 3. Open the "Settings" tab and create a new config var of `DATABASE_URL`. Paste the database URL you copied from ElephantSQL into the value (the value should not have quotation marks around it).
 
-#### **Preparation for Deployment in GitPod**
+#### Preparation for Deployment in GitPod
 
 1. Install `dj_database_url` and `psycopg2` (both needed for connecting to the external database you've just set up):
 
@@ -526,7 +546,7 @@ In development, we have been using the sqlite3 database. However, this is only s
 
 16. To enable automatic deploys on Heroku, go to the deploy tab and click the connect to GitHub button in the deployment method section. Search for the projects repository and then click connect. Click enable automatic deploys at the bottom of the page.
 
-#### **Generate a SECRET KEY & Updating Debug**
+#### Generate a SECRET KEY & Updating Debug
 
 1. Django automatically sets a secret key when you create your project, however we shouldn't use this default key in our deployed version, as it leaves our site vulnerable. We can use a random key generator to create a new SECRET_KEY which we can then add to our Heroku config vars which will then keep the key protected.
 2. [Djecrety's Django Secret Key Generator](https://djecrety.ir/) is an example of a site we could use to create our secret key. Create a new key and copy the value.
@@ -545,7 +565,7 @@ In development, we have been using the sqlite3 database. However, this is only s
 
 6. Save, add, commit and push these changes.
 
-#### **Set up AWS hosting for static and media files**
+#### Set up AWS hosting for static and media files
 
 ! NOTE: These instructions are subject to change slightly in future versions of AWS.
 
@@ -574,7 +594,7 @@ In development, we have been using the sqlite3 database. However, this is only s
 
 6. Now we need to edit the access control list (ACL) section. Click edit and enable list for everyone(public access) and accept the warning box.
 
-#### **Creating AWS groups, policies and users**
+#### Creating AWS groups, policies and users
 
 1. Click the services icon on the top right of the page and navigate to IAM - manage access to AWS services. On the left hand navigation menu click user groups and then click the create group button in the top right. This will create the group that our user will be placed in.
 2. Choose a name for your group - for example manage-boutique-ado, and click the create policy button on the right. This will open a new page.
@@ -589,7 +609,7 @@ In development, we have been using the sqlite3 database. However, this is only s
 11. Add the user to the group you just created and then click next:tags button, next:review button and then create user button.
 12. You will now need to download the CSV file as this contains the user access key and secret access key that we need to insert into the Heroku config vars. Make sure you download the CSV now as you won't be able to access it again.
 
-#### **Connecting Django to our S3 bucket**
+#### Connecting Django to our S3 bucket
 
 1. Install boto3 and django storages and freeze them to the requirements.txt file.
 
@@ -641,7 +661,7 @@ In development, we have been using the sqlite3 database. However, this is only s
 8. Save, add, commit and push these changes to make a deployment to Heroku. In the build log you should be able to see that the static files were collected, and if we check our S3 bucket we can see the static folder which has all the static files in it.
 9. Navigate to S3 and open your bucket. We now want to create a new file to hold all the media files for our site. We can do this by clicking the create folder button on the top right and naming the folder media.
 
-#### **Setting up Stripe**
+#### Setting up Stripe
 
 1. We now need to add our Stripe keys to our config vars in Heroku to keep these out of our code and keep them private. Log into Stripe, click developers and then API keys.
 2. Create 2 new variables in Heroku's config vars - for the publishable key (STRIPE_PUBLIC_KEY) and the secret key (STRIPE_SECRET_KEY) and paste the values in from the Stripe page.
@@ -655,8 +675,6 @@ In development, we have been using the sqlite3 database. However, this is only s
     STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
     STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
     ```
-
-- Credit to Code Institute for creating the above guide in their Boutique Ado Walkthrough Project and to github user and CI Alumna, [kera-kudmore](https://github.com/kera-cudmore), for documenting the above deployment and local development process in her [README](https://github.com/kera-cudmore/Boutique-Ado/commit/f0170c57a0d92d80cc14bdefa8f281020469a406) which I have copied and adapted to suit the documentation of this process for this project.
 
 ---
 
@@ -767,6 +785,20 @@ I set up a custom domain with SSL certification to improve the authencity of the
 1. Click "Check Nameservers" to confirm above steps have worked (this may take a while). When ready you will see a "Cloudlflare is protecting your site" confirmation message on the Cloudflare site overview.
 
 1. Your site will now redirect to do HTTPS and will have a valid SSL Certificate (eg. https://customdomain.tdl / https://www.customdomain.tdl).
+
+---
+
+## Product Creation
+
+I used fixtures files to upload the bulk of the categories and products, the categories fixtures were the same as the Boutique Ado project as I used this project as inspiration for my site. The products fixtures was created by enterinf the details for my custom products, to assist with process, I created custom names and then used ChatGPT to create the descriptionss for the products. I generated the unique AI images using SDXL on ComfyUI which was run locally on my PC, as it takes time to generate the images, I created a custom list of prompts and then set up a que so that I could generate a lot of unique images over a couple of hours. I then used Printfy to create the unqiue product images by adding the images I generated to products from their catalogue and downloading the images. The site could be used with an API on OnlineAI.art to sell the products by print on demand, so once the site accepts the payment, it will send the order to Printify to create and dispatch the custom product, however this was not implemented for the scope of this project, it has however been listed as a potential future development.
+
+### ComfyUI
+
+### SDXL
+
+### Printify
+
+### Custom Products Fixtures
 
 ---
 
@@ -934,6 +966,135 @@ I identified that a closing div tag, `</div>`, was missing from the end of the `
 
 ---
 
+## Testing
+
+### Manual Testing for User Stories
+
+| **User Story Number** | **User Story Description**                                 | **User Story Test**                                             | **Image**     | **Passed Test** | **Test Result** |
+|-----------------------|-----------------------------------------------------------|-----------------------------------------------------|-----------|-----------------|-----------------|
+| 1                     | As a Shopper, I want to be able to view a list of products. | Navigate to the main product page. Check if a list of products displays. | ![test-image-1](#) | ✅              | TBC             |
+| 2                     | As a Shopper, I want a quick product view.                 | Check if a "Quick View" or "Highlight" section exists on the main page. | ![test-image-1a](#) | ✅           | TBC             |
+| 3                     | As a Shopper, I want to view individual product details.   | Click on a product. Verify that detailed info (price, rating, sizes, etc.) appears. | ![test-image-2](#) | ✅         | TBC             |
+| 4                     | As a Shopper, I want to identify deals and special offers.  | Check for a "Deals" or "Clearance" section or tags on products indicating a sale. | ![test-image-3](#) | ✅         | TBC             |
+| 5                     | As a Shopper, I want to view my purchase total.            | Add items to cart. Check if a constantly updated total appears somewhere visible. | ![test-image-4](#) | ✅        | TBC             |
+| 6                     | As a Site User, I want to register for an account.         | Navigate to registration. Complete registration form and submit. | ![test-image-5](#) | ✅           | TBC             |
+| 7                     | As a Site User, I want to login and logout.                | Log in with a test account and then log out.          | ![test-image-6](#) | ✅           | TBC             |
+| 8                     | As a Site User, I want password recovery.                  | Click "Forgot Password" and follow recovery process.   | ![test-image-7](#) | ✅           | TBC             |
+| 9                     | As a Site User, I want email confirmation on registration. | Register and check email for a confirmation message.   | ![test-image-8](#) | ✅           | TBC             |
+| 10                    | As a Site User, I want a personalized user profile.        | Log in and navigate to the profile. Check if personal data, orders, and saved payment info appear. | ![test-image-9](#) | ✅        | TBC             |
+| 11                    | As a Shopper, I want to sort the list of available products. | Use sorting options like best rated, best priced, or by category on the product page. | ![test-image-10](#) | ✅    | TBC             |
+| 12                    | As a Shopper, I want to sort a specific category of product. | Navigate to a category and use sorting options for the best price or rating. | ![test-image-11](#) | ✅      | TBC             |
+| 13                    | As a Shopper, I want to sort multiple categories of products. | Use filters to sort multiple categories simultaneously by the best price or rating. | ![test-image-12](#) | ✅ | TBC             |
+| 14                    | As a Shopper, I want to search for a product by name.       | Use the search bar to find a product by name or description. | ![test-image-13](#) | ✅        | TBC             |
+| 15                    | As a Shopper, I want to easily see what I've searched for.  | Search for a product and verify the search terms and number of results are displayed. | ![test-image-14](#) | ✅ | TBC             |
+| 16                    | As a Shopper, I want to select the size and quantity when purchasing. | Choose a product and select different size and quantity options. | ![test-image-15](#) | ✅   | TBC             |
+| 17                    | As a Shopper, I want to view items in my bag.                | Add items to the bag and view them in the shopping cart or bag page. | ![test-image-16](#) | ✅    | TBC             |
+| 18                    | As a Shopper, I want to adjust the quantity in my bag.       | Change the quantity of a product in the shopping cart or bag. | ![test-image-17](#) | ✅        | TBC             |
+| 19                    | As a Shopper, I want to enter my payment information easily. | Proceed to checkout and enter payment information.        | ![test-image-18](#) | ✅        | TBC             |
+| 20                    | As a Shopper, I want to feel that my information is safe.    | Check for security badges and HTTPS in the checkout process. | ![test-image-19](#) | ✅      | TBC             |
+| 21                    | As a Shopper, I want to view an order confirmation after checkout. | Complete checkout and verify the order confirmation page. | ![test-image-20](#) | ✅ | TBC             |
+| 22                    | As a Shopper, I want email confirmation after checkout.       | Complete checkout and check email for a confirmation message. | ![test-image-21](#) | ✅      | TBC             |
+| 23                    | As a Store Owner, I want to add a product.                   | Use the admin panel to add a new product and verify its appearance on the site. | ![test-image-22](#) | ✅   | TBC             |
+| 24                    | As a Store Owner, I want to edit/update a product.           | Edit a product's details in the admin panel and verify changes on the site. | ![test-image-23](#) | ✅ | TBC             |
+| 25                    | As a Store Owner, I want to delete a product.                | Delete a product from the admin panel and verify its removal from the site. | ![test-image-24](#) | ✅  | TBC             |
+| 26                    | As a Site User, I want to sign up for a mailing list.        | Sign up for the mailing list and verify subscription (e.g. welcome email). | ![test-image-25](#) | ✅ | TBC             |
+| 27                    | As a Site User, I want to find out more information.         | Navigate to pages like "About Us," "Shipping Information," etc. | ![test-image-26](#) | ✅   | TBC             |
+| 28                    | As a Site User, I want to navigate the content easily.       | Test site navigation, ensuring it's intuitive and quick.  | ![test-image-27](#) | ✅          | TBC             |
+| 29                    | As a Store Owner, I want to set up a blog.                   | Create a blog post through the admin panel and verify its appearance on the site. | ![test-image-28](#) | ✅ | TBC             |
+| 30                    | As a Store Owner, I want a unique custom avatar for users.   | Customize an avatar for a user profile and verify its appearance. | ![test-image-29](#) | ✅ | TBC             |
+| 31                    | As a Store Owner, I want admin control of products, blogs, etc. | Use the admin panel to control various site aspects and verify changes. | ![test-image-30](#) | ✅ | TBC             |
+
+
+---
+
+### Automated Testing
+
+TBC
+
+---
+
+### Lighthouse Testing
+
+TBC
+
+---
+
+### Console Log Testing
+
+TBC
+
+---
+
+### W3C Validation Testing
+
+TBC
+
+---
+
+### W3 Jigsaw Testing
+
+TBC
+
+---
+
+### Flake 8 Python Testing
+
+TBC
+
+---
+
+### Responsiveness Testing
+
+TBC
+
+#### Visual Testing on Physical Devices
+
+TBC
+
+#### Visual Testing using Google Inspect
+
+TBC
+
+#### Visual Testing using AmIRepsponsive
+
+TBC
+
+---
+
+## Future Development
+
+TBC
+
+---
+
+## Summary of charges and monitoring costs
+
+TBC
+
+---
+
+## Search Engine Optimization (SEO)
+
+TBC
+
+---
+
+## Web Marketing
+
+### Facebook Page
+
+TBC
+
+### Mailchimp Newsletter
+
+TBC
+
+### GDPR
+
+TBC
+
+---
+
 ## Learning Outcomes
 
 Throughout the development, I have aimed to meet the following learning outcomes:
@@ -1092,14 +1253,14 @@ Here is a list of useful links that were used as part of the project. Thanks to 
 | [Pip](https://pypi.org/project/pip/)                                               | A tool for installing Python packages   |
 | [Shields.io](https://shields.io/)                                                  | To add badges to the projects documentation |
 
--------------CKEDITOR
+-------------
 
 - Custom Domain:
 [Youtube: Use namecheap domain with Heroku hosting](https://www.youtube.com/watch?v=51j_mhje9Kk)
 [Youtube: Free SSL cert with Cloudflare](https://www.youtube.com/watch?v=Y4iHXhRkpO4)
 [YouTube: Gmail Custom Email Domain on Cloudflare using ImprovMX](https://www.youtube.com/watch?v=T4n8EvtVDBE)
-[ImprovMX Website to create free Alias](https://improvmx.com/)
-[]()
+[ImprovMX: Website to create free Alias](https://improvmx.com/) - Not set up yet
+[CKEditor: ]()
 []()
 []()
 []()
@@ -1112,8 +1273,25 @@ I would like to give special thanks to the following:
 
 - [The Code Institute's Boutique Ado Walkthrough Project](), this project is the final tutorial project in their Diploma in Full Stack Software Development (E-commerce Applications) course. I used this project as a basis for the project and expanded on it by customising how it works, how its styled, its products, categories, styling, branding, functionality, etc. I found this project very useful for setting up the overall site infrastructure such as setting up and deploying the application alongside setting up the bag, checkout and stripe functionality.
 
-- I reused some code where possible from my previous project, [Cre8AI.art](). I reused the color set up in the CSS as I found this was an effecient way to apply colours. I also used..........................
+- I reused some code where possible from my previous project, [Cre8AI.art](). I reused the color set up in the CSS as I found this was an effecient way to apply colours except I updated the colours to using the sits custom colour pallette. I also used the footer and updated the styling, layout and links to suite the site.
 
 - I have had the same mentor, Rohit, throughtout my course in The Code Institute and get 3 sessions with him for each of the 5 milestone projects, as usual, I have found his insight and time as a very valuble contribution to the project.
+
+- I used the styling, logic and probailities to create the aiPunks using the code and file from this [Crypto Punk Styled Generator on Github](https://github.com/snoozesecurity/cryptopunkgenerator) as the foundation for the avatar app, although the logic, probabilities and images all remain the same, the code has been extensively modified to turn it into this django app. I would like to thank the creator of this repository on Github as it was an interesting way to explore the logic behind the generation of custom NFT series. I also watched this 50 min [Youtube video on creating crypto punk style images using python](https://www.youtube.com/watch?v=o0qNS_pOVqw)
+
+- I would like to give credit to Code Institute for creating the deployment guide in their Boutique Ado Walkthrough Project and to github user and CI Alumna, [kera-kudmore](https://github.com/kera-cudmore), for documenting the deployment and local development process in her [README](https://github.com/kera-cudmore/Boutique-Ado/commit/f0170c57a0d92d80cc14bdefa8f281020469a406) which I have copied and adapted to suit the documentation of [development process section](#deployment) for this project.
+
+- I found the use of ChatGPT 4 useful while creating this project, however its use was limited to due to its current limitions, hallucenations and constant  it was used for the following: 
+ - Creating all of the product descriptions
+ - Creating the about pages content
+ - Creating the blog page content
+ - Creating or formatting the following tables in this readme: Useful links, learning outcomes, dependancies
+ - I used it to format my external excel file that I was using to track the user stories
+ - It was useful when troubleshooting errors while setting up the django app for the aiPunk generations
+
+ - Despite having previously set up an [django app with DALL-E 2 integrated for creating custom images](cre8ai.art), I decided to use newly created open source, free to use, local, ai image generation software to create the images. I used model SDXL 0.9 was only released a couple of weeks ago with its refiner model as well using ComfyUI interface. You will need a nVidea graphic card with atleast 10gb vram to run the application. I found the images generated with this app are currently ahead of the images created by Dall-E and since its run locally, it has no API charges. I have also used different models on Automatic1111 (A1111) UI for creating images locally but found ComfyUI and the new SD_XL model provided better quality generation alongside increased resolution size which is great for custom printed products. Unfortuntly ComfyUI using the SDXL model with refiner is quiete slow, especially in comparison to the standard model on A111. ------------------------- PROVIDE MORE DETAIL, Create section in readme, how to etc..................
+
+- 
+
 
 [Go Back Up to Table of Contents 📗](#table-of-contents)
