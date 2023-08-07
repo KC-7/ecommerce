@@ -296,7 +296,7 @@ input[name='q']::placeholder {
 }
 
 /* Neon Glow Effect on Hover */
-.neon-glow:hover {
+.neon-glow-hover:hover {
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.7),
         0 0 20px rgba(255, 255, 255, 0.7),
         0 0 30px rgba(255, 255, 255, 0.7);
@@ -347,7 +347,7 @@ input[name='q']::placeholder {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--cyan);
+    background: var(--gold);
 }
 
 /* ------------------------------- blog */

@@ -103,7 +103,9 @@ def delete_blog_page(request, pk):
             messages.error(
                 request, 'Incorrect username. Blog post was not deleted.')
             return render(
-                request, 'blog/delete_blog_page.html', {'blog_page': blog_page})
+                request,
+                'blog/delete_blog_page.html',
+                {'blog_page': blog_page})
 
     template = 'blog/delete_blog_page.html'
     context = {

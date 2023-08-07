@@ -27,7 +27,8 @@ def add_to_bag(request, item_id):
                 bag[item_id]['items_by_size'][size] += quantity
                 messages.success(
                     request,
-                    f'Updated size {size.upper()} {product.name} quantity to {bag[item_id]["items_by_size"][size]}')
+                    f'''Updated size {size.upper()} {product.name}
+                     quantity to {bag[item_id]["items_by_size"][size]}''')
             else:
                 bag[item_id]['items_by_size'][size] = quantity
                 messages.success(
@@ -47,7 +48,7 @@ def add_to_bag(request, item_id):
         else:
             bag[item_id] = quantity
             messages.success(
-                equest,
+                request,
                 f'Added {product.name} to your bag')
 
     request.session['bag'] = bag
@@ -72,7 +73,8 @@ def adjust_bag(request, item_id):
             bag[item_id]['items_by_size'][size] = quantity
             messages.success(
                 request,
-                f'Updated size {size.upper()} {product.name} quantity to {bag[item_id]["items_by_size"][size]}')
+                f'''Updated size {size.upper()} {product.name}
+                 quantity to {bag[item_id]["items_by_size"][size]}''')
         else:
             del bag[item_id]['items_by_size'][size]
             if not bag[item_id]['items_by_size']:
@@ -108,7 +110,8 @@ def remove_from_bag(request, item_id):
             if not bag[item_id]['items_by_size']:
                 bag.pop(item_id)
             messages.success(
-                request, f'Removed size {size.upper()} {product.name} from your bag')
+                request,
+                f'Removed size {size.upper()} {product.name} from your bag')
         else:
             bag.pop(item_id)
             messages.success(

@@ -1039,9 +1039,11 @@ TBC
 
 ---
 
-### Flake 8 Python Testing
+### Flake8 Python Testing
 
-TBC
+Flake8 was used to test the python code by running the following command in the terminal: 
+
+    `python3 -m flake8`
 
 ---
 
