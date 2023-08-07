@@ -14,7 +14,7 @@
 <div class="container mt-5 mb-auto">
   <div class="row mb-4">
     <div class="col-12">
-      <h1 class="text-black mb-4"><i class="fas fa-blog"></i> Blog Posts!</h1>
+      <h1 class="text-black mb-4 typewriter-text"><i class="fas fa-blog"></i> Blog Posts!</h1>
       <hr>
       <p>Check out our blog posts to find out more information about AI Technology:</p>
     </div>
@@ -23,7 +23,7 @@
       <div class="card my-3 rounded-2">
         <div class="card-body">
           <h3 class="card-title"><a href="{% url 'blog_page_detail' pk=blog_page.pk %}"
-              class="text-black">{{ blog_page.title }}</a></h3>
+              class="text-black hover-bg">{{ blog_page.title }}</a></h3>
           <p class="card-text">{{ blog_page.content|truncatewords:30|safe }}</p>
           <div class="text-end">
             <a href="{% url 'blog_page_detail' pk=blog_page.pk %}" class="btn btn-sm btn-black float-right">Read

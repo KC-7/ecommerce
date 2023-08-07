@@ -277,6 +277,9 @@ JAZZMIN_SETTINGS = {
     # If you want to use a single search field you dont need to use a list, you can use a simple string
     "search_model": ["auth.User", "blog.blogpage", "about.aboutpage"],
 
+    # Form Template Type
+    "changeform_format": "collapsible",
+
     # Top Menu:
 
     # Links to put along the top menu

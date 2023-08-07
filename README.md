@@ -21,6 +21,8 @@ The site is targeted towords Art, Tech, Fashion, Entusiates and Blog Readers int
 
 ### Main Site Preview
 
+TBC
+
 ### Admin Portal Preview
 TBC
 
