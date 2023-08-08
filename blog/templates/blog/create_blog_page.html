@@ -21,7 +21,7 @@
       <div class="col-12">
         <h1 class="text-black"><i class="fas fa-blog"></i> Create a New Blog Page:</h1>
         <hr>
-        <form method="post" action="{% url 'create_blog_page' %}" class="my-3">
+        <form method="post" enctype="multipart/form-data" action="{% url 'create_blog_page' %}" class="my-3">
           {% csrf_token %}
             {% for field in form %}
                 {% if field.name != 'image' %}

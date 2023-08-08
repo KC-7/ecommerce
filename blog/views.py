@@ -34,7 +34,7 @@ def create_blog_page(request):
         return redirect(reverse('home'))
 
     if request.method == 'POST':
-        form = BlogPageForm(request.POST)
+        form = BlogPageForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
             messages.success(request, 'You created a new Blog Page')
