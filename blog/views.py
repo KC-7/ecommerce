@@ -84,10 +84,10 @@ def blog_page_detail(request, pk):
 
 @login_required
 def delete_blog_page(request, pk):
-    """ Delete a blog post """
+    """ Delete an blog post """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
-        return redirect(reverse('home'))
+        return redirect(reverse('blog'))
 
     blog_page = get_object_or_404(BlogPage, pk=pk)
 
@@ -101,13 +101,9 @@ def delete_blog_page(request, pk):
 
         else:
             messages.error(
-                request, 'Incorrect username. Blog post was not deleted.')
-            return render(
-                request,
-                'blog/delete_blog_page.html',
-                {'blog_page': blog_page})
+                request, 'Incorrect username. Blog page was not deleted.')
 
-    template = 'blog/delete_blog_page.html'
+    template = 'blog/blog_page_detail.html'
     context = {
         'blog_page': blog_page,
     }

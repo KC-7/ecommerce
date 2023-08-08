@@ -11,6 +11,7 @@
 
 {% block content %}
 <div class="overlay"></div>
+{% include "blog/delete_page_modal.html" %}
 <div class="container mb-4">
     <div class="py-5">
         <div class="row mb-4">
@@ -47,10 +48,9 @@
             </div>
             {% if user.is_superuser %}
                 <div class="col-4 text-center">
-                    <form method="post" action="{% url 'delete_blog_page' pk=blog_page.pk %}">
-                        {% csrf_token %}
-                        <button type="submit" class="btn btn-danger">Delete</button>
-                    </form>
+                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deletePageModal">
+                        Delete
+                    </button>
                 </div>
                 <div class="col-4 text-right"><a href="{% url 'edit_blog_page' pk=blog_page.pk %}" class="btn btn-secondary">Edit</a></div>
             {% endif %}

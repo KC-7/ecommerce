@@ -77,6 +77,7 @@
             </div>
             <div class="row">
                 {% for product in page_obj %}
+                {% include "products/delete_page_modal.html" %}
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                     <div class="card h-100 border-0">
                         {% if product.image %}
@@ -116,7 +117,9 @@
                                     {% if request.user.is_superuser %}
                                     <small class="float-right">
                                         <a class="text-white btn-black bg-purple p-1" href="{% url 'edit_product' product.id %}">Edit</a> |
-                                        <a class="text-white btn-black bg-danger p-1" href="{% url 'delete_product' product.id %}">Delete</a>
+                                        <button type="button" class="text-white btn-black bg-danger border-danger border-1" data-toggle="modal" data-target="#deletePageModal">
+                                            Delete
+                                        </button>
                                     </small>
                                     {% endif %}
                                 </div>

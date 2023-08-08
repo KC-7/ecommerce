@@ -55,7 +55,7 @@ def delete_about_page(request, pk):
     """ Delete an about page """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
-        return redirect(reverse('home'))
+        return redirect(reverse('about'))
 
     about_page = get_object_or_404(AboutPage, pk=pk)
 
@@ -70,12 +70,8 @@ def delete_about_page(request, pk):
         else:
             messages.error(
                 request, 'Incorrect username. About page was not deleted.')
-            return render(
-                request,
-                'about/delete_about_page.html',
-                {'about_page': about_page})
 
-    template = 'about/delete_about_page.html'
+    template = 'about/about_page_detail.html'
     context = {
         'about_page': about_page,
     }

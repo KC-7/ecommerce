@@ -139,10 +139,10 @@ def edit_product(request, product_id):
 
 @login_required
 def delete_product(request, product_id):
-    """ Delete a product from the store """
+    """ Delete an product """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
-        return redirect(reverse('home'))
+        return redirect(reverse('products'))
 
     product = get_object_or_404(Product, pk=product_id)
 
@@ -156,11 +156,9 @@ def delete_product(request, product_id):
 
         else:
             messages.error(
-                request, 'Incorrect username. Product was not deleted.')
-            return render(
-                request, 'products/delete_product.html', {'product': product})
+                request, 'Incorrect username. The product was not deleted.')
 
-    template = 'products/delete_product.html'
+    template = 'products/product_detail.html'
     context = {
         'product': product,
     }
