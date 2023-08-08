@@ -2,7 +2,6 @@ from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from allauth.account.views import SignupView
 from .generate import generate_and_save_punk_for_user
-# from django.contrib.auth.models import User
 from .models import Avatar
 
 

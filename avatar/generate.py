@@ -71,7 +71,6 @@ def generate_and_save_punk_for_user(user, request):
     smokes = os.listdir(
         os.path.join(settings.MEDIA_ROOT, 'attributes/uni/smoke'))
 
-    print("Assigning Punktype")
     punkType = np.random.choice(punkTypes, p=[0.5, 0.3, 0.05, 0.06, 0.09])
     punkStack, attrDict = get_punk_and_attributes(punkType)
 
@@ -81,8 +80,6 @@ def generate_and_save_punk_for_user(user, request):
 
     # Metadata dictionary to keep track of attributes
     metadata = {}
-
-    print(f"Assinging {punkType} attributes")
 
     if punkType == 'male':
         attrDict = prob.maleAttr
@@ -229,10 +226,8 @@ def generate_and_save_punk_for_user(user, request):
 
     avatar = Avatar(user=user, punk_type=punkType, attributes=metadata)
     avatar.image.save(punkFilename, File(buff), save=True)
-    messages.success(
-        request,
-        f"Successfully generated {punkType} punk with "
-        f"{attributeCount} attributes! Ref:({hashDigest})"
-    )
+    if request:
+        messages.success(
+            request, 'Horray, your new  aiPunk was generated successfully!')
 
     return punkStack
