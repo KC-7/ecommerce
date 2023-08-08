@@ -295,19 +295,19 @@ The admin panel also allows the amdministrator to:
 
 ### Stripe Integration
 
-[Stripe](https://stripe.com/gb) has been integrated into the project to handle the payment system.
+[Stripe](https://stripe.com/) has been integrated into the project to handle the payment system.
 
 Stripe is currently in developer mode for the website to allow test payments to be processed to ensure the site's functionality is operating as intended.
 
 #### Test Card Details
 
-Here are some test card details you can use to simulate different scenarios:
+Here are some test card details you can use to simulate different scenarios at checkout:
 
-| Type               | Card No            | Expiry             | CVC          | ZIP          |
-| :----------------- | :----------------- | :----------------- | :----------- | :----------- |
-| Success            | Visa               | 4242 4242 4242 4242 | A future date| Any 3 digits | Any 5 digits |
-| Require authorization | 4000 0027 6000 3184 | A future date    | Any 3 digits | Any 5 digits |
-| Declined           | 4000 0000 0000 0002 | A future date    | Any 3 digits | Any 5 digits |
+| Type                   | Card No             | Expiry                  | CVC                | ZIP                  |
+| :--------------------- | :------------------ | :---------------------- | :----------------- | :------------------- |
+| Success                | 4242 4242 4242 4242 | A future date (04/24)   | Any 3 digits (242) | Any 5 digits (42424) |
+| Requires authorization | 4000 0027 6000 3184 | A future date           | Any 3 digits       | Any 5 digits         |
+| Declined               | 4000 0000 0000 0002 | A future date           | Any 3 digits       | Any 5 digits         |
 
 For more details on setting up Stripe elements to accept payment, refer to the [Stripe Documentation](https://stripe.com/docs/).
 
@@ -848,8 +848,8 @@ To resolve this issue:
 1. Login to Heroku via terminal using: `heroku login -i`.
 2. Enter your email address.
 3. Go to your __Heroku Dashboard__ in a new tab.
-4. Go to __Account Settings__ --> __Applications__ --> __Authorizations__.
-5. Select __Create Authorization__ --> Enter a Description (Project Name) --> __Confirm__.
+4. Go to __Account Settings__ ➡️ __Applications__ ➡️ __Authorizations__.
+5. Select __Create Authorization__ ➡️ Enter a Description (Project Name) ➡️ __Confirm__.
 6. Copy the __Authorization token__ and use it as your password back in the terminal.
 7. You should now be able to login and continue with the deployment.
 
@@ -880,7 +880,7 @@ I initialized the the git remote by using the following code `heroku git:remote 
 
 #### Additional Heroku Tips
 
-Use the following commands to interact with Hroku once logged in: 
+Use the following commands to interact with Heroku once logged in: 
 
 1. Make Migrations:
 
@@ -929,7 +929,7 @@ The navbar was too large for small devices, the checkout element was dropping on
 
 #### Resolution
 
-I resolved this issue by adding the following CSS media quiery: 
+I resolved this issue by adding the following CSS media query: 
 
     @media (max-width: 400px) {
         .navbar {
@@ -1011,11 +1011,178 @@ I identified that a closing div tag, `</div>`, was missing from the end of the `
 
 ### Automated Testing
 
+33 Automated tests were created for the project. They are located in the tests.py files in the following apps: about, avatar, bag, blog, checkout, home, products & profiles.
+
+#### Coverage Installation
+
+The following code was used to install the `coverage` package:
+
+    `pip install coverage`
+
+#### Run Django tests with coverage
+
+The following code is used to initiate the tests for each app:
+
+    `coverage run manage.py test your_app_name`
+
+#### Generate Coverage Report
+
+The following code is used to generate the coverage report:
+
+    `coverage report`
+
+#### Run All Tests
+
+The following code was used to run all tests in the project: 
+
+    `python3 manage.py test`
+
+#### Results for Automated Tests
+
+No issues with the 33 automated tests: 
+
+    `System check identified no issues (0 silenced).
+    .................................
+    ----------------------------------------------------------------------
+    Ran 33 tests in 3.241s
+
+    OK`
+
+#### Coverage Report 
+
+<details> <summary><b> --------------------------------------- Click here to see the coverage report below: ⬇️</b></summary>
+
+| Name                                                  | Stmts | Miss | Cover |
+|-------------------------------------------------------|-------|------|-------|
+| about/__init__.py                                     |     0 |    0 |  100% |
+| about/admin.py                                        |    14 |    0 |  100% |
+| about/apps.py                                         |     4 |    0 |  100% |
+| about/forms.py                                        |     8 |    0 |  100% |
+| about/migrations/0001_initial.py                      |     5 |    0 |  100% |
+| about/migrations/0002_alter_aboutpage_content.py      |     5 |    0 |  100% |
+| about/migrations/__init__.py                          |     0 |    0 |  100% |
+| about/models.py                                       |     8 |    1 |   88% |
+| about/tests.py                                        |    40 |    0 |  100% |
+| about/urls.py                                         |     3 |    0 |  100% |
+| about/views.py                                        |    71 |   24 |   66% |
+| avatar/__init__.py                                    |     0 |    0 |  100% |
+| avatar/admin.py                                       |    16 |    4 |   75% |
+| avatar/apps.py                                        |     4 |    0 |  100% |
+| avatar/generate.py                                    |   125 |   48 |   62% |
+| avatar/migrations/0001_initial.py                     |     7 |    0 |  100% |
+| avatar/migrations/0002_auto_20230730_1422.py          |     4 |    0 |  100% |
+| avatar/migrations/0003_alter_avatar_image.py          |     4 |    0 |  100% |
+| avatar/migrations/__init__.py                         |     0 |    0 |  100% |
+| avatar/models.py                                      |     9 |    0 |  100% |
+| avatar/probability.py                                 |     6 |    0 |  100% |
+| avatar/tests.py                                       |    40 |    0 |  100% |
+| avatar/urls.py                                        |     3 |    0 |  100% |
+| avatar/views.py                                       |    21 |    4 |   81% |
+| bag/__init__.py                                       |     0 |    0 |  100% |
+| bag/admin.py                                          |     1 |    0 |  100% |
+| bag/apps.py                                           |     4 |    0 |  100% |
+| bag/contexts.py                                       |    28 |   12 |   57% |
+| bag/migrations/__init__.py                            |     0 |    0 |  100% |
+| bag/models.py                                         |     1 |    0 |  100% |
+| bag/templatetags/__init__.py                          |     0 |    0 |  100% |
+| bag/templatetags/bag_tools.py                         |     5 |    1 |   80% |
+| bag/tests.py                                          |    31 |    7 |   77% |
+| bag/urls.py                                           |     3 |    0 |  100% |
+| bag/views.py                                          |    70 |   29 |   59% |
+| blog/__init__.py                                      |     0 |    0 |  100% |
+| blog/admin.py                                         |    31 |    6 |   81% |
+| blog/apps.py                                          |     4 |    0 |  100% |
+| blog/forms.py                                         |    10 |    0 |  100% |
+| blog/migrations/0001_initial.py                       |     6 |    0 |  100% |
+| blog/migrations/0002_blogpage_image.py                |     4 |    0 |  100% |
+| blog/migrations/__init__.py                           |     0 |    0 |  100% |
+| blog/models.py                                        |     9 |    1 |   89% |
+| blog/tests.py                                         |    40 |    0 |  100% |
+| blog/urls.py                                          |     3 |    0 |  100% |
+| blog/views.py                                         |    83 |   25 |   70% |
+| blog/widgets.py                                       |     7 |    0 |  100% |
+| checkout/__init__.py                                  |     1 |    0 |  100% |
+| checkout/admin.py                                     |    12 |    0 |  100% |
+| checkout/apps.py                                      |     5 |    0 |  100% |
+| checkout/forms.py                                     |    18 |   11 |   39% |
+| checkout/migrations/0001_initial.py                   |     7 |    0 |  100% |
+| checkout/migrations/0002_order_user_profile.py        |     5 |    0 |  100% |
+| checkout/migrations/__init__.py                       |     0 |    0 |  100% |
+| checkout/models.py                                    |    51 |    1 |   98% |
+| checkout/signals.py                                   |     9 |    1 |   89% |
+| checkout/tests.py                                     |    16 |    0 |  100% |
+| checkout/urls.py                                      |     4 |    0 |  100% |
+| checkout/views.py                                     |    91 |   75 |   18% |
+| checkout/webhook_handler.py                           |    77 |   61 |   21% |
+| checkout/webhooks.py                                  |    28 |   19 |   32% |
+| ecommerce/__init__.py                                 |     0 |    0 |  100% |
+| ecommerce/settings.py                                 |    72 |   21 |   71% |
+| ecommerce/urls.py                                     |     8 |    0 |  100% |
+| ecommerce/views.py                                    |     3 |    1 |   67% |
+| home/__init__.py                                      |     0 |    0 |  100% |
+| home/admin.py                                         |     1 |    0 |  100% |
+| home/apps.py                                          |     4 |    0 |  100% |
+| home/migrations/__init__.py                           |     0 |    0 |  100% |
+| home/models.py                                        |     1 |    0 |  100% |
+| home/tests.py                                         |    10 |    0 |  100% |
+| home/urls.py                                          |     4 |    0 |  100% |
+| home/views.py                                         |     3 |    0 |  100% |
+| manage.py                                             |    12 |    2 |   83% |
+| products/__init__.py                                  |     0 |    0 |  100% |
+| products/admin.py                                     |    25 |    7 |   72% |
+| products/apps.py                                      |     4 |    0 |  100% |
+| products/forms.py                                     |    15 |    0 |  100% |
+| products/migrations/0001_initial.py                   |     6 |    0 |  100% |
+| products/migrations/__init__.py                       |     0 |    0 |  100% |
+| products/models.py                                    |    22 |    0 |  100% |
+| products/tests.py                                     |    51 |    0 |  100% |
+| products/urls.py                                      |     3 |    0 |  100% |
+| products/views.py                                     |   100 |   60 |   40% |
+| products/widgets.py                                   |     7 |    0 |  100% |
+| profiles/__init__.py                                  |     0 |    0 |  100% |
+| profiles/admin.py                                     |     1 |    0 |  100% |
+| profiles/apps.py                                      |     4 |    0 |  100% |
+| profiles/forms.py                                     |    18 |    1 |   94% |
+| profiles/migrations/0001_initial.py                   |     8 |    0 |  100% |
+| profiles/migrations/0002_userprofile_avatar.py        |     4 |    0 |  100% |
+| profiles/migrations/0003_remove_userprofile_avatar.py |     4 |    0 |  100% |
+| profiles/migrations/__init__.py                       |     0 |    0 |  100% |
+| profiles/models.py                                    |    21 |    1 |   95% |
+| profiles/tests.py                                     |    22 |    0 |  100% |
+| profiles/urls.py                                      |     3 |    0 |  100% |
+| profiles/views.py                                     |    34 |    8 |   76% |
+|-------------------------------------------------------|-------|------|-------|
+| TOTAL                                                 |  1531 |  431 |   72% |
+
+</details>
+
 TBC
 
 ---
 
 ### Lighthouse Testing
+
+| Page                  | Result                |
+|-----------------------|-----------------------|
+| Home                  |                       |
+| Products              |                       |
+| Product Detail        |                       |
+| Edit Product          |                       |
+| Create Product Page   |                       |
+| Profile               |                       |
+| AiPunk                |                       |
+| About Pages           |                       |
+| About Page Detail     |                       |
+| Edit About Page       |                       |
+| Create About Page     |                       |
+| Blog Posts            |                       |
+| Blog Post Detail      |                       |
+| Edit Blog Post        |                       |
+| Create Blog Post      |                       |
+| Shopping Bag          |                       |
+| Checkout              |                       |
+| Checkout Success      |                       |
+| 404 Page              |                       |
 
 TBC
 
@@ -1023,17 +1190,83 @@ TBC
 
 ### Console Log Testing
 
+| Page                  | Result                |
+|-----------------------|-----------------------|
+| Home                  |                       |
+| Products              |                       |
+| Product Detail        |                       |
+| Edit Product          |                       |
+| Create Product Page   |                       |
+| Profile               |                       |
+| AiPunk                |                       |
+| About Pages           |                       |
+| About Page Detail     |                       |
+| Edit About Page       |                       |
+| Create About Page     |                       |
+| Blog Posts            |                       |
+| Blog Post Detail      |                       |
+| Edit Blog Post        |                       |
+| Create Blog Post      |                       |
+| Shopping Bag          |                       |
+| Checkout              |                       |
+| Checkout Success      |                       |
+| 404 Page              |                       |
+
 TBC
 
 ---
 
-### W3C Validation Testing
+### W3 Nu HTML Checker Testing
+
+| Page                  | Result                |
+|-----------------------|-----------------------|
+| Home                  |                       |
+| Products              |                       |
+| Product Detail        |                       |
+| Edit Product          |                       |
+| Create Product Page   |                       |
+| Profile               |                       |
+| AiPunk                |                       |
+| About Pages           |                       |
+| About Page Detail     |                       |
+| Edit About Page       |                       |
+| Create About Page     |                       |
+| Blog Posts            |                       |
+| Blog Post Detail      |                       |
+| Edit Blog Post        |                       |
+| Create Blog Post      |                       |
+| Shopping Bag          |                       |
+| Checkout              |                       |
+| Checkout Success      |                       |
+| 404 Page              |                       |
 
 TBC
 
 ---
 
-### W3 Jigsaw Testing
+### W3C Jigsaww CSS Validation Testing
+
+| Page                  | Result                |
+|-----------------------|-----------------------|
+| Home                  | <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!"> |
+| Products              |                       |
+| Product Detail        |                       |
+| Edit Product          |                       |
+| Create Product Page   |                       |
+| Profile               |                       |
+| AiPunk                |                       |
+| About Pages           | <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!"> |
+| About Page Detail     |                       |
+| Edit About Page       |                       |
+| Create About Page     |                       |
+| Blog Posts            |                       |
+| Blog Post Detail      | <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!"> |
+| Edit Blog Post        |                       |
+| Create Blog Post      |                       |
+| Shopping Bag          |                       |
+| Checkout              |                       |
+| Checkout Success      |                       |
+| 404 Page              |                       |
 
 TBC
 
@@ -1105,91 +1338,91 @@ Throughout the development, I have aimed to meet the following learning outcomes
 
 ### Learning Outcome 1: Integrate an e-commerce payment system and product structure in a cloud-hosted Full-Stack web application
 
-| Criteria Description                                                                                        | Completion Status |
-|------------------------------------------------------------------------------------------------------------|-------------------|
+| Criteria Description                                                                                                     | Completion Status   |
+|--------------------------------------------------------------------------------------------------------------------------|---------------------|
 | Implement at least one Django app with e-commerce functionality using an online payment processing system (e.g. Stripe). | [ x ]               |
-| Implement a feedback system for successful and unsuccessful purchases with helpful messages.            | [ x ]               |
-| Develop and implement a Full-Stack web application using Django, relational database, and interactive Front-End. | [ x ]               |
-| Implement at least one form with validation for creating and editing models in the backend.               | [ x ]               |
-| Build a Django file structure following Django conventions.                                              | [ x ]               |
-| Write code demonstrating characteristics of 'clean code.'                                                | [ x ]               |
-| Define application URLs consistently.                                                                     | [ x ]               |
-| Incorporate main navigation menu and structured layout.                                                  | [ x ]               |
-| Demonstrate proficiency in Python language with sufficient custom logic.                                 | [ x ]               |
-| Write Python code with compound statements (if conditions, loops, etc.).                                  | [ x ]               |
-| Design a relational database schema with clear relationships between entities.                           | [ x ]               |
-| Create at least THREE original custom Django models.                                                     | [ x ]               |
-| Implement CRUD functionality for models.                                                                  | [ x ]               |
-| Deploy the final version to a hosting platform and test against the development version.                 | [ x ]               |
-| Remove commented-out code and broken internal links from the deployed code.                               | [ x ]               |
-| Ensure security of the deployed version by handling passwords and secret keys properly.                   | [ x ]               |
-| Use a git-based version control system with regular commits and project documentation in README.         | [ x ]               |
-| Document the complete deployment and testing procedures in README, explaining the application's purpose. | [ x ]               |
+| Implement a feedback system for successful and unsuccessful purchases with helpful messages.                             | [ x ]               |
+| Develop and implement a Full-Stack web application using Django, relational database, and interactive Front-End.         | [ x ]               |
+| Implement at least one form with validation for creating and editing models in the backend.                              | [ x ]               |
+| Build a Django file structure following Django conventions.                                                              | [ x ]               |
+| Write code demonstrating characteristics of 'clean code.'                                                                | [ x ]               |
+| Define application URLs consistently.                                                                                    | [ x ]               |
+| Incorporate main navigation menu and structured layout.                                                                  | [ x ]               |
+| Demonstrate proficiency in Python language with sufficient custom logic.                                                 | [ x ]               |
+| Write Python code with compound statements (if conditions, loops, etc.).                                                 | [ x ]               |
+| Design a relational database schema with clear relationships between entities.                                           | [ x ]               |
+| Create at least THREE original custom Django models.                                                                     | [ x ]               |
+| Implement CRUD functionality for models.                                                                                 | [ x ]               |
+| Deploy the final version to a hosting platform and test against the development version.                                 | [ x ]               |
+| Remove commented-out code and broken internal links from the deployed code.                                              | [ x ]               |
+| Ensure security of the deployed version by handling passwords and secret keys properly.                                  | [ x ]               |
+| Use a git-based version control system with regular commits and project documentation in README.                         | [ x ]               |
+| Document the complete deployment and testing procedures in README, explaining the application's purpose.                 | [ x ]               |
 
 ### Learning Outcome 2: Employ advanced User Experience Design to build a commercial-grade Full Stack Web Application
 
-| Criteria Description                                                                                                                                                                               | Completion Status |
+| Criteria Description                                                                                                                                                                              | Completion Status |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------|
-| Design a Front-End meeting accessibility guidelines, UX principles, and addressing specific user interactions.                                                                                      | [ x ]               |
-| Document and implement all User Stories in an Agile tool, mapping them to project goals.                                                                                                           | [ ]               |
-| Design and implement manual or automated test procedures to assess functionality, usability, responsiveness, and data management.                                                                   | [ ]               |
+| Design a Front-End meeting accessibility guidelines, UX principles, and addressing specific user interactions.                                                                                    | [x]               |
+| Document and implement all User Stories in an Agile tool, mapping them to project goals.                                                                                                          | [ ]               |
+| Design and implement manual or automated test procedures to assess functionality, usability, responsiveness, and data management.                                                                 | [ ]               |
 | Present a clear rationale for the development of the project in the README, addressing the needs of the target audience and user stories.                                                         | [ ]               |
-| Document the UX design work, including wireframes, mockups, diagrams, etc., and demonstrate implementation following the design process.                                                             | [ ]               |
+| Document the UX design work, including wireframes, mockups, diagrams, etc., and demonstrate implementation following the design process.                                                          | [ ]               |
 | Use an Agile tool effectively for managing planning and implementation of primary functionality.                                                                                                  | [ ]               |
 | Document and implement all User Stories and map them to the project within an Agile tool.                                                                                                         | [ ]               |
 
 ### Learning Outcome 3: Employ Search Engine Optimisation (SEO) techniques to improve audience reach
 
-| Criteria Description                                                                               | Completion Status |
+| Criteria Description                                                                              | Completion Status |
 |---------------------------------------------------------------------------------------------------|-------------------|
-| Ensure all pages can be reached by a link from another findable page.                             | [ x ]               |
-| Include Meta Description tags in the application HTML.                                           | [ ]               |
-| Include a site title on the parent template.                                                     | [ ]               |
+| Ensure all pages can be reached by a link from another findable page.                             | [x]               |
+| Include Meta Description tags in the application HTML.                                            | [ ]               |
+| Include a site title on the parent template.                                                      | [ ]               |
 | Use appropriate "nofollow" and "sponsored" attributes for links.                                  | [ ]               |
 | Include a sitemap and robots.txt file for search engine crawling.                                 | [ ]               |
-| Include a 404 response page with appropriate redirect.                                           | [ ]               |
-| Use meaningful text content supporting the application's purpose (no Lorem Ipsum).               | [ ]               |
+| Include a 404 response page with appropriate redirect.                                            | [ ]               |
+| Use meaningful text content supporting the application's purpose (no Lorem Ipsum).                | [ ]               |
 
 ### Learning Outcome 4: Create a secure Full Stack Web application with Authentication and role-based Authorization functionality
 
-| Criteria Description                                                                                                            | Completion Status |
+| Criteria Description                                                                                                           | Completion Status |
 |--------------------------------------------------------------------------------------------------------------------------------|-------------------|
-| Implement authentication mechanism allowing user registration and login for specific reasons.                                    | [ ]               |
+| Implement authentication mechanism allowing user registration and login for specific reasons.                                  | [ ]               |
 | Implement login and registration pages available only to anonymous users.                                                      | [ ]               |
 | Prevent non-admin users from accessing the data store directly without going through the code.                                 | [ ]               |
 | Apply role-based login and registration functionality.                                                                         | [ ]               |
-| Ensure current login state is reflected to the user.                                                                          | [ ]               |
-| Restrict access to restricted content/functionality before role-based login.                                                  | [ ]               |
+| Ensure current login state is reflected to the user.                                                                           | [ ]               |
+| Restrict access to restricted content/functionality before role-based login.                                                   | [ ]               |
 
 ### Learning Outcome 5: Employ marketing techniques to create brand reach
 
 | Criteria Description                                                       | Completion Status |
-|---------------------------------------------------------------------------|-------------------|
+|----------------------------------------------------------------------------|-------------------|
 | Create a Facebook Business Page dedicated to the product.                  | [ ]               |
 | Add a newsletter signup form to the application.                           | [ ]               |
 
 ### Learning Outcome 6: Understand the fundamentals of E-commerce applications
 
-| Criteria Description                                                    | Completion Status |
+| Criteria Description                                                   | Completion Status |
 |------------------------------------------------------------------------|-------------------|
-| Document the e-commerce business model underlying the application.      | [ ]               |
+| Document the e-commerce business model underlying the application.     | [ ]               |
 
 ## Additional Learning Outcomes
 
-| Criteria Description                                                                                                                                                                        | Completion Status |
+| Criteria Description                                                                                                                                                                       | Completion Status |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------|
-| Design and build a real-world full stack MVC e-commerce application with a Front-End that is easy to navigate and intuitive.                                                          | [ ]               |
+| Design and build a real-world full stack MVC e-commerce application with a Front-End that is easy to navigate and intuitive.                                                               | [ ]               |
 | Produce a fully robust codebase with CRUD actions immediately reflected in the user interface.                                                                                             | [ ]               |
-| Follow thorough manual and/or automated test procedures demonstrated in git commits.                                                                                                      | [ ]               |
-| Efficiently configure the project through well-kept Procfile, requirements.txt file, settings files, and data store configuration.                                                        | [ ]               |
+| Follow thorough manual and/or automated test procedures demonstrated in git commits.                                                                                                       | [ ]               |
+| Efficiently configure the project through well-kept Procfile, requirements.txt file, settings files, and data store configuration.                                                         | [ ]               |
 | Fully describe the data schema in the project README file.                                                                                                                                 | [ ]               |
 | Use version control software effectively with a record of the development process.                                                                                                         | [ ]               |
 | Ensure users have full control of their interaction with the application and the site's purpose is immediately evident to new users.                                                       | [ ]               |
-| Control access to sitemap via a robots.txt file and ensure all sitemap links are canonical.                                                                                                 | [ ]               |
-| Use descriptive metadata for SEO that accurately reflects the site's purpose.                                                                                                               | [ ]               |
-| Users only have access to intended views and functionality.                                                                                                                                  | [ ]               |
-| Document the primary marketing strategy behind the application.                                                                                                                             | [ ]               |
-| The solution has a clear, well-defined purpose addressing the needs of a particular target audience.                                                                                      | [ ]               |
+| Control access to sitemap via a robots.txt file and ensure all sitemap links are canonical.                                                                                                | [ ]               |
+| Use descriptive metadata for SEO that accurately reflects the site's purpose.                                                                                                              | [ ]               |
+| Users only have access to intended views and functionality.                                                                                                                                | [ ]               |
+| Document the primary marketing strategy behind the application.                                                                                                                            | [ ]               |
+| The solution has a clear, well-defined purpose addressing the needs of a particular target audience.                                                                                       | [ ]               |
 
 ## Additional Learning Outcomes 2
 
@@ -1292,6 +1525,7 @@ I would like to give special thanks to the following:
  - Creating or formatting the following tables in this readme: Useful links, learning outcomes, dependancies
  - I used it to format my external excel file that I was using to track the user stories
  - It was useful when troubleshooting errors while setting up the django app for the aiPunk generations
+ - It was used when creating the automated tests although most of which requires modifcations to work
 
  - Despite having previously set up an [django app with DALL-E 2 integrated for creating custom images](cre8ai.art), I decided to use newly created open source, free to use, local, ai image generation software to create the images. I used model SDXL 0.9 was only released a couple of weeks ago with its refiner model as well using ComfyUI interface. You will need a nVidea graphic card with atleast 10gb vram to run the application. I found the images generated with this app are currently ahead of the images created by Dall-E and since its run locally, it has no API charges. I have also used different models on Automatic1111 (A1111) UI for creating images locally but found ComfyUI and the new SD_XL model provided better quality generation alongside increased resolution size which is great for custom printed products. Unfortuntly ComfyUI using the SDXL model with refiner is quiete slow, especially in comparison to the standard model on A111. ------------------------- PROVIDE MORE DETAIL, Create section in readme, how to etc..................
 
