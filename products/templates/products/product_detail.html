@@ -76,19 +76,24 @@
                                 <div class="input-group">
                                     <div class="input-group-prepend">
                                         <button class="decrement-qty btn btn-black"
-                                            data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}">
+                                            data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}"
+                                            aria-label="Decrease Quantity">
                                             <span class="icon">
                                                 <i class="fas fa-minus"></i>
                                             </span>
                                         </button>
                                     </div>
                                     <div class="px-2">
+                                        <label for="id_qty_{{ product.id }}" class="sr-only">Quantity</label>
                                         <input class="form-control qty_input rounded-2" type="number" name="quantity" value="1"
-                                        min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
+                                            min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}"
+                                            aria-label="Quantity" aria-describedby="quantity-desc">
+                                        <div id="quantity-desc" class="sr-only">Enter a quantity between 1 and 99.</div>
                                     </div>
                                     <div class="input-group-append">
                                         <button class="increment-qty btn btn-black"
-                                            data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
+                                            data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}"
+                                            aria-label="Increase Quantity">
                                             <span class="icon">
                                                 <i class="fas fa-plus"></i>
                                             </span>
@@ -96,7 +101,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div>                        
                         <div class="col-6 text-center">
                             <a href="{% url 'products' %}" class="btn btn-primary p-1 float-left">
                                 <span class="icon">

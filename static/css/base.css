@@ -8,7 +8,9 @@
     /* Mystical Purple */
     --purple: #800080;
     /* Transcendent Teal */
-    --teal: #008080;
+    --teal: #008485;
+    /* Midnight Teal */
+    --teal-dark: #00555C;
     /* Divine Gold */
     --gold: #FFD700;
     /* Energetic Orange */
@@ -16,7 +18,7 @@
     /* Onyx Black */
     --black: #000000;
     /* Gun Metal Grey */
-    --grey: #808080;
+    --grey: #6b6b6b;
     /* Silver Blush */
     --silver: #dddddd;
     /* Pearl White */
@@ -110,6 +112,10 @@ footer {
     color: var(--teal) !important;
 }
 
+.text-purple {
+    color: var(--purple) !important;
+}
+
 .btn-primary {
     background-color: var(--teal) !important;
     color: var(--white) !important;
@@ -137,7 +143,7 @@ footer {
 }
 
 a {
-    color: var(--teal);
+    color: var(--teal-dark);
     text-decoration: none;
     transition: background-color 0.3s;
     border-radius: 10px;
