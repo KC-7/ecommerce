@@ -25,14 +25,14 @@
     --white: #FFFFFF;
 }
 
-/* ------------------------------------------------- General */
+/* ------------------------------------------------- Body, Background & Overlay */
 
 html {
     height: 100%;
 }
 
 body {
-    background: url('/media/homepage_background_5.png') no-repeat center center fixed;
+    background: url('/media/site/bg1.webp') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
     color: var(--grey);
@@ -40,6 +40,26 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    animation: slideshow 35s infinite; /* Total length for slideshow */
+}
+
+/* Background image slideshow */
+@keyframes slideshow {
+    0%, 100% {
+        background-image: url('/media/site/bg1.webp');
+    }
+    20% {
+        background-image: url('/media/site/bg2.webp');
+    }
+    40% {
+        background-image: url('/media/site/bg3.webp');
+    }
+    60% {
+        background-image: url('/media/site/bg4.webp');
+    }
+    80% {
+        background-image: url('/media/site/bg5.webp');
+    }
 }
 
 .overlay {
@@ -52,6 +72,8 @@ body {
     z-index: -1;
     /* sits behind content */
 }
+
+/* ------------------------------------------------- General */
 
 .hide {
     display: none;
@@ -679,11 +701,10 @@ input[name='q']::placeholder {
     }
 }
 
-/* Remove left and right padding from navbar elements so that content stays on one row on smaller devices, reduce social icon size, reduce font size on buttons */
+/* Remove left padding from navbar elements so that content stays on one row on smaller devices, reduce social icon size, reduce font size on buttons */
 @media (max-width: 400px) {
     .navbar {
         padding-left: 0;
-        padding-right: 0;
         font-size: small;
     }
 
