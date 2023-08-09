@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_meta %}
+<meta name="description" content="Read our new post on the onlineAI.art blog: {{ blog_page.title }}. Explore insights and information about AI technology, generative art, and more.">
+{% endblock %}
+
 {% block page_header %}
 <div class="container header-container">
     <div class="row">
