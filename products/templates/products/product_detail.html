@@ -33,7 +33,7 @@
                 <p class="lead text-left font-weight-bold mb-0">€{{ product.price }}</p>
                 {% if product.category %}
                 <p class="small mt-1 mb-0">
-                    <a href="{% url 'products' %}?category={{ product.category.name }}" class="text-muted">
+                    <a href="{% url 'products' %}?category={{ product.category.name }}" class="text-muted text-hover-teal">
                         <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
                     </a>
                 </p>

@@ -14,28 +14,34 @@
 <div class="container mb-5">
   <div class="py-5">
     <div class="row mb-4">
-        <div class="col-12">
-          <h1 class="text-black mb-4 typewriter-text"><i class="fa-solid fa-circle-info"></i> Find out more!</h1>
-          <hr>
-          <p>Check out our about us pages to find out more information. Feel free to contact us if you need anything further.</p>
+      <div class="col-12">
+        <h1 class="text-black mb-4 typewriter-text"><i class="fa-solid fa-circle-info"></i> Find out more!</h1>
+        <hr>
+        <p>Check out our about us pages to find out more information. Feel free to contact us if you need anything
+          further.</p>
+      </div>
+      <div class="col-10 mx-auto">
+        {% for about_page in about_pages|dictsort:"title" %}
+        <div class="card my-3 border-0 shadow-sm">
+          <div class="card-body">
+            <h5 class="mb-0">
+              <a class="text-black hover-bg stretched-link"
+                href="{% url 'about_page_detail' pk=about_page.pk %}">{{ about_page.title }}</a>
+            </h5>
+          </div>
         </div>
-        <div class="col-10 mx-auto">
-          {% for about_page in about_pages %}
-            <li class="list-group-item pl-3">
-              <a class="text-black hover-bg" href="{% url 'about_page_detail' pk=about_page.pk %}">{{ about_page.title }}</a>
-            </li>
-          {% empty %}
-            <p class="text-danger">No about pages yet.</p>
-          {% endfor %}
-        </div>
+        {% empty %}
+        <p class="text-danger">No about pages yet.</p>
+        {% endfor %}
+      </div>
     </div>
     <div class="row">
-        <div class="col text-end">
-            <a href="{% url 'home' %}" class="btn btn-primary">Home Page</a>
-            {% if user.is_superuser %}
-                <a href="{% url 'create_about_page' %}" class="btn btn-secondary float-right">Create New</a>
-            {% endif %}
-        </div>
+      <div class="col text-end">
+        <a href="{% url 'home' %}" class="btn btn-primary">Home Page</a>
+        {% if user.is_superuser %}
+        <a href="{% url 'create_about_page' %}" class="btn btn-secondary float-right">Create New</a>
+        {% endif %}
+      </div>
     </div>
   </div>
 </div>

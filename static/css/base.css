@@ -2,7 +2,7 @@
 
 :root {
     /* Electric Pink */
-    --pink: #FF00FF;
+    --pink: #ffa0ff;
     /* Cosmic Cyan */
     --cyan: #00FFFF;
     /* Mystical Purple */
@@ -17,6 +17,8 @@
     --black: #000000;
     /* Gun Metal Grey */
     --grey: #808080;
+    /* Silver Blush */
+    --silver: #dddddd;
     /* Pearl White */
     --white: #FFFFFF;
 }
@@ -76,12 +78,14 @@ footer {
 
 .responsive-heading {
     max-width: 100%;
-    overflow: hidden;
+    overflow: auto;
 }
 
 .img-preview {
-    max-width: 250px;
-    max-height: 250px;
+    width: 200px;
+    height: auto;
+    max-height: 100%;
+    max-width: 100%;
 }
 
 .max-height-50 {
@@ -140,7 +144,7 @@ a {
 }
 
 a:hover {
-    color: var(--gold);
+    color: var(--purple);
     text-decoration: none;
 }
 
@@ -229,8 +233,16 @@ a:hover {
     background: var(--teal) !important;
 }
 
+.bg-pink {
+    background: var(--pink) !important;
+}
+
 .bg-grey {
     background: var(--grey) !important;
+}
+
+.bg-silver {
+    background: var(--silver) !important;
 }
 
 a.category-badge>span.badge:hover {

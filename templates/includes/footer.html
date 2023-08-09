@@ -2,22 +2,22 @@
     <!-- Footer Container -->
     <div class="container text-center">
         <div class="row">
-            <!-- Column 1: About -->
+            <!-- Column 1: About Pages -->
             <div class="col-md-4 pb-1">
                 <hr class="custom-hr">
                 <h5><a href="{% url 'about' %}" aria-label="About Pages" class="text-white text-hover-gold footer-heading">🔍 Find out more</a></h5>
                 <ul class="social-icons list-inline text-center">
                     <li class="list-inline-item"><a href="{% url 'about' %}" class="text-cyan text-hover-gold"
                         aria-label="About Us"><i class="fas fa-info-circle fa-2x"></i> About</a></li>
-                    <li class="list-inline-item"><a href="{% url 'about' %}" class="text-cyan text-hover-gold"
+                    <li class="list-line-item"><a href="{% url 'about_page_detail' pk='9' %}" class="text-cyan text-hover-gold"
                         aria-label="Contact Us"><i class="fas fa-envelope fa-2x"></i> Contact</a></li>
-                    <li class="list-inline-item"><a href="{% url 'about' %}" class="text-cyan text-hover-gold"
+                    <li class="list-inline-item"><a href="{% url 'about_page_detail' pk='7' %}" class="text-cyan text-hover-gold"
                         aria-label="FAQ"><i class="fas fa-question-circle fa-2x"></i> FAQ</a></li>
-                    <li class="list-inline-item"><a href="{% url 'about' %}" class="text-cyan text-hover-gold"
+                    <li class="list-inline-item"><a href="{% url 'about_page_detail' pk='6' %}" class="text-cyan text-hover-gold"
                         aria-label="Privacy Policy"><i class="fas fa-lock fa-2x"></i> Privacy</a></li>
                 </ul>
             </div>
-            <!-- Column 2: Email Sign Up Form -->
+            <!-- Column 2: Blog Posts -->
             <div class="col-md-4 pb-1">
                 <hr class="custom-hr">
                 <h5><a href="{% url 'blog' %}" aria-label="Blog Posts" class="text-white text-hover-gold footer-heading">😁 Check out our Blog</a></h5>

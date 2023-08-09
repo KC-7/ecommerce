@@ -11,17 +11,15 @@
 
 {% block content %}
     <div class="container h-100">
-        <div class="row h-100">
-            <div class="col-8 my-auto mx-2">
-                <div class="bg-teal text-white p-4">
-                    <h1 class="logo-font responsive-heading typewriter-text">
+        <div class="row h-100 justify-content-center">
+            <div class="col-lg-8 col-md-10 col-12 d-flex flex-column align-items-center my-auto px-3">
+                <div class="bg-teal rounded p-4 w-100 d-flex align-items-center justify-content-center">
+                    <h2 class="logo-font responsive-heading typewriter-text text-center mb-0 text-white">
                         Unique one of a kind products
-                    </h1>
+                    </h2>
                 </div>
-                <div class="my-5">
-                    <h4>
-                        <a href="{% url 'products' %}" class="btn btn-primary btn-lg">Discover Now</a>
-                    </h4>
+                <div class="mt-5 w-100 text-center">
+                    <a href="{% url 'products' %}" class="btn btn-primary btn-lg border-0">Discover Now</a>
                 </div>
             </div>
         </div>
