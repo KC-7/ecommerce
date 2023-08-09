@@ -163,32 +163,34 @@ TBC
 The below custom colour scheme was designed and set up for the site. 
 
     :root {
-        --pink: #FF00FF;
         /* Electric Pink */
-        --cyan: #00FFFF;
+        --pink: #ffa0ff;
         /* Cosmic Cyan */
-        --purple: #800080;
+        --cyan: #00FFFF;
         /* Mystical Purple */
-        --teal: #008080;
+        --purple: #800080;
         /* Transcendent Teal */
-        --gold: #FFD700;
+        --teal: #008080;
         /* Divine Gold */
-        --orange: #FFA500;
+        --gold: #FFD700;
         /* Energetic Orange */
-        --black: #000000;
+        --orange: #FFA500;
         /* Onyx Black */
-        --grey: #808080;
+        --black: #000000;
         /* Gun Metal Grey */
-        --white: #FFFFFF;
+        --grey: #808080;
+        /* Silver Blush */
+        --silver: #dddddd;
         /* Pearl White */
+        --white: #FFFFFF;
     }
 
-<img src="media/colors1.png" alt="Color Palette" style="max-width: 66%;">
+<img src="media/colors1.png" alt="Color Palette" style="max-width: 40%;">
 
 ### Typography
 The font Audiowide has been used throughout the site to give it a modern, futuristic feel. This was imported into the CSS file from the main base template using Google Fonts.
 
-</summary> <img src="media/googleFontsAudiowide.png" alt="Audiowide Font" style="max-width: 66%;">
+</summary> <img src="media/googleFontsAudiowide.png" alt="Audiowide Font" style="max-width: 40%;">
 
 [Go Back Up to Table of Contents 📗](#table-of-contents)
 
@@ -772,8 +774,6 @@ I set up a custom domain with SSL certification to improve the authencity of the
 
 1. Use [DNS Checker](dnschecker.org) website to see if the domain has propegated successfully.
 
----
-
 ### SSL Cert & HTTPS Redirection Set Up on Cloudflare
 
 1. Sign in to / Set up Cloudflare account.
@@ -788,6 +788,8 @@ I set up a custom domain with SSL certification to improve the authencity of the
 
 1. Your site will now redirect to do HTTPS and will have a valid SSL Certificate (eg. https://customdomain.tdl / https://www.customdomain.tdl).
 
+[Go Back Up to Table of Contents 📗](#table-of-contents)
+
 ---
 
 ## Product Creation
@@ -796,25 +798,37 @@ I used fixtures files to upload the bulk of the categories and products, the cat
 
 ### ComfyUI
 
+TBC
+
 ### SDXL
+
+TBC
 
 ### Printify
 
+TBC
+
 ### Custom Products Fixtures
+
+TBC
+
+[Go Back Up to Table of Contents 📗](#table-of-contents)
 
 ---
 
 ## Bugs & Issues
 
+I have documented some of the bugs and issues I have encountered through out the project for future reference below:
+
 ### Allauth Templates Directory Not Found
 
-#### Issue
+**Issue**
 
 The following file path used in the Boutique Ado tutorial that I was following to set up the basics does not exist in the project directories:
 
     `cp -r ../.pip-modules/lib/python3.7/site-packages/alluth/templates/* ./templates/allauth/`
 
-#### Resolution
+**Resolution**
 
 To find the correct file path for the allauth packages, follow these steps:
 
@@ -829,7 +843,7 @@ To find the correct file path for the allauth packages, follow these steps:
 
 ### Heroku Invalid Credentials Provided
 
-#### Issue
+**Issue**
 
 When attempting to disable static using `heroku config:set DISABLE_COLLECTSTATIC=1 --app kc-ecommerce` as part of the deployment to Heroku, it returned ___Invalid credentials provided___ and gives an option to login to CLI via web browser.
 
@@ -841,7 +855,7 @@ When attempting to login to Heroku via the terminal using `heroku login -i`, it 
     ›
     ›   Error ID: unauthorized
 
-#### Resolution
+**Resolution**
 
 To resolve this issue: 
 
@@ -855,9 +869,9 @@ To resolve this issue:
 
 ---
 
-### Initialize Heroku Git Remote
+### Issue while Initializing the Heroku Git Remote
 
-#### Issue
+**Issue**
 
 Unable to push to Heroku first attempt.
 
@@ -867,7 +881,7 @@ Unable to push to Heroku first attempt.
     Please make sure you have the correct access rights
     and the repository exists.
 
-#### Resolution
+**Resolution**
 
 I initialized the the git remote by using the following code `heroku git:remote -a your-heroku-project-name-here` and was then able to successfully push to Heroku.
 
@@ -878,7 +892,7 @@ I initialized the the git remote by using the following code `heroku git:remote 
     Enumerating objects: 363, done.
     ...
 
-#### Additional Heroku Tips
+**Additional Heroku Tips**
 
 Use the following commands to interact with Heroku once logged in: 
 
@@ -902,13 +916,13 @@ Use the following commands to interact with Heroku once logged in:
 
 ### Programmatic Access for AWS User
 
-#### Issue
+**Issue**
 
 Since the walkthrough Boutique Ado video tutorial and updated text guide by the Code Institute, the AWS layout has changed.
 
 Previously setting up programmatic access was an option during User set up however now you need to set it up after the account has been created so that you can get your `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`.
 
-#### Resolution 
+**Resolution** 
 
 To get an `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` for the user, follow these steps: 
 
@@ -923,11 +937,11 @@ To get an `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` for the user, follow t
 
 ### Navbar too large
 
-#### Issue
+**Issue**
 
 The navbar was too large for small devices, the checkout element was dropping onto a new row. 
 
-#### Resolution
+**Resolution**
 
 I resolved this issue by adding the following CSS media query: 
 
@@ -942,11 +956,11 @@ I resolved this issue by adding the following CSS media query:
 
 ### Order number too long
 
-#### Issue
+**Issue**
 
 The order number was too long to be displayed correctly on smaller devices, it was impacting the styling for the order confirmation page. 
 
-#### Resolution
+**Resolution**
 
 I resolved this issue by using the truncate feature to restrict it to 16 characters instead of displaying all 32: 
 
@@ -956,13 +970,43 @@ I resolved this issue by using the truncate feature to restrict it to 16 charact
 
 ### Navbar not displayed correctly on Profile
 
-#### Issue
+**Issue**
 
 The navbar was not being displayed correctly on the profiles view, it was being positioned at the end of the container instead of the end of the page like the rest of the site. 
 
-#### Resolution
+**Resolution**
 
 I identified that a closing div tag, `</div>`, was missing from the end of the `profile.html` template. The navbar was correctly styled after the missing tag was enetered.
+
+---
+
+### Custom CKEditor not responding well
+
+**Issue**
+
+The CKEditor on the Add About, Edit About, Add Blog & Edit Blog Pages was not responding well on devices with a screen width below 380px. 
+
+**Resolution**
+
+To resolve this issue I tried removing buttons and adjusting formatting for the smaller devices but it still render correctly.
+
+I added the below JS to the CKEditor script to disable the editor on devices with screen width below 380px:
+
+    if (window.innerWidth >= 380) {
+    ... [REDACTED FOR BREVITY] ...
+    } else {
+    // Fallback UI for small screens here if needed
+    let textarea = document.querySelector('#id_content');
+    if (textarea) {
+        textarea.style.width = '100%';
+        textarea.placeholder =
+        "Simple editor mode enabled. Please use a larger screen to enable the integrated HTML editor.";
+        alert(
+        'Simple editor mode enabled. For a better experience, please use a larger screen to endable the integrated HTML editor.'
+        );
+    }
+
+The alert is only triggered on the edit pages as the placeholder is not visible behind the text. A future improvement could be to trigger a modal instead.
 
 [Go Back Up to Table of Contents 📗](#table-of-contents)
 
@@ -1006,12 +1050,11 @@ I identified that a closing div tag, `</div>`, was missing from the end of the `
 | 30                    | As a Store Owner, I want a unique custom avatar for users.   | Customize an avatar for a user profile and verify its appearance. | ![test-image-29](#) | ✅ | TBC             |
 | 31                    | As a Store Owner, I want admin control of products, blogs, etc. | Use the admin panel to control various site aspects and verify changes. | ![test-image-30](#) | ✅ | TBC             |
 
-
 ---
 
 ### Automated Testing
 
-33 Automated tests were created for the project. They are located in the tests.py files in the following apps: about, avatar, bag, blog, checkout, home, products & profiles.
+Thirty three automated tests were created for the project using assistance from ChatGPT. They are located in the tests.py files in the following apps: about, avatar, bag, blog, checkout, home, products & profiles.
 
 #### Coverage Installation
 
@@ -1282,25 +1325,73 @@ Flake8 was used to test the python code by running the following command in the 
 
 ### Responsiveness Testing
 
-TBC
+Its important that the website responds well across a variety of device sizes such as PC monitors, tablets and mobile devices. I carried out tests on a variety of device sizes, both physically and by simulation, to ensure the website responds well. The smallest device that the site has been tested for is the Samsung Galaxy Fold with a screen width of only 280px.
 
 #### Visual Testing on Physical Devices
 
-TBC
+| **Device**                           | **Width (px)** | **Height (px)** |
+|--------------------------------------|----------------|-----------------|
+| **Dell Monitor - 27" (Landscape)**   | 3840           | 2160            |
+| **Dell Monitor - 24" (Portrait)**    | 1920           | 1200            |
+| **Samsung Galaxy S10 - 5.8"**        | 360            | 760             |
 
 #### Visual Testing using Google Inspect
+
+| **Device**                   | **Width (px)** | **Height (px)** |
+|------------------------------|---------------|------------------|
+| **iPhone SE**                | 375           | 667              |
+| **iPhone XR**                | 414           | 896              |
+| **iPhone 12 Pro**            | 390           | 844              |
+| **Pixel 5**                  | 393           | 851              |
+| **Samsung Galaxy S8+**       | 360           | 740              |
+| **Samsung Galaxy S20 Ultra** | 412           | 915              |
+| **iPad Air**                 | 820           | 1180             |
+| **iPad Mini**                | 768           | 1024             |
+| **Surface Pro 7**            | 912           | 1368             |
+| **Galaxy Fold**              | 280           | 653              |
+| **Nest Hub**                 | 1024          | 600              |
+| **Nest Hub Max**             | 1280          | 800              |
 
 TBC
 
 #### Visual Testing using AmIRepsponsive
 
+| **Device**  | **Width (px)** | **Height (px)** | **Scale** |
+|-------------|----------------|-----------------|-----------|
+| **Desktop** | 1600           | 992             | 0.3181    |
+| **Laptop**  | 1280           | 802             | 0.277     |
+| **Tablet**  | 768            | 1024            | 0.219     |
+| **Mobile**  | 320            | 480             | 0.219     |
+
 TBC
+
+[Go Back Up to Table of Contents 📗](#table-of-contents)
 
 ---
 
 ## Future Development
 
+- Change URLs to unique, shortened slugs based off of the corrosponding pages titles instead of pks - eg, for the about pages, blog and products.
+
+- Add comments and like functionality to blog posts.
+
+- Set up user reviews on ordered products.
+
+- Add order processing app for store owners to add tracking number once dispatched, etc. 
+
+- Set up email address on the custom domain, eg: contact@onlineai.art.
+
+- Set up the footer as an app so the admins can modify links via the admin portal without changing the websites code.
+
+- Update products to include has_geneder with male, female and unisex options then add to filtering etc.
+
+- Set up products to allow multiple images and videos.
+
+- ............
+
 TBC
+
+[Go Back Up to Table of Contents 📗](#table-of-contents)
 
 ---
 
@@ -1308,11 +1399,15 @@ TBC
 
 TBC
 
+[Go Back Up to Table of Contents 📗](#table-of-contents)
+
 ---
 
 ## Search Engine Optimization (SEO)
 
 TBC
+
+[Go Back Up to Table of Contents 📗](#table-of-contents)
 
 ---
 
@@ -1329,6 +1424,8 @@ TBC
 ### GDPR
 
 TBC
+
+[Go Back Up to Table of Contents 📗](#table-of-contents)
 
 ---
 
@@ -1407,7 +1504,7 @@ Throughout the development, I have aimed to meet the following learning outcomes
 |------------------------------------------------------------------------|-------------------|
 | Document the e-commerce business model underlying the application.     | [ ]               |
 
-## Additional Learning Outcomes
+### Learning Outcome 7: Additional Learning Outcomes (M)
 
 | Criteria Description                                                                                                                                                                       | Completion Status |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------|
@@ -1424,7 +1521,7 @@ Throughout the development, I have aimed to meet the following learning outcomes
 | Document the primary marketing strategy behind the application.                                                                                                                            | [ ]               |
 | The solution has a clear, well-defined purpose addressing the needs of a particular target audience.                                                                                       | [ ]               |
 
-## Additional Learning Outcomes 2
+### Learning Outcome 8: Additional Learning Outcomes (D)
 
 | Criteria Description | Completion Status |
 |----------------------|-------------------|
@@ -1460,7 +1557,6 @@ Throughout the development, I have aimed to meet the following learning outcomes
 | Datastore configuration is kept in a single location where it can be changed easily. | [ ]               |
 | Configuration and dependencies files are kept up to date. Separate versions/branches of these are commits where relevant. Datastore configuration is kept in a single location and can be changed easily. The datastore is not accessible to the regular user without going through the code. | [ ]               |
 | Testing procedures are comprehensive, with a good level of coverage, and have been followed. There is clear evidence of testing, and this is demonstrated in git commits. All noticeable errors have been corrected or documented. | [ ]               |
-
 
 [Go Back Up to Table of Contents 📗](#table-of-contents)
 

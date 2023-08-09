@@ -17,14 +17,14 @@
     <div class="overlay"></div>
     <div class="container my-4">
         <div class="row">
-            <div class="col-12 col-md-8 offset-1">
+            <div class="col-12 col-md-8 mx-auto">
                 <h1 class="my-4 text-black"><i class="fa-solid fa-circle-info"></i> Edit About Page</h1>
                 <hr>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-12 col-md-8 offset-1">
+            <div class="col-12 col-md-8 mx-auto">
                 <form method="POST" action="{% url 'edit_about_page' pk=about.id %}" class="form mb-2" enctype="multipart/form-data">
                     {% csrf_token %}
                     {% for field in form %}
@@ -45,7 +45,9 @@
 {% endblock %}
 
 {% block postloadjs %}
-  <script>
+<!-- Remove CKEditor from devices with screen widths below 380px -->
+<script>
+  if (window.innerWidth >= 380) {
     ClassicEditor
       .create(document.querySelector('#id_content'), {
         toolbar: ['heading', '|', 'bold', 'italic', 'link', 'bulletedList', 'numberedList', 'blockQuote'],
@@ -80,15 +82,19 @@
         window.editor = editor;
       })
       .catch(error => {
-        const errorMessage = 'There was a problem initializing the editor.'
+        const errorMessage = 'There was a problem initializing the editor.';
       });
-  </script>
-
-    {{ block.super }}
-    <script type="text/javascript">
-        $('#new-image').change(function() {
-            var file = $('#new-image')[0].files[0];
-            $('#filename').text(`Image will be set to: ${file.name}`);
-        });
-    </script>
+  } else {
+    // Fallback UI for small screens here if needed
+    let textarea = document.querySelector('#id_content');
+    if (textarea) {
+      textarea.style.width = '100%';
+      textarea.placeholder =
+        "Simple editor mode enabled. Please use a larger screen to enable the integrated HTML editor.";
+      alert(
+        'Simple editor mode enabled. For a better experience, please use a larger screen to endable the integrated HTML editor.'
+        );
+    }
+  }
+</script>
 {% endblock %}
