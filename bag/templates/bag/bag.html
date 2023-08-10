@@ -19,22 +19,25 @@
             <hr>
         </div>
     </div>
-
+    <!-- Shopping Bag -->
     <div class="row">
         <div class="col">
             {% if bag_items %}
             <div class="d-block d-md-none">
+                <!-- Total Pricing -->
                 <div class="row">
                     <div class="col">
                         {% include "bag/bag-total.html" %}
                     </div>
                 </div>
+                <!-- Checkout Buttons -->
                 <div class="row">
                     <div class="col">
                         {% include "bag/checkout-buttons.html" %}
                         <p class="text-muted mb-5">A summary of your bag contents is below</p>
                     </div>
                 </div>
+                <!-- Items in Bag -->
                 {% for item in bag_items %}
                 <div class="row">
                     <div class="col-12 col-sm-6 mb-2">
@@ -107,6 +110,7 @@
                 </table>
             </div>
             {% else %}
+            <!-- Empty Bag -->
             <p class="lead mb-5">Your bag is empty.</p>
             <a href="{% url 'products' %}" class="btn btn-primary btn-lg">
                 <span class="icon">
@@ -121,36 +125,60 @@
 {% endblock %}
 
 {% block postloadjs %}
-{{ block.super }}
-<script>
-    $('.btt-link').click(function (e) {
-        window.scrollTo(0, 0)
-    })
-</script>
-{% include 'products/includes/quantity_input_script.html' %}
+    {{ block.super }}
+    <script>
+        // Smooth scroll to top when the button is clicked
+        $('.btt-link').click(function (e) {
+            e.preventDefault();
+            $('html, body').animate({ scrollTop: 0 }, 'slow');
+        });
 
-<script>
-    // Update quantity on click
-    $('.update-link').click(function (e) {
-        var form = $(this).prev('.update-form');
-        form.submit();
-    })
+        // Function to toggle the visibility of the scroll-to-top button
+        function toggleScrollToTopButton() {
+            const button = $('.btt-button');
+            const scrollPosition = $(window).scrollTop();
 
-    // Remove item and reload on click
-    $('.remove-item').click(function (e) {
-        var csrfToken = "{{ csrf_token }}";
-        var itemId = $(this).attr('id').split('remove_')[1];
-        var size = $(this).data('product_size');
-        var url = `/bag/remove/${itemId}/`;
-        var data = {
-            'csrfmiddlewaretoken': csrfToken,
-            'product_size': size
-        };
+            // Show the button if the scroll position is greater than 0
+            // Otherwise, hide the button
+            if (scrollPosition > 0) {
+                button.removeClass('hide');
+            } else {
+                button.addClass('hide');
+            }
+        }
 
-        $.post(url, data)
-            .done(function () {
-                location.reload();
-            });
-    })
-</script>
+        // Check the visibility of the button on page load
+        toggleScrollToTopButton();
+
+        // Check the visibility of the button on scroll
+        $(window).scroll(function () {
+            toggleScrollToTopButton();
+        });
+    </script>
+    {% include 'products/includes/quantity_input_script.html' %}
+
+    <script>
+        // Update quantity on click
+        $('.update-link').click(function (e) {
+            var form = $(this).prev('.update-form');
+            form.submit();
+        })
+
+        // Remove item and reload on click
+        $('.remove-item').click(function (e) {
+            var csrfToken = "{{ csrf_token }}";
+            var itemId = $(this).attr('id').split('remove_')[1];
+            var size = $(this).data('product_size');
+            var url = `/bag/remove/${itemId}/`;
+            var data = {
+                'csrfmiddlewaretoken': csrfToken,
+                'product_size': size
+            };
+
+            $.post(url, data)
+                .done(function () {
+                    location.reload();
+                });
+        })
+    </script>
 {% endblock %}

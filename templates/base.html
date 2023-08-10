@@ -11,10 +11,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     {% endblock %}
 
-    <!-- Extra Meta for Specific Page -->
+    <!-- Extra Meta -->
     {% block extra_meta %}
-    <meta name="description"
-        content="Explore OnlineAI.Art – Your Destination for Custom Clothing, Tech, and Homeware featuring Limited Edition AI-Generated Artwork. Discover a Unique Collection of Products and Accessories with Innovative AI Designs. Read our Blog for Insights on AI Technology and Generative Art. Sign Up for Exclusive Benefits and Get Your Own Custom Generated aiPunk Avatar.">
+        <!-- Meta Description -->
+        <meta name="description" content="Explore onlineAI.art for limited edition AI-generated artwork on clothing, tech, and homeware. Discover unique products, read our AI & art blog, and get your own unique aiPunk avatar.">
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="onlineAI.art">
+        <meta property="og:title" content="Online AI .Art">
+        <meta property="og:description" content="Explore onlineAI.art for limited edition AI-generated artwork on clothing, tech, and homeware. Discover unique products, read our AI & art blog, and get your own unique aiPunk avatar.">
+        <meta property="og:image" content="{% static 'favicon/favicon-32x32.png' %}">
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="onlineAI.art">
+        <meta property="twitter:title" content="YOUR_PAGE_TITLE">
+        <meta property="twitter:description" content="Explore onlineAI.art for limited edition AI-generated artwork on clothing, tech, and homeware. Discover unique products, read our AI & art blog, and get your own unique aiPunk avatar.">
+        <meta property="twitter:image" content="{% static 'favicon/favicon-32x32.png' %}">
     {% endblock %}
 
     <!-- Favicon -->
@@ -168,7 +182,9 @@
                     aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                <!-- Mobile Header -->
                 {% include 'includes/mobile-top-header.html' %}
+                <!-- Main Navigation -->
                 {% include 'includes/main-nav.html' %}
             </nav>
         </div>

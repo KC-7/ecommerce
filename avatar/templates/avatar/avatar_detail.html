@@ -24,6 +24,7 @@
     </div>
     <div class="container mt-2">
         <div class="row justify-content-md-center">
+            <!-- Avatar Image -->
             <div class="col-md-4 d-flex justify-content-center align-items-center py-2">
                 {% if avatar.image %}
                     <img src="{{ avatar.image.url }}" alt="User Avatar" class="img-fluid rounded-circle">
@@ -31,6 +32,7 @@
                     <img src="{{ MEDIA_URL }}noimage.png" alt="No Avatar" class="img-fluid rounded-circle">
                 {% endif %}
             </div>
+            <!-- Avatar Attributes -->
             <div class="col-md-6">
                 {% if avatar.attributes %}
                     <h3><i class="fas fa-info-circle"></i> Attributes:</h3>

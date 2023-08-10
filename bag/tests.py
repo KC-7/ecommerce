@@ -1,13 +1,10 @@
 from django.test import TestCase, Client
 from django.urls import reverse
 from products.models import Product
-from django.shortcuts import get_object_or_404
-from django.conf import settings
-from decimal import Decimal
 
 
 class BagViewsTestCase(TestCase):
-
+    """ Tests for Bag """
     def setUp(self):
         self.client = Client()
         self.view_bag_url = reverse('view_bag')

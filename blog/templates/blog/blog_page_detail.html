@@ -16,12 +16,14 @@
 {% block content %}
 <div class="overlay"></div>
 {% include "blog/delete_page_modal.html" %}
+<!-- Blog Post -->
 <div class="container mb-4">
     <div class="py-5">
         <div class="row mb-4">
             <div class="col-12">
                 <h1 class="text-black"><i class="fas fa-blog"></i> {{ blog_page.title }}</h1>
                 <hr>
+                <!-- Blog Image -->
                 {% if blog_page.image %}
                 <div class="blog-image-container mb-3">
                     <div class="image-crop">
@@ -29,6 +31,7 @@
                     </div>
                 </div>
                 {% endif %}
+                <!-- Blog Content -->
                 <div class="pt-3 px-5">{{ blog_page.content|safe }}</div>
                 <div class="text-right">Created: {{ blog_page.created_at }}</div>
                 <hr>

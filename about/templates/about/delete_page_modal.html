@@ -1,4 +1,5 @@
 {% if user.is_superuser %}
+  <!-- Confirm Deletion Form -->
   <form method="post" action="{% url 'delete_about_page' pk=about_page.pk %}">
     {% csrf_token %}
     <div class="modal fade" tabindex="-1" role="dialog" id="deletePageModal">

@@ -2,7 +2,6 @@ import os
 from django.conf import settings
 from PIL import Image
 from .models import Avatar
-# from django.contrib.auth.models import User
 import numpy as np
 import hashlib
 from . import probability as prob
