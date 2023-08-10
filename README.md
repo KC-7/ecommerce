@@ -15,6 +15,8 @@ This is a django project for an E-Commerce Store with Stripe payments, custom pr
 
 The site is targeted towords Art, Tech, Fashion, Entusiates and Blog Readers interested in AI generation.
 
+A [Facebook Page](https://www.facebook.com/people/Onlineaiart/61550214234067/) has been set up for the site.
+
 ---
 
 ## Site Preview 
@@ -1387,7 +1389,9 @@ TBC
 
 - Set up products to allow multiple images and videos.
 
-- ............
+- Set up automated dropshipping.
+
+- Set up a delete profile function.
 
 TBC
 
@@ -1414,6 +1418,12 @@ TBC
 ## Web Marketing
 
 ### Facebook Page
+
+A [Facebook Page](https://www.facebook.com/people/Onlineaiart/61550214234067/) has been set up to the support the ecommerce store.
+
+See images of page and content below:
+
+###############
 
 TBC
 

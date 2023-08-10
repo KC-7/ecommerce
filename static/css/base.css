@@ -702,6 +702,11 @@ input[name='q']::placeholder {
     .social-icons {
         font-size: x-small;
     }
+    
+    /* Fix for Account  */
+    .dropdown-menu {
+        margin: .125rem -4rem;
+    }
 }
 
 @media (max-width: 450px) {
