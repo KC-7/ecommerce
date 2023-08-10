@@ -2,7 +2,8 @@
 {% load static %}
 
 {% block extra_meta %}
-<meta name="description" content="Explore AI Technology and Generative Art through our Blog Posts. Discover Insights, Updates, and More at onlineAI.art!">
+<meta name="description"
+  content="Explore AI Technology and Generative Art through our Blog Posts. Discover Insights, Updates, and More at onlineAI.art!">
 {% endblock %}
 
 {% block page_header %}
@@ -27,61 +28,65 @@
       <div class="card mb-3 rounded-4 bg-silver">
         <div class="row g-0">
           {% if forloop.counter|divisibleby:2 %}
-            <!-- Text content for odd blog posts on larger screens and below the image for smaller screens -->
-            <div class="col-12 col-md-9 order-2 order-md-1">
-              <div class="card-body">
-                <h3 class="card-title">
-                  <a href="{% url 'blog_page_detail' pk=blog_page.pk %}">{{ blog_page.title }}</a>
-                </h3>
-                <p class="card-text text-black">{{ blog_page.content|striptags|truncatewords:30|safe }}</p>
-                <div class="text-end">
-                  <a href="{% url 'blog_page_detail' pk=blog_page.pk %}"
-                    class="btn btn-sm btn-black mb-2 float-right">Read More</a>
-                </div>
+          <!-- Text content for odd blog posts on larger screens and below the image for smaller screens -->
+          <div class="col-12 col-md-9 order-2 order-md-1">
+            <div class="card-body">
+              <h3 class="card-title">
+                <a href="{% url 'blog_page_detail' pk=blog_page.pk %}"
+                  aria-label="Read more about: {{ blog_page.title }}">{{ blog_page.title }}</a>
+              </h3>
+              <p class="card-text text-black">{{ blog_page.content|striptags|truncatewords:30|safe }}</p>
+              <div class="text-end">
+                <a href="{% url 'blog_page_detail' pk=blog_page.pk %}" class="btn btn-sm btn-black mb-2 float-right"
+                  aria-label="Read more about: {{ blog_page.title }}">
+                  <span class="visually-hidden">about {{ blog_page.title }}</span>Read More</a>
               </div>
             </div>
-            <!-- Image for odd blog posts on larger screens and top for smaller screens -->
-            <div class="col-12 col-md-3 order-1 order-md-2">
-              {% if blog_page.image %}
-                <div class="d-flex align-items-center justify-content-center h-100">
-                  <img src="{{ blog_page.image.url }}" alt="{{ blog_page.title }}"
-                    class="img-fluid rounded-circle img-preview p-3">
-                </div>
-              {% else %}
-                <div class="d-flex align-items-center justify-content-center h-100">
-                  <img src="{{ MEDIA_URL }}alien-emoji.png" alt="Default image for {{ blog_page.title }}"
-                    class="img-fluid rounded-circle img-preview p-4">
-                </div>
-              {% endif %}
+          </div>
+          <!-- Image for odd blog posts on larger screens and top for smaller screens -->
+          <div class="col-12 col-md-3 order-1 order-md-2">
+            {% if blog_page.image %}
+            <div class="d-flex align-items-center justify-content-center h-100">
+              <img src="{{ blog_page.image.url }}" alt="{{ blog_page.title }}"
+                class="img-fluid rounded-circle img-preview p-3">
             </div>
+            {% else %}
+            <div class="d-flex align-items-center justify-content-center h-100">
+              <img src="{{ MEDIA_URL }}alien-emoji.png" alt="Default image for {{ blog_page.title }}"
+                class="img-fluid rounded-circle img-preview p-4">
+            </div>
+            {% endif %}
+          </div>
           {% else %}
-            <!-- Image for even blog posts on larger screens and top for smaller screens -->
-            <div class="col-12 col-md-3 order-1">
-              {% if blog_page.image %}
-                <div class="d-flex align-items-center justify-content-center h-100">
-                  <img src="{{ blog_page.image.url }}" alt="{{ blog_page.title }}"
-                    class="img-fluid rounded-circle img-preview p-3">
-                </div>
-              {% else %}
-                <div class="d-flex align-items-center justify-content-center h-100">
-                  <img src="{{ MEDIA_URL }}alien-emoji.png" alt="Default image for {{ blog_page.title }}"
-                    class="img-fluid rounded-circle img-preview p-4">
-                </div>
-              {% endif %}
+          <!-- Image for even blog posts on larger screens and top for smaller screens -->
+          <div class="col-12 col-md-3 order-1">
+            {% if blog_page.image %}
+            <div class="d-flex align-items-center justify-content-center h-100">
+              <img src="{{ blog_page.image.url }}" alt="{{ blog_page.title }}"
+                class="img-fluid rounded-circle img-preview p-3">
             </div>
-            <!-- Text content for even blog posts on larger screens and below the image for smaller screens -->
-            <div class="col-12 col-md-9 order-2">
-              <div class="card-body">
-                <h3 class="card-title">
-                  <a href="{% url 'blog_page_detail' pk=blog_page.pk %}">{{ blog_page.title }}</a>
-                </h3>
-                <p class="card-text text-black">{{ blog_page.content|striptags|truncatewords:30|safe }}</p>
-                <div class="text-end">
-                  <a href="{% url 'blog_page_detail' pk=blog_page.pk %}"
-                    class="btn btn-sm btn-black mb-2 float-right">Read More</a>
-                </div>
+            {% else %}
+            <div class="d-flex align-items-center justify-content-center h-100">
+              <img src="{{ MEDIA_URL }}alien-emoji.png" alt="Default image for {{ blog_page.title }}"
+                class="img-fluid rounded-circle img-preview p-4">
+            </div>
+            {% endif %}
+          </div>
+          <!-- Text content for even blog posts on larger screens and below the image for smaller screens -->
+          <div class="col-12 col-md-9 order-2">
+            <div class="card-body">
+              <h3 class="card-title">
+                <a href="{% url 'blog_page_detail' pk=blog_page.pk %}"
+                  aria-label="Read more about: {{ blog_page.title }}">{{ blog_page.title }}</a>
+              </h3>
+              <p class="card-text text-black">{{ blog_page.content|striptags|truncatewords:30|safe }}</p>
+              <div class="text-end">
+                <a href="{% url 'blog_page_detail' pk=blog_page.pk %}" class="btn btn-sm btn-black mb-2 float-right"
+                  aria-label="Read more about: {{ blog_page.title }}">
+                  <span class="visually-hidden">about {{ blog_page.title }}</span>Read More</a>
               </div>
             </div>
+          </div>
           {% endif %}
         </div>
       </div>
@@ -92,7 +97,8 @@
     <div class="col text-end mb-2">
       <a href="{% url 'home' %}" class="btn btn-primary">Home Page</a>
       {% if user.is_superuser %}
-      <a href="{% url 'create_blog_page' %}" class="btn btn-secondary float-right">Create New</a>
+      <a href="{% url 'create_blog_page' %}" class="btn btn-secondary float-right"
+        aria-label="Create a new blog post">Create New</a>
       {% endif %}
     </div>
   </div>
