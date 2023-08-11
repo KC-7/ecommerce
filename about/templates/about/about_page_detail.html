@@ -20,10 +20,10 @@
 {% include "about/delete_page_modal.html" %}
 <!-- About Page Details -->
 <div class="mb-4">
-    <div class="container py-5">
+    <div class="container py-4">
         <div class="row mb-4">
             <div class="col-12">
-                <h1 class="text-black"><i class="fa-solid fa-circle-info"></i> {{ about_page.title }}</h1>
+                <h3 class="text-black"><i class="fa-solid fa-circle-info"></i> {{ about_page.title }}</h3>
                 <hr>
                 <div class="pl-3 pt-3">{{ about_page.content|safe }}</div>
                 <div class="text-right">Created: {{ about_page.created_at }}</div>

@@ -32,14 +32,16 @@
 <div class="container mb-4">
     <!-- Categories -->
     <div class="row">
-        <div class="col text-center mt-5">
-            <h2 class="text-black"><i class="fa-solid fa-shirt"></i> Products</h2>
+        <div class="col-10 mx-auto mt-5">
+            <h2 class="text-black typewriter-text"><i class="fa-solid fa-shirt"></i> Products</h2>
             {% for c in current_categories %}
-            <a href="{% url 'products' %}?category={{ c.name }}" class="category-badge text-decoration-none">
-                <span class="p-2 mt-2 badge badge-white text-black rounded-2 border border-dark">
-                    {{ c.friendly_name }}
-                </span>
-            </a>
+            <div class="text-center">
+                <a href="{% url 'products' %}?category={{ c.name }}" class="category-badge text-decoration-none">
+                    <span class="p-2 mt-2 badge badge-white text-black rounded-2 border border-dark">
+                        {{ c.friendly_name }}
+                    </span>
+                </a>
+            </div>
             {% endfor %}
             <hr class="w-50 mb-1">
         </div>

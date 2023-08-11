@@ -258,6 +258,14 @@ a:hover {
     color: var(--cyan) !important;
 }
 
+.text-purple {
+    color: var(--purple) !important;
+}
+
+.bg-cyan {
+    background: var(--cyan) !important;
+}
+
 .bg-black {
     background: var(--black) !important;
 }
@@ -588,7 +596,7 @@ input[name='q']::placeholder {
 }
 
 .allauth-form-inner-content a {
-    color: var(--cyan);
+    color: var(--purple);
     /* text-info */
 }
 
@@ -719,10 +727,10 @@ input[name='q']::placeholder {
     }
 }
 
-/* Remove left padding from navbar elements so that content stays on one row on smaller devices, reduce social icon size, reduce font size on buttons */
+/* Reduce padding on navbar so that content stays on one row on smaller devices, reduce social icon size, reduce font size on buttons */
 @media (max-width: 400px) {
     .navbar {
-        padding-left: 0;
+        padding: 0.5rem 0.5rem;
         font-size: small;
     }
 

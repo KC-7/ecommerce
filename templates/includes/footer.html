@@ -1,7 +1,7 @@
-<footer class="small mt-auto py-3 bg-purple text-light footer">
+<footer class="small mt-auto pt-3 pb-2 bg-purple text-light footer">
     <!-- Footer Container -->
-    <div class="container text-center">
-        <div class="row mx-auto">
+    <div class="container text-center mx-auto">
+        <div class="row justify-content-center">
             <!-- Column 1: About Pages -->
             <div class="col-md-4 pb-1">
                 <hr class="custom-hr">
@@ -18,12 +18,15 @@
                 </ul>
             </div>
             <!-- Column 2: Blog Posts -->
-            <div class="col-md-4 pb-1">
+            <div class="col-md-2 pb-1">
                 <hr class="custom-hr">
-                <h5><a href="{% url 'blog' %}" aria-label="Blog Posts" class="text-white text-hover-gold footer-heading">😁 Check out our Blog</a></h5>
-                <p class="footer-text pt-1">
-                    Check out our <a href="{% url 'blog' %}" aria-label="Blog Posts" class="text-cyan text-hover-gold"><i class="fas fa-blog"></i> blog posts</a> to stay up to date with all the latest AI Tech!
-                </p>
+                <h5><a href="{% url 'blog' %}" aria-label="Blog Posts" class="text-white text-hover-gold footer-heading">😁 Blog</a></h5>
+                <ul class="social-icons list-inline justify-content-center">
+                    <li class="list-inline-item">
+                        <a href="{% url 'blog' %}" aria-label="Blog Posts" class="text-cyan text-hover-gold">
+                            <i class="fas fa-blog fa-2x"></i> Blog<span class="text-purple">_</span>Posts</a>
+                    </li>
+                </ul>
             </div>
             <!-- Column 3: Social Links -->
             <div class="col-md-4 pb-1">
@@ -37,8 +40,8 @@
                     <li class="list-inline-item"><a href="https://twitter.com/" target="_blank" class="text-cyan text-hover-gold"
                             rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter fa-2x"></i> Twitter</a>
                     </li>
-                    <li class="list-inline-item"><a href="https://www.instagram.com/" target="_blank" class="text-cyan text-hover-gold"
-                            rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram fa-2x"></i> Instagram</a>
+                    <li class="list-inline-item"><a href="https://www.discord.com/" target="_blank" class="text-cyan text-hover-gold"
+                            rel="noopener noreferrer" aria-label="Discord"><i class="fa-brands fa-discord fa-2x"></i> Discord</a>
                     </li>
                     <li class="list-inline-item"><a href="https://github.com/KC-7/ecommerce" target="_blank" class="text-cyan text-hover-gold"
                             rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github fa-2x"></i> GitHub</a>
@@ -49,8 +52,8 @@
     </div>
     <!-- Logo at end of footer -->
     <div class="container">
-        <div class="row">
-            <div class="col-md-12">
+        <div class="row justify-content-center">
+            <div class="col-10">
                 <hr class="custom-hr">
                 <p class="text-center text-small mb-0 text-white">
                     <small>onlineAI.art | est. 2023</small>

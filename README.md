@@ -1075,36 +1075,36 @@ Thirty three automated tests were created for the project using assistance from 
 
 The following code was used to install the `coverage` package:
 
-    `pip install coverage`
+    pip install coverage
 
 #### Run Django tests with coverage
 
 The following code is used to initiate the tests for each app:
 
-    `coverage run manage.py test your_app_name`
+    coverage run manage.py test your_app_name
 
 #### Generate Coverage Report
 
 The following code is used to generate the coverage report:
 
-    `coverage report`
+    coverage report
 
 #### Run All Tests
 
 The following code was used to run all tests in the project: 
 
-    `python3 manage.py test`
+    python3 manage.py test
 
 #### Results for Automated Tests
 
 No issues with the 33 automated tests: 
 
-    `System check identified no issues (0 silenced).
+    System check identified no issues (0 silenced).
     .................................
     ----------------------------------------------------------------------
     Ran 33 tests in 3.241s
 
-    OK`
+    OK
 
 #### Coverage Report 
 
@@ -1248,27 +1248,31 @@ TBC
 
 ### Console Log Testing
 
-| Page                  | Result                |
-|-----------------------|-----------------------|
-| Home                  |                       |
-| Products              |                       |
-| Product Detail        |                       |
-| Edit Product          |                       |
-| Create Product Page   |                       |
-| Profile               |                       |
-| AiPunk                |                       |
-| About Pages           |                       |
-| About Page Detail     |                       |
-| Edit About Page       |                       |
-| Create About Page     |                       |
-| Blog Posts            |                       |
-| Blog Post Detail      |                       |
-| Edit Blog Post        |                       |
-| Create Blog Post      |                       |
-| Shopping Bag          |                       |
-| Checkout              |                       |
-| Checkout Success      |                       |
-| 404 Page              |                       |
+I tested the following pages in Chrome Incognito and they displayed no error messages.
+
+I noticed I receive errors using normal Chrome browser due to one of my extensions.
+
+| Page                  | Result                 |
+|-----------------------|------------------------|
+| Home                  | ✅                    |
+| Products              | ✅                    |
+| Product Detail        | ✅                    |
+| Edit Product          | ✅                    |
+| Create Product Page   | ✅                    |
+| Profile               | ✅                    |
+| AiPunk                | ✅                    |
+| About Pages           | ✅                    |
+| About Page Detail     | ✅                    |
+| Edit About Page       | ✅                    |
+| Create About Page     | ✅                    |
+| Blog Posts            | ✅                    |
+| Blog Post Detail      | ✅                    |
+| Edit Blog Post        | ✅                    |
+| Create Blog Post      | ✅                    |
+| Shopping Bag          | ✅                    |
+| Checkout              | ✅                    |
+| Checkout Success      | ✅                    |
+| 404 Page              | ✅                    |
 
 TBC
 
@@ -1334,7 +1338,7 @@ TBC
 
 Flake8 was used to test the python code by running the following command in the terminal: 
 
-    `python3 -m flake8`
+    python3 -m flake8
 
 ---
 
