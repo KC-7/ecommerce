@@ -40,23 +40,30 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    animation: slideshow 35s infinite; /* Total length for slideshow */
+    animation: slideshow 35s infinite;
+    /* Total length for slideshow */
 }
 
 /* Background image slideshow */
 @keyframes slideshow {
-    0%, 100% {
+
+    0%,
+    100% {
         background-image: url('/media/site/bg1.webp');
     }
+
     20% {
         background-image: url('/media/site/bg2.webp');
     }
+
     40% {
         background-image: url('/media/site/bg3.webp');
     }
+
     60% {
         background-image: url('/media/site/bg4.webp');
     }
+
     80% {
         background-image: url('/media/site/bg5.webp');
     }
@@ -321,6 +328,37 @@ a.category-badge>span.badge:hover {
 
 input[name='q']::placeholder {
     color: var(--grey);
+}
+
+/* ------------------------------------------------- Cookies Consent */
+
+#termsfeed-com---nb {
+    margin: 10px;
+    border-radius: 15px;
+}
+
+.cc-nb-main-container {
+    background: var(--cyan);
+    padding: 1rem !important;
+}
+
+.cc-nb-title-container,
+.cc-pc-head-title,
+.cc-cp-body-content-entry-title {
+    font-family: 'Audiowide', cursive !important;
+}
+
+.cc-nb-okagree,
+.cc-cp-foot-save {
+    background: var(--teal) !important;
+}
+
+.cc-nb-reject {
+    background: var(--purple) !important;
+}
+
+.cc-nb-changep {
+    background: var(--pink) !important;
 }
 
 /* ------------------------------------------------- Custom CSS Effects */
@@ -710,7 +748,7 @@ input[name='q']::placeholder {
     .social-icons {
         font-size: x-small;
     }
-    
+
     /* Fix Position for Account Dropdown on Mobile  */
     .dropdown-menu-account {
         margin: .125rem -4rem;

@@ -1466,17 +1466,19 @@ https://analytics.google.com/
 
 - Save, commit and push changes.
 
-- You should now be able to monitor your site's traffic.
+- You should now be able to monitor your site's traffic after 1 - 2 days.
+
+- If you would like to test the GTAG sooner, you can download [Google Analytics Debugger](https://chrome.google.com/webstore/detail/google-analytics-debugger/jnkmfdileelhofjcijamephohjechhna) from the Chrome Extensions Store - simply install, access the web page and view the console. Note you will need to disable your ad blocker if you have one installed while testing the page.
 
 TBC
 
 ### GDPR
 
-Since user data is collected in the data base and cookies have been enabled using Google Analytics, I have added a GDPR pop up notification.
+Since user data is collected in the data base and cookies have been enabled using Google Analytics, I have added a GDPR pop up notification that I got from [https://www.cookieconsent.com/](cookieconsent.com).
 
-A privacy policy is created in the About pages app.
+I then customized the styling using the Google Chrome Inspection Tool to indentify the corrosponding classes and IDs to modify using the main CSS stylesheet.
 
-
+##############
 
 TBC
 

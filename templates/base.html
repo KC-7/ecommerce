@@ -13,22 +13,25 @@
 
     <!-- Extra Meta -->
     {% block extra_meta %}
-        <!-- Meta Description -->
-        <meta name="description" content="Explore onlineAI.art for limited edition AI-generated artwork on clothing, tech, and homeware. Discover unique products, read our AI & art blog, and get your own unique aiPunk avatar.">
+    <!-- Meta Description -->
+    <meta name="description"
+        content="Explore onlineAI.art for limited edition AI-generated artwork on clothing, tech, and homeware. Discover unique products, read our AI & art blog, and get your own unique aiPunk avatar.">
 
-        <!-- Open Graph / Facebook -->
-        <meta property="og:type" content="website">
-        <meta property="og:url" content="https://onlineAI.art">
-        <meta property="og:title" content="onlineAI.art">
-        <meta property="og:description" content="Explore onlineAI.art for limited edition AI-generated artwork on clothing, tech, and homeware. Discover unique products, read our AI & art blog, and get your own unique aiPunk avatar.">
-        <meta property="og:image" content="{% static 'favicon/favicon-32x32.png' %}">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://onlineAI.art">
+    <meta property="og:title" content="onlineAI.art">
+    <meta property="og:description"
+        content="Explore onlineAI.art for limited edition AI-generated artwork on clothing, tech, and homeware. Discover unique products, read our AI & art blog, and get your own unique aiPunk avatar.">
+    <meta property="og:image" content="{% static 'favicon/favicon-32x32.png' %}">
 
-        <!-- Twitter -->
-        <meta property="twitter:card" content="summary_large_image">
-        <meta property="twitter:url" content="https://onlineAI.art">
-        <meta property="twitter:title" content="onlineAI.art">
-        <meta property="twitter:description" content="Explore onlineAI.art for limited edition AI-generated artwork on clothing, tech, and homeware. Discover unique products, read our AI & art blog, and get your own unique aiPunk avatar.">
-        <meta property="twitter:image" content="{% static 'favicon/favicon-32x32.png' %}">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://onlineAI.art">
+    <meta property="twitter:title" content="onlineAI.art">
+    <meta property="twitter:description"
+        content="Explore onlineAI.art for limited edition AI-generated artwork on clothing, tech, and homeware. Discover unique products, read our AI & art blog, and get your own unique aiPunk avatar.">
+    <meta property="twitter:image" content="{% static 'favicon/favicon-32x32.png' %}">
     {% endblock %}
 
     <!-- Favicon -->
@@ -44,10 +47,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-
     <!-- Google Fonts: Audiowide -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap">
-
     <!-- Base CSS -->
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% endblock %}
@@ -83,7 +84,26 @@
     <title>onlineAI.art {% block extra_title %}{% endblock %}</title>
 </head>
 
-<!-- Google tag (gtag.js) -->
+<!-- Cookie Consent -->
+<script type="text/javascript" src="https://www.termsfeed.com/public/cookie-consent/4.1.0/cookie-consent.js"
+    charset="UTF-8"></script>
+<script type="text/javascript" charset="UTF-8">
+    document.addEventListener('DOMContentLoaded', function () {
+        cookieconsent.run({
+            "notice_banner_type": "simple",
+            "consent_type": "express",
+            "palette": "light",
+            "language": "en",
+            "page_load_consent_levels": ["strictly-necessary"],
+            "notice_banner_reject_button_hide": false,
+            "preferences_center_close_button_hide": false,
+            "page_refresh_confirmation_buttons": false,
+            "website_privacy_policy_url": "https://onlineai.art/about/6/"
+        });
+    });
+</script>
+
+Google tag (gtag.js)
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-D7B14208X7"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
