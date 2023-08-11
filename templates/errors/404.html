@@ -1,5 +1,12 @@
 {% extends 'base.html' %}
 {% load static %}
+
+{% block extra_title %}| Page Not Found{% endblock %}
+
+{% block extra_meta %}
+    <meta name="robots" content="noindex,nofollow">
+{% endblock %}
+
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
@@ -17,18 +24,16 @@
                 <hr>
             </div>
         </div>
-
-    <div class="container">
         <div class="row">
             <div class="col-7 col-md-6 my-auto">
                 <h1 class="display-4 logo-font text-black">
-                    Uh oh, the page you are looking for isn't available.
+                    Uh oh, the page you are looking for isn't available. You are not suppossed to be here.
                 </h1>
                 <div class="my-5">
                     <h4>
-                        <a href="{% url 'products' %}" 
+                        <a href="{% url 'home' %}" 
                             class="shop-now-button btn btn-lg btn-primary text-uppercase py-3">
-                                Return to shop
+                                Return to safety
                         </a>
                     </h4>
                 </div>

@@ -2,6 +2,12 @@
 
 {% load i18n %}
 
+{% block extra_title %}| Account Inactive{% endblock %}
+
+{% block extra_meta %}
+    <meta name="robots" content="noindex,nofollow">
+{% endblock %}
+
 {% block head_title %}{% trans "Account Inactive" %}{% endblock %}
 
 {% block inner_content %}

@@ -2,6 +2,12 @@
 
 {% load i18n %}
 
+{% block extra_title %}| Verify Email{% endblock %}
+
+{% block extra_meta %}
+    <meta name="robots" content="noindex,nofollow">
+{% endblock %}
+
 {% block head_title %}{% trans "Verify Your E-mail Address" %}{% endblock %}
 
 {% block inner_content %}
