@@ -982,6 +982,22 @@ I identified that a closing div tag, `</div>`, was missing from the end of the `
 
 ---
 
+### Images sizes too large
+
+**Issue**
+
+A lot of images sizes not appropriatly sized for web pages.
+
+**Resolution**
+
+I used [TinyPNG](https://tinypng.com/) to reduce the image sizes.
+
+I converted the homepage background images to WEBP files using [Convertio](https://convertio.co/png-webp/).
+
+Ideally all of the images should be served in WEBP format going forward but converting the file types for the exisiting images would require the database urls for the images to be updated as well, all further images will be uploaded in WEBP format.
+
+---
+
 ### Custom CKEditor not responding well
 
 **Issue**
@@ -1323,6 +1339,36 @@ TBC
 | Create About Page     |                       |
 | Blog Posts            |                       |
 | Blog Post Detail      | <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!"> |
+| Edit Blog Post        |                       |
+| Create Blog Post      |                       |
+| Shopping Bag          |                       |
+| Checkout              |                       |
+| Checkout Success      |                       |
+| 404 Page              |                       |
+
+TBC
+
+---
+
+---
+
+### JSHint JS Testing
+
+| Page                  | Result                |
+|-----------------------|-----------------------|
+| Home                  |                       |
+| Products              | ✅                    |
+| Product Detail        |                       |
+| Edit Product          |                       |
+| Create Product Page   |                       |
+| Profile               |                       |
+| AiPunk                |                       |
+| About Pages           |                       |
+| About Page Detail     |                       |
+| Edit About Page       |                       |
+| Create About Page     |                       |
+| Blog Posts            |                       |
+| Blog Post Detail      |                       |
 | Edit Blog Post        |                       |
 | Create Blog Post      |                       |
 | Shopping Bag          |                       |

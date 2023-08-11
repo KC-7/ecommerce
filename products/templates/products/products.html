@@ -8,7 +8,7 @@
 <script id="mcjs">
     ! function (c, h, i, m, p) {
         m = c.createElement(h), p = c.getElementsByTagName(h)[0], m.async = 1, m.src = i, p.parentNode.insertBefore(
-            m, p)
+            m, p);
     }(document, "script",
         "https://chimpstatic.com/mcjs-connected/js/users/7fcf7ba076152bf0d67b5af49/dd23ecf8e6cd44d5ce0a44dc4.js");
 </script>
@@ -34,15 +34,15 @@
     <div class="row">
         <div class="col-10 mx-auto mt-5">
             <h2 class="text-black typewriter-text"><i class="fa-solid fa-shirt"></i> Products</h2>
-            {% for c in current_categories %}
             <div class="text-center">
-                <a href="{% url 'products' %}?category={{ c.name }}" class="category-badge text-decoration-none">
-                    <span class="p-2 mt-2 badge badge-white text-black rounded-2 border border-dark">
-                        {{ c.friendly_name }}
-                    </span>
-                </a>
+                {% for c in current_categories %}
+                    <a href="{% url 'products' %}?category={{ c.name }}" class="category-badge text-decoration-none">
+                        <span class="p-2 mt-2 badge badge-white text-black rounded-2 border border-dark">
+                            {{ c.friendly_name }}
+                        </span>
+                    </a>
+                {% endfor %}
             </div>
-            {% endfor %}
             <hr class="w-50 mb-1">
         </div>
     </div>
@@ -233,6 +233,7 @@
 
 {% block postloadjs %}
 {{ block.super }}
+<!-- Back to Top of Page Script -->
 <script>
     // Smooth scroll to top when the button is clicked
     $('.btt-link').click(function (e) {
@@ -263,6 +264,7 @@
     });
 </script>
 
+<!-- Sort Direct Script -->
 <script>
     $('#sort-selector').change(function () {
         var selector = $(this);
