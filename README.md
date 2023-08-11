@@ -1438,9 +1438,15 @@ TBC
 
 A [Facebook Page](https://www.facebook.com/people/Onlineaiart/61550214234067/) has been set up to the support the ecommerce store.
 
-See images of page and content below:
+I have added the store details, profile picture, header image and series of posts about our store and topics.
+
+I also experimented with Meta Business Manager and scheduled posts to be posted in future as I thought this was a useful feature.
+
+See images of page and content of same below:
 
 ###############
+
+Note: Facebook often removes inactive store pages.
 
 TBC
 
@@ -1448,7 +1454,29 @@ TBC
 
 TBC
 
+### Google Analytics
+
+https://analytics.google.com/
+
+- Set up an account with Google Analytics and add the web domain.
+
+- Follow the sign up process.
+
+- Copy and paste the GTAG into the base template, just below the `</head>` tag as per Google's instructions.
+
+- Save, commit and push changes.
+
+- You should now be able to monitor your site's traffic.
+
+TBC
+
 ### GDPR
+
+Since user data is collected in the data base and cookies have been enabled using Google Analytics, I have added a GDPR pop up notification.
+
+A privacy policy is created in the About pages app.
+
+
 
 TBC
 
