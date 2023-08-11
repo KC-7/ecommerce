@@ -1,6 +1,12 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_title %}| Edit Blog Post{% endblock %}
+
+{% block extra_meta %}
+    <meta name="robots" content="noindex,nofollow">
+{% endblock %}
+
 {% block extra_js %}
 <script src="https://cdn.ckeditor.com/ckeditor5/38.1.1/classic/ckeditor.js"></script>
 {% endblock %}

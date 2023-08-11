@@ -1,6 +1,12 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_title %}| {{ user.username }}'s Profile{% endblock %}
+
+{% block extra_meta %}
+    <meta name="robots" content="noindex,nofollow">
+{% endblock %}
+
 {% block extra_css %}
     <link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
 {% endblock %}
@@ -62,14 +68,19 @@
                             {% for order in orders %}
                                 <tr>
                                     <td>
+                                        <hr class="custom-hr">
                                         <a href="{% url 'order_history' order.order_number %}"
-                                        title="{{ order.order_number }}">{{ order.order_number|truncatechars:6 }}</a>
+                                        title="{{ order.order_number }}">{{ order.order_number|truncatechars:8 }}</a>
                                     </td>
-                                    <td>{{ order.date }}</td>
                                     <td>
+                                        <hr class="custom-hr">
+                                        {{ order.date }}
+                                    </td>
+                                    <td>
+                                        <hr class="custom-hr">
                                         <ul class="list-unstyled">
                                             {% for item in order.lineitems.all %}
-                                                <li class="small">
+                                                <li class="small py-1">
                                                     {% if item.product.has_sizes %}
                                                         Size {{ item.product.size|upper }}
                                                     {% endif %}{{ item.product.name }} x{{ item.quantity }}
@@ -77,7 +88,10 @@
                                             {% endfor %}
                                         </ul>
                                     </td>
-                                    <td>${{ order.grand_total }}</td>
+                                    <td>
+                                        <hr class="custom-hr">
+                                        ${{ order.grand_total }}
+                                    </td>
                                 </tr>
                             {% empty %}
                                 <tr>

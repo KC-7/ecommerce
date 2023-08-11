@@ -1,6 +1,12 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_title %}| Edit Product{% endblock %}
+
+{% block extra_meta %}
+    <meta name="robots" content="noindex,nofollow">
+{% endblock %}
+
 {% block page_header %}
     <div class="container header-container">
         <div class="row">

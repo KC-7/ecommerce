@@ -2,6 +2,12 @@
 {% load static %}
 {% load bag_tools %}
 
+{% block extra_title %}| Checkout{% endblock %}
+
+{% block extra_meta %}
+    <meta name="robots" content="noindex,nofollow">
+{% endblock %}
+
 {% block extra_css %}
     <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
 {% endblock %}

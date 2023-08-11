@@ -1010,6 +1010,19 @@ I added the below JS to the CKEditor script to disable the editor on devices wit
 
 The alert is only triggered on the edit pages as the placeholder is not visible behind the text. A future improvement could be to trigger a modal instead.
 
+---
+
+### Custom CKEditor not responding well
+
+**Issue**
+
+I have set it up so that you can add HTML to the blogs through the admin panel which works well when creating and editing text. It also allows the admin to add embed items such as iframes for Youtube or Google Maps. Unfortuntly when you try to edit a page with an embeded item, the code for the embded part is not displayed.
+
+**Resolution**
+
+This minor bug is outstanding and does not affect the MVP. 
+
+
 [Go Back Up to Table of Contents 📗](#table-of-contents)
 
 ---

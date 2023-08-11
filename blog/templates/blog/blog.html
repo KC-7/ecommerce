@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_title %}| Blog{% endblock %}
+
 {% block extra_meta %}
 <meta name="description"
   content="Explore AI Technology and Generative Art through our Blog Posts. Discover Insights, Updates, and More at onlineAI.art!">
@@ -103,50 +105,50 @@
       {% endif %}
     </div>
   </div>
-</div>
-{% if is_paginated %}
-<div class="row">
-  <div class="col-12">
-    <!-- Pagination -->
-    <nav aria-label="Page navigation">
-      <ul class="pagination justify-content-center">
-        {% if page_obj.number|add:"-2" > 0 %}
-        <li>
-          <a href="?page=1" class="page-button" aria-label="Go to first page">
-            <i class="fa-solid fa-backward-fast"></i>
-          </a>
-        </li>
-        {% endif %}
-        {% if page_obj.has_previous %}
-        <li>
-          <a href="?page={{ page_obj.previous_page_number }}" class="page-button" aria-label="Go to previous page">
-            <i class="fa-solid fa-backward-step"></i>
-          </a>
-        </li>
-        {% endif %}
-        <!-- Display current page number and total pages -->
-        <li class="align-self-center">
-          <span class="page-info">
-            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
-          </span>
-        </li>
-        {% if page_obj.has_next %}
-        <li>
-          <a href="?page={{ page_obj.next_page_number }}" class="page-button" aria-label="Go to next page">
-            <i class="fa-solid fa-forward-step"></i>
-          </a>
-        </li>
-        {% endif %}
-        {% if page_obj.number|add:"1" < page_obj.paginator.num_pages %}
-        <li>
-          <a href="?page={{ page_obj.paginator.num_pages }}" class="page-button" aria-label="Go to last page">
-            <i class="fa-solid fa-forward-fast"></i>
-          </a>
-        </li>
-        {% endif %}
-      </ul>
-    </nav>
+  {% if is_paginated %}
+  <div class="row">
+    <div class="col-12">
+      <!-- Pagination -->
+      <nav aria-label="Page navigation">
+        <ul class="pagination justify-content-center">
+          {% if page_obj.number|add:"-2" > 0 %}
+          <li>
+            <a href="?page=1" class="page-button" aria-label="Go to first page">
+              <i class="fa-solid fa-backward-fast"></i>
+            </a>
+          </li>
+          {% endif %}
+          {% if page_obj.has_previous %}
+          <li>
+            <a href="?page={{ page_obj.previous_page_number }}" class="page-button" aria-label="Go to previous page">
+              <i class="fa-solid fa-backward-step"></i>
+            </a>
+          </li>
+          {% endif %}
+          <!-- Display current page number and total pages -->
+          <li class="align-self-center">
+            <span class="page-info">
+              Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+            </span>
+          </li>
+          {% if page_obj.has_next %}
+          <li>
+            <a href="?page={{ page_obj.next_page_number }}" class="page-button" aria-label="Go to next page">
+              <i class="fa-solid fa-forward-step"></i>
+            </a>
+          </li>
+          {% endif %}
+          {% if page_obj.number|add:"1" < page_obj.paginator.num_pages %}
+          <li>
+            <a href="?page={{ page_obj.paginator.num_pages }}" class="page-button" aria-label="Go to last page">
+              <i class="fa-solid fa-forward-fast"></i>
+            </a>
+          </li>
+          {% endif %}
+        </ul>
+      </nav>
+    </div>
+    {% endif %}
   </div>
-  {% endif %}
 </div>
 {% endblock %}

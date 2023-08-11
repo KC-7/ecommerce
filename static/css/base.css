@@ -703,8 +703,8 @@ input[name='q']::placeholder {
         font-size: x-small;
     }
     
-    /* Fix for Account  */
-    .dropdown-menu {
+    /* Fix Position for Account Dropdown on Mobile  */
+    .dropdown-menu-account {
         margin: .125rem -4rem;
     }
 }

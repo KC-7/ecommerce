@@ -28,7 +28,7 @@
                 <p class="my-0">Account</p>
             </div>
         </a>
-        <div class="dropdown-menu border-1" aria-labelledby="user-options-mobile">
+        <div class="dropdown-menu dropdown-menu-account border-1" aria-labelledby="user-options-mobile">
             {% if request.user.is_authenticated %}
                 <div id="user-settings-mobile">
                     {% if request.user.is_superuser %}
