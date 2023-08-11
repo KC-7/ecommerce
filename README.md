@@ -1532,134 +1532,134 @@ TBC
 
 ---
 
-## Learning Outcomes
+## Learning Goals
 
 Throughout the development, I have aimed to meet the following learning outcomes:
 
-### Learning Outcome 1: Integrate an e-commerce payment system and product structure in a cloud-hosted Full-Stack web application
+### Learning Goals 1: Integrate an e-commerce payment system and product structure in a cloud-hosted Full-Stack web application
 
 | Criteria Description                                                                                                     | Completion Status   |
 |--------------------------------------------------------------------------------------------------------------------------|---------------------|
-| Implement at least one Django app with e-commerce functionality using an online payment processing system (e.g. Stripe). | [ x ]               |
-| Implement a feedback system for successful and unsuccessful purchases with helpful messages.                             | [ x ]               |
-| Develop and implement a Full-Stack web application using Django, relational database, and interactive Front-End.         | [ x ]               |
-| Implement at least one form with validation for creating and editing models in the backend.                              | [ x ]               |
-| Build a Django file structure following Django conventions.                                                              | [ x ]               |
-| Write code demonstrating characteristics of 'clean code.'                                                                | [ x ]               |
-| Define application URLs consistently.                                                                                    | [ x ]               |
-| Incorporate main navigation menu and structured layout.                                                                  | [ x ]               |
-| Demonstrate proficiency in Python language with sufficient custom logic.                                                 | [ x ]               |
-| Write Python code with compound statements (if conditions, loops, etc.).                                                 | [ x ]               |
-| Design a relational database schema with clear relationships between entities.                                           | [ x ]               |
-| Create at least THREE original custom Django models.                                                                     | [ x ]               |
-| Implement CRUD functionality for models.                                                                                 | [ x ]               |
-| Deploy the final version to a hosting platform and test against the development version.                                 | [ x ]               |
-| Remove commented-out code and broken internal links from the deployed code.                                              | [ x ]               |
-| Ensure security of the deployed version by handling passwords and secret keys properly.                                  | [ x ]               |
-| Use a git-based version control system with regular commits and project documentation in README.                         | [ x ]               |
-| Document the complete deployment and testing procedures in README, explaining the application's purpose.                 | [ x ]               |
+| Implement at least one Django app with e-commerce functionality using an online payment processing system (e.g. Stripe). | ✅ Implemented Stripe payments system.              |
+| Implement a feedback system for successful and unsuccessful purchases with helpful messages.                             | ✅ Set up toast messages and email order confirmation alongside an order success page.              |
+| Develop and implement a Full-Stack web application using Django, relational database, and interactive Front-End.         | ✅ Created and deployed a Django-based full-stack web app with interactive front-end, backed by a relational database.               |
+| Implement at least one form with validation for creating and editing models in the backend.                              | ✅ Implemented forms with validation to create and edit models in the backend.              |
+| Build a Django file structure following Django conventions.                                                              | ✅ Followed Django conventions when structuring the file layout.              |
+| Write code demonstrating characteristics of 'clean code.'                                                                | ✅ Aimed to write clean, well commented and clear code.              |
+| Define application URLs consistently.                                                                                    | ✅ Consistent approach when defining URLs.              |
+| Incorporate main navigation menu and structured layout.                                                                  | ✅ Incorporated nav bar for mobile and desktop. Add additional navigation in footer.              |
+| Demonstrate proficiency in Python language with sufficient custom logic.                                                 | ✅ Python was used extensively through out the project & accounts for 40% of the overall coding languages used in the project.      |
+| Write Python code with compound statements (if conditions, loops, etc.).                                                 | ✅ Compound statements implemented as required and practical.              |
+| Design a relational database schema with clear relationships between entities.                                           | ✅ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX   TBC           |
+| Create at least THREE original custom Django models.                                                                     | ✅ A variety of custom model where created such as the about, avatar and blog apps.              |
+| Implement CRUD functionality for models.                                                                                 | ✅ CRUD has been implemented in the about, blog and products apps (note: avatars are intentionally creation only)              |
+| Deploy the final version to a hosting platform and test against the development version.                                 | ✅ The site is hosted on Heroku. It's also set up with a custom namecheap domain. I used Cloudflare for the SSL Cert and Security.     |
+| Remove commented-out code and broken internal links from the deployed code.                                              | ✅ Commented out code removed prior to final deployment.              |
+| Ensure security of the deployed version by handling passwords and secret keys properly.                                  | ✅ Passwords and secret keys stored securly on Heroku Config Vars for the deployed site.              |
+| Use a git-based version control system with regular commits and project documentation in README.                         | ✅ Coding carried out using GitPod IDE. Regular git commits to GitHub with clear messages. Project documented in README file.   |
+| Document the complete deployment and testing procedures in README, explaining the application's purpose.                 | ✅ Thorough documentation has been created for the deployment & testing procedures alongside details on applications purpose.  |
 
-### Learning Outcome 2: Employ advanced User Experience Design to build a commercial-grade Full Stack Web Application
+### Learning Goals 2: Employ advanced User Experience Design to build a commercial-grade Full Stack Web Application
 
-| Criteria Description                                                                                                                                                                              | Completion Status |
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------|
-| Design a Front-End meeting accessibility guidelines, UX principles, and addressing specific user interactions.                                                                                    | [x]               |
-| Document and implement all User Stories in an Agile tool, mapping them to project goals.                                                                                                          | [ ]               |
-| Design and implement manual or automated test procedures to assess functionality, usability, responsiveness, and data management.                                                                 | [ ]               |
-| Present a clear rationale for the development of the project in the README, addressing the needs of the target audience and user stories.                                                         | [ ]               |
-| Document the UX design work, including wireframes, mockups, diagrams, etc., and demonstrate implementation following the design process.                                                          | [ ]               |
-| Use an Agile tool effectively for managing planning and implementation of primary functionality.                                                                                                  | [ ]               |
-| Document and implement all User Stories and map them to the project within an Agile tool.                                                                                                         | [ ]               |
+| Criteria Description                                                                                                                       | Completion Status |
+|--------------------------------------------------------------------------------------------------------------------------------------------|-------------------|
+| Design a Front-End meeting accessibility guidelines, UX principles, and addressing specific user interactions.                             | ✅ Careful consideration has been given to ensure the site meets accessibility, UX and user interaction expectations. |
+| Document and implement all User Stories in an Agile tool, mapping them to project goals.                                                   | ✅ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx TBC              |
+| Design and implement manual or automated test procedures to assess functionality, usability, responsiveness, and data management.          | ✅ Manual and automated tests have been added to ensure the site operates as intended.              |
+| Present a clear rationale for the development of the project in the README, addressing the needs of the target audience and user stories.  | ✅ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX TBC              |
+| Document the UX design work, including wireframes, mockups, diagrams, etc., and demonstrate implementation following the design process.   | ✅ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX TBC              |
+| Use an Agile tool effectively for managing planning and implementation of primary functionality.                                           | ✅ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX TBC              |
+| Document and implement all User Stories and map them to the project within an Agile tool.                                                  | ✅ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX TBC              |
 
-### Learning Outcome 3: Employ Search Engine Optimisation (SEO) techniques to improve audience reach
+### Learning Goals 3: Employ Search Engine Optimisation (SEO) techniques to improve audience reach
 
 | Criteria Description                                                                              | Completion Status |
 |---------------------------------------------------------------------------------------------------|-------------------|
-| Ensure all pages can be reached by a link from another findable page.                             | [x]               |
-| Include Meta Description tags in the application HTML.                                            | [ ]               |
-| Include a site title on the parent template.                                                      | [ ]               |
-| Use appropriate "nofollow" and "sponsored" attributes for links.                                  | [ ]               |
-| Include a sitemap and robots.txt file for search engine crawling.                                 | [ ]               |
-| Include a 404 response page with appropriate redirect.                                            | [ ]               |
-| Use meaningful text content supporting the application's purpose (no Lorem Ipsum).                | [ ]               |
+| Ensure all pages can be reached by a link from another findable page.                             | ✅ All pages are reachable on the site.              |
+| Include Meta Description tags in the application HTML.                                            | ✅ Meta description tag added to the base template, its overwritten by certain pages with additional more page specific meta description tags.              |
+| Include a site title on the parent template.                                                      | ✅ A site title is include in the base template. Specific pages add to it using blocks.              |
+| Use appropriate "nofollow" and "sponsored" attributes for links.                                  | ✅ "nofollow" attributes added through site as required.              |
+| Include a sitemap and robots.txt file for search engine crawling.                                 | ✅ Sitemap and robots file added to route directory.              |
+| Include a 404 response page with appropriate redirect.                                            | ✅ 404 page included with necessary redirection for same.              |
+| Use meaningful text content supporting the application's purpose (no Lorem Ipsum).                | ✅ Meaningful, descriptive, SEO friendly text content has been added throughout the site to support purpose. ChatGPT was very useful for this.              |
 
-### Learning Outcome 4: Create a secure Full Stack Web application with Authentication and role-based Authorization functionality
+### Learning Goals 4: Create a secure Full Stack Web application with Authentication and role-based Authorization functionality
 
-| Criteria Description                                                                                                           | Completion Status |
-|--------------------------------------------------------------------------------------------------------------------------------|-------------------|
-| Implement authentication mechanism allowing user registration and login for specific reasons.                                  | [ ]               |
-| Implement login and registration pages available only to anonymous users.                                                      | [ ]               |
-| Prevent non-admin users from accessing the data store directly without going through the code.                                 | [ ]               |
-| Apply role-based login and registration functionality.                                                                         | [ ]               |
-| Ensure current login state is reflected to the user.                                                                           | [ ]               |
-| Restrict access to restricted content/functionality before role-based login.                                                   | [ ]               |
+| Criteria Description                                                                           | Completion Status |
+|------------------------------------------------------------------------------------------------|-------------------|
+| Implement authentication mechanism allowing user registration and login for specific reasons.  | ✅ Authentification has been implemented for registration and as required.              |
+| Implement login and registration pages available only to anonymous users.                      | ✅ Login and registration has been implemented and is only visible to logged out or un-signed up users.              |
+| Prevent non-admin users from accessing the data store directly without going through the code. | ✅ Non admin users cant access data store without going through the code.              |
+| Apply role-based login and registration functionality.                                         | ✅ Admin users have additional privilages on main site such as edit or create alongside access to the admin portal with more features. |
+| Ensure current login state is reflected to the user.                                           | ✅ Login state is clearly identifable by the Account dropmenu as the options are modified based on login state.              |
+| Restrict access to restricted content/functionality before role-based login.                   | ✅ Access to content is restricted as required.              |
 
-### Learning Outcome 5: Employ marketing techniques to create brand reach
+### Learning Goals 5: Employ marketing techniques to create brand reach
 
-| Criteria Description                                                       | Completion Status |
-|----------------------------------------------------------------------------|-------------------|
-| Create a Facebook Business Page dedicated to the product.                  | [ ]               |
-| Add a newsletter signup form to the application.                           | [ ]               |
+| Criteria Description                                       | Completion Status |
+|------------------------------------------------------------|-------------------|
+| Create a Facebook Business Page dedicated to the product.  | ✅ A Facebook page has been created for the site.              |
+| Add a newsletter signup form to the application.           | ✅ A MailChimp newsletter has been added to the site as a pop up on the products page.            |
 
-### Learning Outcome 6: Understand the fundamentals of E-commerce applications
+### Learning Goals 6: Understand the fundamentals of E-commerce applications
 
 | Criteria Description                                                   | Completion Status |
 |------------------------------------------------------------------------|-------------------|
-| Document the e-commerce business model underlying the application.     | [ ]               |
+| Document the e-commerce business model underlying the application.     | ✅ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx TBC              |
 
-### Learning Outcome 7: Additional Learning Outcomes (M)
+### Learning Goals 7: Additional Learning Outcomes (M)
 
-| Criteria Description                                                                                                                                                                       | Completion Status |
-|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------|
-| Design and build a real-world full stack MVC e-commerce application with a Front-End that is easy to navigate and intuitive.                                                               | [ ]               |
-| Produce a fully robust codebase with CRUD actions immediately reflected in the user interface.                                                                                             | [ ]               |
-| Follow thorough manual and/or automated test procedures demonstrated in git commits.                                                                                                       | [ ]               |
-| Efficiently configure the project through well-kept Procfile, requirements.txt file, settings files, and data store configuration.                                                         | [ ]               |
-| Fully describe the data schema in the project README file.                                                                                                                                 | [ ]               |
-| Use version control software effectively with a record of the development process.                                                                                                         | [ ]               |
-| Ensure users have full control of their interaction with the application and the site's purpose is immediately evident to new users.                                                       | [ ]               |
-| Control access to sitemap via a robots.txt file and ensure all sitemap links are canonical.                                                                                                | [ ]               |
-| Use descriptive metadata for SEO that accurately reflects the site's purpose.                                                                                                              | [ ]               |
-| Users only have access to intended views and functionality.                                                                                                                                | [ ]               |
-| Document the primary marketing strategy behind the application.                                                                                                                            | [ ]               |
-| The solution has a clear, well-defined purpose addressing the needs of a particular target audience.                                                                                       | [ ]               |
+| Criteria Description                                                                                                                 | Completion Status |
+|--------------------------------------------------------------------------------------------------------------------------------------|-------------------|
+| Design and build a real-world full stack MVC e-commerce application with a Front-End that is easy to navigate and intuitive.         | ✅ Developed a comprehensive full-stack Model-View-Controller (MVC) e-commerce platform with user friendly, intuitive design. |
+| Produce a fully robust codebase with CRUD actions immediately reflected in the user interface.                                       | ✅ Robust codebase enabling Create, Read, Update, & Delete (CRUD) operations with real-time updates reflected in the UI. |
+| Follow thorough manual and/or automated test procedures demonstrated in git commits.                                                 | ✅ Thorough manual and automated testing has been implemented and documented.              |
+| Efficiently configure the project through well-kept Procfile, requirements.txt file, settings files, and data store configuration.   | ✅ Procfile, rerquirements, settings and data store config has been efficiently configured.             |
+| Fully describe the data schema in the project README file.                                                                           | ✅ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX TBC              |
+| Use version control software effectively with a record of the development process.                                                   | ✅ Detailed git commits have been added regularly throughout the project to record the development process.              |
+| Ensure users have full control of their interaction with the application and the site's purpose is immediately evident to new users. | ✅ Sites pupose is immediately event to users and the UI allows them full control of their permitted interactions. |
+| Control access to sitemap via a robots.txt file and ensure all sitemap links are canonical.                                          | ✅ Access to the sitemap is controlled by the robots file and all sitemap links are canonical.              |
+| Use descriptive metadata for SEO that accurately reflects the site's purpose.                                                        | ✅ Descriptive meta deta has been addedd to reflect site purpose and improve SEO.              |
+| Users only have access to intended views and functionality.                                                                          | ✅ User access to site functionality has been resricted as intended.              |
+| Document the primary marketing strategy behind the application.                                                                      | ✅ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX TBC              |
+| The solution has a clear, well-defined purpose addressing the needs of a particular target audience.                                 | ✅ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX TBC              |
 
 ### Learning Outcome 8: Additional Learning Outcomes (D)
 
 | Criteria Description | Completion Status |
 |----------------------|-------------------|
-| The learner has documented a clear, justified rationale for a real-world application. The development of the project has resulted in a fully-functioning, interactive web application. | [ ]               |
-| The finished project is publishable in its current form with an evidenced professional-grade user interface and interaction adhering to current practice. There are no logic errors in the code. | [ ]               |
-| The resulting application is original and not a copy of any walkthrough projects encountered in the unit. | [ ]               |
-| The design of the web application demonstrates the main principles of good UX design. | [ ]               |
-| Information Hierarchy is clear and well-structured. | [ ]               |
-| User Control is maintained throughout the application. | [ ]               |
-| Consistency is evident across all pages/sections and covers interactivity as well as design. | [ ]               |
-| Confirmation and feedback is given at all times. | [ ]               |
-| There is evident conformity to accessibility guidelines across all pages/sections and in all interactivity. | [ ]               |
-| Any design decisions that contravene accepted user interaction, user experience design principles are identified and described. | [ ]               |
-| Code demonstrates characteristics of ‘clean code’. | [ ]               |
-| Consistent and appropriate naming conventions within code and in file naming. | [ ]               |
-| File structure is organized and makes sense. | [ ]               |
-| Code is indented in a consistent manner to ease readability. | [ ]               |
-| Defensive design has been applied. | [ ]               |
-| All custom code files include clear and relevant comments explaining the purpose of code segments. | [ ]               |
-| Code passes through appropriate validators with no issues. | [ ]               |
-| Robust code with no logic errors is found when running code. | [ ]               |
-| The entire design is implemented, providing an excellent solution to the users' demands and expectations and security consideration. | [ ]               |
-| Real-world application has been achieved. | [ ]               |
-| Testing procedures are comprehensive, with a good level of coverage, and have been followed. | [ ]               |
-| SEO and Marketing features are evident. | [ ]               |
-| Security features and practice are evidenced. | [ ]               |
-| Framework conventions are followed and used correctly. | [ ]               |
-| Placing of logic in the most relevant components demonstrates an understanding of the Model-View-Controller(Template) pattern is evident through the placing of logic in the most appropriate components. | [ ]               |
-| Configuration and settings files are well-organised. | [ ]               |
-| Security features and practice are evidenced. | [ ]               |
-| Data is well structured. | [ ]               |
-| Data is fully modelled and matches the schema. | [ ]               |
-| Datastore configuration is kept in a single location where it can be changed easily. | [ ]               |
-| Configuration and dependencies files are kept up to date. Separate versions/branches of these are commits where relevant. Datastore configuration is kept in a single location and can be changed easily. The datastore is not accessible to the regular user without going through the code. | [ ]               |
-| Testing procedures are comprehensive, with a good level of coverage, and have been followed. There is clear evidence of testing, and this is demonstrated in git commits. All noticeable errors have been corrected or documented. | [ ]               |
+| The learner has documented a clear, justified rationale for a real-world application. The development of the project has resulted in a fully-functioning, interactive web application. | ✅ Clear rational has been documented for the development of this real world, fully functioning, interactive application.              |
+| The finished project is publishable in its current form with an evidenced professional-grade user interface and interaction adhering to current practice. There are no logic errors in the code. | ✅ The site is ready to be published as an MVP, minimum viabable product. The site has a profesional grade UI which adheres to best practices. There are no logical errors in the code.              |
+| The resulting application is original and not a copy of any other projects. | ✅ The project is unique and original but shares simularities to Code Institute's Boutique Ado project which was used as the inspiration and base for this project. The final project is heavily modified and expanded on.             |
+| The design of the web application demonstrates the main principles of good UX design. | ✅ Good UX has been built into the design process for this web application.              |
+| Information Hierarchy is clear and well-structured. | ✅ Information is clear and well structured.              |
+| User Control is maintained throughout the application. | ✅ User control and management is implemented through out the project with a particular focus on admin controls, both via the main site and the admin portal.              |
+| Consistency is evident across all pages/sections and covers interactivity as well as design. | ✅ The site design is consitent through out. It utilizes a custom colour pallette, CSS and Bootstrap to give the site a consistent, interactive design.   |
+| Confirmation and feedback is given at all times. | ✅ Confirmation and user feedback has been implemented throughout the site to improve the users experience.              |
+| There is evident conformity to accessibility guidelines across all pages/sections and in all interactivity. | ✅ Considerable consideration has been given to ensure the site is conforms to accessibilty guidelines which is eveident in the Lighthouse testing. |
+| Any design decisions that contravene accepted user interaction, user experience design principles are identified and described. | ✅ The site has been designed to conform to UI and UX standards and through doucmentation is detailed in README.    |
+| Code demonstrates characteristics of ‘clean code’. | ✅ Clean code best practices have been implemented to ensure the code is minimal yet easy to follow and maintain.              |
+| Consistent and appropriate naming conventions within code and in file naming. | ✅ Consintent naming conventions have been used within the code and when naming files and folders.              |
+| File structure is organized and makes sense. | ✅ The file structure is well organized and clear to follow.              |
+| Code is indented in a consistent manner to ease readability. | ✅ The code has been consistently indented to for ease of readability.              |
+| Defensive design has been applied. | ✅ Implemented defensive design principles to enhance application security and robustness. |
+| All custom code files include clear and relevant comments explaining the purpose of code segments. | ✅ Clear comments and docstrings have been added to ensure the code is easy to understand and maintain.              |
+| Code passes through appropriate validators with no issues. | ✅ Code passes through all validation checks as per the multiple testing sections in the readme.              |
+| Robust code with no logic errors is found when running code. | ✅ The code is robust and runs without errors.              |
+| The entire design is implemented, providing an excellent solution to the users' demands and expectations and security consideration. | ✅ The site has been developed to ensure all users have an enjoyable, functional and safe experience.  |
+| Real-world application has been achieved. | ✅ Developed a practical and functional real-world e-commerce application.              |
+| Testing procedures are comprehensive, with a good level of coverage, and have been followed. | ✅ Comprehensive testing has been carried out and is well documented.              |
+| SEO and Marketing features are evident. | ✅ SEO and Marketing has been carefully considered and implemented on the project as demonstrated in the SEO and Web marketing sections of the README.             |
+| Security features and practice are evidenced. | ✅ Security features have been implemented to protect against potential vulnerabilities and threats.               |
+| Framework conventions are followed and used correctly. | ✅ Adhered to framework conventions and applied them accurately throughout the project.              |
+| Placing of logic in the most relevant components demonstrates an understanding of the Model-View-Controller(Template) pattern. | ✅ The MVC template has been effectively utilized in this project.              |
+| Configuration and settings files are well-organised. | ✅ Config and settings files are well organised and allow the site to operate as intended.              |
+| Security features and practice are evidenced. | ✅ Security features have been implemented inline with best practises.              |
+| Data is well structured. | ✅ The data is well structured to improve readability.              |
+| Data is fully modelled and matches the schema. | ✅ ############################################################################################################################################################ TBC              |
+| Datastore configuration is kept in a single location where it can be changed easily. | ✅ Centralized datastore configuration in a settings file for easy and convenient modification.              |
+| Configuration and dependencies files are kept up to date. Separate versions/branches of these are commits where relevant. The datastore is not accessible to the regular user without going through the code. | ✅ Maintained up to date configuration and dependency files. Ensured that the datastore remains inaccessible to regular users unless accessed through the application's code.              |
+| Testing procedures are comprehensive, with a good level of coverage, and have been followed. There is clear evidence of testing, and this is demonstrated in git commits. All noticeable errors have been corrected or documented. | ✅ Comprehensive testing carried out with substantial coverage though manual and automated tests, evident through well-documented testing in README and Git commits. Addressed and rectified or documented any noticeable errors encountered.              |
 
 [Go Back Up to Table of Contents 📗](#table-of-contents)
 
