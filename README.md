@@ -1,4 +1,4 @@
-![Banner](/media/banner.gif)
+![Banner](readme_images/general/banner.gif)
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/kc-7/ecommerce?style=for-the-badge)
 ![GitHub contributors](https://img.shields.io/github/contributors/kc-7/ecommerce?style=for-the-badge)
@@ -13,7 +13,7 @@ Heroku App Link: https://kc-ecommerce-434e6f88dca9.herokuapp.com/
 
 This is a django project for an E-Commerce Store with Stripe payments, custom products, blogs, avatars and about pages.
 
-The site is targeted towords Art, Tech, Fashion, Entusiates and Blog Readers interested in AI generation.
+TBC
 
 A [Facebook Page](https://www.facebook.com/people/Onlineaiart/61550214234067/) has been set up for the site.
 
@@ -26,81 +26,22 @@ A [Facebook Page](https://www.facebook.com/people/Onlineaiart/61550214234067/) h
 TBC
 
 ### Admin Portal Preview
+
 TBC
 
 ---
 
 ## Table of Contents
 
-- [onlineAI.art | E-Commerce Project](#onlineaiart---e-commerce-project)
-  * [User Stories](#user-stories)
-    + [View and Navigation](#view-and-navigation)
-    + [Registration and User Accounts](#registration-and-user-accounts)
-    + [Sorting and Searching](#sorting-and-searching)
-    + [Purchasing and Checkout](#purchasing-and-checkout)
-    + [Admin and Store Management](#admin-and-store-management)
-    + [Additional Features](#additional-features)
-  * [Design](#design)
-    + [Colour Scheme](#colour-scheme)
-    + [Typography](#typography)
-  * [Custom Features](#custom-features)
-    + [Custom Admin Portal](#custom-admin-portal)
-    + [Custom Admin Features](#custom-admin-features)
-    + [Stripe Integration](#stripe-integration)
-      - [Test Card Details](#test-card-details)
-    + [CKEditor](#ckeditor)
-    + [Custom Blog Posts (CRUD)](#custom-blog-posts--crud-)
-    + [Custom About Pages (CRUD)](#custom-about-pages--crud-)
-    + [Custom Crypto Punk Style Avatars](#custom-crypto-punk-style-avatars)
-  * [Python Package Requirements](#python-package-requirements)
-  * [Deployment & Local Development](#deployment---local-development)
-    + [Deployment](#deployment)
-      - [**Create the Live Database**](#--create-the-live-database--)
-      - [**Heroku App Setup**](#--heroku-app-setup--)
-      - [**Preparation for Deployment in GitPod**](#--preparation-for-deployment-in-gitpod--)
-      - [**Generate a SECRET KEY & Updating Debug**](#--generate-a-secret-key---updating-debug--)
-      - [**Set up AWS hosting for static and media files**](#--set-up-aws-hosting-for-static-and-media-files--)
-      - [**Creating AWS groups, policies and users**](#--creating-aws-groups--policies-and-users--)
-      - [**Connecting Django to our S3 bucket**](#--connecting-django-to-our-s3-bucket--)
-      - [**Setting up Stripe**](#--setting-up-stripe--)
-    + [Local Development](#local-development)
-      - [How to Fork](#how-to-fork)
-      - [How to Clone](#how-to-clone)
-  * [Bugs & Issues](#bugs---issues)
-    + [Allauth Templates Directory Not Found](#allauth-templates-directory-not-found)
-      - [Issue](#issue)
-      - [Resolution](#resolution)
-    + [Heroku Invalid Credentials Provided](#heroku-invalid-credentials-provided)
-      - [Issue](#issue-1)
-      - [Resolution](#resolution-1)
-    + [Initialize Heroku Git Remote](#initialize-heroku-git-remote)
-      - [Issue](#issue-2)
-      - [Resolution](#resolution-2)
-      - [Additional Heroku Tips](#additional-heroku-tips)
-    + [Programmatic Access for AWS User](#programmatic-access-for-aws-user)
-      - [Issue](#issue-3)
-      - [Resolution](#resolution-3)
-    + [Navbar too large](#navbar-too-large)
-      - [Issue](#issue-4)
-      - [Resolution](#resolution-4)
-    + [Order number too long](#order-number-too-long)
-      - [Issue](#issue-5)
-      - [Resolution](#resolution-5)
-    + [Navbar not displayed correctly on Profile](#navbar-not-displayed-correctly-on-profile)
-      - [Issue](#issue-6)
-      - [Resolution](#resolution-6)
-  * [Learning Outcomes](#learning-outcomes)
-    + [Learning Outcome 1: Integrate an e-commerce payment system and product structure in a cloud-hosted Full-Stack web application](#learning-outcome-1--integrate-an-e-commerce-payment-system-and-product-structure-in-a-cloud-hosted-full-stack-web-application)
-    + [Learning Outcome 2: Employ advanced User Experience Design to build a commercial-grade Full Stack Web Application](#learning-outcome-2--employ-advanced-user-experience-design-to-build-a-commercial-grade-full-stack-web-application)
-    + [Learning Outcome 3: Employ Search Engine Optimisation (SEO) techniques to improve audience reach](#learning-outcome-3--employ-search-engine-optimisation--seo--techniques-to-improve-audience-reach)
-    + [Learning Outcome 4: Create a secure Full Stack Web application with Authentication and role-based Authorization functionality](#learning-outcome-4--create-a-secure-full-stack-web-application-with-authentication-and-role-based-authorization-functionality)
-    + [Learning Outcome 5: Employ marketing techniques to create brand reach](#learning-outcome-5--employ-marketing-techniques-to-create-brand-reach)
-    + [Learning Outcome 6: Understand the fundamentals of E-commerce applications](#learning-outcome-6--understand-the-fundamentals-of-e-commerce-applications)
-  * [Additional Learning Outcomes](#additional-learning-outcomes)
-  * [Additional Learning Outcomes 2](#additional-learning-outcomes-2)
-  * [Resources](#resources)
-    + [Technologies Used](#technologies-used)
-  * [Credits](#credits)
+TBC
+
+---
+
+## Businness Type
+
+The site is targeted towords Art, Tech, Fashion Entusiates and Blog Readers interested in AI generation.
+
+TBC
 
 ---
 
@@ -162,6 +103,7 @@ TBC
 ## Design
 
 ### Colour Scheme
+
 The below custom colour scheme was designed and set up for the site. 
 
     :root {
@@ -187,12 +129,13 @@ The below custom colour scheme was designed and set up for the site.
         --white: #FFFFFF;
     }
 
-<img src="media/colors1.png" alt="Color Palette" style="max-width: 40%;">
+<img src="readme_images/general/colors1.png" alt="Color Palette" style="max-width: 40%;">
 
 ### Typography
-The font Audiowide has been used throughout the site to give it a modern, futuristic feel. This was imported into the CSS file from the main base template using Google Fonts.
 
-</summary> <img src="media/googleFontsAudiowide.png" alt="Audiowide Font" style="max-width: 40%;">
+The font Audiowide has been used throughout the site to give it a modern, futuristic feel. This was imported into the CSS file from the main base template using [Google Fonts](https://fonts.google.com/).
+
+</summary> <img src="readme_images/google/googleFontsAudiowide.png" alt="Audiowide Font" style="max-width: 40%;">
 
 [Go Back Up to Table of Contents 📗](#table-of-contents)
 
@@ -202,11 +145,13 @@ The font Audiowide has been used throughout the site to give it a modern, futuri
 
 ### Custom Admin Portal
 
+<img src="readme_images/general/TBC.png" style="max-width: 60%;">
+
 The admin portal was customized by using the following [installation guide for Jazzmin](https://django-jazzmin.readthedocs.io/installation/): 
 
-Step 1 - Install the latest `pypi` release with `pip3 install -U django-jazzmin` in the terminal
+1. Install the latest `pypi` release with `pip3 install -U django-jazzmin` in the terminal
 
-Step 2 - Add jazzmin to your `INSTALLED_APPS` __before__ `django.contrib.admin`:
+2. Add jazzmin to your `INSTALLED_APPS` __before__ `django.contrib.admin`:
 
     INSTALLED_APPS = [
         'jazzmin',
@@ -214,7 +159,7 @@ Step 2 - Add jazzmin to your `INSTALLED_APPS` __before__ `django.contrib.admin`:
         [...]
     ]
 
-Step3 - Add custom jazzmin settings to settings.py.
+3. Add [custom jazzmin configuration settings](https://django-jazzmin.readthedocs.io/configuration/) to settings.py.
 
 <details> <summary><b> --------------------------------------- Click here to see my custom Jazzmin settings ⬇️</b></summary>
 
@@ -295,6 +240,8 @@ The admin panel also allows the amdministrator to:
 
 - Batch select products and update if they have sizes or not, this was very useful when setting up the products catalogue
 
+<img src="readme_images/general/TBC.png" style="max-width: 60%;">
+
 ---
 
 ### Stripe Integration
@@ -315,15 +262,46 @@ Here are some test card details you can use to simulate different scenarios at c
 
 For more details on setting up Stripe elements to accept payment, refer to the [Stripe Documentation](https://stripe.com/docs/).
 
+<img src="readme_images/general/TBC.png" style="max-width: 60%;">
+
 ---
 
-### CKEditor 
+### CKEditor
 
-I installed the CKEditor to allow customisable text inputs for the Admins to add About Pages. This allows the site management team to add and update these pages without the need of a web developer. The CKEditor easily allows them to vustomise the text. 
+<img src="readme_images/general/TBC.png" style="max-width: 60%;">
 
-I have customized the editor to only display certain suitable options, for example H1 has been removed as it used for the Title for the page so there is no need to have it in the content section, the customizations are added as a postload js script to the pages where the editor has been implemented, eg create blog and create about pages.
+I installed the [CKEditor Classic Editor](https://ckeditor.com/docs/ckeditor5/latest/installation/getting-started/predefined-builds.html#classic-editor) to allow customisable text inputs for the Admins to add About Pages. This allows the site management team to add and update these pages without the need of a web developer. The CKEditor easily allows them to customise the text. 
 
-https://ckeditor.com/docs/ckeditor5/latest/installation/getting-started/predefined-builds.html#classic-editor
+<details> <summary><b> --------------------------------------- Click here to see the conscise set up guide for the CKEditor ⬇️</b></summary>
+
+Installation example
+In your HTML page add an element that CKEditor 5 should replace:
+
+    <div id="editor"></div>
+
+Load the classic editor build (here, the CDN location is used):
+
+    <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
+
+Alternatively, you may install CKEditor 5 from npm:
+
+    npm install --save @ckeditor/ckeditor5-build-classic
+
+Then bundle it together with your app.
+
+Call the ClassicEditor.create() method.
+
+    <script>
+        ClassicEditor
+            .create( document.querySelector( '#editor' ) )
+            .catch( error => {
+                console.error( error );
+            } );
+    </script>
+
+</details>
+
+I have customized the editor to only display certain suitable options, for example H1 has been removed as it used for the Title for the page so there is no need to have it in the content section, the customizations are added as a postload js script on the pages where the editor has been implemented, eg create & edit blog and create & edit about pages.
 
 <details> <summary><b> --------------------------------------- Click here to see my custom CKEditor settings ⬇️</b></summary>
 
@@ -370,21 +348,81 @@ https://ckeditor.com/docs/ckeditor5/latest/installation/getting-started/predefin
 
 ---
 
-### Custom Blog Posts (CRUD)
-
-TBC
-
----
-
 ### Custom About Pages (CRUD)
 
-TBC
+<img src="readme_images/general/TBC.png" style="max-width: 60%;">
+
+#### Project Conception
+
+The implementation of this app felt like a neccessity as I wanted an easy way for admin users to modify site about page details to ensure customers are kept up to date with relevant site information without the requirement for someone with coding knowledge to make the modifications. 
+
+#### Usability
+
+All site users can read the about pages, they are accessible by the footer nav links or by clicking on the account drop menu in the main navigation bar. The about page serves as a list of the pages and the specific about pages contain the content. This provide users with direct access to the information and effecitivly serves its intended purpose.
+
+### CRUD Operations
+
+This application offers full CRUD functionality for the admin users to Create, Read, Update & Destroy about pages, both on the main site and the admin portal.
+
+#### Custom Editor
+
+I felt the standard text editor was insufficent for creating and modifying about pages so I have added the CKEditor. I have detailed the customization and implementation of the CKEditior in this README. This editor allows admins to adjust heading sizes, add bold, italic, links, etc. when creating the about pages. I have chosen to restrict access to heading size 1, colours and fonts so that the website it maintained and styled consistently with the sites colour schema and typography. Admin users can access the additional editor functionality via the admin portal. In the admin portal they have full access to the custom editor and can also modify the pages as HTML which allows them to add videos or embded content. This was useful when creating the Contact page with embed Google Maps location alongside the embed Youtube video in the Generative AI Video. The custom editor is disabled on very small mobile devices to ensure responsiveness.
 
 ---
 
-### Custom Crypto Punk Style Avatars
+### Custom Blog Posts (CRUD)
 
-https://github.com/snoozesecurity/cryptopunkgenerator 
+#### Project Conception
+
+To gain site visitors, I have set up a blog application that allows the admin users to generate blog posts. This will be an effective way to attract users to the site and also serve as a vehicle for affiliate marketing links in future. The site onlineai.art will be able to created AI, art or tech related blogs that are relevant to the business's target audience.
+
+#### Usability
+
+All site users can read the blog pages, they are accessible by the footer nav links or by clicking on the account drop menu in the main navigation bar. The blog page serves as a list of the pages, its designed to be visually appealing to the user and displays the Blog titles alongside a short preview of the content and a preview of the image used in the blog post to draw the users interest. It also utilises sorting to rotate the preview direction for each post in an alternating order and then paginates the list into multiple pages which can be controlled by the page navigation buttons at the end of the blog posts page. The blog post detail pages include the Title, Preview Image and Content. The pages also allow direct navigation to older and newer posts to keep the user reading the blog posts.
+
+### CRUD Operations
+
+This application offers full CRUD functionality for the admin users to Create, Read, Update & Destroy about pages, both on the main site and the admin portal.
+
+#### Custom Editor
+
+A similar approach was taken when setting up the custom CKEditor for the blog as the about application. Admins have limited options when creating modifications using the Create or Edit blog pages as intented to ensure the site is maintained with consitent content. The admins can however access the full editor by the admin portal, this will allow them to make unusual styling modifications or add embeded content if ever required. The custom editor is disabled on very small mobile devices to ensure responsiveness.
+
+---
+
+### Algorithmically Generated Pixel Art Avatars
+
+<img src="readme_images/general/aipunk.png" style="max-width: 100px;">
+
+The custom avatar app takes inspiration from the CryptoPunks NFT series, but what are Crypto Punks?
+
+#### What are CryptoPunks?
+
+"The CryptoPunks are a collection of 10,000 unique, algorithmically generated digital artworks on the Ethereum blockchain. Each CryptoPunk is a distinct pixel art image of a character with various attributes like hairstyles, accessories, and more. They are considered one of the first examples of non-fungible tokens (NFTs), which are digital tokens representing ownership of a specific item or piece of content. CryptoPunks hold value due to their rarity and historical significance in the NFT space, often being bought, sold, and traded as collectible digital assets."
+
+#### Project Conception and Implementation
+
+I wanted to experiment with this concept and learn more about the generation process so decided to implement this into the project, each new user has a unique avatar, called an aiPunk, algorithmically generated for them when they sign up for an account. This avatar is there digital identify on the onlineAI.art platform, it can not be modified, exchanged or destroyed by the user, its unique and one off to them (it intentionally does not include CRUD functionality). It also acts as a security feature, you can ensure you are connected the real onlineai.art domain as when you sign in and access your profile, you'll be greeted by a familiar face. We do not store or hold your personal credit or debit card information on our servers so you can be sure you are safely logged into our site before entering your payment information to make any purchase.
+
+#### Development and Research Process
+
+I started off reseaching the algorithmic generative process online and founds a lot of relevent resounces and medium articles etc. I found this [Youtube video on creating crypto punk style images using python](https://www.youtube.com/watch?v=o0qNS_pOVqw) which was a great resource for learning the creation process.
+
+#### Leveraging Existing Work
+
+I ended up finding this small [CryptoPunk themed GitHub Repo by Snoozesecurity](https://github.com/snoozesecurity/cryptopunkgenerator) and decided to use the logic, probabilities and image layers to server the core functionality for this application.
+
+#### Customization and Integration
+
+The codebase was then extensively modified to fit the Model-View-Controller (MVC) structure within the Django project. I also added extra functionality by creating a custom view to create the images on new user registration and also another view to display the attributes.
+
+The custom avatar image was added to the user's profile and I also created a custom avatar template so the user can view their avatar and its unique custom attributes, this page is accessible via the users profile or account dropdown menu.
+
+#### Administrative Enchancement
+
+A custom admin view was created to display the avatar image and their attributes. It also allows for custom sorting.
+
+<img src="readme_images/general/aipunks.png" style="max-width: 60%;">
 
 [Go Back Up to Table of Contents 📗](#table-of-contents)
 
@@ -776,6 +814,8 @@ I set up a custom domain with SSL certification to improve the authencity of the
 
 1. Use [DNS Checker](dnschecker.org) website to see if the domain has propegated successfully.
 
+<img src="readme_images/general/dns-checker.png" style="max-width: 60%;">
+
 ### SSL Cert & HTTPS Redirection Set Up on Cloudflare
 
 1. Sign in to / Set up Cloudflare account.
@@ -790,6 +830,8 @@ I set up a custom domain with SSL certification to improve the authencity of the
 
 1. Your site will now redirect to do HTTPS and will have a valid SSL Certificate (eg. https://customdomain.tdl / https://www.customdomain.tdl).
 
+<img src="readme_images/general/TBC.png" style="max-width: 60%;">
+
 [Go Back Up to Table of Contents 📗](#table-of-contents)
 
 ---
@@ -798,21 +840,95 @@ I set up a custom domain with SSL certification to improve the authencity of the
 
 I used fixtures files to upload the bulk of the categories and products, the categories fixtures were the same as the Boutique Ado project as I used this project as inspiration for my site. The products fixtures was created by enterinf the details for my custom products, to assist with process, I created custom names and then used ChatGPT to create the descriptionss for the products. I generated the unique AI images using SDXL on ComfyUI which was run locally on my PC, as it takes time to generate the images, I created a custom list of prompts and then set up a que so that I could generate a lot of unique images over a couple of hours. I then used Printfy to create the unqiue product images by adding the images I generated to products from their catalogue and downloading the images. The site could be used with an API on OnlineAI.art to sell the products by print on demand, so once the site accepts the payment, it will send the order to Printify to create and dispatch the custom product, however this was not implemented for the scope of this project, it has however been listed as a potential future development.
 
-### ComfyUI
+<img src="readme_images/general/mugs.png" style="max-width: 60%;">
+
+### AI Images usign ComfyUI with Stable Diffusion XL
+
+The majority of the images used for the creation of products or added to articles on the site where generated using ComfyUI with SDXL and refiner (ver:0.9).
+
+Previouslly I was using Automatic1111 for local AI image generation however you will need to use ComfyUI if you would like to utilize the new SDXL and refiner models.
+
+The image is initially generated using your positive and negative prompts using the SDXL base model. The base image is then refined by reviewing your prompts again and then modifying the base image with the refiner model. The refined image is returned with noticable improvements over the base output, this can also be upscalled if required.
+
+See below guide to set up ComfyUI with SDXL base and refiner models locally. Note you will need a nVidea GPU with minimum 10gb vram, alternativly you could research setting it up using Google Collab. If this sounds like too much work for you, you can generate images for FREE (currently set to 5 per day per user) on my django website with DALL-E 2 integrated for creating custom images, [Cre8ai.art](cre8ai.art), just sign up and go to generate art, enter your prompt and hit generate, its that simple. You can then download your image by selecting the download button, its free and yours to use how you'd please and its watermark free!
+
+<img src="readme_images/general/painting.png" style="max-width: 60%;">
+
+#### Setup Guide
+
+To create images using SDXL v1.0 and the node-based interface ComfyUI, follow these steps:
+
+1. **Download SDXL v1.0 Models:**
+   - Download both the base and refiner models from HuggingFace.co: [SDXL-base-1.0](https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0) and [SDXL-refiner-1.0](https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0).
+   - For image upscaling, use NMKD Superscale x4, available at Icedrive.net using [this link](https://icedrive.net/s/14BM8qlGO6).
+
+2. **Get ComfyUI:**
+   - Download ComfyUI using this [direct download GitHub link](#https://github.com/comfyanonymous/ComfyUI/releases/download/latest/ComfyUI_windows_portable_nvidia_cu118_or_cpu.7z).
+   - Extract the downloaded file using 7-Zip.
+   - Place the downloaded models in the folder: `ComfyUI_windows_portable\ComfyUI\models\checkpoints`.
+   - If you downloaded the upscaler, place it in the folder: `ComfyUI_windows_portable\ComfyUI\models\upscale_models`.
+
+3. **Download Sytan's SDXL Workflow:**
+   - Get the JSON workflow file from [this link](#link-to-json-workflow).
+   - Save the downloaded JSON file.
+
+4. **Start ComfyUI:**
+   - Run `run_nvidia_gpu.bat` to open ComfyUI in your web browser.
+   - Click the "Load" button and select the JSON workflow file you downloaded.
+
+5. **Run Your Prompt:**
+   - Connect models: In the yellow Refiner Model box, select `sd_xl_refiner_1.0.safetensors`. In the yellow Base Model box, select `sd_xl_base_1.0.safetensors`.
+   - If you downloaded the upscaler, choose it in the Upscale Model node.
+   - Run the default prompt by clicking "Queue Prompt".
+   - Observe faster generation times compared to AUTOMATIC1111.
+   - Right-click the image and choose "Save Image" to download it.
+
+**Settings to Explore:**
+- **Linguistic Positive and Supporting Terms:** Use CLIP_G for natural language sentences and CLIP_L for comma-separated tags.
+- **Fundamental Negative:** Set the negative prompt here.
+- **Image Resolution:** Optimal at 1024 x 1024 or equivalent total pixels.
+- **Steps:** Default value of 20 is good for high-quality images.
+- **Base CFG:** Adjust for prompt adherence and freedom.
+- **Seed:** Optionally set a seed for consistent results.
+- **Refiner CFG:** Default value of 7.5 is recommended.
+- **Positive and Negative Aesthetic Scores:** Influence image aesthetics based on score bias.
+
+**Additional Resources**
+
+You can find more information on setting up this application using the following resources: 
+
+- [Set up tutorial by Yubin on aituts.com](https://aituts.com/comfyui-sdxl/) - I used the links and info from this guide to recreate above tutorial as I have ver0.9 installed instead of the new ver1.0.
+- [Pixoverts Youtube Beginners Guide](https://www.youtube.com/watch?v=yamusLEyt4g) - Here is a detailed video if you are interesting in learning more about this process.
+
+<img src="readme_images/general/TBC.png" style="max-width: 60%;">
+
+### Custom Product using Printify
+
+I created the product images by adding the gennerated AI images to print on demand products using [Printful](https://www.printful.com/)
+
+To do this, simply set up an account, go to the product catalogue, select your product to edit, import image and adjust positioning then save the modifed product with images.
+
+<img src="readme_images/general/pritify.png" style="max-width: 60%;">
 
 TBC
 
-### SDXL
+### Product Descriptions using ChatGPT
 
-TBC
+I used ChatGPT to create meaningful, creative, SEO friendly, product descriptions and titles by giving it brief details on my store, target audience and the products I was going to list.
 
-### Printify
+<img src="readme_images/general/TBC.png" style="max-width: 60%;">
 
 TBC
 
 ### Custom Products Fixtures
 
-TBC
+I added all of the images, titles and description to the custom products fixtures file, `products.json`. This allowed me to dd the majority of the listed products simultaneously. I later added additional products using the admin accounts.
+
+I loaded the custom product fixtures file to Heroku using the following command: 
+
+    heroku run python3 manage.py loaddata products/fixtures/products.json -a kc-ecommerce
+
+<img src="readme_images/general/TBC.png" style="max-width: 60%;">
 
 [Go Back Up to Table of Contents 📗](#table-of-contents)
 
@@ -828,7 +944,7 @@ I have documented some of the bugs and issues I have encountered through out the
 
 The following file path used in the Boutique Ado tutorial that I was following to set up the basics does not exist in the project directories:
 
-    `cp -r ../.pip-modules/lib/python3.7/site-packages/alluth/templates/* ./templates/allauth/`
+    cp -r ../.pip-modules/lib/python3.7/site-packages/alluth/templates/* ./templates/allauth/
 
 **Resolution**
 
@@ -992,9 +1108,15 @@ A lot of images sizes not appropriatly sized for web pages.
 
 I used [TinyPNG](https://tinypng.com/) to reduce the image sizes.
 
+<img src="readme_images/general/tinypng.png" style="max-width: 60%;">
+
 I converted the homepage background images to WEBP files using [Convertio](https://convertio.co/png-webp/).
 
 Ideally all of the images should be served in WEBP format going forward but converting the file types for the exisiting images would require the database urls for the images to be updated as well, all further images will be uploaded in WEBP format.
+
+<img src="readme_images/aws/s3-delete.png" style="max-width: 60%;">
+
+<img src="readme_images/aws/s3-upload.png" style="max-width: 60%;">
 
 ---
 
@@ -1032,11 +1154,11 @@ The alert is only triggered on the edit pages as the placeholder is not visible 
 
 **Issue**
 
-I have set it up so that you can add HTML to the blogs through the admin panel which works well when creating and editing text. It also allows the admin to add embed items such as iframes for Youtube or Google Maps. Unfortuntly when you try to edit a page with an embeded item, the code for the embded part is not displayed.
+I have set it up so that you can add HTML to the blogs through the admin panel which works well when creating and editing text. It also allows the admin to add embed items such as iframes for Youtube or Google Maps. Unfortuntly when you try to edit a page with an embeded item, the code for the embed part is not displayed.
 
 **Resolution**
 
-This minor bug is outstanding and does not affect the MVP. 
+This minor bug is outstanding and does not affect the MVP, the uploaded pages still work as intended.
 
 
 [Go Back Up to Table of Contents 📗](#table-of-contents)
@@ -1085,13 +1207,13 @@ This minor bug is outstanding and does not affect the MVP.
 
 ### Automated Testing
 
-Thirty three automated tests were created for the project using assistance from ChatGPT. They are located in the tests.py files in the following apps: about, avatar, bag, blog, checkout, home, products & profiles.
+Thirty three automated tests were created for the project using ChatGPT. They are located in the tests.py files in the following apps: about, avatar, bag, blog, checkout, home, products & profiles. These were created to support the thorough manual testing process.
 
 #### Coverage Installation
 
 The following code was used to install the `coverage` package:
 
-    pip install coverage
+    pip3 install coverage
 
 #### Run Django tests with coverage
 
@@ -1258,6 +1380,8 @@ TBC
 | Checkout Success      |                       |
 | 404 Page              |                       |
 
+<img src="readme_images/general/tbc.png" style="max-width: 60%;">
+
 TBC
 
 ---
@@ -1290,6 +1414,8 @@ I noticed I receive errors using normal Chrome browser due to one of my extensio
 | Checkout Success      | ✅                    |
 | 404 Page              | ✅                    |
 
+<img src="readme_images/general/tbc.png" style="max-width: 60%;">
+
 TBC
 
 ---
@@ -1317,6 +1443,8 @@ TBC
 | Checkout              |                       |
 | Checkout Success      |                       |
 | 404 Page              |                       |
+
+<img src="readme_images/general/tbc.png" style="max-width: 60%;">
 
 TBC
 
@@ -1346,9 +1474,9 @@ TBC
 | Checkout Success      |                       |
 | 404 Page              |                       |
 
-TBC
+<img src="readme_images/general/tbc.png" style="max-width: 60%;">
 
----
+TBC
 
 ---
 
@@ -1376,6 +1504,8 @@ TBC
 | Checkout Success      |                       |
 | 404 Page              |                       |
 
+<img src="readme_images/tests/jshint/products-btt-button.png" style="max-width: 60%;">
+
 TBC
 
 ---
@@ -1385,6 +1515,10 @@ TBC
 Flake8 was used to test the python code by running the following command in the terminal: 
 
     python3 -m flake8
+
+TBC
+
+<img src="readme_images/general/tbc.png" style="max-width: 60%;">
 
 ---
 
@@ -1417,6 +1551,8 @@ Its important that the website responds well across a variety of device sizes su
 | **Nest Hub**                 | 1024          | 600              |
 | **Nest Hub Max**             | 1280          | 800              |
 
+<img src="readme_images/general/tbc.png" style="max-width: 60%;">
+
 TBC
 
 #### Visual Testing using AmIRepsponsive
@@ -1427,6 +1563,9 @@ TBC
 | **Laptop**  | 1280           | 802             | 0.277     |
 | **Tablet**  | 768            | 1024            | 0.219     |
 | **Mobile**  | 320            | 480             | 0.219     |
+
+
+<img src="readme_images/general/tbc.png" style="max-width: 60%;">
 
 TBC
 
@@ -1444,7 +1583,9 @@ TBC
 
 - Add order processing app for store owners to add tracking number once dispatched, etc. 
 
-- Set up email address on the custom domain, eg: contact@onlineai.art.
+- Set up email address on the custom domain, eg: contact@onlineai.art. Below video tutorial demonstrates free work around to set up custom email domain on Google with Cloudflare.
+ - [YouTube: Gmail Custom Email Domain on Cloudflare using ImprovMX](https://www.youtube.com/watch?v=T4n8EvtVDBE)
+ - [ImprovMX: Website to create free Alias](https://improvmx.com/)
 
 - Set up the footer as an app so the admins can modify links via the admin portal without changing the websites code.
 
@@ -1464,6 +1605,9 @@ TBC
 
 ## Summary of charges and monitoring costs
 
+
+<img src="readme_images/general/tbc.png" style="max-width: 60%;">
+
 TBC
 
 [Go Back Up to Table of Contents 📗](#table-of-contents)
@@ -1482,31 +1626,37 @@ TBC
 
 ### Facebook Page
 
+<img src="readme_images/facebook/fb3.png" style="max-width: 60%;">
+
 A [Facebook Page](https://www.facebook.com/people/Onlineaiart/61550214234067/) has been set up to the support the ecommerce store.
 
 I have added the store details, profile picture, header image and series of posts about our store and topics.
 
 I also experimented with Meta Business Manager and scheduled posts to be posted in future as I thought this was a useful feature.
 
-See images of page and content of same below:
+<img src="readme_images/facebook/fb-schedule-post.png" style="max-width: 60%;">
 
-###############
+See images of posts content below:
+
+<img src="readme_images/facebook/fb-posts-content.png" style="max-width: 60%;">
 
 Note: Facebook often removes inactive store pages.
 
-TBC
-
 ### Mailchimp Newsletter
+
+A pop up for newsletter sign up has been added to the products page using MailChimp. 
+
+It has been styled to integrate well with the site.
+
+<img src="readme_images/general/mailchimp-popup.png" style="max-width: 60%;">
 
 TBC
 
 ### Google Analytics
 
-https://analytics.google.com/
+- Set up an account with [Google Analytics](https://analytics.google.com/) and add the web domain.
 
-- Set up an account with Google Analytics and add the web domain.
-
-- Follow the sign up process.
+- Follow the set up process.
 
 - Copy and paste the GTAG into the base template, just below the `</head>` tag as per Google's instructions.
 
@@ -1514,17 +1664,18 @@ https://analytics.google.com/
 
 - You should now be able to monitor your site's traffic after 1 - 2 days.
 
-- If you would like to test the GTAG sooner, you can download [Google Analytics Debugger](https://chrome.google.com/webstore/detail/google-analytics-debugger/jnkmfdileelhofjcijamephohjechhna) from the Chrome Extensions Store - simply install, access the web page and view the console. Note you will need to disable your ad blocker if you have one installed while testing the page.
+- If you would like to test the GTAG sooner, you can download [Google Analytics Debugger](https://chrome.google.com/webstore/detail/google-analytics-debugger/jnkmfdileelhofjcijamephohjechhna) from the Chrome Extensions Store - simply install, access the web page and view the console. Note you will need to disable your ad blocker if you have one installed while testing the page. This allowed me to ensure the GTAG was configured correctly without waiting, it took about 12 hours for the analytics to start working.
 
-TBC
+<img src="readme_images/google/google-analytics-1.png" style="max-width: 60%;">
 
 ### GDPR
 
-Since user data is collected in the data base and cookies have been enabled using Google Analytics, I have added a GDPR pop up notification that I got from [https://www.cookieconsent.com/](cookieconsent.com).
+Since user data is collected in the data base and cookies have been enabled using Google Analytics, I have added a GDPR pop up notification that I got from [https://www.cookieconsent.com/](cookieconsent.com) and included the site's custom privacy policy page.
 
-I then customized the styling using the Google Chrome Inspection Tool to indentify the corrosponding classes and IDs to modify using the main CSS stylesheet.
+I then customized the styling using the Google Chrome Inspection Tool to indentify the corrosponding classes and IDs to modify using the main CSS stylesheet. I ensured that the trackers are not activated until the user has accepted to them to stay in line with EU GDPR legislation.
 
-##############
+<img src="readme_images/general/cookies-consent.png" style="max-width: 60%;">
+<img src="readme_images/general/cookies-consent-2.png" style="max-width: 60%;">
 
 TBC
 
@@ -1694,8 +1845,7 @@ Here is a list of useful links that were used as part of the project. Thanks to 
 - Custom Domain:
 [Youtube: Use namecheap domain with Heroku hosting](https://www.youtube.com/watch?v=51j_mhje9Kk)
 [Youtube: Free SSL cert with Cloudflare](https://www.youtube.com/watch?v=Y4iHXhRkpO4)
-[YouTube: Gmail Custom Email Domain on Cloudflare using ImprovMX](https://www.youtube.com/watch?v=T4n8EvtVDBE)
-[ImprovMX: Website to create free Alias](https://improvmx.com/) - Not set up yet
+
 [CKEditor: ]()
 []()
 []()
