@@ -93,12 +93,10 @@ def delete_blog_page(request, pk):
 
     if request.method == "POST":
         username = request.POST.get("username")
-
         if username == request.user.username:
             blog_page.delete()
             messages.success(request, 'Blog post deleted!')
             return redirect(reverse('blog'))
-
         else:
             messages.error(
                 request, 'Incorrect username. Blog page was not deleted.')

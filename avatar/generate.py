@@ -64,12 +64,14 @@ def generate_and_save_punk_for_user(user, request):
     Generate and save a new punk image with
     random attributes for the given user.
     """
+
     punkTypes = ['male', 'female', 'alien', 'ape', 'zombie']
     backgrounds = os.listdir(
         os.path.join(settings.MEDIA_ROOT, 'backgrounds'))
     smokes = os.listdir(
         os.path.join(settings.MEDIA_ROOT, 'attributes/uni/smoke'))
 
+    # Randomly select a punk type
     punkType = np.random.choice(punkTypes, p=[0.5, 0.3, 0.05, 0.06, 0.09])
     punkStack, attrDict = get_punk_and_attributes(punkType)
 
@@ -80,6 +82,7 @@ def generate_and_save_punk_for_user(user, request):
     # Metadata dictionary to keep track of attributes
     metadata = {}
 
+    # Logic to select punk type and assign attributes based on probabilities
     if punkType == 'male':
         attrDict = prob.maleAttr
         punkStack = Image.open(
