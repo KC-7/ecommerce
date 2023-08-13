@@ -7,25 +7,37 @@
 
 # onlineAI.art | E-Commerce Project
 
-Custom Domain Link: [onlineAI.art](onlineAI.art)
+## Live Links
 
-Heroku App Link: https://kc-ecommerce-434e6f88dca9.herokuapp.com/
+[onlineAI.art](https://onlineai.art/)
 
-This is a django project for an E-Commerce Store with Stripe payments, custom products, blogs, avatars and about pages.
+[onlineAI.art - Admin Portal](https://onlineai.art/admin/)
 
-TBC
+[Heroku App Link](https://kc-ecommerce-434e6f88dca9.herokuapp.com/)
 
-A [Facebook Page](https://www.facebook.com/people/Onlineaiart/61550214234067/) has been set up for the site.
+[Facebook Page](https://www.facebook.com/people/Onlineaiart/61550214234067/)
 
 ---
 
-## Site Preview 
+## Project Preview 
+
+### Project Description
+
+This is a django project for an E-Commerce Store which specializes in offering custom printed products, each designed uniquely using AI image generation.
+
+The site allows users to view and add products to their bags, search and filter products by category, price, etc. They can checkout using Stripe payments. The can view about pages and blog posts. They can sign up for a profile, save delivery information, view past orders etc. An algorithimically generaterad avatar called an aiPunk is created for each user.
+
+Admin users can create, modify or delete the about pages, blog posts and products. They can also access a custom admin portal for additional admin functionality.
 
 ### Main Site Preview
+
+<img src="readme_images/general/TBC.png" style="max-width: 60%;">
 
 TBC
 
 ### Admin Portal Preview
+
+<img src="readme_images/general/TBC.png" style="max-width: 60%;">
 
 TBC
 
@@ -37,70 +49,106 @@ TBC
 
 ---
 
-## Businness Type
+## Business Overview
 
-The site is targeted towords Art, Tech, Fashion Entusiates and Blog Readers interested in AI generation.
+<details> <summary><b> Click here to expand the section ⬇️</b></summary>
 
-TBC
+### Purpose of Website
+
+The purpose of the website is a robust e-commerce platform that meets the needs of its potential customers. The site is designed to sell products with custom printed AI artwork such as clothing, homeware and tech products.
+
+### Business Type
+
+The site primarily uses a B2C (business to consumer) business model. The site caters directly to consumers and is designed to be easy to interact and allow for swift checkout without the need for user registration. This allows for potential customers to make a purchase as quickly and as easily as possible. Return customers can set up an account which allows them to save their delivery information to simply the checkout process even further.
+
+### Target Audience
+
+The target audience is fulti-faceted and includes but is not limited to the below consumer types. We envisage our target audience will be both male and female, mainly ranging from 18 to 60 years old. 
+
+- **Tech Enthusiasts:** Indviduals interested in AI technology and generative art
+- **Design and Art Enthusiasts:** Individuals interested in art and design
+- **E-Commerce Shoppers:** Regular online shoppers looking for unique products
+
+### Primary Marketing Strategy
+
+The primary marketing strategy is to leverage the uniqueness of the product range, our products are not available anywhere else as they are custom designed for the store. Our unique products range will attract general E-Commerce Shoppers, our custom designs will attract Art Enthusiasts and our tech related blog posts will attract Tech Enthusiasts. 
+
+### Marketing Solutions to Meet Audience Needs
+
+Alongside our primary marketing strategies we will implement additional marketing solutions to meet the needs of our target audience:
+
+- **Social Media:** A dedicated [Facebook Business Page](https://www.facebook.com/people/Onlineaiart/61550214234067/) has been created to showcase our unique designs and products. We will also create Twitter and Instagram pages to expand our out reach on different platforms. Alongside this we can set up a Discord channel to create a social community. We will also be able to share our custom images and products on additional platforms such as Reddit, TikTok, etc.
+- **Engaging Content:** We intend to utilize the Blog and About applications on the website to create engaging content about generative art and AI technology which will improve user engagement on the site.
+- **Email newsletter:** We have set up a newsletter using MailChimp so we can send free, regular newsletters to our subscribers.
+- **Affiliant Marketing:** We intend to utilize the blog platform for affiliate marketing for non-competing products such as generative AI services etc. 
+- **Collaborations:** We intend to collaborate with influencers in the tech and fashion industries to showcase our products.
+- **Promotions and Discounts:** We have implemented a clearance and sale section on the site. We will also send discounts to our newsletter subscribers in future.
+- **Advertising & SEO:** Monitor our analytics using Google Analytics and monitor search results with Google Search Console. Potentially set up Google Business and Google Advertising in future to attract additional customers.
+
+[Go Back Up to Table of Contents 📗](#table-of-contents)
+
+</details>
 
 ---
 
 ## User Story Test Cases
 
-[Click here to see the Github User Stories Board](#)
+<details> <summary><b> Click here to expand the section ⬇️</b></summary>
 
-<details> <summary><b> --------------------------------------- or click here to see the list of user stories below ⬇️</b></summary>
+[Click here to see the Github User Stories Board](#)
 
 ### View and Navigation
 1. As a Shopper, I want to be able to view a list of products so that I can select some to purchase.
-- 1.a: As a Shopper, I want to be able to view a list of products so that I can quickly find products I'm interested in without having to filter through all products.
-2. As a Shopper, I want to be able to view individual product details so that I can identify the price, description, product rating, product image, and available sizes.
-3. As a Shopper, I want to be able to quickly identify deals, clearance items, and special offers so that I can take advantage of special savings on products I'd like to purchase.
-4. As a Shopper, I want to be able to easily view the total of my purchases at any time so that I can avoid spending too much.
+2. As a Shopper, I want to be able to view a list of products so that I can quickly find products I'm interested in without having to filter through all products.
+3. As a Shopper, I want to be able to view individual product details so that I can identify the price, description, product rating, product image, and available sizes.
+4. As a Shopper, I want to be able to quickly identify deals, clearance items, and special offers so that I can take advantage of special savings on products I'd like to purchase.
+5. As a Shopper, I want to be able to easily view the total of my purchases at any time so that I can avoid spending too much.
 
 ### Registration and User Accounts
-5. As a Site User, I want to be able to easily register for an account so that I can have a personal account and be able to view my profile.
-6. As a Site User, I want to be able to easily login and logout so that I can access my personal account information.
-7. As a Site User, I want to be able to easily recover my password in case I forget it so that I can recover access to my account.
-8. As a Site User, I want to be able to receive an email confirmation after registering so that I can verify that my account registration was successful.
-9. As a Site User, I want to be able to have a personalized user profile so that I can view my personal order history and confirmations, and save my payment information.
+6. As a Site User, I want to be able to easily register for an account so that I can have a personal account and be able to view my profile.
+7. As a Site User, I want to be able to easily login and logout so that I can access my personal account information.
+8. As a Site User, I want to be able to easily recover my password in case I forget it so that I can recover access to my account.
+9. As a Site User, I want to be able to receive an email confirmation after registering so that I can verify that my account registration was successful.
+10. As a Site User, I want to be able to have a personalized user profile so that I can view my personal order history and confirmations, and save my payment information.
 
 ### Sorting and Searching
-10. As a Shopper, I want to be able to sort the list of available products so that I can easily identify the best rated, best priced, and categorically sorted products.
-11. As a Shopper, I want to be able to sort a specific category of product so that I can find the best priced or best rated product in a specific category, or sort the products in that category by name.
-12. As a Shopper, I want to be able to sort multiple categories of products simultaneously so that I can find the best priced or best rated products across broad categories, such as "clothing" or "homeware".
-13. As a Shopper, I want to be able to search for a product by name or description so that I can find a specific product I'd like to purchase.
-14. As a Shopper, I want to be able to easily see what I've searched for and the number of the results so that I can quickly decide whether the product I want is available.
+11. As a Shopper, I want to be able to sort the list of available products so that I can easily identify the best rated, best priced, and categorically sorted products.
+12. As a Shopper, I want to be able to sort a specific category of product so that I can find the best priced or best rated product in a specific category, or sort the products in that category by name.
+13. As a Shopper, I want to be able to sort multiple categories of products simultaneously so that I can find the best priced or best rated products across broad categories, such as "clothing" or "homeware".
+14. As a Shopper, I want to be able to search for a product by name or description so that I can find a specific product I'd like to purchase.
+15. As a Shopper, I want to be able to easily see what I've searched for and the number of the results so that I can quickly decide whether the product I want is available.
 
 ### Purchasing and Checkout
-15. As a Shopper, I want to be able to easily select the size and the quantity of a product when purchasing it so that I can ensure I don't accidentally select the wrong product quantity or size.
-16. As a Shopper, I want to be able to view items in my bag to be purchased so that I can identify the total cost of my purchase and all of the items I will receive.
-17. As a Shopper, I want to be able to adjust the quantity of individual items in my bag so that I can easily make changes to my purchase before checkout.
-18. As a Shopper, I want to be able to easily enter my payment information so that I can check out quickly and without issues.
-19. As a Shopper, I want to be able to feel that my personal and payment information is safe and secure so that I can confidently provide the needed information to make a purchase.
-20. As a Shopper, I want to be able to view an order confirmation after checkout so that I can verify that I haven't made any mistakes.
-21. As a Shopper, I want to be able to receive an email confirmation after checking out so that I can keep the confirmation of what I've purchased for my records.
+16. As a Shopper, I want to be able to easily select the size and the quantity of a product when purchasing it so that I can ensure I don't accidentally select the wrong product quantity or size.
+17. As a Shopper, I want to be able to view items in my bag to be purchased so that I can identify the total cost of my purchase and all of the items I will receive.
+18. As a Shopper, I want to be able to adjust the quantity of individual items in my bag so that I can easily make changes to my purchase before checkout.
+19. As a Shopper, I want to be able to easily enter my payment information so that I can check out quickly and without issues.
+20. As a Shopper, I want to be able to feel that my personal and payment information is safe and secure so that I can confidently provide the needed information to make a purchase.
+21. As a Shopper, I want to be able to view an order confirmation after checkout so that I can verify that I haven't made any mistakes.
+22. As a Shopper, I want to be able to receive an email confirmation after checking out so that I can keep the confirmation of what I've purchased for my records.
 
 ### Admin and Store Management
-22. As a Store Owner, I want to be able to add a product so that I can add new items to my store.
-23. As a Store Owner, I want to be able to edit/update a product so that I can change product prices, descriptions, images, and other product criteria.
-24. As a Store Owner, I want to be able to delete a product so that I can remove items that are no longer for sale.
+23. As a Store Owner, I want to be able to add a product so that I can add new items to my store.
+24. As a Store Owner, I want to be able to edit/update a product so that I can change product prices, descriptions, images, and other product criteria.
+25. As a Store Owner, I want to be able to delete a product so that I can remove items that are no longer for sale.
 
 ### Additional Features
-25. As a Site User, I want to be able to sign up for a mailing list so that I can stay up to date with the latest products and deals.
-26. As a Site User, I want to be able to find out more information so that I can find out additional information about the company such as shipping, etc.
-27. As a Site User, I want to be able to navigate the content easily and quickly so that I can find the content that I am looking for.
-28. As a Store Owner, I want to set up a blog so that I can draw more site attention, recommend my products to the target audience, and potentially affiliate marketing and sponsered articles.
-29. As a Store Owner, I want create a unique custom avatar with unique traits for each user so that I can enhance the personalized shopping experience to create increased customer engagement and retention.
-30. As a Store Owner, I want to allow admin to control the products, blogs and about pages via the site and dedicated admin panel so that I can allow admins to run the store without the need for website modifications.
-
-</details>
+26. As a Site User, I want to be able to sign up for a mailing list so that I can stay up to date with the latest products and deals.
+27. As a Site User, I want to be able to find out more information so that I can find out additional information about the company such as shipping, etc.
+28. As a Site User, I want to be able to navigate the content easily and quickly so that I can find the content that I am looking for.
+29. As a Store Owner, I want to set up a blog so that I can draw more site attention, recommend my products to the target audience, and potentially affiliate marketing and sponsered articles.
+30. As a Store Owner, I want create a unique custom avatar with unique traits for each user so that I can enhance the personalized shopping experience to create increased customer engagement and retention.
+31. As a Store Owner, I want to allow admin to control the products, blogs and about pages via the site and dedicated admin panel so that I can allow admins to run the store without the need for website modifications.
 
 [Go Back Up to Table of Contents 📗](#table-of-contents)
+
+</details>
 
 ---
 
 ## Design
+
+<details> <summary><b> Click here to expand the section ⬇️</b></summary>
 
 ### Colour Scheme
 
@@ -139,9 +187,31 @@ The font Audiowide has been used throughout the site to give it a modern, futuri
 
 [Go Back Up to Table of Contents 📗](#table-of-contents)
 
+### Wireframes
+
+I created the wireframes for the Home, Products and Product Page using [Figma](https://www.figma.com/)
+
+<img src="readme_images/wireframes/wireframe-home.png" style="max-width: 60%;">
+
+<img src="readme_images/wireframes/wireframe-products.png" style="max-width: 60%;">
+
+<img src="readme_images/wireframes/wireframe-product.png" style="max-width: 60%;">
+
+### Data Schema
+
+I used [Lucid Chart](https://lucid.app/) to create the **Entity Relationship Diagram**:
+
+<img src="readme_images/data_schema/entity-relationship-diagram.png" style="max-width: 60%;">
+
+[Go Back Up to Table of Contents 📗](#table-of-contents)
+
+</details>
+
 ---
 
-## Custom Features
+## Site Features
+
+<details> <summary><b> Click here to expand the section ⬇️</b></summary>
 
 ### Custom Admin Portal
 
@@ -161,7 +231,7 @@ The admin portal was customized by using the following [installation guide for J
 
 3. Add [custom jazzmin configuration settings](https://django-jazzmin.readthedocs.io/configuration/) to settings.py.
 
-<details> <summary><b> --------------------------------------- Click here to see my custom Jazzmin settings ⬇️</b></summary>
+See my custom Jazzmin settings ⬇️
 
     # Custom Jazzmin Settings
     JAZZMIN_SETTINGS = {
@@ -228,7 +298,8 @@ The admin portal was customized by using the following [installation guide for J
             {"name": "Developer", "url": "https://github.com/kc-7", "new_window": True},
         ],
     }
-</details>
+
+<img src="readme_images/general/TBC.png" style="max-width: 60%;">
 
 ---
 
@@ -244,13 +315,19 @@ The admin panel also allows the amdministrator to:
 
 ---
 
-### Stripe Integration
+### E-commerce functionality
+
+The site has integrated the following apps to allow customers to interact with and purchase items: bag, checkout & products.
+
+It also has a profile app to allow the users to save their delivery information.
+
+#### Stripe Integration & Test Card Details
 
 [Stripe](https://stripe.com/) has been integrated into the project to handle the payment system.
 
 Stripe is currently in developer mode for the website to allow test payments to be processed to ensure the site's functionality is operating as intended.
 
-#### Test Card Details
+**Test Card Details:**
 
 Here are some test card details you can use to simulate different scenarios at checkout:
 
@@ -268,18 +345,17 @@ For more details on setting up Stripe elements to accept payment, refer to the [
 
 ### CKEditor
 
-<img src="readme_images/general/TBC.png" style="max-width: 60%;">
+<img src="readme_images/ckeditor/ckeditor-mobile.png" style="max-width: 60%;">
 
 I installed the [CKEditor Classic Editor](https://ckeditor.com/docs/ckeditor5/latest/installation/getting-started/predefined-builds.html#classic-editor) to allow customisable text inputs for the Admins to add About Pages. This allows the site management team to add and update these pages without the need of a web developer. The CKEditor easily allows them to customise the text. 
 
-<details> <summary><b> --------------------------------------- Click here to see the conscise set up guide for the CKEditor ⬇️</b></summary>
+#### Set Up Guide
 
-Installation example
-In your HTML page add an element that CKEditor 5 should replace:
+1. In your HTML page add an element that CKEditor 5 should replace:
 
     <div id="editor"></div>
 
-Load the classic editor build (here, the CDN location is used):
+1. Load the classic editor build (here, the CDN location is used):
 
     <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
 
@@ -287,7 +363,7 @@ Alternatively, you may install CKEditor 5 from npm:
 
     npm install --save @ckeditor/ckeditor5-build-classic
 
-Then bundle it together with your app.
+1. Then bundle it together with your app.
 
 Call the ClassicEditor.create() method.
 
@@ -299,11 +375,9 @@ Call the ClassicEditor.create() method.
             } );
     </script>
 
-</details>
-
 I have customized the editor to only display certain suitable options, for example H1 has been removed as it used for the Title for the page so there is no need to have it in the content section, the customizations are added as a postload js script on the pages where the editor has been implemented, eg create & edit blog and create & edit about pages.
 
-<details> <summary><b> --------------------------------------- Click here to see my custom CKEditor settings ⬇️</b></summary>
+See my custom CKEditor settings below ⬇️
 
     <script>
     ClassicEditor
@@ -344,7 +418,13 @@ I have customized the editor to only display certain suitable options, for examp
         });
     </script>
 
-</details>
+Admin users can access the additional editor functionality via the admin portal.
+
+<img src="readme_images/ckeditor/ckeditor-admin.png" style="max-width: 60%;">
+
+The custom editor is disabled on very small mobile devices to ensure responsiveness.
+
+<img src="readme_images/ckeditor/ckeditor-removed-xs-mobile.png" style="max-width: 60%;">
 
 ---
 
@@ -424,11 +504,23 @@ A custom admin view was created to display the avatar image and their attributes
 
 <img src="readme_images/general/aipunks.png" style="max-width: 60%;">
 
+---
+
+### User Feedback, Error Handeling and 404 Redirection
+
+The site has integrated user feedback by displaying toast messages for info, success, errors etc. Apps have built in error handeling to notify users of issues in a user friendly manner. 404 page has been configured to show when the page the user is looking for can not be found.
+
+<img src="readme_images/general/aipunks.png" style="max-width: 60%;">
+
 [Go Back Up to Table of Contents 📗](#table-of-contents)
+
+</details>
 
 ---
 
 ## Dependencies & Their Use Cases
+
+<details> <summary><b> Click here to expand the section ⬇️</b></summary>
 
 The project relies on a range of Python packages to ensure its smooth operation and delivery of features. Here's a brief overview of each dependency in the `requirements.txt` and its use case:
 
@@ -462,21 +554,25 @@ The project relies on a range of Python packages to ensure its smooth operation 
 
 For installation, simply run `pip3 install -r requirements.txt`.
 
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX TBC
+
 [Go Back Up to Table of Contents 📗](#table-of-contents)
+
+</details>
 
 ---
 
 ## Deployment & Local Development
 
+<details> <summary><b> Click here to expand the section ⬇️</b></summary>
+
 ### Deployment
 
-The project is deployed using Heroku. 
-
-<details> <summary><b> --------------------------------------- Click here to see the deployment procedure! 🚀</b></summary>
+The project is deployed using Heroku.  🚀
 
 To deploy the project, follow these steps:
 
-#### **Create the Live Database**
+#### Create the Live Database
 
 In development, we have been using the sqlite3 database. However, this is only suitable for development, so we need to create a new external database accessible by Heroku.
 
@@ -722,8 +818,6 @@ In development, we have been using the sqlite3 database. However, this is only s
 
 ---
 
-</details>
-
 ### Local Development
 
 #### How to Fork
@@ -772,19 +866,33 @@ To clone the repository:
 
         python manage.py runserver
 
-You should now be able to access the application locally.
+---
+
+### Environment Variables
+
+I set the local Environment Config Variables on GitPod workspaces buy you can also set it up as a `env.py` file (note: `env.py` is already included in the `.gitignore` file).
+
+I have set up the deployed Environment Config Variables on Heroku, see below for list of inclusions:
+
+<img src="readme_images/heroku/heroku-config-vars.png" style="max-width: 60%;">
 
 [Go Back Up to Table of Contents 📗](#table-of-contents)
+
+</details>
 
 ---
 
 ## Custom Domain & SSL Cert
+
+<details> <summary><b> Click here to expand the section ⬇️</b></summary>
 
 I set up a custom domain with SSL certification to improve the authencity of the online e-commerce store. The custom domain on Namecheap cost €3 and the Cloudflare account is free.
 
 ### Custom Domain Set Up on Namecheap
 
 1. Sign up / login in to Namecheap (or alt domain registrar however please note the following how to is written for Namecheap). Find and purchase suitable domain. While purchasing the domain you should set up Domain Privacy to protect your identity, Namecheap offer this service for free however other registrars charge for this service. 
+
+<img src="readme_images/namecheap/namecheap-1.png" style="max-width: 60%;">
 
 1. Add your new domain name to `ALLOWED_HOSTS` your `settings.py` file. Your allowed hosts should now look like the following so its accessible locally, on heroku and on the custom domain: 
 
@@ -830,13 +938,35 @@ I set up a custom domain with SSL certification to improve the authencity of the
 
 1. Your site will now redirect to do HTTPS and will have a valid SSL Certificate (eg. https://customdomain.tdl / https://www.customdomain.tdl).
 
-<img src="readme_images/general/TBC.png" style="max-width: 60%;">
+<img src="readme_images/general/https-ssl.png" style="max-width: 60%;">
+
+<img src="readme_images/cloudflare/cloudflare-dns.png" style="max-width: 60%;">
+
+<img src="readme_images/cloudflare/cloudflare-overview.png" style="max-width: 60%;">
+
+### Cloudflare Scecurity
+
+Cloudlfare options a range of options to provide additional protection for your site against malicous traffic. 
+
+It has notified me about a lot of bot traffic, presumably due to registering the site on a custom domain, that have tried to gain root or env access such as the below example, there has also been a noticable amount of traffic from Tor and Russia:
+
+<img src="readme_images/cloudflare/firewall-alert-get-env-cloudflare.png" style="max-width: 60%;">
+
+<img src="readme_images/cloudflare/firewall-alert-cloudflare.png" style="max-width: 60%;">
+
+Alonside threat alerts, it also shows bot and crawler traffic, example google and apple bots:
+
+<img src="readme_images/cloudflare/cloudflare-threats-crawlers.png" style="max-width: 60%;">
 
 [Go Back Up to Table of Contents 📗](#table-of-contents)
 
+</details>
+
 ---
 
-## Product Creation
+## Product Creation Process
+
+<details> <summary><b> Click here to expand the section ⬇️</b></summary>
 
 I used fixtures files to upload the bulk of the categories and products, the categories fixtures were the same as the Boutique Ado project as I used this project as inspiration for my site. The products fixtures was created by enterinf the details for my custom products, to assist with process, I created custom names and then used ChatGPT to create the descriptionss for the products. I generated the unique AI images using SDXL on ComfyUI which was run locally on my PC, as it takes time to generate the images, I created a custom list of prompts and then set up a que so that I could generate a lot of unique images over a couple of hours. I then used Printfy to create the unqiue product images by adding the images I generated to products from their catalogue and downloading the images. The site could be used with an API on OnlineAI.art to sell the products by print on demand, so once the site accepts the payment, it will send the order to Printify to create and dispatch the custom product, however this was not implemented for the scope of this project, it has however been listed as a potential future development.
 
@@ -908,7 +1038,9 @@ I created the product images by adding the gennerated AI images to print on dema
 
 To do this, simply set up an account, go to the product catalogue, select your product to edit, import image and adjust positioning then save the modifed product with images.
 
-<img src="readme_images/general/pritify.png" style="max-width: 60%;">
+<img src="readme_images/general/printify.png" style="max-width: 60%;">
+
+<img src="readme_images/general/suitcase.png" style="max-width: 60%;">
 
 TBC
 
@@ -932,9 +1064,13 @@ I loaded the custom product fixtures file to Heroku using the following command:
 
 [Go Back Up to Table of Contents 📗](#table-of-contents)
 
+</details>
+
 ---
 
 ## Bugs & Issues
+
+<details> <summary><b> Click here to expand the section ⬇️</b></summary>
 
 I have documented some of the bugs and issues I have encountered through out the project for future reference below:
 
@@ -1146,7 +1282,7 @@ I added the below JS to the CKEditor script to disable the editor on devices wit
         );
     }
 
-The alert is only triggered on the edit pages as the placeholder is not visible behind the text. A future improvement could be to trigger a modal instead.
+The alert is only triggered on the edit pages as the placeholder is not visible behind the text. A future UX improvement could be to trigger a modal or toast (using toastify) instead of an alert.
 
 ---
 
@@ -1163,9 +1299,13 @@ This minor bug is outstanding and does not affect the MVP, the uploaded pages st
 
 [Go Back Up to Table of Contents 📗](#table-of-contents)
 
+</details>
+
 ---
 
 ## Testing
+
+<details> <summary><b> Click here to expand this section ⬇️</b></summary>
 
 ### Manual Testing for User Stories
 
@@ -1246,7 +1386,7 @@ No issues with the 33 automated tests:
 
 #### Coverage Report 
 
-<details> <summary><b> --------------------------------------- Click here to see the coverage report below: ⬇️</b></summary>
+See the coverage report below: ⬇️
 
 | Name                                                  | Stmts | Miss | Cover |
 |-------------------------------------------------------|-------|------|-------|
@@ -1349,8 +1489,6 @@ No issues with the 33 automated tests:
 | profiles/views.py                                     |    34 |    8 |   76% |
 |-------------------------------------------------------|-------|------|-------|
 | TOTAL                                                 |  1531 |  431 |   72% |
-
-</details>
 
 TBC
 
@@ -1502,7 +1640,7 @@ TBC
 | Shopping Bag          |                       |
 | Checkout              |                       |
 | Checkout Success      |                       |
-| 404 Page              |                       |
+| 404 Page              | N/A                   |
 
 <img src="readme_images/tests/jshint/products-btt-button.png" style="max-width: 60%;">
 
@@ -1571,9 +1709,13 @@ TBC
 
 [Go Back Up to Table of Contents 📗](#table-of-contents)
 
+</details>
+
 ---
 
 ## Future Development
+
+<details> <summary><b> Click here to expand this section ⬇️</b></summary>
 
 - Change URLs to unique, shortened slugs based off of the corrosponding pages titles instead of pks - eg, for the about pages, blog and products.
 
@@ -1593,18 +1735,27 @@ TBC
 
 - Set up products to allow multiple images and videos.
 
-- Set up automated dropshipping.
+- Set up automated dropshipping usinging service provider such as Printify.
 
-- Set up a delete profile function.
+- Set up a delete profile function to allow users to delete their profile after confirming their intentions.
+
+- Implement Google translate on the site it can target people that speak languages other than English.
+
+- Add integrated mailchimp newsletter signup to an about page.
+
+- Look into adding services such as Hotjar and Facebook Pixel.
 
 TBC
 
 [Go Back Up to Table of Contents 📗](#table-of-contents)
 
+</details>
+
 ---
 
 ## Summary of charges and monitoring costs
 
+<details> <summary><b> Click here to expand this section ⬇️</b></summary>
 
 <img src="readme_images/general/tbc.png" style="max-width: 60%;">
 
@@ -1612,17 +1763,13 @@ TBC
 
 [Go Back Up to Table of Contents 📗](#table-of-contents)
 
----
-
-## Search Engine Optimization (SEO)
-
-TBC
-
-[Go Back Up to Table of Contents 📗](#table-of-contents)
+</details>
 
 ---
 
-## Web Marketing
+## Web Marketing & Search Engine Optimization (SEO)
+
+<details> <summary><b> Click here to expand this section ⬇️</b></summary>
 
 ### Facebook Page
 
@@ -1652,6 +1799,24 @@ It has been styled to integrate well with the site.
 
 TBC
 
+### Google Search Console
+
+I set up Google Search Console as it allows you to closely monitor how your website performs in Google search results, providing data on search queries, click-through rates, and website indexing.
+
+<img src="readme_images/google/google-search-console.png" style="max-width: 60%;">
+
+It's easy to set up, just follow the simple [registration process here](https://search.google.com/search-console/welcome).
+
+<img src="readme_images/google/google-search-console-registration.png" style="max-width: 60%;">
+
+### Google Business
+
+I took a look at the set up procedure for registering the website with Google Business, I entered the set up information but did not verify the account with my personal information as its not an actual business.
+
+<img src="readme_images/google/google-business-view.png" style="max-width: 60%;">
+
+"By creating a Google Business listing, your company gains visibility on Google Search and Maps, making it easier for potential customers to find essential information such as location, hours of operation, contact details, and customer reviews. This free service allows you to manage your online reputation, engage with customers, and provide accurate and up-to-date information. Google Business acts as a digital storefront, boosting your credibility and trustworthiness in the eyes of online shoppers."
+
 ### Google Analytics
 
 - Set up an account with [Google Analytics](https://analytics.google.com/) and add the web domain.
@@ -1665,6 +1830,8 @@ TBC
 - You should now be able to monitor your site's traffic after 1 - 2 days.
 
 - If you would like to test the GTAG sooner, you can download [Google Analytics Debugger](https://chrome.google.com/webstore/detail/google-analytics-debugger/jnkmfdileelhofjcijamephohjechhna) from the Chrome Extensions Store - simply install, access the web page and view the console. Note you will need to disable your ad blocker if you have one installed while testing the page. This allowed me to ensure the GTAG was configured correctly without waiting, it took about 12 hours for the analytics to start working.
+
+<img src="readme_images/google/google-analytics-2.png" style="max-width: 60%;">
 
 <img src="readme_images/google/google-analytics-1.png" style="max-width: 60%;">
 
@@ -1681,9 +1848,13 @@ TBC
 
 [Go Back Up to Table of Contents 📗](#table-of-contents)
 
+<details> <summary><b> Click here to expand this section ⬇️</b></summary>
+
 ---
 
 ## Learning Goals
+
+<details> <summary><b> Click here to expand this section ⬇️</b></summary>
 
 Throughout the development, I have aimed to meet the following learning outcomes:
 
@@ -1717,8 +1888,8 @@ Throughout the development, I have aimed to meet the following learning outcomes
 | Design a Front-End meeting accessibility guidelines, UX principles, and addressing specific user interactions.                             | ✅ Careful consideration has been given to ensure the site meets accessibility, UX and user interaction expectations. |
 | Document and implement all User Stories in an Agile tool, mapping them to project goals.                                                   | ✅ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx TBC              |
 | Design and implement manual or automated test procedures to assess functionality, usability, responsiveness, and data management.          | ✅ Manual and automated tests have been added to ensure the site operates as intended.              |
-| Present a clear rationale for the development of the project in the README, addressing the needs of the target audience and user stories.  | ✅ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX TBC              |
-| Document the UX design work, including wireframes, mockups, diagrams, etc., and demonstrate implementation following the design process.   | ✅ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX TBC              |
+| Present a clear rationale for the development of the project in the README, addressing the needs of the target audience and user stories.  | ✅ Clear rational for developing the project alongside addressing the needs of the users & the target audience has been documented. |
+| Document the UX design work, including wireframes, mockups, diagrams, etc., and demonstrate implementation following the design process.   | ✅ The UX design has been documented and includes wireframe mockups. XXXXXXXXXXXXXXX TBC              |
 | Use an Agile tool effectively for managing planning and implementation of primary functionality.                                           | ✅ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX TBC              |
 | Document and implement all User Stories and map them to the project within an Agile tool.                                                  | ✅ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX TBC              |
 
@@ -1756,7 +1927,7 @@ Throughout the development, I have aimed to meet the following learning outcomes
 
 | Criteria Description                                                   | Completion Status |
 |------------------------------------------------------------------------|-------------------|
-| Document the e-commerce business model underlying the application.     | ✅ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx TBC              |
+| Document the e-commerce business model underlying the application.     | ✅ The e-commerce busines model has been documented in the readme.              |
 
 ### Learning Goals 7: Additional Learning Outcomes (M)
 
@@ -1772,8 +1943,8 @@ Throughout the development, I have aimed to meet the following learning outcomes
 | Control access to sitemap via a robots.txt file and ensure all sitemap links are canonical.                                          | ✅ Access to the sitemap is controlled by the robots file and all sitemap links are canonical.              |
 | Use descriptive metadata for SEO that accurately reflects the site's purpose.                                                        | ✅ Descriptive meta deta has been addedd to reflect site purpose and improve SEO.              |
 | Users only have access to intended views and functionality.                                                                          | ✅ User access to site functionality has been resricted as intended.              |
-| Document the primary marketing strategy behind the application.                                                                      | ✅ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX TBC              |
-| The solution has a clear, well-defined purpose addressing the needs of a particular target audience.                                 | ✅ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX TBC              |
+| Document the primary marketing strategy behind the application.                                                                      | ✅ The primary marketing strategy has been documented.              |
+| The solution has a clear, well-defined purpose addressing the needs of a particular target audience.                                 | ✅ Solutions to address the needs of the target audience have been documented.              |
 
 ### Learning Outcome 8: Additional Learning Outcomes (D)
 
@@ -1814,9 +1985,13 @@ Throughout the development, I have aimed to meet the following learning outcomes
 
 [Go Back Up to Table of Contents 📗](#table-of-contents)
 
+</details>
+
 ---
 
 ## Resources
+
+<details> <summary><b> Click here to expand this section ⬇️</b></summary>
 
 ### Useful Links
 
@@ -1825,7 +2000,7 @@ Here is a list of useful links that were used as part of the project. Thanks to 
 | Name                                                                               | Use                                    |
 | ---------------------------------------------------------------------------------- | -------------------------------------- |
 | [AWS](https://aws.amazon.com/)                                                     | Cloud storage services                 |
-| [Balsamiq](https://balsamiq.com/)                                                  | Used to create wireframes              |
+| [Figma](https://figma.com/)                                                        | Used to create wireframes              |
 | [Bootstrap Documentation](https://getbootstrap.com/docs/)                          | Official Bootstrap documentation       |
 | [Canva](https://canva.com/)                                                        | Graphic design and photo editing       |
 | [Django Documentation](https://docs.djangoproject.com/)                            | Official Django documentation          |
@@ -1859,26 +2034,42 @@ I would like to give special thanks to the following:
 
 - [The Code Institute's Boutique Ado Walkthrough Project](), this project is the final tutorial project in their Diploma in Full Stack Software Development (E-commerce Applications) course. I used this project as a basis for the project and expanded on it by customising how it works, how its styled, its products, categories, styling, branding, functionality, etc. I found this project very useful for setting up the overall site infrastructure such as setting up and deploying the application alongside setting up the bag, checkout and stripe functionality.
 
-- I reused some code where possible from my previous project, [Cre8AI.art](). I reused the color set up in the CSS as I found this was an effecient way to apply colours except I updated the colours to using the sits custom colour pallette. I also used the footer and updated the styling, layout and links to suite the site.
-
 - I have had the same mentor, Rohit, throughtout my course in The Code Institute and get 3 sessions with him for each of the 5 milestone projects, as usual, I have found his insight and time as a very valuble contribution to the project.
+
+- I reused some code where possible from my previous project, [Cre8AI.art](https://cre8ai.art). I reused the color set up in the CSS as I found this was an effecient way to apply colours except I updated the colours to using the sits custom colour pallette. I also used the footer and updated the styling, layout and links to suit the site.
 
 - I used the styling, logic and probailities to create the aiPunks using the code and file from this [Crypto Punk Styled Generator on Github](https://github.com/snoozesecurity/cryptopunkgenerator) as the foundation for the avatar app, although the logic, probabilities and images all remain the same, the code has been extensively modified to turn it into this django app. I would like to thank the creator of this repository on Github as it was an interesting way to explore the logic behind the generation of custom NFT series. I also watched this 50 min [Youtube video on creating crypto punk style images using python](https://www.youtube.com/watch?v=o0qNS_pOVqw)
 
 - I would like to give credit to Code Institute for creating the deployment guide in their Boutique Ado Walkthrough Project and to github user and CI Alumna, [kera-kudmore](https://github.com/kera-cudmore), for documenting the deployment and local development process in her [README](https://github.com/kera-cudmore/Boutique-Ado/commit/f0170c57a0d92d80cc14bdefa8f281020469a406) which I have copied and adapted to suit the documentation of [development process section](#deployment) for this project.
 
-- I found the use of ChatGPT 4 useful while creating this project, however its use was limited to due to its current limitions, hallucenations and constant  it was used for the following: 
- - Creating all of the product descriptions
+- I found the use of ChatGPT 4 useful while creating parts of this project such as the following: 
+ - Creating all of the product descriptions and formatting the new fixtures file
  - Creating the about pages content
  - Creating the blog page content
- - Creating or formatting the following tables in this readme: Useful links, learning outcomes, dependancies
+ - Creating or formatting some tables in this readme such as: Useful links, learning outcomes, dependancies
  - I used it to format my external excel file that I was using to track the user stories
  - It was useful when troubleshooting errors while setting up the django app for the aiPunk generations
  - It was used when creating the automated tests although most of which requires modifcations to work
+ - 
 
  - Despite having previously set up an [django app with DALL-E 2 integrated for creating custom images](cre8ai.art), I decided to use newly created open source, free to use, local, ai image generation software to create the images. I used model SDXL 0.9 was only released a couple of weeks ago with its refiner model as well using ComfyUI interface. You will need a nVidea graphic card with atleast 10gb vram to run the application. I found the images generated with this app are currently ahead of the images created by Dall-E and since its run locally, it has no API charges. I have also used different models on Automatic1111 (A1111) UI for creating images locally but found ComfyUI and the new SD_XL model provided better quality generation alongside increased resolution size which is great for custom printed products. Unfortuntly ComfyUI using the SDXL model with refiner is quiete slow, especially in comparison to the standard model on A111. ------------------------- PROVIDE MORE DETAIL, Create section in readme, how to etc..................
 
 - 
 
+[Go Back Up to Table of Contents 📗](#table-of-contents)
+
+</details>
+
+--- 
+
+## Conclusion & Contact
+
+Thanks for checking out my project!
+
+I can be reached directly at <a href="mailto:kieran@kc-7.com">kieran@kc-7.com</a>.
+
+Checkout my other projects at [repos.kc-7.com](repos.kc-7.com).
 
 [Go Back Up to Table of Contents 📗](#table-of-contents)
+
+---
