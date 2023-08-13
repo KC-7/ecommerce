@@ -179,7 +179,9 @@ TBC
 
 ## Business Overview
 
-<details> <summary><b> Click here to expand this section ⬇️</b></summary>
+<details open>
+
+<summary><b>Click here to minimize this section ➖ ⬆️</b></summary>
 
 ### Purpose of Website
 
@@ -213,7 +215,7 @@ Alongside our primary marketing strategies we will implement additional marketin
 - **Promotions and Discounts:** We have implemented a clearance and sale section on the site. We will also send discounts to our newsletter subscribers in future.
 - **Advertising & SEO:** Monitor our analytics using Google Analytics and monitor search results with Google Search Console. Potentially set up Google Business and Google Advertising in future to attract additional customers.
 
-[Go Back Up to Table of Contents 📗](#table-of-contents)
+[Click here to go back up to the Table of Contents 📗 ⤴️](#table-of-contents)
 
 </details>
 
@@ -221,9 +223,11 @@ Alongside our primary marketing strategies we will implement additional marketin
 
 ## User Story Test Cases
 
-<details> <summary><b> Click here to expand this section ⬇️</b></summary>
-
 [Click here to see the Github User Stories Board](#)
+
+<details open>
+
+<summary><b>Click here to minimize this section ➖ ⬆️</b></summary>
 
 ### View and Navigation
 1. As a Shopper, I want to be able to view a list of products so that I can select some to purchase.
@@ -268,7 +272,7 @@ Alongside our primary marketing strategies we will implement additional marketin
 30. As a Store Owner, I want create a unique custom avatar with unique traits for each user so that I can enhance the personalized shopping experience to create increased customer engagement and retention.
 31. As a Store Owner, I want to allow admin to control the products, blogs and about pages via the site and dedicated admin panel so that I can allow admins to run the store without the need for website modifications.
 
-[Go Back Up to Table of Contents 📗](#table-of-contents)
+[Click here to go back up to the Table of Contents 📗 ⤴️](#table-of-contents)
 
 </details>
 
@@ -276,7 +280,9 @@ Alongside our primary marketing strategies we will implement additional marketin
 
 ## Design
 
-<details> <summary><b> Click here to expand this section ⬇️</b></summary>
+<details open>
+
+<summary><b>Click here to minimize this section ➖ ⬆️</b></summary>
 
 ### Colour Scheme
 
@@ -313,7 +319,7 @@ The font Audiowide has been used throughout the site to give it a modern, futuri
 
 </summary> <img src="readme_images/google/googleFontsAudiowide.png" alt="Audiowide Font" style="max-width: 40%;">
 
-[Go Back Up to Table of Contents 📗](#table-of-contents)
+[Click here to go back up to the Table of Contents 📗 ⤴️](#table-of-contents)
 
 ### Wireframes
 
@@ -331,7 +337,7 @@ I used [Lucid Chart](https://lucid.app/) to create the **Entity Relationship Dia
 
 <img src="readme_images/data_schema/entity-relationship-diagram.png" style="max-width: 60%;">
 
-[Go Back Up to Table of Contents 📗](#table-of-contents)
+[Click here to go back up to the Table of Contents 📗 ⤴️](#table-of-contents)
 
 </details>
 
@@ -339,7 +345,9 @@ I used [Lucid Chart](https://lucid.app/) to create the **Entity Relationship Dia
 
 ## Site Features
 
-<details> <summary><b> Click here to expand this section ⬇️</b></summary>
+<details open>
+
+<summary><b>Click here to minimize this section ➖ ⬆️</b></summary>
 
 ### Custom Admin Portal
 
@@ -638,9 +646,11 @@ A custom admin view was created to display the avatar image and their attributes
 
 The site has integrated user feedback by displaying toast messages for info, success, errors etc. Apps have built in error handeling to notify users of issues in a user friendly manner. 404 page has been configured to show when the page the user is looking for can not be found.
 
-<img src="readme_images/general/aipunks.png" style="max-width: 60%;">
+TBC
 
-[Go Back Up to Table of Contents 📗](#table-of-contents)
+<img src="readme_images/general/404.png" style="max-width: 60%;">
+
+[Click here to go back up to the Table of Contents 📗 ⤴️](#table-of-contents)
 
 </details>
 
@@ -648,7 +658,9 @@ The site has integrated user feedback by displaying toast messages for info, suc
 
 ## Dependencies & Their Use Cases
 
-<details> <summary><b> Click here to expand this section ⬇️</b></summary>
+<details open>
+
+<summary><b>Click here to minimize this section ➖ ⬆️</b></summary>
 
 The project relies on a range of Python packages to ensure its smooth operation and delivery of features. Here's a brief overview of each dependency in the `requirements.txt` and its use case:
 
@@ -684,7 +696,7 @@ For installation, simply run `pip3 install -r requirements.txt`.
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX TBC
 
-[Go Back Up to Table of Contents 📗](#table-of-contents)
+[Click here to go back up to the Table of Contents 📗 ⤴️](#table-of-contents)
 
 </details>
 
@@ -692,7 +704,9 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 ## Deployment & Local Development
 
-<details> <summary><b> Click here to expand this section ⬇️</b></summary>
+<details open>
+
+<summary><b>Click here to minimize this section ➖ ⬆️</b></summary>
 
 ### Deployment
 
@@ -1004,7 +1018,7 @@ I have set up the deployed Environment Config Variables on Heroku, see below for
 
 <img src="readme_images/heroku/heroku-config-vars.png" style="max-width: 60%;">
 
-[Go Back Up to Table of Contents 📗](#table-of-contents)
+[Click here to go back up to the Table of Contents 📗 ⤴️](#table-of-contents)
 
 </details>
 
@@ -1012,15 +1026,17 @@ I have set up the deployed Environment Config Variables on Heroku, see below for
 
 ## Custom Domain & SSL Cert
 
-<details> <summary><b> Click here to expand this section ⬇️</b></summary>
+<details open>
+
+<summary><b>Click here to minimize this section ➖ ⬆️</b></summary>
 
 I set up a custom domain with SSL certification to improve the authencity of the online e-commerce store. The custom domain on Namecheap cost €3 and the Cloudflare account is free.
 
 ### Custom Domain Set Up on Namecheap
 
-1. Sign up / login in to Namecheap (or alt domain registrar however please note the following how to is written for Namecheap). Find and purchase suitable domain. While purchasing the domain you should set up Domain Privacy to protect your identity, Namecheap offer this service for free however other registrars charge for this service. 
-
 <img src="readme_images/namecheap/namecheap-1.png" style="max-width: 60%;">
+
+1. Sign up / login in to Namecheap (or alt domain registrar however please note the following how to is written for Namecheap). Find and purchase suitable domain. While purchasing the domain you should set up Domain Privacy to protect your identity, Namecheap offer this service for free however other registrars charge for this service. 
 
 1. Add your new domain name to `ALLOWED_HOSTS` your `settings.py` file. Your allowed hosts should now look like the following so its accessible locally, on heroku and on the custom domain: 
 
@@ -1054,6 +1070,8 @@ I set up a custom domain with SSL certification to improve the authencity of the
 
 ### SSL Cert & HTTPS Redirection Set Up on Cloudflare
 
+<img src="readme_images/cloudflare/cloudflare-dns.png" style="max-width: 60%;">
+
 1. Sign in to / Set up Cloudflare account.
 
 1. From the Cloudflare Home, go to ➡️ Add a site ➡️ Enter your domain name ➡️ Select Free Plan ➡️ Review DNS Records & Continue (No changes required) ➡️ From Change Your Nameservers, copy the Nameservers (1 & 2).
@@ -1067,8 +1085,6 @@ I set up a custom domain with SSL certification to improve the authencity of the
 1. Your site will now redirect to do HTTPS and will have a valid SSL Certificate (eg. https://customdomain.tdl / https://www.customdomain.tdl).
 
 <img src="readme_images/general/https-ssl.png" style="max-width: 60%;">
-
-<img src="readme_images/cloudflare/cloudflare-dns.png" style="max-width: 60%;">
 
 <img src="readme_images/cloudflare/cloudflare-overview.png" style="max-width: 60%;">
 
@@ -1086,7 +1102,7 @@ Alonside threat alerts, it also shows bot and crawler traffic, example google an
 
 <img src="readme_images/cloudflare/cloudflare-threats-crawlers.png" style="max-width: 60%;">
 
-[Go Back Up to Table of Contents 📗](#table-of-contents)
+[Click here to go back up to the Table of Contents 📗 ⤴️](#table-of-contents)
 
 </details>
 
@@ -1094,7 +1110,9 @@ Alonside threat alerts, it also shows bot and crawler traffic, example google an
 
 ## Product Creation Process
 
-<details> <summary><b> Click here to expand this section ⬇️</b></summary>
+<details open>
+
+<summary><b>Click here to minimize this section ➖ ⬆️</b></summary>
 
 I used fixtures files to upload the bulk of the categories and products, the categories fixtures were the same as the Boutique Ado project as I used this project as inspiration for my site. The products fixtures was created by enterinf the details for my custom products, to assist with process, I created custom names and then used ChatGPT to create the descriptionss for the products. I generated the unique AI images using SDXL on ComfyUI which was run locally on my PC, as it takes time to generate the images, I created a custom list of prompts and then set up a que so that I could generate a lot of unique images over a couple of hours. I then used Printfy to create the unqiue product images by adding the images I generated to products from their catalogue and downloading the images. The site could be used with an API on OnlineAI.art to sell the products by print on demand, so once the site accepts the payment, it will send the order to Printify to create and dispatch the custom product, however this was not implemented for the scope of this project, it has however been listed as a potential future development.
 
@@ -1190,7 +1208,7 @@ I loaded the custom product fixtures file to Heroku using the following command:
 
 <img src="readme_images/general/TBC.png" style="max-width: 60%;">
 
-[Go Back Up to Table of Contents 📗](#table-of-contents)
+[Click here to go back up to the Table of Contents 📗 ⤴️](#table-of-contents)
 
 </details>
 
@@ -1198,7 +1216,9 @@ I loaded the custom product fixtures file to Heroku using the following command:
 
 ## Bugs & Issues
 
-<details> <summary><b> Click here to expand this section ⬇️</b></summary>
+<details open>
+
+<summary><b>Click here to minimize this section ➖ ⬆️</b></summary>
 
 I have documented some of the bugs and issues I have encountered through out the project for future reference below:
 
@@ -1414,18 +1434,17 @@ The alert is only triggered on the edit pages as the placeholder is not visible 
 
 ---
 
-### Custom CKEditor not responding well
+### Unable to view saved embeded HTML with CKEditor
 
 **Issue**
 
-I have set it up so that you can add HTML to the blogs through the admin panel which works well when creating and editing text. It also allows the admin to add embed items such as iframes for Youtube or Google Maps. Unfortuntly when you try to edit a page with an embeded item, the code for the embed part is not displayed.
+Unable to view saved embeded HTML for iframes when editing Blog and About pages using CKEditor. I have set it up so that you can add HTML to the blogs through the admin panel which works well when creating and editing text. It also allows the admin to add embed items such as iframes for Youtube or Google Maps. Unfortuntly when you try to edit a page with an embeded item, the code for the embed part is not displayed.
 
 **Resolution**
 
 This minor bug is outstanding and does not affect the MVP, the uploaded pages still work as intended.
 
-
-[Go Back Up to Table of Contents 📗](#table-of-contents)
+[Click here to go back up to the Table of Contents 📗 ⤴️](#table-of-contents)
 
 </details>
 
@@ -1433,7 +1452,9 @@ This minor bug is outstanding and does not affect the MVP, the uploaded pages st
 
 ## Testing
 
-<details> <summary><b> Click here to expand this section ⬇️</b></summary>
+<details open>
+
+<summary><b>Click here to minimize this section ➖ ⬆️</b></summary>
 
 ### Manual Testing for User Stories
 
@@ -1716,7 +1737,7 @@ TBC
 
 ---
 
-### W3C Jigsaww CSS Validation Testing
+### W3C Jigsaw CSS Validation Testing
 
 | Page                  | Result                |
 |-----------------------|-----------------------|
@@ -1835,7 +1856,7 @@ TBC
 
 TBC
 
-[Go Back Up to Table of Contents 📗](#table-of-contents)
+[Click here to go back up to the Table of Contents 📗 ⤴️](#table-of-contents)
 
 </details>
 
@@ -1843,7 +1864,9 @@ TBC
 
 ## Future Development
 
-<details> <summary><b> Click here to expand this section ⬇️</b></summary>
+<details open>
+
+<summary><b>Click here to minimize this section ➖ ⬆️</b></summary>
 
 - Change URLs to unique, shortened slugs based off of the corrosponding pages titles instead of pks - eg, for the about pages, blog and products.
 
@@ -1875,7 +1898,7 @@ TBC
 
 TBC
 
-[Go Back Up to Table of Contents 📗](#table-of-contents)
+[Click here to go back up to the Table of Contents 📗 ⤴️](#table-of-contents)
 
 </details>
 
@@ -1883,13 +1906,15 @@ TBC
 
 ## Summary of charges and monitoring costs
 
-<details> <summary><b> Click here to expand this section ⬇️</b></summary>
+<details open>
+
+<summary><b>Click here to minimize this section ➖ ⬆️</b></summary>
 
 <img src="readme_images/general/tbc.png" style="max-width: 60%;">
 
 TBC
 
-[Go Back Up to Table of Contents 📗](#table-of-contents)
+[Click here to go back up to the Table of Contents 📗 ⤴️](#table-of-contents)
 
 </details>
 
@@ -1897,7 +1922,9 @@ TBC
 
 ## Web Marketing & Search Engine Optimization (SEO)
 
-<details> <summary><b> Click here to expand this section ⬇️</b></summary>
+<details open>
+
+<summary><b>Click here to minimize this section ➖ ⬆️</b></summary>
 
 ### Facebook Page
 
@@ -1974,7 +2001,7 @@ I then customized the styling using the Google Chrome Inspection Tool to indenti
 
 TBC
 
-[Go Back Up to Table of Contents 📗](#table-of-contents)
+[Click here to go back up to the Table of Contents 📗 ⤴️](#table-of-contents)
 
 </details>
 
@@ -1982,7 +2009,9 @@ TBC
 
 ## Learning Goals
 
-<details> <summary><b> Click here to expand this section ⬇️</b></summary>
+<details open>
+
+<summary><b>Click here to minimize this section ➖ ⬆️</b></summary>
 
 Throughout the development, I have aimed to meet the following learning outcomes:
 
@@ -2111,7 +2140,7 @@ Throughout the development, I have aimed to meet the following learning outcomes
 | Configuration and dependencies files are kept up to date. Separate versions/branches of these are commits where relevant. The datastore is not accessible to the regular user without going through the code. | ✅ Maintained up to date configuration and dependency files. Ensured that the datastore remains inaccessible to regular users unless accessed through the application's code.              |
 | Testing procedures are comprehensive, with a good level of coverage, and have been followed. There is clear evidence of testing, and this is demonstrated in git commits. All noticeable errors have been corrected or documented. | ✅ Comprehensive testing carried out with substantial coverage though manual and automated tests, evident through well-documented testing in README and Git commits. Addressed and rectified or documented any noticeable errors encountered.              |
 
-[Go Back Up to Table of Contents 📗](#table-of-contents)
+[Click here to go back up to the Table of Contents 📗 ⤴️](#table-of-contents)
 
 </details>
 
@@ -2119,7 +2148,9 @@ Throughout the development, I have aimed to meet the following learning outcomes
 
 ## Resources & Credits
 
-<details> <summary><b> Click here to expand this section ⬇️</b></summary>
+<details open>
+
+<summary><b>Click here to minimize this section ➖ ⬆️</b></summary>
 
 ### Useful Links & Resources
 
@@ -2186,7 +2217,7 @@ I would like to give special thanks to the following:
 
 - 
 
-[Go Back Up to Table of Contents 📗](#table-of-contents)
+[Click here to go back up to the Table of Contents 📗 ⤴️](#table-of-contents)
 
 </details>
 
@@ -2200,6 +2231,6 @@ I can be reached directly at <a href="mailto:kieran@kc-7.com">kieran@kc-7.com</a
 
 Checkout my other projects at [repos.kc-7.com](repos.kc-7.com).
 
-[Go Back Up to Table of Contents 📗](#table-of-contents)
+[Click here to go back up to the Table of Contents 📗 ⤴️](#table-of-contents)
 
 ---
