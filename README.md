@@ -45,13 +45,141 @@ TBC
 
 ## Table of Contents
 
+- [onlineAI.art | E-Commerce Project](#onlineaiart---e-commerce-project)
+  * [Live Links](#live-links)
+  * [Project Preview](#project-preview)
+    + [Project Description](#project-description)
+    + [Main Site Preview](#main-site-preview)
+    + [Admin Portal Preview](#admin-portal-preview)
+  * [Table of Contents](#table-of-contents)
+  * [Business Overview](#business-overview)
+    + [Purpose of Website](#purpose-of-website)
+    + [Business Type](#business-type)
+    + [Target Audience](#target-audience)
+    + [Primary Marketing Strategy](#primary-marketing-strategy)
+    + [Marketing Solutions to Meet Audience Needs](#marketing-solutions-to-meet-audience-needs)
+  * [User Story Test Cases](#user-story-test-cases)
+    + [View and Navigation](#view-and-navigation)
+    + [Registration and User Accounts](#registration-and-user-accounts)
+    + [Sorting and Searching](#sorting-and-searching)
+    + [Purchasing and Checkout](#purchasing-and-checkout)
+    + [Admin and Store Management](#admin-and-store-management)
+    + [Additional Features](#additional-features)
+  * [Design](#design)
+    + [Colour Scheme](#colour-scheme)
+    + [Typography](#typography)
+    + [Wireframes](#wireframes)
+    + [Data Schema](#data-schema)
+  * [Site Features](#site-features)
+    + [Custom Admin Portal](#custom-admin-portal)
+    + [Custom Admin Features](#custom-admin-features)
+    + [E-commerce functionality](#e-commerce-functionality)
+      - [Stripe Integration & Test Card Details](#stripe-integration---test-card-details)
+    + [CKEditor](#ckeditor)
+      - [Set Up Guide](#set-up-guide)
+    + [Custom About Pages (CRUD)](#custom-about-pages--crud-)
+      - [Project Conception](#project-conception)
+      - [Usability](#usability)
+    + [CRUD Operations](#crud-operations)
+      - [Custom Editor](#custom-editor)
+    + [Custom Blog Posts (CRUD)](#custom-blog-posts--crud-)
+      - [Project Conception](#project-conception-1)
+      - [Usability](#usability-1)
+    + [CRUD Operations](#crud-operations-1)
+      - [Custom Editor](#custom-editor-1)
+    + [Algorithmically Generated Pixel Art Avatars](#algorithmically-generated-pixel-art-avatars)
+      - [What are CryptoPunks?](#what-are-cryptopunks-)
+      - [Project Conception and Implementation](#project-conception-and-implementation)
+      - [Development and Research Process](#development-and-research-process)
+      - [Leveraging Existing Work](#leveraging-existing-work)
+      - [Customization and Integration](#customization-and-integration)
+      - [Administrative Enchancement](#administrative-enchancement)
+    + [User Feedback, Error Handeling and 404 Redirection](#user-feedback--error-handeling-and-404-redirection)
+  * [Dependencies & Their Use Cases](#dependencies---their-use-cases)
+  * [Deployment & Local Development](#deployment---local-development)
+    + [Deployment](#deployment)
+      - [Create the Live Database](#create-the-live-database)
+      - [Heroku App Setup](#heroku-app-setup)
+      - [Preparation for Deployment in GitPod](#preparation-for-deployment-in-gitpod)
+      - [Generate a SECRET KEY & Updating Debug](#generate-a-secret-key---updating-debug)
+      - [Set up AWS hosting for static and media files](#set-up-aws-hosting-for-static-and-media-files)
+      - [Creating AWS groups, policies and users](#creating-aws-groups--policies-and-users)
+      - [Connecting Django to our S3 bucket](#connecting-django-to-our-s3-bucket)
+      - [Setting up Stripe](#setting-up-stripe)
+    + [Local Development](#local-development)
+      - [How to Fork](#how-to-fork)
+      - [How to Clone](#how-to-clone)
+    + [Environment Variables](#environment-variables)
+  * [Custom Domain & SSL Cert](#custom-domain---ssl-cert)
+    + [Custom Domain Set Up on Namecheap](#custom-domain-set-up-on-namecheap)
+    + [SSL Cert & HTTPS Redirection Set Up on Cloudflare](#ssl-cert---https-redirection-set-up-on-cloudflare)
+    + [Cloudflare Scecurity](#cloudflare-scecurity)
+  * [Product Creation Process](#product-creation-process)
+    + [AI Images usign ComfyUI with Stable Diffusion XL](#ai-images-usign-comfyui-with-stable-diffusion-xl)
+      - [Setup Guide](#setup-guide)
+    + [Custom Product using Printify](#custom-product-using-printify)
+    + [Product Descriptions using ChatGPT](#product-descriptions-using-chatgpt)
+    + [Custom Products Fixtures](#custom-products-fixtures)
+  * [Bugs & Issues](#bugs---issues)
+    + [Allauth Templates Directory Not Found](#allauth-templates-directory-not-found)
+    + [Heroku Invalid Credentials Provided](#heroku-invalid-credentials-provided)
+    + [Issue while Initializing the Heroku Git Remote](#issue-while-initializing-the-heroku-git-remote)
+    + [Programmatic Access for AWS User](#programmatic-access-for-aws-user)
+    + [Navbar too large](#navbar-too-large)
+    + [Order number too long](#order-number-too-long)
+    + [Navbar not displayed correctly on Profile](#navbar-not-displayed-correctly-on-profile)
+    + [Images sizes too large](#images-sizes-too-large)
+    + [Custom CKEditor not responding well](#custom-ckeditor-not-responding-well)
+    + [Custom CKEditor not responding well](#custom-ckeditor-not-responding-well-1)
+  * [Testing](#testing)
+    + [Manual Testing for User Stories](#manual-testing-for-user-stories)
+    + [Automated Testing](#automated-testing)
+      - [Coverage Installation](#coverage-installation)
+      - [Run Django tests with coverage](#run-django-tests-with-coverage)
+      - [Generate Coverage Report](#generate-coverage-report)
+      - [Run All Tests](#run-all-tests)
+      - [Results for Automated Tests](#results-for-automated-tests)
+      - [Coverage Report](#coverage-report)
+    + [Lighthouse Testing](#lighthouse-testing)
+    + [Console Log Testing](#console-log-testing)
+    + [W3 Nu HTML Checker Testing](#w3-nu-html-checker-testing)
+    + [W3C Jigsaww CSS Validation Testing](#w3c-jigsaww-css-validation-testing)
+    + [JSHint JS Testing](#jshint-js-testing)
+    + [Flake8 Python Testing](#flake8-python-testing)
+    + [Responsiveness Testing](#responsiveness-testing)
+      - [Visual Testing on Physical Devices](#visual-testing-on-physical-devices)
+      - [Visual Testing using Google Inspect](#visual-testing-using-google-inspect)
+      - [Visual Testing using AmIRepsponsive](#visual-testing-using-amirepsponsive)
+  * [Future Development](#future-development)
+  * [Summary of charges and monitoring costs](#summary-of-charges-and-monitoring-costs)
+  * [Web Marketing & Search Engine Optimization (SEO)](#web-marketing---search-engine-optimization--seo-)
+    + [Facebook Page](#facebook-page)
+    + [Mailchimp Newsletter](#mailchimp-newsletter)
+    + [Google Search Console](#google-search-console)
+    + [Google Business](#google-business)
+    + [Google Analytics](#google-analytics)
+    + [GDPR](#gdpr)
+  * [Learning Goals](#learning-goals)
+    + [Learning Goals 1: Integrate an e-commerce payment system and product structure in a cloud-hosted Full-Stack web application](#learning-goals-1--integrate-an-e-commerce-payment-system-and-product-structure-in-a-cloud-hosted-full-stack-web-application)
+    + [Learning Goals 2: Employ advanced User Experience Design to build a commercial-grade Full Stack Web Application](#learning-goals-2--employ-advanced-user-experience-design-to-build-a-commercial-grade-full-stack-web-application)
+    + [Learning Goals 3: Employ Search Engine Optimisation (SEO) techniques to improve audience reach](#learning-goals-3--employ-search-engine-optimisation--seo--techniques-to-improve-audience-reach)
+    + [Learning Goals 4: Create a secure Full Stack Web application with Authentication and role-based Authorization functionality](#learning-goals-4--create-a-secure-full-stack-web-application-with-authentication-and-role-based-authorization-functionality)
+    + [Learning Goals 5: Employ marketing techniques to create brand reach](#learning-goals-5--employ-marketing-techniques-to-create-brand-reach)
+    + [Learning Goals 6: Understand the fundamentals of E-commerce applications](#learning-goals-6--understand-the-fundamentals-of-e-commerce-applications)
+    + [Learning Goals 7: Additional Learning Outcomes (M)](#learning-goals-7--additional-learning-outcomes--m-)
+    + [Learning Outcome 8: Additional Learning Outcomes (D)](#learning-outcome-8--additional-learning-outcomes--d-)
+  * [Resources & Credits](#resources---credits)
+    + [Useful Links & Resources](#useful-links---resources)
+    + [Credits & Special Thanks](#credits---special-thanks)
+  * [Conclusion & Contact](#conclusion---contact)
+
 TBC
 
 ---
 
 ## Business Overview
 
-<details> <summary><b> Click here to expand the section ⬇️</b></summary>
+<details> <summary><b> Click here to expand this section ⬇️</b></summary>
 
 ### Purpose of Website
 
@@ -93,7 +221,7 @@ Alongside our primary marketing strategies we will implement additional marketin
 
 ## User Story Test Cases
 
-<details> <summary><b> Click here to expand the section ⬇️</b></summary>
+<details> <summary><b> Click here to expand this section ⬇️</b></summary>
 
 [Click here to see the Github User Stories Board](#)
 
@@ -148,7 +276,7 @@ Alongside our primary marketing strategies we will implement additional marketin
 
 ## Design
 
-<details> <summary><b> Click here to expand the section ⬇️</b></summary>
+<details> <summary><b> Click here to expand this section ⬇️</b></summary>
 
 ### Colour Scheme
 
@@ -211,7 +339,7 @@ I used [Lucid Chart](https://lucid.app/) to create the **Entity Relationship Dia
 
 ## Site Features
 
-<details> <summary><b> Click here to expand the section ⬇️</b></summary>
+<details> <summary><b> Click here to expand this section ⬇️</b></summary>
 
 ### Custom Admin Portal
 
@@ -520,7 +648,7 @@ The site has integrated user feedback by displaying toast messages for info, suc
 
 ## Dependencies & Their Use Cases
 
-<details> <summary><b> Click here to expand the section ⬇️</b></summary>
+<details> <summary><b> Click here to expand this section ⬇️</b></summary>
 
 The project relies on a range of Python packages to ensure its smooth operation and delivery of features. Here's a brief overview of each dependency in the `requirements.txt` and its use case:
 
@@ -564,7 +692,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 ## Deployment & Local Development
 
-<details> <summary><b> Click here to expand the section ⬇️</b></summary>
+<details> <summary><b> Click here to expand this section ⬇️</b></summary>
 
 ### Deployment
 
@@ -884,7 +1012,7 @@ I have set up the deployed Environment Config Variables on Heroku, see below for
 
 ## Custom Domain & SSL Cert
 
-<details> <summary><b> Click here to expand the section ⬇️</b></summary>
+<details> <summary><b> Click here to expand this section ⬇️</b></summary>
 
 I set up a custom domain with SSL certification to improve the authencity of the online e-commerce store. The custom domain on Namecheap cost €3 and the Cloudflare account is free.
 
@@ -966,7 +1094,7 @@ Alonside threat alerts, it also shows bot and crawler traffic, example google an
 
 ## Product Creation Process
 
-<details> <summary><b> Click here to expand the section ⬇️</b></summary>
+<details> <summary><b> Click here to expand this section ⬇️</b></summary>
 
 I used fixtures files to upload the bulk of the categories and products, the categories fixtures were the same as the Boutique Ado project as I used this project as inspiration for my site. The products fixtures was created by enterinf the details for my custom products, to assist with process, I created custom names and then used ChatGPT to create the descriptionss for the products. I generated the unique AI images using SDXL on ComfyUI which was run locally on my PC, as it takes time to generate the images, I created a custom list of prompts and then set up a que so that I could generate a lot of unique images over a couple of hours. I then used Printfy to create the unqiue product images by adding the images I generated to products from their catalogue and downloading the images. The site could be used with an API on OnlineAI.art to sell the products by print on demand, so once the site accepts the payment, it will send the order to Printify to create and dispatch the custom product, however this was not implemented for the scope of this project, it has however been listed as a potential future development.
 
@@ -1070,7 +1198,7 @@ I loaded the custom product fixtures file to Heroku using the following command:
 
 ## Bugs & Issues
 
-<details> <summary><b> Click here to expand the section ⬇️</b></summary>
+<details> <summary><b> Click here to expand this section ⬇️</b></summary>
 
 I have documented some of the bugs and issues I have encountered through out the project for future reference below:
 
@@ -1848,7 +1976,7 @@ TBC
 
 [Go Back Up to Table of Contents 📗](#table-of-contents)
 
-<details> <summary><b> Click here to expand this section ⬇️</b></summary>
+</details>
 
 ---
 
@@ -1989,11 +2117,11 @@ Throughout the development, I have aimed to meet the following learning outcomes
 
 ---
 
-## Resources
+## Resources & Credits
 
 <details> <summary><b> Click here to expand this section ⬇️</b></summary>
 
-### Useful Links
+### Useful Links & Resources
 
 Here is a list of useful links that were used as part of the project. Thanks to all contributers to the below content and services.
 
@@ -2022,13 +2150,15 @@ Here is a list of useful links that were used as part of the project. Thanks to 
 [Youtube: Free SSL cert with Cloudflare](https://www.youtube.com/watch?v=Y4iHXhRkpO4)
 
 [CKEditor: ]()
+[Markdown Table of Contents Generator](http://ecotrust-canada.github.io/markdown-toc/)
 []()
 []()
-[]()
+
+TBC
 
 ---
 
-## Credits
+### Credits & Special Thanks
 
 I would like to give special thanks to the following: 
 
