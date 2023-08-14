@@ -445,7 +445,6 @@ Relationships:
 - Each Order can have multiple OrderLineItems.
 - Each OrderLineItem refers to a single Product.
 - Each Product belongs to a Category.
-- Each Product can have one Discount.
 - A UserProfile can have one Avatar.
 
 ### Entity Relationship Diagram
@@ -1512,6 +1511,8 @@ I used [TinyPNG](https://tinypng.com/) to reduce the image sizes.
 
 I converted the homepage background images to WEBP files using [Convertio](https://convertio.co/png-webp/).
 
+<img src="readme_images/general/convertio.png" style="max-width: 60%;">
+
 Ideally all of the images should be served in WEBP format going forward but converting the file types for the exisiting images would require the database urls for the images to be updated as well, all further images will be uploaded in WEBP format.
 
 <img src="readme_images/aws/s3-delete.png" style="max-width: 60%;">
@@ -1559,6 +1560,22 @@ Unable to view saved embeded HTML for iframes when editing Blog and About pages 
 **Resolution**
 
 This minor bug is outstanding and does not affect the MVP, the uploaded pages still work as intended.
+
+---
+
+### Back to top button not crawlable
+
+**Issue**
+
+The back to top of page button was negativly affecting the SEO lighthouse score for not being crawlable.
+
+<img src="readme_images/tests/lighthouse/seo-issue.png" style="max-width: 60%;">
+
+**Resolution**
+
+As this link is not intended to be crawlable, I resolved the issue by adding the following highlight code. 
+
+<img src="readme_images/tests/lighthouse/seo-issue-fix.png" style="max-width: 60%;">
 
 [Click here to go back up to the Table of Contents 📗 ⤴️](#table-of-contents)
 
@@ -1650,15 +1667,17 @@ This minor bug is outstanding and does not affect the MVP, the uploaded pages st
 
 | Test | Expected Result | Image | Completion Status |
 |------|-----------------|-------|-------------------|
+| Repeat all user and admin manual tests on mobile or tablet device or simulate using Google Inspect. | All pages should respond well on all devices with a screen width as low as 280px. | ![Placeholder Image]() | ✅ |
 | Test for invalid input, such as entering a non-existent email during login. | An error message is displayed, prompting the user to enter valid credentials or check their input. | ![Placeholder Image]() | ✅ |
 | Test entering mismatched passwords during sign-up. | An error message is displayed, prompting the user to ensure passwords match. | ![Placeholder Image]() | ✅ |
 | Access a non-existent page (404 test). | User is redirected to a 404 error page with a message indicating the page doesn't exist. | ![Placeholder Image]() | ✅ |
-| Test cookies pop-up. | On first visit, a pop-up should appear asking the user to accept cookies. | ![Placeholder Image]() | ✅ |
+| Test cookies pop-up. | On first visit, a pop-up should appear asking the user to accept cookies. You can access the sites privacy policy by clicking `Change my preferences` --> `More information` --> `Privacy Policy` | ![Placeholder Image]() | ✅ |
 | Test mailchimp newsletter sign-up pop-up. | User is prompted to enter their email for the newsletter, and upon submission, a confirmation or thank you message is displayed. | ![Placeholder Image]() | ✅ |
 | Try submitting forms with missing mandatory fields. | An error message is displayed, indicating which fields are mandatory. | ![Placeholder Image]() | ✅ |
 | Test for invalid characters or input patterns in form fields. | An error message is displayed, indicating the correct input pattern or highlighting invalid characters. | ![Placeholder Image]() | ✅ |
 | Test the site responsiveness on mobile and tablet devices by repeating above tests on physical devices or by using the Google Inspect tool to simulate same. | Site elements adjust and align properly when viewed on smaller screens, ensuring a consistent user experience. | ![Placeholder Image]() | ✅ |
 | Check for broken links throughout the site. | All links redirect to the intended pages without any errors. | ![Placeholder Image]() | ✅ |
+| Test 404 page by entering a URL that wont be found, [example](https://onlineai.art/123456789/) | The user will be redirected to the 404 page which will give them an option to return back to the homepage. | ![Placeholder Image]() | ✅ |
 
 ---
 
