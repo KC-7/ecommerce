@@ -29,17 +29,17 @@ The site allows users to view and add products to their bags, search and filter 
 
 Admin users can create, modify or delete the about pages, blog posts and products. They can also access a custom admin portal for additional admin functionality.
 
-### Main Site Preview
+### Main Site - User Preview
 
-<img src="readme_images/general/TBC.png" style="max-width: 60%;">
+<img src="readme_images/gifs/user-preview.gif" style="max-width: 60%;">
 
-TBC
+### Main Site - Admin Preview
+
+<img src="readme_images/gifs/admin-preview.gif" style="max-width: 60%;">
 
 ### Admin Portal Preview
 
-<img src="readme_images/general/TBC.png" style="max-width: 60%;">
-
-TBC
+<img src="readme_images/gifs/admin-portal-preview.gif" style="max-width: 60%;">
 
 ---
 
@@ -1450,47 +1450,119 @@ This minor bug is outstanding and does not affect the MVP, the uploaded pages st
 
 ---
 
-## Testing
+## Automated, Manual & Validation Testing
 
 <details open>
 
 <summary><b>Click here to minimize this section ➖ ⬆️</b></summary>
 
-### Manual Testing for User Stories
+### Manual Testing
 
-| **User Story Number** | **User Story Description**                                 | **User Story Test**                                             | **Image**     | **Passed Test** | **Test Result** |
-|-----------------------|-----------------------------------------------------------|-----------------------------------------------------|-----------|-----------------|-----------------|
-| 1                     | As a Shopper, I want to be able to view a list of products. | Navigate to the main product page. Check if a list of products displays. | ![test-image-1](#) | ✅              | TBC             |
-| 2                     | As a Shopper, I want a quick product view.                 | Check if a "Quick View" or "Highlight" section exists on the main page. | ![test-image-1a](#) | ✅           | TBC             |
-| 3                     | As a Shopper, I want to view individual product details.   | Click on a product. Verify that detailed info (price, rating, sizes, etc.) appears. | ![test-image-2](#) | ✅         | TBC             |
-| 4                     | As a Shopper, I want to identify deals and special offers.  | Check for a "Deals" or "Clearance" section or tags on products indicating a sale. | ![test-image-3](#) | ✅         | TBC             |
-| 5                     | As a Shopper, I want to view my purchase total.            | Add items to cart. Check if a constantly updated total appears somewhere visible. | ![test-image-4](#) | ✅        | TBC             |
-| 6                     | As a Site User, I want to register for an account.         | Navigate to registration. Complete registration form and submit. | ![test-image-5](#) | ✅           | TBC             |
-| 7                     | As a Site User, I want to login and logout.                | Log in with a test account and then log out.          | ![test-image-6](#) | ✅           | TBC             |
-| 8                     | As a Site User, I want password recovery.                  | Click "Forgot Password" and follow recovery process.   | ![test-image-7](#) | ✅           | TBC             |
-| 9                     | As a Site User, I want email confirmation on registration. | Register and check email for a confirmation message.   | ![test-image-8](#) | ✅           | TBC             |
-| 10                    | As a Site User, I want a personalized user profile.        | Log in and navigate to the profile. Check if personal data, orders, and saved payment info appear. | ![test-image-9](#) | ✅        | TBC             |
-| 11                    | As a Shopper, I want to sort the list of available products. | Use sorting options like best rated, best priced, or by category on the product page. | ![test-image-10](#) | ✅    | TBC             |
-| 12                    | As a Shopper, I want to sort a specific category of product. | Navigate to a category and use sorting options for the best price or rating. | ![test-image-11](#) | ✅      | TBC             |
-| 13                    | As a Shopper, I want to sort multiple categories of products. | Use filters to sort multiple categories simultaneously by the best price or rating. | ![test-image-12](#) | ✅ | TBC             |
-| 14                    | As a Shopper, I want to search for a product by name.       | Use the search bar to find a product by name or description. | ![test-image-13](#) | ✅        | TBC             |
-| 15                    | As a Shopper, I want to easily see what I've searched for.  | Search for a product and verify the search terms and number of results are displayed. | ![test-image-14](#) | ✅ | TBC             |
-| 16                    | As a Shopper, I want to select the size and quantity when purchasing. | Choose a product and select different size and quantity options. | ![test-image-15](#) | ✅   | TBC             |
-| 17                    | As a Shopper, I want to view items in my bag.                | Add items to the bag and view them in the shopping cart or bag page. | ![test-image-16](#) | ✅    | TBC             |
-| 18                    | As a Shopper, I want to adjust the quantity in my bag.       | Change the quantity of a product in the shopping cart or bag. | ![test-image-17](#) | ✅        | TBC             |
-| 19                    | As a Shopper, I want to enter my payment information easily. | Proceed to checkout and enter payment information.        | ![test-image-18](#) | ✅        | TBC             |
-| 20                    | As a Shopper, I want to feel that my information is safe.    | Check for security badges and HTTPS in the checkout process. | ![test-image-19](#) | ✅      | TBC             |
-| 21                    | As a Shopper, I want to view an order confirmation after checkout. | Complete checkout and verify the order confirmation page. | ![test-image-20](#) | ✅ | TBC             |
-| 22                    | As a Shopper, I want email confirmation after checkout.       | Complete checkout and check email for a confirmation message. | ![test-image-21](#) | ✅      | TBC             |
-| 23                    | As a Store Owner, I want to add a product.                   | Use the admin panel to add a new product and verify its appearance on the site. | ![test-image-22](#) | ✅   | TBC             |
-| 24                    | As a Store Owner, I want to edit/update a product.           | Edit a product's details in the admin panel and verify changes on the site. | ![test-image-23](#) | ✅ | TBC             |
-| 25                    | As a Store Owner, I want to delete a product.                | Delete a product from the admin panel and verify its removal from the site. | ![test-image-24](#) | ✅  | TBC             |
-| 26                    | As a Site User, I want to sign up for a mailing list.        | Sign up for the mailing list and verify subscription (e.g. welcome email). | ![test-image-25](#) | ✅ | TBC             |
-| 27                    | As a Site User, I want to find out more information.         | Navigate to pages like "About Us," "Shipping Information," etc. | ![test-image-26](#) | ✅   | TBC             |
-| 28                    | As a Site User, I want to navigate the content easily.       | Test site navigation, ensuring it's intuitive and quick.  | ![test-image-27](#) | ✅          | TBC             |
-| 29                    | As a Store Owner, I want to set up a blog.                   | Create a blog post through the admin panel and verify its appearance on the site. | ![test-image-28](#) | ✅ | TBC             |
-| 30                    | As a Store Owner, I want a unique custom avatar for users.   | Customize an avatar for a user profile and verify its appearance. | ![test-image-29](#) | ✅ | TBC             |
-| 31                    | As a Store Owner, I want admin control of products, blogs, etc. | Use the admin panel to control various site aspects and verify changes. | ![test-image-30](#) | ✅ | TBC             |
+### Manual UI & UX Tests
+
+#### User Tests
+
+<img src="readme_images/tests/manual_tests/user_tests/1-home.png" style="max-width: 60%;">
+<img src="readme_images/tests/manual_tests/user_tests/2-sign-up.png" style="max-width: 60%;">
+<img src="readme_images/tests/manual_tests/user_tests/3-verify-email.png" style="max-width: 60%;">
+<img src="readme_images/tests/manual_tests/user_tests/4-confirm-email.png" style="max-width: 60%;">
+<img src="readme_images/tests/manual_tests/user_tests/5-email-confirmed-sign-in-redirection.png" style="max-width: 60%;">
+<img src="readme_images/tests/manual_tests/user_tests/6-signed-in-home.png" style="max-width: 60%;">
+<img src="readme_images/tests/manual_tests/user_tests/7-profile.png" style="max-width: 60%;">
+<img src="readme_images/tests/manual_tests/user_tests/8-avatar.png" style="max-width: 60%;">
+<img src="readme_images/tests/manual_tests/user_tests/9-products.png" style="max-width: 60%;">
+<img src="readme_images/tests/manual_tests/user_tests/10-products-pagination.png" style="max-width: 60%;">
+<img src="readme_images/tests/manual_tests/user_tests/11-products-sort-by.png" style="max-width: 60%;">
+<img src="readme_images/tests/manual_tests/user_tests/12-product-detail.png" style="max-width: 60%;">
+<img src="readme_images/tests/manual_tests/user_tests/13-product-added-to-bag.png" style="max-width: 60%;">
+<img src="readme_images/tests/manual_tests/user_tests/14-bag-below-threshold.png" style="max-width: 60%;">
+<img src="readme_images/tests/manual_tests/user_tests/15-bag-above-threshold.png" style="max-width: 60%;">
+<img src="readme_images/tests/manual_tests/user_tests/16-checkout.png" style="max-width: 60%;">
+<img src="readme_images/tests/manual_tests/user_tests/17-order-confirmation.png" style="max-width: 60%;">
+<img src="readme_images/tests/manual_tests/user_tests/18-profile-order-history-saved-delivery-info.png" style="max-width: 60%;">
+<img src="readme_images/tests/manual_tests/user_tests/19-about.png" style="max-width: 60%;">
+
+#### Admin Tests
+
+<img src="readme_images/tests/manual_tests/admin_tests/1-product-add.png" style="max-width: 60%;">
+<img src="readme_images/tests/manual_tests/admin_tests/2-product-added.png" style="max-width: 60%;">
+<img src="readme_images/tests/manual_tests/admin_tests/2-a-product-added.png" style="max-width: 60%;">
+<img src="readme_images/tests/manual_tests/admin_tests/3-product-edit.png" style="max-width: 60%;">
+<img src="readme_images/tests/manual_tests/admin_tests/4-product-updated.png" style="max-width: 60%;">
+<img src="readme_images/tests/manual_tests/admin_tests/5-product-delete.png" style="max-width: 60%;">
+<img src="readme_images/tests/manual_tests/admin_tests/6-product-deleted.png" style="max-width: 60%;">
+<img src="readme_images/tests/manual_tests/admin_tests/7-about-add.png" style="max-width: 60%;">
+<img src="readme_images/tests/manual_tests/admin_tests/8-about-added.png" style="max-width: 60%;">
+<img src="readme_images/tests/manual_tests/admin_tests/9-about-edit.png" style="max-width: 60%;">
+<img src="readme_images/tests/manual_tests/admin_tests/10-about-edited.png" style="max-width: 60%;">
+<img src="readme_images/tests/manual_tests/admin_tests/11-about-delete.png" style="max-width: 60%;">
+<img src="readme_images/tests/manual_tests/admin_tests/12-about-deleted.png" style="max-width: 60%;">
+<img src="readme_images/tests/manual_tests/admin_tests/13-blog-add.png" style="max-width: 60%;">
+<img src="readme_images/tests/manual_tests/admin_tests/14-blog-added.png" style="max-width: 60%;">
+<img src="readme_images/tests/manual_tests/admin_tests/15-blog-edit.png" style="max-width: 60%;">
+<img src="readme_images/tests/manual_tests/admin_tests/16-blog-edited.png" style="max-width: 60%;">
+<img src="readme_images/tests/manual_tests/admin_tests/17-blog-delete.png" style="max-width: 60%;">
+<img src="readme_images/tests/manual_tests/admin_tests/18-blog-deleted.png" style="max-width: 60%;">
+
+#### Admin Portal Tests
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX TBC
+
+| Test Description | Expected Result | Status |
+| --- | --- | --- |
+| Verify the layout and design of the [homepage](https://onlineai.art/): Go to the website. <br> <img src="readme_images/general/https-ssl.png" alt="SSL" style="max-width:480px;"> | Homepage displays featured text, Discover Now button, background images with transitions and all navigation links consistently. <br> <img src="readme_images/tests/manual_tests/home.png" alt="Home Screenshot" style="max-width:480px;"> | ✅ |
+| Test the user sign-up process: Select the account nav bar in the top right of the nav bar. Go to the Sign Up Page. <br> <img src="readme_images/tests/manual_tests/account-menu-signed-out.png" alt="Account Menu" style="max-width:480px;"> | Select sign up after entering valid details, the user is registered and redirected to the homepage with a greeting message. <br> <img src="readme_images/tests/manual_tests/home.png" alt="Home Screenshot" style="max-width:480px;"> | ✅ |
+| Test the user login process. | After entering valid credentials, the user is logged in and redirected to the homepage with a greeting message. | ✅ |
+
+Profile Page
+
+Avatar Page
+
+
+
+
+| Test viewing all products on the products page. | All products are displayed with clear images, names, and prices. Products can be clicked to view details. | ✅ |
+| Test viewing individual product detail pages. | Selected product is displayed with a larger image, detailed description, and an option to add to cart. | ✅ |
+| Test viewing all blog posts. | All blog posts are listed with titles, brief descriptions, and images. Posts can be clicked to view full details. | ✅ |
+| Test viewing individual blog post details. | Selected blog post is displayed with full content, author details, and date of posting. | ✅ |
+| Test viewing the About page. | About page displays the site's mission, team members, and other relevant information with consistent styling. | ✅ |
+| Test adding products to the shopping bag. | Selected products are added to the bag, and the bag's total item count and price are updated. | ✅ |
+| Test viewing items in the shopping bag. | All items added to the bag are listed with product images, names, quantities, and individual prices. Options to adjust quantity or remove items are present. | ✅ |
+| Test filling in checkout details. | User details are pre-filled, with options to edit. Shipping and payment sections are displayed with required fields. | ✅ |
+| Test the payment process. | After entering valid payment details, the payment is processed, and the user is redirected to an order confirmation page. | ✅ |
+| Verify the order confirmation page. | Order confirmation page displays a summary of the order, including products purchased, total amount, and shipping details. | ✅ |
+| Test viewing the user profile page. | User profile page displays personal details, avatar, and order history. Options to edit profile and view individual orders are present. | ✅ |
+| Test editing user profile details. | After making changes to the profile details and saving, the updated details are reflected on the profile page. | ✅ |
+| Test viewing order history. | Previous orders are listed chronologically with clickable links to view detailed order summaries. | ✅ |
+| Test adding a new product. | After filling out the product details form and submitting, the new product appears on the 'products' page. | ✅ |
+| Test editing an existing product's details. | Changes made to the product details are reflected on the product's page and the 'products' page. | ✅ |
+| Test deleting a product. | After confirming the deletion of a product, the product no longer appears on the 'products' page. | ✅ |
+| Test adding a new blog post. | After filling out the blog post form and submitting, the new post appears on the 'blog' page. | ✅ |
+| Test editing an existing blog post. | Changes made to the blog post are reflected on the 'blog' page and the post's individual page. | ✅ |
+| Test deleting a blog post. | After confirming the deletion of a blog post, the post no longer appears on the 'blog' page. | ✅ |
+| Test adding new content to the About page. | After filling out the content form and submitting, the new content appears on the 'About' page. | ✅ |
+| Test editing content on the About page. | Changes made to the content are reflected on the 'About' page. | ✅ |
+| Test deleting content from the About page. | After confirming the deletion of content, the content no longer appears on the 'About' page. | ✅ |
+| Test the sign-up confirmation email. | After signing up, the user receives a confirmation email with a link to verify their email address. | ✅ |
+| Test the forgot password email. | Upon selecting 'Forgot Password', the user receives an email with a link to reset their password. | ✅ |
+| Test the order confirmation email. | After successfully placing an order, the user receives an email with a summary of the order, including products purchased, total amount, and shipping details. | ✅ |
+| Test for invalid input, such as entering a non-existent email during login. | An error message is displayed, prompting the user to enter valid credentials or check their input. | ✅ |
+| Test entering mismatched passwords during sign-up. | An error message is displayed, prompting the user to ensure passwords match. | ✅ |
+
+Test cookies pop up
+Test mailchimp newsletter sign up pop up
+
+| Test the sign out process. | User receives an email with instructions to reset their password. | ✅ |
+| Test the forgot password process. | User receives an email with instructions to reset their password. | ✅ |
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX TBC
+
+#### Additional Tests
+
+| Test Description | Expected Result | Status |
+| Test the site responsiveness on mobile and tablet devices by repeating above tests on physical devices or by using the Google Inspect tool to simulate same. | Site elements adjust and align properly when viewed on smaller screens, ensuring a consistent user experience. | ✅ |
+| Check for broken links throughout the site. | All links redirect to the intended pages without any errors. | ✅ |
+
 
 ---
 
@@ -1956,13 +2028,15 @@ TBC
 
 ### Google Search Console
 
+<img src="readme_images/google/google-search-console.png" style="max-width: 60%;">
+
 I set up Google Search Console as it allows you to closely monitor how your website performs in Google search results, providing data on search queries, click-through rates, and website indexing.
 
-<img src="readme_images/google/google-search-console.png" style="max-width: 60%;">
+<img src="readme_images/google/google-search-console-registration.png" style="max-width: 60%;">
 
 It's easy to set up, just follow the simple [registration process here](https://search.google.com/search-console/welcome).
 
-<img src="readme_images/google/google-search-console-registration.png" style="max-width: 60%;">
+<img src="readme_images/google/google-search-console-url-inspection.png" style="max-width: 60%;">
 
 ### Google Business
 
@@ -1992,14 +2066,17 @@ I took a look at the set up procedure for registering the website with Google Bu
 
 ### GDPR
 
-Since user data is collected in the data base and cookies have been enabled using Google Analytics, I have added a GDPR pop up notification that I got from [https://www.cookieconsent.com/](cookieconsent.com) and included the site's custom privacy policy page.
+Since user data is collected in the data base and cookies have been enabled using Google Analytics, I have added a GDPR pop up notification that I got from [https://www.cookieconsent.com/](cookieconsent.com).
+
+<img src="readme_images/general/cookies-consent.png" style="max-width: 60%;">
 
 I then customized the styling using the Google Chrome Inspection Tool to indentify the corrosponding classes and IDs to modify using the main CSS stylesheet. I ensured that the trackers are not activated until the user has accepted to them to stay in line with EU GDPR legislation.
 
-<img src="readme_images/general/cookies-consent.png" style="max-width: 60%;">
 <img src="readme_images/general/cookies-consent-2.png" style="max-width: 60%;">
 
-TBC
+The site's custom privacy policy is included on the More Information Tab on the cookies consent.
+
+<img src="readme_images/general/cookies-consent-3.png" style="max-width: 60%;">
 
 [Click here to go back up to the Table of Contents 📗 ⤴️](#table-of-contents)
 
