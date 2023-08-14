@@ -35,6 +35,9 @@
     {% block extra_meta %}
     {% endblock %}
 
+    <!-- Title -->
+    <title>onlineAI.art {% block extra_title %}{% endblock %}</title>
+
     <!-- Favicon -->
     {% block favicon %}
     <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png' %}">
@@ -60,6 +63,18 @@
 
     <!-- Core JS -->
     {% block corejs %}
+    <!-- Google Tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D7B14208X7"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-D7B14208X7');
+    </script>
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/872cb96f02.js" crossorigin="anonymous"></script>
     <!-- jQuery -->
@@ -81,8 +96,6 @@
     {% block extra_js %}
     {% endblock %}
 
-    <!-- Title -->
-    <title>onlineAI.art {% block extra_title %}{% endblock %}</title>
 </head>
 
 <body>
@@ -250,20 +263,6 @@
                 "website_privacy_policy_url": "https://onlineai.art/about/6/"
             });
         });
-    </script>
-
-    <!-- Google Tag -->
-    Google tag (gtag.js)
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D7B14208X7"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'G-D7B14208X7');
     </script>
 
     <script>

@@ -1577,18 +1577,6 @@ As this link is not intended to be crawlable, I resolved the issue by adding the
 
 <img src="readme_images/tests/lighthouse/seo-issue-fix.png" style="max-width: 60%;">
 
----
-
-### NuHTML Checker flagging issues with Cookies Consent Script
-
-**Issue**
-
-The nuHTML checker returned an error for the location of the script as it was placed after ther </head> tag (as per Google Instructions).
-
-**Resolution**
-
-I resolved this issue by moving the cookies and GTAG script into the Post Load JS at the end of the body.
-
 [Click here to go back up to the Table of Contents 📗 ⤴️](#table-of-contents)
 
 </details>
@@ -1859,11 +1847,11 @@ I have documented some of the tests below. Preformance for the products could be
 | Blog Post Detail      | ![Lighthouse Test Image](readme_images/tests/lighthouse/blog-page.png)  |
 | Sign In               | ![Lighthouse Test Image](readme_images/tests/lighthouse/signin.png)     |
 
-The below code was added to pages that should not be accessible by webcrawlers, such as creation / editinf of products, blogs and products pages.
+The below code was added to pages that should not be accessible by webcrawlers, such as creating / editiing products, blogs and products pages.
 
-{% block extra_meta %}
-    <meta name="robots" content="noindex,nofollow">
-{% endblock %}
+    {% block extra_meta %}
+        <meta name="robots" content="noindex,nofollow">
+    {% endblock %}
 
 Pages with no index, no follow are not crawlable as intended:
 
@@ -1899,10 +1887,6 @@ I noticed I receive errors using normal Chrome browser due to one of my extensio
 | Checkout Success      | ✅                    |
 | 404 Page              | ✅                    |
 
-<img src="readme_images/general/tbc.png" style="max-width: 60%;">
-
-TBC
-
 ---
 
 ### W3 Nu HTML Checker Testing
@@ -1922,7 +1906,6 @@ TBC
 | Checkout              | ✅                    |
 
 <img src="readme_images/tests/html-test.png" style="max-width: 60%;">
-
 
 ---
 
@@ -2243,7 +2226,7 @@ I took a look at the set up procedure for registering the website with Google Bu
 
 - Follow the set up process.
 
-- Copy and paste the GTAG into the base template. Google's instructions recommended below the `</head>` tag but his caused issues with NuHTML Checker. I moved it into the the PostLoad JS instead at the end of the the body and it works without issues.
+- Copy and paste the GTAG into the head of the base template.
 
 - Save, commit and push changes.
 
@@ -2257,7 +2240,7 @@ I took a look at the set up procedure for registering the website with Google Bu
 
 ### GDPR
 
-Since user data is collected in the data base and cookies have been enabled using Google Analytics, I have added a GDPR pop up notification that I got from [https://www.cookieconsent.com/](cookieconsent.com).
+Since cookies have been enabled using Google Analytics, I have added a GDPR pop up notification that I got from [cookieconsent.com](https://www.cookieconsent.com/).
 
 <img src="readme_images/general/cookies-consent.png" style="max-width: 60%;">
 
