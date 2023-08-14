@@ -72,8 +72,10 @@ Admin users can create, modify or delete the about pages, blog posts and product
   * [Live Links](#live-links)
   * [Project Preview](#project-preview)
     + [Project Description](#project-description)
-    + [Main Site Preview](#main-site-preview)
+    + [Main Site - User Preview](#main-site---user-preview)
+    + [Main Site - Admin Preview](#main-site---admin-preview)
     + [Admin Portal Preview](#admin-portal-preview)
+  * [Technologies and Services](#technologies-and-services)
   * [Table of Contents](#table-of-contents)
   * [Business Overview](#business-overview)
     + [Purpose of Website](#purpose-of-website)
@@ -82,17 +84,26 @@ Admin users can create, modify or delete the about pages, blog posts and product
     + [Primary Marketing Strategy](#primary-marketing-strategy)
     + [Marketing Solutions to Meet Audience Needs](#marketing-solutions-to-meet-audience-needs)
   * [User Story Test Cases](#user-story-test-cases)
-    + [View and Navigation](#view-and-navigation)
-    + [Registration and User Accounts](#registration-and-user-accounts)
-    + [Sorting and Searching](#sorting-and-searching)
-    + [Purchasing and Checkout](#purchasing-and-checkout)
-    + [Admin and Store Management](#admin-and-store-management)
-    + [Additional Features](#additional-features)
+      - [View and Navigation](#view-and-navigation)
+      - [Registration and User Accounts](#registration-and-user-accounts)
+      - [Sorting and Searching](#sorting-and-searching)
+      - [Purchasing and Checkout](#purchasing-and-checkout)
+      - [Admin and Store Management](#admin-and-store-management)
+      - [Additional Features](#additional-features)
+    + [Agile User Stories Board](#agile-user-stories-board)
   * [Design](#design)
     + [Colour Scheme](#colour-scheme)
     + [Typography](#typography)
     + [Wireframes](#wireframes)
     + [Data Schema](#data-schema)
+      - [UserProfile](#userprofile)
+      - [Category](#category)
+      - [Product](#product)
+      - [Order](#order)
+      - [OrderLineItem](#orderlineitem)
+      - [BlogPost](#blogpost)
+    + [Relationships](#relationships)
+    + [Entity Relationship Diagram](#entity-relationship-diagram)
   * [Site Features](#site-features)
     + [Custom Admin Portal](#custom-admin-portal)
     + [Custom Admin Features](#custom-admin-features)
@@ -139,23 +150,23 @@ Admin users can create, modify or delete the about pages, blog posts and product
     + [Cloudflare Scecurity](#cloudflare-scecurity)
   * [Product Creation Process](#product-creation-process)
     + [AI Images usign ComfyUI with Stable Diffusion XL](#ai-images-usign-comfyui-with-stable-diffusion-xl)
-      - [Setup Guide](#setup-guide)
+      - [Setup Guide for Comfy UI with SDXL 1.0 base and refiner models](#setup-guide-for-comfy-ui-with-sdxl-10-base-and-refiner-models)
     + [Custom Product using Printify](#custom-product-using-printify)
     + [Product Descriptions using ChatGPT](#product-descriptions-using-chatgpt)
     + [Custom Products Fixtures](#custom-products-fixtures)
-  * [Bugs & Issues](#bugs---issues)
-    + [Allauth Templates Directory Not Found](#allauth-templates-directory-not-found)
-    + [Heroku Invalid Credentials Provided](#heroku-invalid-credentials-provided)
-    + [Issue while Initializing the Heroku Git Remote](#issue-while-initializing-the-heroku-git-remote)
-    + [Programmatic Access for AWS User](#programmatic-access-for-aws-user)
-    + [Navbar too large](#navbar-too-large)
-    + [Order number too long](#order-number-too-long)
-    + [Navbar not displayed correctly on Profile](#navbar-not-displayed-correctly-on-profile)
-    + [Images sizes too large](#images-sizes-too-large)
-    + [Custom CKEditor not responding well](#custom-ckeditor-not-responding-well)
-    + [Custom CKEditor not responding well](#custom-ckeditor-not-responding-well-1)
-  * [Testing](#testing)
-    + [Manual Testing for User Stories](#manual-testing-for-user-stories)
+  * [Web Marketing & Search Engine Optimization (SEO)](#web-marketing---search-engine-optimization--seo-)
+    + [Facebook Page](#facebook-page)
+    + [Mailchimp Newsletter](#mailchimp-newsletter)
+    + [Google Search Console](#google-search-console)
+    + [Google Business](#google-business)
+    + [Google Analytics](#google-analytics)
+    + [GDPR](#gdpr)
+  * [Automated, Manual & Validation Testing](#automated--manual---validation-testing)
+    + [Manual Testing](#manual-testing)
+      - [User Tests](#user-tests)
+      - [Admin Tests](#admin-tests)
+      - [Admin Portal Tests](#admin-portal-tests)
+      - [Additional Tests](#additional-tests)
     + [Automated Testing](#automated-testing)
       - [Coverage Installation](#coverage-installation)
       - [Run Django tests with coverage](#run-django-tests-with-coverage)
@@ -166,22 +177,28 @@ Admin users can create, modify or delete the about pages, blog posts and product
     + [Lighthouse Testing](#lighthouse-testing)
     + [Console Log Testing](#console-log-testing)
     + [W3 Nu HTML Checker Testing](#w3-nu-html-checker-testing)
-    + [W3C Jigsaww CSS Validation Testing](#w3c-jigsaww-css-validation-testing)
+    + [W3C Jigsaw CSS Validation Testing](#w3c-jigsaw-css-validation-testing)
     + [JSHint JS Testing](#jshint-js-testing)
     + [Flake8 Python Testing](#flake8-python-testing)
+      - [Results](#results)
     + [Responsiveness Testing](#responsiveness-testing)
       - [Visual Testing on Physical Devices](#visual-testing-on-physical-devices)
       - [Visual Testing using Google Inspect](#visual-testing-using-google-inspect)
       - [Visual Testing using AmIRepsponsive](#visual-testing-using-amirepsponsive)
+  * [Bugs & Issues](#bugs---issues)
+    + [Allauth Templates Directory Not Found](#allauth-templates-directory-not-found)
+    + [Heroku Invalid Credentials Provided](#heroku-invalid-credentials-provided)
+    + [Issue while Initializing the Heroku Git Remote](#issue-while-initializing-the-heroku-git-remote)
+    + [Programmatic Access for AWS User](#programmatic-access-for-aws-user)
+    + [Navbar too large](#navbar-too-large)
+    + [Order number too long](#order-number-too-long)
+    + [Navbar not displayed correctly on Profile](#navbar-not-displayed-correctly-on-profile)
+    + [Images sizes too large](#images-sizes-too-large)
+    + [Custom CKEditor not responding well on small mobile devices](#custom-ckeditor-not-responding-well-on-small-mobile-devices)
+    + [Unable to view saved embeded HTML with CKEditor](#unable-to-view-saved-embeded-html-with-ckeditor)
+    + [Back to top button not crawlable](#back-to-top-button-not-crawlable)
   * [Future Development](#future-development)
   * [Summary of charges and monitoring costs](#summary-of-charges-and-monitoring-costs)
-  * [Web Marketing & Search Engine Optimization (SEO)](#web-marketing---search-engine-optimization--seo-)
-    + [Facebook Page](#facebook-page)
-    + [Mailchimp Newsletter](#mailchimp-newsletter)
-    + [Google Search Console](#google-search-console)
-    + [Google Business](#google-business)
-    + [Google Analytics](#google-analytics)
-    + [GDPR](#gdpr)
   * [Learning Goals](#learning-goals)
     + [Learning Goals 1: Integrate an e-commerce payment system and product structure in a cloud-hosted Full-Stack web application](#learning-goals-1--integrate-an-e-commerce-payment-system-and-product-structure-in-a-cloud-hosted-full-stack-web-application)
     + [Learning Goals 2: Employ advanced User Experience Design to build a commercial-grade Full Stack Web Application](#learning-goals-2--employ-advanced-user-experience-design-to-build-a-commercial-grade-full-stack-web-application)
@@ -195,8 +212,6 @@ Admin users can create, modify or delete the about pages, blog posts and product
     + [Useful Links & Resources](#useful-links---resources)
     + [Credits & Special Thanks](#credits---special-thanks)
   * [Conclusion & Contact](#conclusion---contact)
-
-TBC
 
 ---
 
@@ -252,28 +267,28 @@ Alongside our primary marketing strategies we will implement additional marketin
 
 <summary><b>Click here to minimize this section ➖ ⬆️</b></summary>
 
-### View and Navigation
+#### View and Navigation
 1. As a Shopper, I want to be able to view a list of products so that I can select some to purchase.
 2. As a Shopper, I want to be able to view a list of products so that I can quickly find products I'm interested in without having to filter through all products.
 3. As a Shopper, I want to be able to view individual product details so that I can identify the price, description, product rating, product image, and available sizes.
 4. As a Shopper, I want to be able to quickly identify deals, clearance items, and special offers so that I can take advantage of special savings on products I'd like to purchase.
 5. As a Shopper, I want to be able to easily view the total of my purchases at any time so that I can avoid spending too much.
 
-### Registration and User Accounts
+#### Registration and User Accounts
 6. As a Site User, I want to be able to easily register for an account so that I can have a personal account and be able to view my profile.
 7. As a Site User, I want to be able to easily login and logout so that I can access my personal account information.
 8. As a Site User, I want to be able to easily recover my password in case I forget it so that I can recover access to my account.
 9. As a Site User, I want to be able to receive an email confirmation after registering so that I can verify that my account registration was successful.
 10. As a Site User, I want to be able to have a personalized user profile so that I can view my personal order history and confirmations, and save my payment information.
 
-### Sorting and Searching
+#### Sorting and Searching
 11. As a Shopper, I want to be able to sort the list of available products so that I can easily identify the best rated, best priced, and categorically sorted products.
 12. As a Shopper, I want to be able to sort a specific category of product so that I can find the best priced or best rated product in a specific category, or sort the products in that category by name.
 13. As a Shopper, I want to be able to sort multiple categories of products simultaneously so that I can find the best priced or best rated products across broad categories, such as "clothing" or "homeware".
 14. As a Shopper, I want to be able to search for a product by name or description so that I can find a specific product I'd like to purchase.
 15. As a Shopper, I want to be able to easily see what I've searched for and the number of the results so that I can quickly decide whether the product I want is available.
 
-### Purchasing and Checkout
+#### Purchasing and Checkout
 16. As a Shopper, I want to be able to easily select the size and the quantity of a product when purchasing it so that I can ensure I don't accidentally select the wrong product quantity or size.
 17. As a Shopper, I want to be able to view items in my bag to be purchased so that I can identify the total cost of my purchase and all of the items I will receive.
 18. As a Shopper, I want to be able to adjust the quantity of individual items in my bag so that I can easily make changes to my purchase before checkout.
@@ -282,18 +297,40 @@ Alongside our primary marketing strategies we will implement additional marketin
 21. As a Shopper, I want to be able to view an order confirmation after checkout so that I can verify that I haven't made any mistakes.
 22. As a Shopper, I want to be able to receive an email confirmation after checking out so that I can keep the confirmation of what I've purchased for my records.
 
-### Admin and Store Management
+#### Admin and Store Management
 23. As a Store Owner, I want to be able to add a product so that I can add new items to my store.
 24. As a Store Owner, I want to be able to edit/update a product so that I can change product prices, descriptions, images, and other product criteria.
 25. As a Store Owner, I want to be able to delete a product so that I can remove items that are no longer for sale.
 
-### Additional Features
+#### Additional Features
 26. As a Site User, I want to be able to sign up for a mailing list so that I can stay up to date with the latest products and deals.
 27. As a Site User, I want to be able to find out more information so that I can find out additional information about the company such as shipping, etc.
-28. As a Site User, I want to be able to navigate the content easily and quickly so that I can find the content that I am looking for.
-29. As a Store Owner, I want to set up a blog so that I can draw more site attention, recommend my products to the target audience, and potentially affiliate marketing and sponsered articles.
-30. As a Store Owner, I want create a unique custom avatar with unique traits for each user so that I can enhance the personalized shopping experience to create increased customer engagement and retention.
-31. As a Store Owner, I want to allow admin to control the products, blogs and about pages via the site and dedicated admin panel so that I can allow admins to run the store without the need for website modifications.
+28. As a Store Owner, I want to be able to be able to easily add, edit, or delete the about pages so that I can ensure customers are kept up to date with the latest, most accurate information about our business.
+29. As a Store Owner, I want to set up a blog so that I can draw more site attention, recommend my products to the target audience, and potentially affiliate marketing and sponsored articles.
+30. As a Store Owner, I want to be able to easily add, edit and delete blog posts, so that I can easily share new posts and maintain exisiting ones.
+31. As a Store Owner, I want create a unique custom avatar with unique traits for each user so that I can enhance the personalized shopping experience to create increased customer engagement and retention.
+32. As a Store Owner, I want to customize the admin panel to ensure its clean and user friendly so that the admin team can easily access the relevant data and make necessary changes as required.
+33. As a Store Owner, I want to be able to make a limited amount of non intrusive styling changes to blog posts and about pages without the need for a web developer so that I can make my about pages and blog articles visually appealing for the users.
+
+### Agile User Stories Board
+
+<img src="readme_images/general/user-story-board.png" style="max-width: 60%;">
+
+I initially tracked all of my user stories but on excel tracker spreadsheet but I later added them to an Agile board.
+
+A [project board was set up on GitHub](https://github.com/users/KC-7/projects/5) to display the user stories.
+
+The Agile board is publicly accessible and linked to the ecommerce repository for this project. 
+
+A custom templates was set up for the user stories.
+
+A custom label was set up to add stories as features. 
+
+Thirty three user stories were added to the board and marked as complete.
+
+Six milestones where set up for the project and closed off after completion.
+
+<img src="readme_images/general/user-story-milestones.png" style="max-width: 60%;">
 
 [Click here to go back up to the Table of Contents 📗 ⤴️](#table-of-contents)
 
@@ -310,6 +347,8 @@ Alongside our primary marketing strategies we will implement additional marketin
 ### Colour Scheme
 
 The below custom colour scheme was designed and set up for the site. 
+
+<img src="readme_images/general/color-palette.png" alt="Color Palette" style="width: 100%;">
 
     :root {
         /* Electric Pink */
@@ -334,7 +373,7 @@ The below custom colour scheme was designed and set up for the site.
         --white: #FFFFFF;
     }
 
-<img src="readme_images/general/colors1.png" alt="Color Palette" style="max-width: 40%;">
+<img src="readme_images/general/color-3s.gif" alt="Color Palette" style="width: 100%;">
 
 ### Typography
 
@@ -467,7 +506,7 @@ I used [Lucid Chart](https://lucid.app/) to create the Entity Relationship Diagr
 
 ### Custom Admin Portal
 
-<img src="readme_images/general/TBC.png" style="max-width: 60%;">
+<img src="readme_images/gifs/admin-portal-preview.gif" style="max-width: 60%;">
 
 The admin portal was customized by using the following [installation guide for Jazzmin](https://django-jazzmin.readthedocs.io/installation/): 
 
@@ -483,7 +522,7 @@ The admin portal was customized by using the following [installation guide for J
 
 3. Add [custom jazzmin configuration settings](https://django-jazzmin.readthedocs.io/configuration/) to settings.py.
 
-See my custom Jazzmin settings ⬇️
+See my custom Jazzmin settings below which also include additional search functionality and links to the project and my Github page.
 
     # Custom Jazzmin Settings
     JAZZMIN_SETTINGS = {
@@ -551,19 +590,27 @@ See my custom Jazzmin settings ⬇️
         ],
     }
 
-<img src="readme_images/general/TBC.png" style="max-width: 60%;">
+If you would like to see what the admin panel looks like without the custom styling, simply comment out the app in the settings.py file.
+
+<img src="readme_images/tests/manual_tests/admin_portal_tests/custom-dropdown-links.png" style="max-width: 60%;">
+
+<img src="readme_images/tests/manual_tests/admin_portal_tests/custom-top-links-search.png" style="max-width: 60%;">
 
 ---
 
 ### Custom Admin Features
 
-The admin panel also allows the amdministrator to: 
+The admin panel also allows the administrator to: 
 
 - Sort, Filter & Search Products by name, sku and has_sizes
 
 - Batch select products and update if they have sizes or not, this was very useful when setting up the products catalogue
 
-<img src="readme_images/general/TBC.png" style="max-width: 60%;">
+- View preview images for blog posts and avatars
+
+- Search products, blogs, about pages, users, etc.
+
+<img src="readme_images/tests/manual_tests/admin_portal_tests/7-avatars.png" style="max-width: 60%;">
 
 ---
 
@@ -571,7 +618,11 @@ The admin panel also allows the amdministrator to:
 
 The site has integrated the following apps to allow customers to interact with and purchase items: bag, checkout & products.
 
+<img src="readme_images/tests/manual_tests/user_tests/15-bag-above-threshold.png" style="max-width: 60%;">
+
 It also has a profile app to allow the users to save their delivery information.
+
+<img src="readme_images/tests/manual_tests/user_tests/7-profile.png" style="max-width: 60%;">
 
 #### Stripe Integration & Test Card Details
 
@@ -591,7 +642,7 @@ Here are some test card details you can use to simulate different scenarios at c
 
 For more details on setting up Stripe elements to accept payment, refer to the [Stripe Documentation](https://stripe.com/docs/).
 
-<img src="readme_images/general/TBC.png" style="max-width: 60%;">
+<img src="readme_images/tests/manual_tests/user_tests/17-order-confirmation.png" style="max-width: 60%;">
 
 ---
 
@@ -682,7 +733,7 @@ The custom editor is disabled on very small mobile devices to ensure responsiven
 
 ### Custom About Pages (CRUD)
 
-<img src="readme_images/general/TBC.png" style="max-width: 60%;">
+<img src="readme_images/tests/manual_tests/user_tests/19-about.png" style="max-width: 60%;">
 
 #### Project Conception
 
@@ -700,9 +751,13 @@ This application offers full CRUD functionality for the admin users to Create, R
 
 I felt the standard text editor was insufficent for creating and modifying about pages so I have added the CKEditor. I have detailed the customization and implementation of the CKEditior in this README. This editor allows admins to adjust heading sizes, add bold, italic, links, etc. when creating the about pages. I have chosen to restrict access to heading size 1, colours and fonts so that the website it maintained and styled consistently with the sites colour schema and typography. Admin users can access the additional editor functionality via the admin portal. In the admin portal they have full access to the custom editor and can also modify the pages as HTML which allows them to add videos or embded content. This was useful when creating the Contact page with embed Google Maps location alongside the embed Youtube video in the Generative AI Video. The custom editor is disabled on very small mobile devices to ensure responsiveness.
 
+<img src="readme_images/tests/manual_tests/user_tests/20-about-page.png" style="max-width: 60%;">
+
 ---
 
 ### Custom Blog Posts (CRUD)
+
+<img src="readme_images/tests/manual_tests/user_tests/21-blog.png" style="max-width: 60%;">
 
 #### Project Conception
 
@@ -719,6 +774,8 @@ This application offers full CRUD functionality for the admin users to Create, R
 #### Custom Editor
 
 A similar approach was taken when setting up the custom CKEditor for the blog as the about application. Admins have limited options when creating modifications using the Create or Edit blog pages as intented to ensure the site is maintained with consitent content. The admins can however access the full editor by the admin portal, this will allow them to make unusual styling modifications or add embeded content if ever required. The custom editor is disabled on very small mobile devices to ensure responsiveness.
+
+<img src="readme_images/tests/manual_tests/user_tests/23-blog-post.png" style="max-width: 60%;">
 
 ---
 
@@ -756,13 +813,15 @@ A custom admin view was created to display the avatar image and their attributes
 
 <img src="readme_images/general/aipunks.png" style="max-width: 60%;">
 
+<img src="readme_images/tests/manual_tests/user_tests/8-avatar.png" style="max-width: 60%;">
+
 ---
 
 ### User Feedback, Error Handeling and 404 Redirection
 
 The site has integrated user feedback by displaying toast messages for info, success, errors etc. Apps have built in error handeling to notify users of issues in a user friendly manner. 404 page has been configured to show when the page the user is looking for can not be found.
 
-TBC
+<img src="readme_images/tests/manual_tests/user_tests/bag-success.png" style="max-width: 60%;">
 
 <img src="readme_images/general/404.png" style="max-width: 60%;">
 
@@ -1235,6 +1294,8 @@ I used fixtures files to upload the bulk of the categories and products, the cat
 
 ### AI Images usign ComfyUI with Stable Diffusion XL
 
+<img src="readme_images/general/painting.png" style="max-width: 60%;">
+
 The majority of the images used for the creation of products or added to articles on the site where generated using ComfyUI with SDXL and refiner (ver:0.9).
 
 Previouslly I was using Automatic1111 for local AI image generation however you will need to use ComfyUI if you would like to utilize the new SDXL and refiner models.
@@ -1243,7 +1304,7 @@ The image is initially generated using your positive and negative prompts using 
 
 See below guide to set up ComfyUI with SDXL base and refiner models locally. Note you will need a nVidea GPU with minimum 10gb vram, alternativly you could research setting it up using Google Collab. If this sounds like too much work for you, you can generate images for FREE (currently set to 5 per day per user) on my django website with DALL-E 2 integrated for creating custom images, [Cre8ai.art](cre8ai.art), just sign up and go to generate art, enter your prompt and hit generate, its that simple. You can then download your image by selecting the download button, its free and yours to use how you'd please and its watermark free!
 
-<img src="readme_images/general/painting.png" style="max-width: 60%;">
+<img src="readme_images/general/comfyui-sdxl-2.png" style="max-width: 60%;">
 
 #### Setup Guide for Comfy UI with SDXL 1.0 base and refiner models
 
@@ -1291,7 +1352,13 @@ You can find more information on setting up this application using the following
 - [Set up tutorial by Yubin on aituts.com](https://aituts.com/comfyui-sdxl/) - I used the links and info from this guide to recreate above tutorial as I have ver0.9 installed instead of the new ver1.0.
 - [Pixoverts Youtube Beginners Guide](https://www.youtube.com/watch?v=yamusLEyt4g) - Here is a detailed video if you are interesting in learning more about this process.
 
-<img src="readme_images/general/TBC.png" style="max-width: 60%;">
+**Base Output**
+
+<img src="readme_images/general/sdxl-base.png" style="max-width: 60%;">
+
+**Refiner Output**
+
+<img src="readme_images/general/sdxl-refiner.png" style="max-width: 60%;">
 
 ### Custom Product using Printify
 
@@ -1309,9 +1376,7 @@ TBC
 
 I used ChatGPT to create meaningful, creative, SEO friendly, product descriptions and titles by giving it brief details on my store, target audience and the products I was going to list.
 
-<img src="readme_images/general/TBC.png" style="max-width: 60%;">
-
-TBC
+<img src="readme_images/tests/manual_tests/user_tests/12-product-detail.png" style="max-width: 60%;">
 
 ### Custom Products Fixtures
 
@@ -1321,7 +1386,7 @@ I loaded the custom product fixtures file to Heroku using the following command:
 
     heroku run python3 manage.py loaddata products/fixtures/products.json -a kc-ecommerce
 
-<img src="readme_images/general/TBC.png" style="max-width: 60%;">
+The fixtures are located in the following path: `products/fixtures/`.
 
 [Click here to go back up to the Table of Contents 📗 ⤴️](#table-of-contents)
 
@@ -1329,253 +1394,89 @@ I loaded the custom product fixtures file to Heroku using the following command:
 
 ---
 
-## Bugs & Issues
+## Web Marketing & Search Engine Optimization (SEO)
 
 <details open>
 
 <summary><b>Click here to minimize this section ➖ ⬆️</b></summary>
 
-I have documented some of the bugs and issues I have encountered through out the project for future reference below:
+### Facebook Page
 
-### Allauth Templates Directory Not Found
+<img src="readme_images/facebook/fb3.png" style="max-width: 60%;">
 
-**Issue**
+A [Facebook Page](https://www.facebook.com/people/Onlineaiart/61550214234067/) has been set up to the support the ecommerce store.
 
-The following file path used in the Boutique Ado tutorial that I was following to set up the basics does not exist in the project directories:
+I have added the store details, profile picture, header image and series of posts about our store and topics.
 
-    cp -r ../.pip-modules/lib/python3.7/site-packages/alluth/templates/* ./templates/allauth/
+I also experimented with Meta Business Manager and scheduled posts to be posted in future as I thought this was a useful feature.
 
-**Resolution**
+<img src="readme_images/facebook/fb-schedule-post.png" style="max-width: 60%;">
 
-To find the correct file path for the allauth packages, follow these steps:
+See images of posts content below:
 
-1. Start the Python interpreter by running the `python` command in the terminal:
-2. Once the Python interpreter starts, enter the `help('allauth')` command to access the Python help system:
-3. The help information for the allauth package will be displayed, including the path to the site-packages directory where it is installed.
-4. Copy the site-packages path from the output and replace [your site-package path] in the command `cp -r [your site-package path]/allauth/templates/* ./templates/allauth/` with the actual path.
-5. Run the modified command to copy the allauth templates to the appropriate directory, I used:
-    `cp -r /workspace/.pip-modules/lib/python3.8/site-packages/allauth/templates/* ./templates/allauth/`
+<img src="readme_images/facebook/fb-posts-content.png" style="max-width: 60%;">
 
----
+Note: Facebook often removes inactive store pages.
 
-### Heroku Invalid Credentials Provided
+### Mailchimp Newsletter
 
-**Issue**
+A pop up for newsletter sign up has been added to the products page using MailChimp. 
 
-When attempting to disable static using `heroku config:set DISABLE_COLLECTSTATIC=1 --app kc-ecommerce` as part of the deployment to Heroku, it returned ___Invalid credentials provided___ and gives an option to login to CLI via web browser.
+It has been styled to integrate well with the site.
 
-When attempting to login through the browser, it directs to a page that says ___IP address mismatch___.
+<img src="readme_images/general/mailchimp-popup.png" style="max-width: 60%;">
 
-When attempting to login to Heroku via the terminal using `heroku login -i`, it would return the following error message when using my accounts email address and password: 
+### Google Search Console
 
-    ›   Error: Invalid credentials provided.
-    ›
-    ›   Error ID: unauthorized
+<img src="readme_images/google/google-search-console.png" style="max-width: 60%;">
 
-**Resolution**
+I set up Google Search Console as it allows you to closely monitor how your website performs in Google search results, providing data on search queries, click-through rates, and website indexing.
 
-To resolve this issue: 
+<img src="readme_images/google/google-search-console-registration.png" style="max-width: 60%;">
 
-1. Login to Heroku via terminal using: `heroku login -i`.
-2. Enter your email address.
-3. Go to your __Heroku Dashboard__ in a new tab.
-4. Go to __Account Settings__ ➡️ __Applications__ ➡️ __Authorizations__.
-5. Select __Create Authorization__ ➡️ Enter a Description (Project Name) ➡️ __Confirm__.
-6. Copy the __Authorization token__ and use it as your password back in the terminal.
-7. You should now be able to login and continue with the deployment.
+It's easy to set up, just follow the simple [registration process here](https://search.google.com/search-console/welcome).
 
----
+<img src="readme_images/google/google-search-console-url-inspection.png" style="max-width: 60%;">
 
-### Issue while Initializing the Heroku Git Remote
+### Google Business
 
-**Issue**
+I took a look at the set up procedure for registering the website with Google Business, I entered the set up information but did not verify the account with my personal information as its not an actual business.
 
-Unable to push to Heroku first attempt.
+<img src="readme_images/google/google-business-view.png" style="max-width: 60%;">
 
-    gitpod /workspace/ecommerce (main) $ git push heroku main
-    fatal: 'heroku' does not appear to be a git repository
-    fatal: Could not read from remote repository.
-    Please make sure you have the correct access rights
-    and the repository exists.
+"By creating a Google Business listing, your company gains visibility on Google Search and Maps, making it easier for potential customers to find essential information such as location, hours of operation, contact details, and customer reviews. This free service allows you to manage your online reputation, engage with customers, and provide accurate and up-to-date information. Google Business acts as a digital storefront, boosting your credibility and trustworthiness in the eyes of online shoppers."
 
-**Resolution**
+### Google Analytics
 
-I initialized the the git remote by using the following code `heroku git:remote -a your-heroku-project-name-here` and was then able to successfully push to Heroku.
+- Set up an account with [Google Analytics](https://analytics.google.com/) and add the web domain.
 
-    gitpod /workspace/ecommerce (main) $ heroku git:remote -a kc-ecommerce
-    set git remote heroku to https://git.heroku.com/kc-ecommerce.git
+- Follow the set up process.
 
-    gitpod /workspace/ecommerce (main) $ git push heroku main
-    Enumerating objects: 363, done.
-    ...
+- Copy and paste the GTAG into the head of the base template.
 
-**Additional Heroku Tips**
+- Save, commit and push changes.
 
-Use the following commands to interact with Heroku once logged in: 
+- You should now be able to monitor your site's traffic after 1 - 2 days.
 
-1. Make Migrations:
+- If you would like to test the GTAG sooner, you can download [Google Analytics Debugger](https://chrome.google.com/webstore/detail/google-analytics-debugger/jnkmfdileelhofjcijamephohjechhna) from the Chrome Extensions Store - simply install, access the web page and view the console. Note you will need to disable your ad blocker if you have one installed while testing the page. This allowed me to ensure the GTAG was configured correctly without waiting, it took about 12 hours for the analytics to start working.
 
-    `heroku run python3 manage.py makemigrations -a -kc-ecommerce`
+<img src="readme_images/google/google-analytics-2.png" style="max-width: 60%;">
 
+<img src="readme_images/google/google-analytics-1.png" style="max-width: 60%;">
 
-2. Migrate:
+### GDPR
 
-    `heroku run python3 manage.py migrate -a -kc-ecommerce`
+Since cookies have been enabled using Google Analytics, I have added a GDPR pop up notification that I got from [cookieconsent.com](https://www.cookieconsent.com/).
 
+<img src="readme_images/general/cookies-consent.png" style="max-width: 60%;">
 
-3. Load Fixtures:
+I then customized the styling using the Google Chrome Inspection Tool to indentify the corrosponding classes and IDs to modify using the main CSS stylesheet. I ensured that the trackers are not activated until the user has accepted to them to stay in line with EU GDPR legislation.
 
-    `heroku run python3 manage.py loaddata products/fixtures/products.json -a kc-ecommerce`
+<img src="readme_images/general/cookies-consent-2.png" style="max-width: 60%;">
 
-    `heroku run python3 manage.py loaddata products/fixtures/categories.json -a kc-ecommerce`
+The site's custom privacy policy is included on the More Information Tab on the cookies consent.
 
----
-
-### Programmatic Access for AWS User
-
-**Issue**
-
-Since the walkthrough Boutique Ado video tutorial and updated text guide by the Code Institute, the AWS layout has changed.
-
-Previously setting up programmatic access was an option during User set up however now you need to set it up after the account has been created so that you can get your `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`.
-
-**Resolution** 
-
-To get an `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` for the user, follow these steps: 
-
-1. Create User
-2. In the IAM section, select Users
-3. Select the new user
-4. Select Security Credentials
-5. Select 'Other'
-6. Save your access keys to Heroku config vars
-
----
-
-### Navbar too large
-
-**Issue**
-
-The navbar was too large for small devices, the checkout element was dropping onto a new row. 
-
-**Resolution**
-
-I resolved this issue by adding the following CSS media query: 
-
-    @media (max-width: 400px) {
-        .navbar {
-            padding-left: 0;
-            padding-right: 0;
-        }
-    }
-
----
-
-### Order number too long
-
-**Issue**
-
-The order number was too long to be displayed correctly on smaller devices, it was impacting the styling for the order confirmation page. 
-
-**Resolution**
-
-I resolved this issue by using the truncate feature to restrict it to 16 characters instead of displaying all 32: 
-
-    `<p class="mb-0">{{ order.order_number|truncatechars:16 }}</p>`
-
----
-
-### Navbar not displayed correctly on Profile
-
-**Issue**
-
-The navbar was not being displayed correctly on the profiles view, it was being positioned at the end of the container instead of the end of the page like the rest of the site. 
-
-**Resolution**
-
-I identified that a closing div tag, `</div>`, was missing from the end of the `profile.html` template. The navbar was correctly styled after the missing tag was enetered.
-
----
-
-### Images sizes too large
-
-**Issue**
-
-A lot of images sizes not appropriatly sized for web pages.
-
-**Resolution**
-
-I used [TinyPNG](https://tinypng.com/) to reduce the image sizes.
-
-<img src="readme_images/general/tinypng.png" style="max-width: 60%;">
-
-I converted the homepage background images to WEBP files using [Convertio](https://convertio.co/png-webp/).
-
-<img src="readme_images/general/convertio.png" style="max-width: 60%;">
-
-Ideally all of the images should be served in WEBP format going forward but converting the file types for the exisiting images would require the database urls for the images to be updated as well, all further images will be uploaded in WEBP format.
-
-<img src="readme_images/aws/s3-delete.png" style="max-width: 60%;">
-
-<img src="readme_images/aws/s3-upload.png" style="max-width: 60%;">
-
----
-
-### Custom CKEditor not responding well on small mobile devices
-
-**Issue**
-
-The CKEditor on the Add About, Edit About, Add Blog & Edit Blog Pages was not responding well on devices with a screen width below 380px. 
-
-**Resolution**
-
-To resolve this issue I tried removing buttons and adjusting formatting for the smaller devices but it still render correctly.
-
-I added the below JS to the CKEditor script to disable the editor on devices with screen width below 380px:
-
-    if (window.innerWidth >= 380) {
-    ... [REDACTED FOR BREVITY] ...
-    } else {
-    // Fallback UI for small screens here if needed
-    let textarea = document.querySelector('#id_content');
-    if (textarea) {
-        textarea.style.width = '100%';
-        textarea.placeholder =
-        "Simple editor mode enabled. Please use a larger screen to enable the integrated HTML editor.";
-        alert(
-        'Simple editor mode enabled. For a better experience, please use a larger screen to endable the integrated HTML editor.'
-        );
-    }
-
-The alert is only triggered on the edit pages as the placeholder is not visible behind the text. A future UX improvement could be to trigger a modal or toast (using toastify) instead of an alert.
-
----
-
-### Unable to view saved embeded HTML with CKEditor
-
-**Issue**
-
-Unable to view saved embeded HTML for iframes when editing Blog and About pages using CKEditor. I have set it up so that you can add HTML to the blogs through the admin panel which works well when creating and editing text. It also allows the admin to add embed items such as iframes for Youtube or Google Maps. Unfortuntly when you try to edit a page with an embeded item, the code for the embed part is not displayed.
-
-**Resolution**
-
-This minor bug is outstanding and does not affect the MVP, the uploaded pages still work as intended.
-
----
-
-### Back to top button not crawlable
-
-**Issue**
-
-The back to top of page button was negativly affecting the SEO lighthouse score for not being crawlable.
-
-<img src="readme_images/tests/lighthouse/seo-issue.png" style="max-width: 60%;">
-
-**Resolution**
-
-As this link is not intended to be crawlable, I resolved the issue by adding the following highlight code. 
-
-<img src="readme_images/tests/lighthouse/seo-issue-fix.png" style="max-width: 60%;">
+<img src="readme_images/general/cookies-consent-3.png" style="max-width: 60%;">
 
 [Click here to go back up to the Table of Contents 📗 ⤴️](#table-of-contents)
 
@@ -2086,10 +1987,6 @@ Its important that the website responds well across a variety of device sizes su
 | **Nest Hub**                 | 1024          | 600              |
 | **Nest Hub Max**             | 1280          | 800              |
 
-<img src="readme_images/general/tbc.png" style="max-width: 60%;">
-
-TBC
-
 #### Visual Testing using AmIRepsponsive
 
 | **Device**  | **Width (px)** | **Height (px)** | **Scale** |
@@ -2099,10 +1996,261 @@ TBC
 | **Tablet**  | 768            | 1024            | 0.219     |
 | **Mobile**  | 320            | 480             | 0.219     |
 
+<img src="readme_images/tests/amiresponsive.png" style="max-width: 60%;">
 
-<img src="readme_images/general/tbc.png" style="max-width: 60%;">
+[Click here to go back up to the Table of Contents 📗 ⤴️](#table-of-contents)
 
-TBC
+</details>
+
+---
+
+## Bugs & Issues
+
+<details open>
+
+<summary><b>Click here to minimize this section ➖ ⬆️</b></summary>
+
+I have documented some of the bugs and issues I have encountered through out the project for future reference below:
+
+### Allauth Templates Directory Not Found
+
+**Issue**
+
+The following file path used in the Boutique Ado tutorial that I was following to set up the basics does not exist in the project directories:
+
+    cp -r ../.pip-modules/lib/python3.7/site-packages/alluth/templates/* ./templates/allauth/
+
+**Resolution**
+
+To find the correct file path for the allauth packages, follow these steps:
+
+1. Start the Python interpreter by running the `python` command in the terminal:
+2. Once the Python interpreter starts, enter the `help('allauth')` command to access the Python help system:
+3. The help information for the allauth package will be displayed, including the path to the site-packages directory where it is installed.
+4. Copy the site-packages path from the output and replace [your site-package path] in the command `cp -r [your site-package path]/allauth/templates/* ./templates/allauth/` with the actual path.
+5. Run the modified command to copy the allauth templates to the appropriate directory, I used:
+    `cp -r /workspace/.pip-modules/lib/python3.8/site-packages/allauth/templates/* ./templates/allauth/`
+
+---
+
+### Heroku Invalid Credentials Provided
+
+**Issue**
+
+When attempting to disable static using `heroku config:set DISABLE_COLLECTSTATIC=1 --app kc-ecommerce` as part of the deployment to Heroku, it returned ___Invalid credentials provided___ and gives an option to login to CLI via web browser.
+
+When attempting to login through the browser, it directs to a page that says ___IP address mismatch___.
+
+When attempting to login to Heroku via the terminal using `heroku login -i`, it would return the following error message when using my accounts email address and password: 
+
+    ›   Error: Invalid credentials provided.
+    ›
+    ›   Error ID: unauthorized
+
+**Resolution**
+
+To resolve this issue: 
+
+1. Login to Heroku via terminal using: `heroku login -i`.
+2. Enter your email address.
+3. Go to your __Heroku Dashboard__ in a new tab.
+4. Go to __Account Settings__ ➡️ __Applications__ ➡️ __Authorizations__.
+5. Select __Create Authorization__ ➡️ Enter a Description (Project Name) ➡️ __Confirm__.
+6. Copy the __Authorization token__ and use it as your password back in the terminal.
+7. You should now be able to login and continue with the deployment.
+
+---
+
+### Issue while Initializing the Heroku Git Remote
+
+**Issue**
+
+Unable to push to Heroku first attempt.
+
+    gitpod /workspace/ecommerce (main) $ git push heroku main
+    fatal: 'heroku' does not appear to be a git repository
+    fatal: Could not read from remote repository.
+    Please make sure you have the correct access rights
+    and the repository exists.
+
+**Resolution**
+
+I initialized the the git remote by using the following code `heroku git:remote -a your-heroku-project-name-here` and was then able to successfully push to Heroku.
+
+    gitpod /workspace/ecommerce (main) $ heroku git:remote -a kc-ecommerce
+    set git remote heroku to https://git.heroku.com/kc-ecommerce.git
+
+    gitpod /workspace/ecommerce (main) $ git push heroku main
+    Enumerating objects: 363, done.
+    ...
+
+**Additional Heroku Tips**
+
+Use the following commands to interact with Heroku once logged in: 
+
+1. Make Migrations:
+
+    `heroku run python3 manage.py makemigrations -a -kc-ecommerce`
+
+
+2. Migrate:
+
+    `heroku run python3 manage.py migrate -a -kc-ecommerce`
+
+
+3. Load Fixtures:
+
+    `heroku run python3 manage.py loaddata products/fixtures/products.json -a kc-ecommerce`
+
+    `heroku run python3 manage.py loaddata products/fixtures/categories.json -a kc-ecommerce`
+
+---
+
+### Programmatic Access for AWS User
+
+**Issue**
+
+Since the walkthrough Boutique Ado video tutorial and updated text guide by the Code Institute, the AWS layout has changed.
+
+Previously setting up programmatic access was an option during User set up however now you need to set it up after the account has been created so that you can get your `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`.
+
+**Resolution** 
+
+To get an `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` for the user, follow these steps: 
+
+1. Create User
+2. In the IAM section, select Users
+3. Select the new user
+4. Select Security Credentials
+5. Select 'Other'
+6. Save your access keys to Heroku config vars
+
+---
+
+### Navbar too large
+
+**Issue**
+
+The navbar was too large for small devices, the checkout element was dropping onto a new row. 
+
+**Resolution**
+
+I resolved this issue by adding the following CSS media query: 
+
+    @media (max-width: 400px) {
+        .navbar {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+---
+
+### Order number too long
+
+**Issue**
+
+The order number was too long to be displayed correctly on smaller devices, it was impacting the styling for the order confirmation page. 
+
+**Resolution**
+
+I resolved this issue by using the truncate feature to restrict it to 16 characters instead of displaying all 32: 
+
+    `<p class="mb-0">{{ order.order_number|truncatechars:16 }}</p>`
+
+---
+
+### Navbar not displayed correctly on Profile
+
+**Issue**
+
+The navbar was not being displayed correctly on the profiles view, it was being positioned at the end of the container instead of the end of the page like the rest of the site. 
+
+**Resolution**
+
+I identified that a closing div tag, `</div>`, was missing from the end of the `profile.html` template. The navbar was correctly styled after the missing tag was enetered.
+
+---
+
+### Images sizes too large
+
+**Issue**
+
+A lot of images sizes not appropriatly sized for web pages.
+
+**Resolution**
+
+I used [TinyPNG](https://tinypng.com/) to reduce the image sizes.
+
+<img src="readme_images/general/tinypng.png" style="max-width: 60%;">
+
+I converted the homepage background images to WEBP files using [Convertio](https://convertio.co/png-webp/).
+
+<img src="readme_images/general/convertio.png" style="max-width: 60%;">
+
+Ideally all of the images should be served in WEBP format going forward but converting the file types for the exisiting images would require the database urls for the images to be updated as well, all further images will be uploaded in WEBP format.
+
+<img src="readme_images/aws/s3-delete.png" style="max-width: 60%;">
+
+<img src="readme_images/aws/s3-upload.png" style="max-width: 60%;">
+
+---
+
+### Custom CKEditor not responding well on small mobile devices
+
+**Issue**
+
+The CKEditor on the Add About, Edit About, Add Blog & Edit Blog Pages was not responding well on devices with a screen width below 380px. 
+
+**Resolution**
+
+To resolve this issue I tried removing buttons and adjusting formatting for the smaller devices but it still render correctly.
+
+I added the below JS to the CKEditor script to disable the editor on devices with screen width below 380px:
+
+    if (window.innerWidth >= 380) {
+    ... [REDACTED FOR BREVITY] ...
+    } else {
+    // Fallback UI for small screens here if needed
+    let textarea = document.querySelector('#id_content');
+    if (textarea) {
+        textarea.style.width = '100%';
+        textarea.placeholder =
+        "Simple editor mode enabled. Please use a larger screen to enable the integrated HTML editor.";
+        alert(
+        'Simple editor mode enabled. For a better experience, please use a larger screen to endable the integrated HTML editor.'
+        );
+    }
+
+The alert is only triggered on the edit pages as the placeholder is not visible behind the text. A future UX improvement could be to trigger a modal or toast (using toastify) instead of an alert.
+
+---
+
+### Unable to view saved embeded HTML with CKEditor
+
+**Issue**
+
+Unable to view saved embeded HTML for iframes when editing Blog and About pages using CKEditor. I have set it up so that you can add HTML to the blogs through the admin panel which works well when creating and editing text. It also allows the admin to add embed items such as iframes for Youtube or Google Maps. Unfortuntly when you try to edit a page with an embeded item, the code for the embed part is not displayed.
+
+**Resolution**
+
+This minor bug is outstanding and does not affect the MVP, the uploaded pages still work as intended.
+
+---
+
+### Back to top button not crawlable
+
+**Issue**
+
+The back to top of page button was negativly affecting the SEO lighthouse score for not being crawlable.
+
+<img src="readme_images/tests/lighthouse/seo-issue.png" style="max-width: 60%;">
+
+**Resolution**
+
+As this link is not intended to be crawlable, I resolved the issue by adding the following highlight code. 
+
+<img src="readme_images/tests/lighthouse/seo-issue-fix.png" style="max-width: 60%;">
 
 [Click here to go back up to the Table of Contents 📗 ⤴️](#table-of-contents)
 
@@ -2159,98 +2307,6 @@ TBC
 <img src="readme_images/general/tbc.png" style="max-width: 60%;">
 
 TBC
-
-[Click here to go back up to the Table of Contents 📗 ⤴️](#table-of-contents)
-
-</details>
-
----
-
-## Web Marketing & Search Engine Optimization (SEO)
-
-<details open>
-
-<summary><b>Click here to minimize this section ➖ ⬆️</b></summary>
-
-### Facebook Page
-
-<img src="readme_images/facebook/fb3.png" style="max-width: 60%;">
-
-A [Facebook Page](https://www.facebook.com/people/Onlineaiart/61550214234067/) has been set up to the support the ecommerce store.
-
-I have added the store details, profile picture, header image and series of posts about our store and topics.
-
-I also experimented with Meta Business Manager and scheduled posts to be posted in future as I thought this was a useful feature.
-
-<img src="readme_images/facebook/fb-schedule-post.png" style="max-width: 60%;">
-
-See images of posts content below:
-
-<img src="readme_images/facebook/fb-posts-content.png" style="max-width: 60%;">
-
-Note: Facebook often removes inactive store pages.
-
-### Mailchimp Newsletter
-
-A pop up for newsletter sign up has been added to the products page using MailChimp. 
-
-It has been styled to integrate well with the site.
-
-<img src="readme_images/general/mailchimp-popup.png" style="max-width: 60%;">
-
-TBC
-
-### Google Search Console
-
-<img src="readme_images/google/google-search-console.png" style="max-width: 60%;">
-
-I set up Google Search Console as it allows you to closely monitor how your website performs in Google search results, providing data on search queries, click-through rates, and website indexing.
-
-<img src="readme_images/google/google-search-console-registration.png" style="max-width: 60%;">
-
-It's easy to set up, just follow the simple [registration process here](https://search.google.com/search-console/welcome).
-
-<img src="readme_images/google/google-search-console-url-inspection.png" style="max-width: 60%;">
-
-### Google Business
-
-I took a look at the set up procedure for registering the website with Google Business, I entered the set up information but did not verify the account with my personal information as its not an actual business.
-
-<img src="readme_images/google/google-business-view.png" style="max-width: 60%;">
-
-"By creating a Google Business listing, your company gains visibility on Google Search and Maps, making it easier for potential customers to find essential information such as location, hours of operation, contact details, and customer reviews. This free service allows you to manage your online reputation, engage with customers, and provide accurate and up-to-date information. Google Business acts as a digital storefront, boosting your credibility and trustworthiness in the eyes of online shoppers."
-
-### Google Analytics
-
-- Set up an account with [Google Analytics](https://analytics.google.com/) and add the web domain.
-
-- Follow the set up process.
-
-- Copy and paste the GTAG into the head of the base template.
-
-- Save, commit and push changes.
-
-- You should now be able to monitor your site's traffic after 1 - 2 days.
-
-- If you would like to test the GTAG sooner, you can download [Google Analytics Debugger](https://chrome.google.com/webstore/detail/google-analytics-debugger/jnkmfdileelhofjcijamephohjechhna) from the Chrome Extensions Store - simply install, access the web page and view the console. Note you will need to disable your ad blocker if you have one installed while testing the page. This allowed me to ensure the GTAG was configured correctly without waiting, it took about 12 hours for the analytics to start working.
-
-<img src="readme_images/google/google-analytics-2.png" style="max-width: 60%;">
-
-<img src="readme_images/google/google-analytics-1.png" style="max-width: 60%;">
-
-### GDPR
-
-Since cookies have been enabled using Google Analytics, I have added a GDPR pop up notification that I got from [cookieconsent.com](https://www.cookieconsent.com/).
-
-<img src="readme_images/general/cookies-consent.png" style="max-width: 60%;">
-
-I then customized the styling using the Google Chrome Inspection Tool to indentify the corrosponding classes and IDs to modify using the main CSS stylesheet. I ensured that the trackers are not activated until the user has accepted to them to stay in line with EU GDPR legislation.
-
-<img src="readme_images/general/cookies-consent-2.png" style="max-width: 60%;">
-
-The site's custom privacy policy is included on the More Information Tab on the cookies consent.
-
-<img src="readme_images/general/cookies-consent-3.png" style="max-width: 60%;">
 
 [Click here to go back up to the Table of Contents 📗 ⤴️](#table-of-contents)
 
