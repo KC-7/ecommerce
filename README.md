@@ -1838,8 +1838,6 @@ See the coverage report below: ⬇️
 |-------------------------------------------------------|-------|------|-------|
 | TOTAL                                                 |  1531 |  431 |   72% |
 
-TBC
-
 ---
 
 ### Lighthouse Testing
@@ -1867,7 +1865,7 @@ The below code was added to pages that should not be accessible by webcrawlers, 
     <meta name="robots" content="noindex,nofollow">
 {% endblock %}
 
-Pages with no idex, no follow are not crawlable.
+Pages with no index, no follow are not crawlable as intended:
 
 <img src="readme_images/tests/lighthouse/seo-no-index-no-follow.png" style="max-width: 60%;">
 
@@ -1887,7 +1885,7 @@ I noticed I receive errors using normal Chrome browser due to one of my extensio
 | Edit Product          | ✅                    |
 | Create Product Page   | ✅                    |
 | Profile               | ✅                    |
-| AiPunk                | ✅                    |
+| Avatar                | ✅                    |
 | About Pages           | ✅                    |
 | About Page Detail     | ✅                    |
 | Edit About Page       | ✅                    |
@@ -1909,67 +1907,48 @@ TBC
 
 ### W3 Nu HTML Checker Testing
 
-| Page                  | Result                                      |
-|-----------------------|---------------------------------------------|
-| Home                  | ![Placeholder Image]()                      |
-| Products              | ![Placeholder Image]()                      |
-| Product Detail        | ![Placeholder Image]()                      |
-| Edit Product          | ![Placeholder Image]()                      |
-| Create Product Page   | ![Placeholder Image]()                      |
-| Profile               | ![Placeholder Image]()                      |
-| AiPunk                | ![Placeholder Image]()                      |
-| About Pages           | ![Placeholder Image]()                      |
-| About Page Detail     | ![Placeholder Image]()                      |
-| Edit About Page       | ![Placeholder Image]()                      |
-| Create About Page     | ![Placeholder Image]()                      |
-| Blog Posts            | ![Placeholder Image]()                      |
-| Blog Post Detail      | ![Placeholder Image]()                      |
-| Edit Blog Post        | ![Placeholder Image]()                      |
-| Create Blog Post      | ![Placeholder Image]()                      |
-| Shopping Bag          | ![Placeholder Image]()                      |
-| Checkout              | ![Placeholder Image]()                      |
-| Checkout Success      | ![Placeholder Image]()                      |
-| 404 Page              | ![Placeholder Image]()                      |
+[W3 Nu Html Checker](https://validator.w3.org/nu/) was used to check the HTML to ensure there are no errors:
 
-<img src="readme_images/general/tbc.png" style="max-width: 60%;">
+| Page                  | Result                 |
+|-----------------------|------------------------|
+| Home                  | ✅                    |
+| Products              | ✅                    |
+| Product Detail        | ✅                    |
+| About Pages           | ✅                    |
+| About Page Detail     | ✅                    |
+| Blog Posts            | ✅                    |
+| Blog Post Detail      | ✅                    |
+| Shopping Bag          | ✅                    |
+| Checkout              | ✅                    |
 
-TBC
+<img src="readme_images/tests/html-test.png" style="max-width: 60%;">
+
 
 ---
 
 ### W3C Jigsaw CSS Validation Testing
 
-| Page                  | Result                |
-|-----------------------|-----------------------|
+[W3C Jigsaw Validator](https://jigsaw.w3.org/css-validator/) was used for the CSS to ensure there are no errors:
+
+| Page                  | Result                                                                                                                    |
+|-----------------------|---------------------------------------------------------------------------------------------------------------------------|
 | Home                  | <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!"> |
-| Products              |                       |
-| Product Detail        |                       |
-| Edit Product          |                       |
-| Create Product Page   |                       |
-| Profile               |                       |
-| AiPunk                |                       |
+| Products              | <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!"> |
+| Product Detail        | <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!"> |
 | About Pages           | <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!"> |
-| About Page Detail     |                       |
-| Edit About Page       |                       |
-| Create About Page     |                       |
-| Blog Posts            |                       |
+| About Page Detail     | <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!"> |
+| Blog Posts            | <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!"> |
 | Blog Post Detail      | <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!"> |
-| Edit Blog Post        |                       |
-| Create Blog Post      |                       |
-| Shopping Bag          |                       |
-| Checkout              |                       |
-| Checkout Success      |                       |
-| 404 Page              |                       |
+| Shopping Bag          | <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!"> |
+| Checkout              | <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!"> |
 
-<img src="readme_images/general/tbc.png" style="max-width: 60%;">
-
-TBC
+<img src="readme_images/tests/css-test.png" style="max-width: 60%;">
 
 ---
 
 ### JSHint JS Testing
 
-JSHint was used to test the Javascript used on the site.
+[JSHint](https://jshint.com/) was used to test the Javascript used on the site.
 
 The tested code is free of errors:
 
