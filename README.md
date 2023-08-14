@@ -1577,6 +1577,18 @@ As this link is not intended to be crawlable, I resolved the issue by adding the
 
 <img src="readme_images/tests/lighthouse/seo-issue-fix.png" style="max-width: 60%;">
 
+---
+
+### NuHTML Checker flagging issues with Cookies Consent Script
+
+**Issue**
+
+The nuHTML checker returned an error for the location of the script as it was placed after ther </head> tag (as per Google Instructions).
+
+**Resolution**
+
+I resolved this issue by moving the cookies and GTAG script into the Post Load JS at the end of the body.
+
 [Click here to go back up to the Table of Contents 📗 ⤴️](#table-of-contents)
 
 </details>
@@ -1832,31 +1844,32 @@ TBC
 
 ### Lighthouse Testing
 
-| Page                  | Result                                      |
-|-----------------------|---------------------------------------------|
-| Home                  | ![Placeholder Image]()                      |
-| Products              | ![Placeholder Image]()                      |
-| Product Detail        | ![Placeholder Image]()                      |
-| Edit Product          | ![Placeholder Image]()                      |
-| Create Product Page   | ![Placeholder Image]()                      |
-| Profile               | ![Placeholder Image]()                      |
-| AiPunk                | ![Placeholder Image]()                      |
-| About Pages           | ![Placeholder Image]()                      |
-| About Page Detail     | ![Placeholder Image]()                      |
-| Edit About Page       | ![Placeholder Image]()                      |
-| Create About Page     | ![Placeholder Image]()                      |
-| Blog Posts            | ![Placeholder Image]()                      |
-| Blog Post Detail      | ![Placeholder Image]()                      |
-| Edit Blog Post        | ![Placeholder Image]()                      |
-| Create Blog Post      | ![Placeholder Image]()                      |
-| Shopping Bag          | ![Placeholder Image]()                      |
-| Checkout              | ![Placeholder Image]()                      |
-| Checkout Success      | ![Placeholder Image]()                      |
-| 404 Page              | ![Placeholder Image]()                      |
+Lighthouse testing has been extensively used to improve the site throughout development and during final testing.
 
-<img src="readme_images/general/tbc.png" style="max-width: 60%;">
+I have documented some of the tests below. Preformance for the products could be improved by converting all files to webp and updating the database accordingly.
 
-TBC
+| Page                  | Result                                                                  |
+|-----------------------|-------------------------------------------------------------------------|
+| Home                  | ![Lighthouse Test Image](readme_images/tests/lighthouse/home.png)       |
+| Products              | ![Lighthouse Test Image](readme_images/tests/lighthouse/products.png)   |
+| Product Detail        | ![Lighthouse Test Image](readme_images/tests/lighthouse/product.png)    |
+| Profile               | ![Lighthouse Test Image](readme_images/tests/lighthouse/profile.png)    |
+| Avatar                | ![Lighthouse Test Image](readme_images/tests/lighthouse/avatar.png)     |
+| About Pages           | ![Lighthouse Test Image](readme_images/tests/lighthouse/about.png)      |
+| About Page Detail     | ![Lighthouse Test Image](readme_images/tests/lighthouse/about-page.png) |
+| Blog Posts            | ![Lighthouse Test Image](readme_images/tests/lighthouse/blog.png)       |
+| Blog Post Detail      | ![Lighthouse Test Image](readme_images/tests/lighthouse/blog-page.png)  |
+| Sign In               | ![Lighthouse Test Image](readme_images/tests/lighthouse/signin.png)     |
+
+The below code was added to pages that should not be accessible by webcrawlers, such as creation / editinf of products, blogs and products pages.
+
+{% block extra_meta %}
+    <meta name="robots" content="noindex,nofollow">
+{% endblock %}
+
+Pages with no idex, no follow are not crawlable.
+
+<img src="readme_images/tests/lighthouse/seo-no-index-no-follow.png" style="max-width: 60%;">
 
 ---
 
@@ -1956,31 +1969,17 @@ TBC
 
 ### JSHint JS Testing
 
-| Page                  | Result                |
-|-----------------------|-----------------------|
-| Home                  |                       |
-| Products              | ✅                    |
-| Product Detail        |                       |
-| Edit Product          |                       |
-| Create Product Page   |                       |
-| Profile               |                       |
-| AiPunk                |                       |
-| About Pages           |                       |
-| About Page Detail     |                       |
-| Edit About Page       |                       |
-| Create About Page     |                       |
-| Blog Posts            |                       |
-| Blog Post Detail      |                       |
-| Edit Blog Post        |                       |
-| Create Blog Post      |                       |
-| Shopping Bag          |                       |
-| Checkout              |                       |
-| Checkout Success      |                       |
-| 404 Page              | N/A                   |
+JSHint was used to test the Javascript used on the site.
 
-<img src="readme_images/tests/jshint/products-btt-button.png" style="max-width: 60%;">
+The tested code is free of errors:
 
-TBC
+| Page                        | Result                                                                        |
+|-----------------------------|-------------------------------------------------------------------------------|
+| Back to Top of Page Button  | ![JSHint Test](readme_images/tests/jshint/products-btt-button.png)            |
+| Auto Hide Messages          | ![JSHint Test](readme_images/tests/jshint/auto-hide-message.png)              |
+| Shopping Bag                | ![JSHint Test](readme_images/tests/jshint/bag.png)                            |
+| CKEditor                    | ![JSHint Test](readme_images/tests/jshint/ckeditor.png)                       |
+| Quantity Input              | ![JSHint Test](readme_images/tests/jshint/qty-input.png)                      |
 
 ---
 
@@ -1990,7 +1989,9 @@ Flake8 was used to test the python code by running the following command in the 
 
     python3 -m flake8
 
-I resolved all of the issues where possible except the migration files which I ignored. The main issues I reolved where to do with: lines too long, white space at end of row or in an empty row & missing blank line at end of files.
+I resolved all of the issues where possible except the migration files which I ignored. The main issues I resolved where to do with: lines too long, white space at end of row or in an empty row & missing blank line at end of files.
+
+All of the code is running as intended.
 
 #### Results
 
@@ -2263,7 +2264,7 @@ I took a look at the set up procedure for registering the website with Google Bu
 
 - Follow the set up process.
 
-- Copy and paste the GTAG into the base template, just below the `</head>` tag as per Google's instructions.
+- Copy and paste the GTAG into the base template. Google's instructions recommended below the `</head>` tag but his caused issues with NuHTML Checker. I moved it into the the PostLoad JS instead at the end of the the body and it works without issues.
 
 - Save, commit and push changes.
 

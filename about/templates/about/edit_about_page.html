@@ -52,7 +52,7 @@
 {% endblock %}
 
 {% block postloadjs %}
-<!-- Remove CKEditor from devices with screen widths below 380px -->
+<!-- Load CKEditor on devices with screen widths wider than 380px -->
 <script>
   if (window.innerWidth >= 380) {
     ClassicEditor
