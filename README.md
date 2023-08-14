@@ -1612,19 +1612,19 @@ This minor bug is outstanding and does not affect the MVP, the uploaded pages st
 | Confirmation of product added | Admin receives confirmation that the product has been added successfully. | ![Product Added](readme_images/tests/manual_tests/admin_tests/2-product-added.png) | ✅ |
 | Edit an existing product | Admin can edit the details of an existing product. | ![Product Edit](readme_images/tests/manual_tests/admin_tests/3-product-edit.png) | ✅ |
 | Confirmation of product updated | Admin receives confirmation that the product details have been updated successfully. | ![Product Updated](readme_images/tests/manual_tests/admin_tests/4-product-updated.png) | ✅ |
-| Delete a product | Admin can delete a product from the list. | ![Product Delete](readme_images/tests/manual_tests/admin_tests/5-product-delete.png) | ✅ |
+| Delete a product | Admin can delete a product from the list by confirming their username in the modal confirmation window. | ![Product Delete](readme_images/tests/manual_tests/admin_tests/5-product-delete.png) | ✅ |
 | Confirmation of product deletion | Admin receives confirmation that the product has been deleted successfully. | ![Product Deleted](readme_images/tests/manual_tests/admin_tests/6-product-deleted.png) | ✅ |
-| Add a new about entry | Admin can add a new entry to the about page. | ![About Add](readme_images/tests/manual_tests/admin_tests/7-about-add.png) | ✅ |
+| Add a new about entry | Admin can add a new entry to the about page using CKEditor on devices wider than 380px. | ![About Add](readme_images/tests/manual_tests/admin_tests/7-about-add.png) | ✅ |
 | Confirmation of about entry added | Admin receives confirmation that the about entry has been added successfully. | ![About Added](readme_images/tests/manual_tests/admin_tests/8-about-added.png) | ✅ |
-| Edit an about entry | Admin can edit the details of an existing about entry. | ![About Edit](readme_images/tests/manual_tests/admin_tests/9-about-edit.png) | ✅ |
+| Edit an about entry | Admin can edit the details of an existing about entry using CKEditor on devices wider than 380px. | ![About Edit](readme_images/tests/manual_tests/admin_tests/9-about-edit.png) | ✅ |
 | Confirmation of about entry updated | Admin receives confirmation that the about entry details have been updated successfully. | ![About Edited](readme_images/tests/manual_tests/admin_tests/10-about-edited.png) | ✅ |
-| Delete an about entry | Admin can delete an entry from the about page. | ![About Delete](readme_images/tests/manual_tests/admin_tests/11-about-delete.png) | ✅ |
+| Delete an about entry | Admin can delete an entry from the about page by confirming their username in the modal confirmation window. | ![About Delete](readme_images/tests/manual_tests/admin_tests/11-about-delete.png) | ✅ |
 | Confirmation of about entry deletion | Admin receives confirmation that the about entry has been deleted successfully. | ![About Deleted](readme_images/tests/manual_tests/admin_tests/12-about-deleted.png) | ✅ |
-| Add a new blog post | Admin can add a new blog post. | ![Blog Add](readme_images/tests/manual_tests/admin_tests/13-blog-add.png) | ✅ |
+| Add a new blog post | Admin can add a new blog post using CKEditor on devices wider than 380px. | ![Blog Add](readme_images/tests/manual_tests/admin_tests/13-blog-add.png) | ✅ |
 | Confirmation of blog post added | Admin receives confirmation that the blog post has been added successfully. | ![Blog Added](readme_images/tests/manual_tests/admin_tests/14-blog-added.png) | ✅ |
-| Edit a blog post | Admin can edit the details of a blog post. | ![Blog Edit](readme_images/tests/manual_tests/admin_tests/15-blog-edit.png) | ✅ |
+| Edit a blog post | Admin can edit the details of a blog post using CKEditor on devices wider than 380px. | ![Blog Edit](readme_images/tests/manual_tests/admin_tests/15-blog-edit.png) | ✅ |
 | Confirmation of blog post updated | Admin receives confirmation that the blog post details have been updated successfully. | ![Blog Edited](readme_images/tests/manual_tests/admin_tests/16-blog-edited.png) | ✅ |
-| Delete a blog post | Admin can delete a blog post. | ![Blog Delete](readme_images/tests/manual_tests/admin_tests/17-blog-delete.png) | ✅ |
+| Delete a blog post | Admin can delete a blog post by confirming their username in the modal confirmation window. | ![Blog Delete](readme_images/tests/manual_tests/admin_tests/17-blog-delete.png) | ✅ |
 | Confirmation of blog post deletion | Admin receives confirmation that the blog post has been deleted successfully. | ![Blog Deleted](readme_images/tests/manual_tests/admin_tests/18-blog-deleted.png) | ✅ |
 
 #### Admin Portal Tests
@@ -1632,15 +1632,14 @@ This minor bug is outstanding and does not affect the MVP, the uploaded pages st
 | Test | Expected Result | Image | Completion Status |
 |------|-----------------|-------|-------------------|
 | View the admin portal | Admin can view the main dashboard of the admin portal. | ![Admin Portal](readme_images/tests/manual_tests/admin_portal_tests/1-admin-portal.png) | ✅ |
-| View the dashboard | Admin can view a comprehensive dashboard with relevant statistics and data. | ![Dashboard](readme_images/tests/manual_tests/admin_portal_tests/2-dashboard.png) | ✅ |
-| View the about page details | Admin can view the details of the about page from the portal. | ![About](readme_images/tests/manual_tests/admin_portal_tests/3-about.png) | ✅ |
-| Edit the about page details | Admin can make modifications to the about page details. | ![About Edit](readme_images/tests/manual_tests/admin_portal_tests/4-about-edit.png) | ✅ |
-| View email configurations | Admin can view the current email configurations. | ![Email Config](readme_images/tests/manual_tests/admin_portal_tests/4-email.png) | ✅ |
-| Edit email configurations | Admin can modify the current email configurations. | ![Email Edit](readme_images/tests/manual_tests/admin_portal_tests/5-email.png) | ✅ |
+| View the dashboard | Admin can view dashboard with relevant overview. | ![Dashboard](readme_images/tests/manual_tests/admin_portal_tests/2-dashboard.png) | ✅ |
+| View the about pages | Admin can view the list of about pages. | ![About](readme_images/tests/manual_tests/admin_portal_tests/3-about.png) | ✅ |
+| Edit the about page details | Admin can make modifications to the about page details using CKEditor. | ![About Edit](readme_images/tests/manual_tests/admin_portal_tests/4-about-edit.png) | ✅ |
+| View list of email | Admin can view the current email addresses in the database. | ![Email Config](readme_images/tests/manual_tests/admin_portal_tests/4-email.png) | ✅ |
 | View list of users | Admin can view a list of all registered users. | ![Users](readme_images/tests/manual_tests/admin_portal_tests/6-users.png) | ✅ |
-| View list of avatars | Admin can view a list of all available avatars. | ![Avatars](readme_images/tests/manual_tests/admin_portal_tests/7-avatars.png) | ✅ |
-| View list of blog posts | Admin can view a list of all blog posts. | ![Blog](readme_images/tests/manual_tests/admin_portal_tests/8-blog.png) | ✅ |
-| Edit a blog post | Admin can edit the details of a blog post. | ![Blog Edit](readme_images/tests/manual_tests/admin_portal_tests/9-blog-edit.png) | ✅ |
+| View list of avatars | Admin can view a list of all of the generated avatars with a preview image for each alongside their attributes. | ![Avatars](readme_images/tests/manual_tests/admin_portal_tests/7-avatars.png) | ✅ |
+| View list of blog posts | Admin can view a list of all blog posts with text and image previews. | ![Blog](readme_images/tests/manual_tests/admin_portal_tests/8-blog.png) | ✅ |
+| Edit a blog post | Admin can edit the details of a blog post using CKEditor. | ![Blog Edit](readme_images/tests/manual_tests/admin_portal_tests/9-blog-edit.png) | ✅ |
 | View list of orders | Admin can view a list of all placed orders. | ![Orders](readme_images/tests/manual_tests/admin_portal_tests/10-orders.png) | ✅ |
 | View list of product categories | Admin can view a list of all product categories. | ![Categories](readme_images/tests/manual_tests/admin_portal_tests/11-categories.png) | ✅ |
 | View list of products | Admin can view a list of all available products. | ![Products](readme_images/tests/manual_tests/admin_portal_tests/12-products.png) | ✅ |
@@ -2143,9 +2142,7 @@ TBC
 
 - Add order processing app for store owners to add tracking number once dispatched, etc. 
 
-- Set up email address on the custom domain, eg: contact@onlineai.art. Below video tutorial demonstrates free work around to set up custom email domain on Google with Cloudflare.
- - [YouTube: Gmail Custom Email Domain on Cloudflare using ImprovMX](https://www.youtube.com/watch?v=T4n8EvtVDBE)
- - [ImprovMX: Website to create free Alias](https://improvmx.com/)
+- Set up email address on the custom domain, eg: contact@onlineai.art. The following video tutorial demonstrates free work around to set up custom email domain on Google with Cloudflare: [1 YouTube: Gmail Custom Email Domain on Cloudflare using ImprovMX](https://www.youtube.com/watch?v=T4n8EvtVDBE), [2 ImprovMX: Website to create free Alias](https://improvmx.com/)
 
 - Set up the footer as an app so the admins can modify links via the admin portal without changing the websites code.
 
@@ -2474,11 +2471,6 @@ I would like to give special thanks to the following:
  - I used it to format my external excel file that I was using to track the user stories
  - It was useful when troubleshooting errors while setting up the django app for the aiPunk generations
  - It was used when creating the automated tests although they required modifcations to work
- - 
-
- - Despite having previously set up an [django app with DALL-E 2 integrated for creating custom images](cre8ai.art), I decided to use newly created open source, free to use, local, ai image generation software to create the images. I used model SDXL 0.9 was only released a couple of weeks ago with its refiner model as well using ComfyUI interface. You will need a nVidea graphic card with atleast 10gb vram to run the application. I found the images generated with this app are currently ahead of the images created by Dall-E and since its run locally, it has no API charges. I have also used different models on Automatic1111 (A1111) UI for creating images locally but found ComfyUI and the new SD_XL model provided better quality generation alongside increased resolution size which is great for custom printed products. Unfortuntly ComfyUI using the SDXL model with refiner is quiete slow, especially in comparison to the standard model on A111. ------------------------- PROVIDE MORE DETAIL, Create section in readme, how to etc..................
-
-- 
 
 [Click here to go back up to the Table of Contents 📗 ⤴️](#table-of-contents)
 
