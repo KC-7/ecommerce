@@ -9,7 +9,7 @@
 
 ## Live Links
 
-[onlineAI.art](https://onlineai.art/)
+[👉 onlineAI.art 👈](https://onlineai.art/)
 
 [onlineAI.art - Admin Portal](https://onlineai.art/admin/)
 
@@ -25,21 +25,44 @@
 
 This is a django project for an E-Commerce Store which specializes in offering custom printed products, each designed uniquely using AI image generation.
 
-The site allows users to view and add products to their bags, search and filter products by category, price, etc. They can checkout using Stripe payments. The can view about pages and blog posts. They can sign up for a profile, save delivery information, view past orders etc. An algorithimically generaterad avatar called an aiPunk is created for each user.
-
-Admin users can create, modify or delete the about pages, blog posts and products. They can also access a custom admin portal for additional admin functionality.
-
 ### Main Site - User Preview
 
 <img src="readme_images/gifs/user-preview.gif" style="max-width: 60%;">
+
+The platform is a robust, web-based application developed using the Django framework. This platform provides users with a seamless shopping experience, from product browsing to secure checkout. Admin features offer comprehensive management tools for products, blogs, and other site content. Integrated with Stripe for payment processing and AWS S3 for static and media file hosting, the platform is scalable and optimized for performance. The use of modern web technologies, combined with best coding practices, ensures a reliable and efficient system for both users and administrators. This platform is designed to be intuitive for users while providing developers with a clean and modular codebase for further enhancements.
 
 ### Main Site - Admin Preview
 
 <img src="readme_images/gifs/admin-preview.gif" style="max-width: 60%;">
 
+Admin users can create, modify or delete the about pages, blog posts and products. They can also access a custom admin portal for additional admin functionality.
+
 ### Admin Portal Preview
 
 <img src="readme_images/gifs/admin-portal-preview.gif" style="max-width: 60%;">
+
+---
+
+## Technologies and Services
+
+| Technology / Service | Description |
+|-------------------|-------------|
+| Django            | A high-level Python Web Framework that encourages rapid design and clean, pragmatic design. |
+| Python            | A versatile, high-level programming language used for web development and various other applications. |
+| HTML              | The standard markup language used for structuring web content. |
+| CSS               | A stylesheet language used for describing the look and formatting of a document written in HTML. |
+| JavaScript        | A programming language that enables interactive web pages and is a part of most web browsers. |
+| AWS (Amazon Web Services) | A subsidiary of Amazon providing on-demand cloud computing platforms and APIs. |
+| ElephantSQL       | A fully managed PostgreSQL database hosting service with automated backups, scaling, and high availability. |
+| Stripe            | An online payment processing platform that supports online money transfers. |
+| Git               | A distributed version control system used to track changes in any set of files. |
+| GitHub            | A platform that provides hosting for software development and a community of developers to discover, share, and build better software. |
+| GitPod            | An online integrated development environment for GitHub. It provides a complete dev environment, enabling you to start coding immediately. |
+| Cloudflare        | A web performance and security company that provides online services to protect and accelerate websites online. |
+| NameCheap         | An ICANN-accredited domain name registrar, which provides domain name registration and web hosting. |
+| Bootstrap         | A free and open-source CSS framework used for responsive, mobile-first front-end web development. |
+| CKEditor          | A popular WYSIWYG editor that brings common word processor features directly to web pages. |
+| Jazzmin           | A fresh lick of paint for the Django admin interface. |
 
 ---
 
@@ -333,7 +356,101 @@ I created the wireframes for the Home, Products and Product Page using [Figma](h
 
 ### Data Schema
 
-I used [Lucid Chart](https://lucid.app/) to create the **Entity Relationship Diagram**:
+See the models in the project below: 
+
+#### UserProfile
+
+This model contains the user profile data.
+
+| Field(s)                                         | Description                                               |
+|--------------------------------------------------|-----------------------------------------------------------|
+| user                                             | A one-to-one field with Django's built-in User model. This establishes a unique profile for each user. |
+| default_phone_number, default_street_address1, default_street_address2, default_town_or_city, default_county, default_postcode, default_country | These fields store the default shipping information for the user. |
+
+#### Category
+
+This model defines the different categories for products.
+
+| Field(s)    | Description |
+|-------------|-------------|
+| name        | A char field that holds the category name. |
+| friendly_name | A char field that holds a user-friendly version of the category name. |
+
+#### Product
+
+This model contains the details of products.
+
+| Field(s)   | Description |
+|------------|-------------|
+| category   | A foreign key to the Category model. This sets a many-to-one relationship between products and their categories. |
+| name       | A char field that holds the product name. |
+| description | A text field that provides a description of the product. |
+| price      | A decimal field for the product's price. |
+| rating     | A decimal field to store the average rating for the product. |
+| image_url  | A URL field to hold the link to the product's image. |
+| image      | An image field to store the product's image. |
+
+#### Order
+
+This model maintains the details of customer orders.
+
+| Field(s)   | Description |
+|------------|-------------|
+| order_number | A char field that stores a unique order number. |
+| user_profile | A foreign key to the UserProfile model. This establishes a connection between orders and user profiles. |
+| full_name   | A char field that stores the full name of the customer. |
+| email       | An email field that stores the customer's email address. |
+| phone_number, street_address1, street_address2, town_or_city, county, postcode, country | These fields store the shipping information for the order. |
+| date        | A date field that keeps track of when the order was made. |
+| delivery_cost | A decimal field to store the cost of delivery. |
+| order_total | A decimal field that stores the total cost of the order. |
+| grand_total | A decimal field that combines the order_total and delivery_cost. |
+| original_bag | A text field to store the contents of the shopping bag when the order was made. |
+| stripe_pid  | A char field to store the customer's Stripe payment ID. |
+
+#### OrderLineItem
+
+This model keeps track of individual order line items.
+
+| Field(s)   | Description |
+|------------|-------------|
+| order      | A foreign key to the Order model. This sets a many-to-one relationship between line items and orders. |
+| product    | A foreign key to the Product model. This sets a many-to-one relationship between line items and products. |
+| product_size | A char field to store the size of the product. |
+| quantity   | An integer field to store the quantity of the product. |
+| lineitem_total | A decimal field to store the total cost of the line item. |
+
+#### BlogPost
+
+This model maintains the details of blog posts.
+
+| Field(s)   | Description |
+|------------|-------------|
+| title      | A char field that stores the title of the blog post. |
+| slug       | A slug field that holds a URL-friendly version of the blog post title. |
+| introduction | A char field that provides an introduction to the blog post. |
+| content    | A rich text field to store the main content of the blog post. |
+| created_date | A date field that keeps track of when the blog post was created. |
+| published_date | A date field that keeps track of when the blog post was published. |
+| views      | An integer field to store the number of times the blog post has been viewed. |
+| tag        | A char field to store tags related to the blog post. |
+| image      | An image field to store the blog post's image. |
+
+### Relationships
+
+Relationships:
+
+- A User has one UserProfile.
+- A UserProfile can have multiple Orders.
+- Each Order can have multiple OrderLineItems.
+- Each OrderLineItem refers to a single Product.
+- Each Product belongs to a Category.
+- Each Product can have one Discount.
+- A UserProfile can have one Avatar.
+
+### Entity Relationship Diagram
+
+I used [Lucid Chart](https://lucid.app/) to create the Entity Relationship Diagram:
 
 <img src="readme_images/data_schema/entity-relationship-diagram.png" style="max-width: 60%;">
 
@@ -664,37 +781,36 @@ TBC
 
 The project relies on a range of Python packages to ensure its smooth operation and delivery of features. Here's a brief overview of each dependency in the `requirements.txt` and its use case:
 
-| **Package**           | **Version** | **Use Case**                                                                                     |
-|-----------------------|-------------|--------------------------------------------------------------------------------------------------|
-| asgiref               | 3.7.2       | Interface between your web service and ASGI server, ensuring asynchronous capabilities.          |
-| boto3                 | 1.28.5      | Amazon Web Services (AWS) SDK for Python, allowing for AWS service integrations.                 |
-| botocore              | 1.31.5      | Core foundation for the AWS SDK for Python, powering `boto3`.                                    |
-| dj-database-url       | 0.5.0       | Utilities to utilize database URLs with Django for configuration simplicity.                     |
-| Django                | 3.2.20      | The core Django framework powering the entire web application.                                   |
-| django-allauth        | 0.41.0      | Provides authentication, registration, and account management features.                          |
-| django-ckeditor       | 6.6.1       | Rich-text WYSIWYG editor for Django models and forms.                                            |
-| django-countries      | 7.2.1       | Utility to handle country fields in Django models and forms.                                     |
-| django-crispy-forms   | 1.14.0      | Enables rendering of Django forms with crispy Bootstrap styles.                                  |
-| django-jazzmin        | 2.6.0       | A fresh take on the Django admin interface, for improved UX.                                     |
-| django-js-asset       | 2.1.0       | Helps with generating URLs for your static files with Django.                                    |
-| django-storages       | 1.13.2      | Collection of custom storage backends for Django, notably for cloud storage.                     |
-| gunicorn              | 21.1.0      | A Python WSGI HTTP Server for deploying Django applications in production environments.          |
-| jmespath              | 1.0.1       | Allows querying JSON documents, used internally by `boto3` and `botocore`.                       |
-| numpy                 | 1.24.4      | Fundamental package for numerical computations in Python.                                        |
-| oauthlib              | 3.2.2       | OAuth library integration for Django, used with `django-allauth`.                                |
-| Pillow                | 10.0.0      | Python Imaging Library, for handling image processing tasks in Django.                           |
-| psycopg2              | 2.9.6       | PostgreSQL adapter for Django, allows using PostgreSQL as the database backend.                  |
-| python3-openid        | 3.2.0       | Provides OpenID support for Python, used in conjunction with `django-allauth` for authentication.|
-| pytz                  | 2023.3      | World timezone definitions for Python, utilized by Django for timezone-aware operations.         |
-| requests-oauthlib     | 1.3.1       | Provides OAuthlib authentication support for Python's `requests` module.                         |
-| s3transfer            | 0.6.1       | Amazon S3 Transfer Manager for Python, used internally by `boto3`.                               |
-| sqlparse              | 0.4.4       | A utility to parse SQL strings, used by Django during database operations.                       |
-| stripe                | 5.5.0       | Enables Stripe payment integrations for Django, allowing secure payment processing.              |
-| urllib3               | 1.26.16     | HTTP client for Python, used internally by several packages for making HTTP requests.            |
+| Package            | Version | Use Case                                                |
+|--------------------|---------|---------------------------------------------------------|
+| asgiref            | 3.7.2   | ASGI compatibility needed by Django                     |
+| boto3              | 1.28.5  | Amazon Web Services SDK for Python                      |
+| botocore           | 1.31.5  | Core functionality for boto3                            |
+| coverage           | 7.2.7   | Tool for measuring code coverage of Python programs     |
+| dj-database-url    | 0.5.0   | Database URL support for Django                         |
+| Django             | 3.2.20  | High-level Python web framework                         |
+| django-allauth     | 0.41.0  | Integrated set of Django apps addressing authentication |
+| django-ckeditor    | 6.6.1   | Rich-text editing for Django                            |
+| django-countries   | 7.2.1   | Django country field with continents                    |
+| django-crispy-forms| 1.14.0  | Forms in a crispy way for Django                        |
+| django-jazzmin     | 2.6.0   | Jazz up the Django admin                                |
+| django-js-asset    | 2.1.0   | Bring Django's "static" template tag to JavaScript      |
+| django-storages    | 1.13.2  | Custom storage backends for Django                      |
+| gunicorn           | 21.1.0  | WSGI HTTP server for UNIX                               |
+| jmespath           | 1.0.1   | JSON Matching Expressions                               |
+| numpy              | 1.24.4  | Mathematical library for Python                         |
+| oauthlib           | 3.2.2   | OAuth library                                           |
+| Pillow             | 10.0.0  | Python Imaging Library                                  |
+| psycopg2           | 2.9.6   | PostgreSQL adapter for Python                           |
+| python3-openid     | 3.2.0   | Python 3 port of python-openid                          |
+| pytz               | 2023.3  | Time zone definitions                                   |
+| requests-oauthlib  | 1.3.1   | OAuthlib authentication support for requests            |
+| s3transfer         | 0.6.1   | Amazon S3 Transfer Manager for Python                   |
+| sqlparse           | 0.4.4   | SQL parser for Python                                   |
+| stripe             | 5.5.0   | Stripe API wrapper                                      |
+| urllib3            | 1.26.16 | HTTP client for Python                                  |
 
 For installation, simply run `pip3 install -r requirements.txt`.
-
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX TBC
 
 [Click here to go back up to the Table of Contents 📗 ⤴️](#table-of-contents)
 
@@ -1130,7 +1246,7 @@ See below guide to set up ComfyUI with SDXL base and refiner models locally. Not
 
 <img src="readme_images/general/painting.png" style="max-width: 60%;">
 
-#### Setup Guide
+#### Setup Guide for Comfy UI with SDXL 1.0 base and refiner models
 
 To create images using SDXL v1.0 and the node-based interface ComfyUI, follow these steps:
 
@@ -1404,7 +1520,7 @@ Ideally all of the images should be served in WEBP format going forward but conv
 
 ---
 
-### Custom CKEditor not responding well
+### Custom CKEditor not responding well on small mobile devices
 
 **Issue**
 
@@ -1469,19 +1585,19 @@ This minor bug is outstanding and does not affect the MVP, the uploaded pages st
 | Redirection after email confirmation | After confirming the email address, user is redirected to the sign-in page. | ![Redirection](readme_images/tests/manual_tests/user_tests/5-email-confirmed-sign-in-redirection.png) | ✅ |
 | Signed-in Home Page | After signing in, user sees the homepage with a personalized greeting. | ![Signed In](readme_images/tests/manual_tests/user_tests/6-signed-in-home.png) | ✅ |
 | User profile page | User can view their profile details. | ![Profile](readme_images/tests/manual_tests/user_tests/7-profile.png) | ✅ |
-| Change profile avatar | User can change their profile avatar. | ![Avatar](readme_images/tests/manual_tests/user_tests/8-avatar.png) | ✅ |
+| Avatar attributes page | User can view their avatar and its attributes. | ![Avatar](readme_images/tests/manual_tests/user_tests/8-avatar.png) | ✅ |
 | Browse products | User can browse the list of available products. | ![Products](readme_images/tests/manual_tests/user_tests/9-products.png) | ✅ |
 | Pagination in products page | User can navigate through multiple pages of products. | ![Products Paginated](readme_images/tests/manual_tests/user_tests/10-products-pagination.png) | ✅ |
 | Sort products | User can sort products based on different criteria. | ![Sort Products](readme_images/tests/manual_tests/user_tests/11-products-sort-by.png) | ✅ |
 | View product details | User can view detailed information about a specific product. | ![Product Detail](readme_images/tests/manual_tests/user_tests/12-product-detail.png) | ✅ |
 | Add product to bag | User can add a product to their shopping bag. | ![Add to Bag](readme_images/tests/manual_tests/user_tests/13-product-added-to-bag.png) | ✅ |
-| View bag below threshold | User can view their bag and see a message indicating that they need to add more for free delivery. | ![Below Threshold](readme_images/tests/manual_tests/user_tests/14-bag-below-threshold.png) | ✅ |
-| View bag above threshold | User can view their bag which qualifies for free delivery. | ![Above Threshold](readme_images/tests/manual_tests/user_tests/15-bag-above-threshold.png) | ✅ |
-| Initiate checkout process | User can initiate the checkout process by clicking on the checkout button. | ![Checkout](readme_images/tests/manual_tests/user_tests/16-checkout.png) | ✅ |
+| View bag below threshold | User can view their bag and see a message indicating that they need to add more for free delivery. A 20% delivery charge is added to the order. | ![Below Threshold](readme_images/tests/manual_tests/user_tests/14-bag-below-threshold.png) | ✅ |
+| Add more products and view bag when above free delivery threshold | User can view their bag, it will qualify for free delivery. | ![Above Threshold](readme_images/tests/manual_tests/user_tests/15-bag-above-threshold.png) | ✅ |
+| Initiate checkout process by clicking on the checkout button. | The check out page will be loaded. The user must complete the form alongside entering the one of the Stripe payment card details to complete the purchase (e.g. Card No. 4242 4242 4242 4242, Exp. 04/24, CVC 242). | ![Checkout](readme_images/tests/manual_tests/user_tests/16-checkout.png) | ✅ |
 | View order confirmation | User can view the order confirmation after successfully placing an order. | ![Order Confirmation](readme_images/tests/manual_tests/user_tests/17-order-confirmation.png) | ✅ |
-| View profile order history and saved delivery info | User can view their past orders and saved delivery information in their profile. | ![Order History](readme_images/tests/manual_tests/user_tests/18-profile-order-history-saved-delivery-info.png) | ✅ |
-| View the about page | User can view the about page of the e-commerce platform. | ![About Page](readme_images/tests/manual_tests/user_tests/19-about.png) | ✅ |
-| View about page | User can view the about page of the website. | ![About Page](readme_images/tests/manual_tests/user_tests/20-about-page.png) | ✅ |
+| View profile to see order history and saved delivery info | User can view their past orders and saved delivery information in their profile. | ![Order History](readme_images/tests/manual_tests/user_tests/18-profile-order-history-saved-delivery-info.png) | ✅ |
+| View the about page | User can view the about page to see a full list of the about pages. | ![About Page](readme_images/tests/manual_tests/user_tests/19-about.png) | ✅ |
+| View about page | User can view a specific about page on the website (e.g. contact). | ![About Page](readme_images/tests/manual_tests/user_tests/20-about-page.png) | ✅ |
 | Browse blog posts | User can browse the list of available blog posts. | ![Blog Posts](readme_images/tests/manual_tests/user_tests/21-blog.png) | ✅ |
 | Pagination in blog posts page | User can navigate through multiple pages of blog posts. | ![Blog Posts Pagination](readme_images/tests/manual_tests/user_tests/22-blog-paginated.png) | ✅ |
 | View individual blog post | User can view content of an individual blog post. | ![Blog Post](readme_images/tests/manual_tests/user_tests/23-blog-post.png) | ✅ |
@@ -1549,7 +1665,7 @@ This minor bug is outstanding and does not affect the MVP, the uploaded pages st
 
 ### Automated Testing
 
-Thirty three automated tests were created for the project using ChatGPT. They are located in the tests.py files in the following apps: about, avatar, bag, blog, checkout, home, products & profiles. These were created to support the thorough manual testing process.
+Thirty three automated tests were created for the project to compliment the thorough manual testing. The majority of these tests where created using ChatGPT. They are located in the tests.py files in the following apps: about, avatar, bag, blog, checkout, home, products & profiles.
 
 #### Coverage Installation
 
@@ -1698,27 +1814,27 @@ TBC
 
 ### Lighthouse Testing
 
-| Page                  | Result                |
-|-----------------------|-----------------------|
-| Home                  |                       |
-| Products              |                       |
-| Product Detail        |                       |
-| Edit Product          |                       |
-| Create Product Page   |                       |
-| Profile               |                       |
-| AiPunk                |                       |
-| About Pages           |                       |
-| About Page Detail     |                       |
-| Edit About Page       |                       |
-| Create About Page     |                       |
-| Blog Posts            |                       |
-| Blog Post Detail      |                       |
-| Edit Blog Post        |                       |
-| Create Blog Post      |                       |
-| Shopping Bag          |                       |
-| Checkout              |                       |
-| Checkout Success      |                       |
-| 404 Page              |                       |
+| Page                  | Result                                      |
+|-----------------------|---------------------------------------------|
+| Home                  | ![Placeholder Image]()                      |
+| Products              | ![Placeholder Image]()                      |
+| Product Detail        | ![Placeholder Image]()                      |
+| Edit Product          | ![Placeholder Image]()                      |
+| Create Product Page   | ![Placeholder Image]()                      |
+| Profile               | ![Placeholder Image]()                      |
+| AiPunk                | ![Placeholder Image]()                      |
+| About Pages           | ![Placeholder Image]()                      |
+| About Page Detail     | ![Placeholder Image]()                      |
+| Edit About Page       | ![Placeholder Image]()                      |
+| Create About Page     | ![Placeholder Image]()                      |
+| Blog Posts            | ![Placeholder Image]()                      |
+| Blog Post Detail      | ![Placeholder Image]()                      |
+| Edit Blog Post        | ![Placeholder Image]()                      |
+| Create Blog Post      | ![Placeholder Image]()                      |
+| Shopping Bag          | ![Placeholder Image]()                      |
+| Checkout              | ![Placeholder Image]()                      |
+| Checkout Success      | ![Placeholder Image]()                      |
+| 404 Page              | ![Placeholder Image]()                      |
 
 <img src="readme_images/general/tbc.png" style="max-width: 60%;">
 
@@ -1762,27 +1878,27 @@ TBC
 
 ### W3 Nu HTML Checker Testing
 
-| Page                  | Result                |
-|-----------------------|-----------------------|
-| Home                  |                       |
-| Products              |                       |
-| Product Detail        |                       |
-| Edit Product          |                       |
-| Create Product Page   |                       |
-| Profile               |                       |
-| AiPunk                |                       |
-| About Pages           |                       |
-| About Page Detail     |                       |
-| Edit About Page       |                       |
-| Create About Page     |                       |
-| Blog Posts            |                       |
-| Blog Post Detail      |                       |
-| Edit Blog Post        |                       |
-| Create Blog Post      |                       |
-| Shopping Bag          |                       |
-| Checkout              |                       |
-| Checkout Success      |                       |
-| 404 Page              |                       |
+| Page                  | Result                                      |
+|-----------------------|---------------------------------------------|
+| Home                  | ![Placeholder Image]()                      |
+| Products              | ![Placeholder Image]()                      |
+| Product Detail        | ![Placeholder Image]()                      |
+| Edit Product          | ![Placeholder Image]()                      |
+| Create Product Page   | ![Placeholder Image]()                      |
+| Profile               | ![Placeholder Image]()                      |
+| AiPunk                | ![Placeholder Image]()                      |
+| About Pages           | ![Placeholder Image]()                      |
+| About Page Detail     | ![Placeholder Image]()                      |
+| Edit About Page       | ![Placeholder Image]()                      |
+| Create About Page     | ![Placeholder Image]()                      |
+| Blog Posts            | ![Placeholder Image]()                      |
+| Blog Post Detail      | ![Placeholder Image]()                      |
+| Edit Blog Post        | ![Placeholder Image]()                      |
+| Create Blog Post      | ![Placeholder Image]()                      |
+| Shopping Bag          | ![Placeholder Image]()                      |
+| Checkout              | ![Placeholder Image]()                      |
+| Checkout Success      | ![Placeholder Image]()                      |
+| 404 Page              | ![Placeholder Image]()                      |
 
 <img src="readme_images/general/tbc.png" style="max-width: 60%;">
 
@@ -1856,9 +1972,107 @@ Flake8 was used to test the python code by running the following command in the 
 
     python3 -m flake8
 
-TBC
+I resolved all of the issues where possible except the migration files which I ignored. The main issues I reolved where to do with: lines too long, white space at end of row or in an empty row & missing blank line at end of files.
 
-<img src="readme_images/general/tbc.png" style="max-width: 60%;">
+#### Results
+
+    gitpod /workspace/ecommerce (main) $ python3 -m flake8
+    ./.vscode/arctictern.py:10:1: F401 'subprocess' imported but unused
+    ./.vscode/arctictern.py:20:80: E501 line too long (92 > 79 characters)
+    ./.vscode/arctictern.py:48:22: E124 closing bracket does not match visual indentation
+    ./.vscode/arctictern.py:51:22: E124 closing bracket does not match visual indentation
+    ./.vscode/arctictern.py:64:1: W293 blank line contains whitespace
+    ./.vscode/arctictern.py:71:1: E302 expected 2 blank lines, found 1
+    ./.vscode/arctictern.py:79:1: W293 blank line contains whitespace
+    ./.vscode/arctictern.py:100:10: E231 missing whitespace after ','
+    ./.vscode/arctictern.py:109:1: W293 blank line contains whitespace
+    ./.vscode/arctictern.py:110:80: E501 line too long (81 > 79 characters)
+    ./.vscode/arctictern.py:136:1: W293 blank line contains whitespace
+    ./.vscode/arctictern.py:154:19: E712 comparison to True should be 'if cond is True:' or 'if cond:'
+    ./.vscode/arctictern.py:156:1: W293 blank line contains whitespace
+    ./.vscode/arctictern.py:169:80: E501 line too long (98 > 79 characters)
+    ./.vscode/arctictern.py:178:80: E501 line too long (92 > 79 characters)
+    ./.vscode/make_url.py:10:39: E231 missing whitespace after ','
+    ./.vscode/make_url.py:11:36: E231 missing whitespace after ','
+    ./.vscode/make_url.py:12:39: E231 missing whitespace after ','
+    ./about/migrations/0001_initial.py:17:80: E501 line too long (117 > 79 characters)
+    ./avatar/generate.py:132:80: E501 line too long (92 > 79 characters)
+    ./avatar/generate.py:180:80: E501 line too long (94 > 79 characters)
+    ./avatar/migrations/0001_initial.py:20:80: E501 line too long (117 > 79 characters)
+    ./avatar/migrations/0001_initial.py:24:80: E501 line too long (121 > 79 characters)
+    ./avatar/migrations/0002_auto_20230730_1422.py:21:80: E501 line too long (85 > 79 characters)
+    ./bag/models.py:1:1: F401 'django.db.models' imported but unused
+    ./bag/tests.py:23:9: F841 local variable 'response' is assigned to but never used
+    ./bag/tests.py:32:9: F841 local variable 'response' is assigned to but never used
+    ./bag/tests.py:40:9: F841 local variable 'response' is assigned to but never used
+    ./blog/migrations/0001_initial.py:18:80: E501 line too long (117 > 79 characters)
+    ./blog/migrations/0001_initial.py:20:80: E501 line too long (82 > 79 characters)
+    ./blog/views.py:65:80: E501 line too long (93 > 79 characters)
+    ./blog/widgets.py:9:80: E501 line too long (83 > 79 characters)
+    ./checkout/apps.py:8:9: F401 'checkout.signals' imported but unused
+    ./checkout/migrations/0001_initial.py:20:80: E501 line too long (117 > 79 characters)
+    ./checkout/migrations/0001_initial.py:21:80: E501 line too long (82 > 79 characters)
+    ./checkout/migrations/0001_initial.py:25:80: E501 line too long (80 > 79 characters)
+    ./checkout/migrations/0001_initial.py:26:80: E501 line too long (85 > 79 characters)
+    ./checkout/migrations/0001_initial.py:29:80: E501 line too long (92 > 79 characters)
+    ./checkout/migrations/0001_initial.py:30:80: E501 line too long (83 > 79 characters)
+    ./checkout/migrations/0001_initial.py:32:80: E501 line too long (98 > 79 characters)
+    ./checkout/migrations/0001_initial.py:33:80: E501 line too long (97 > 79 characters)
+    ./checkout/migrations/0001_initial.py:34:80: E501 line too long (97 > 79 characters)
+    ./checkout/migrations/0001_initial.py:42:80: E501 line too long (117 > 79 characters)
+    ./checkout/migrations/0001_initial.py:43:80: E501 line too long (88 > 79 characters)
+    ./checkout/migrations/0001_initial.py:45:80: E501 line too long (104 > 79 characters)
+    ./checkout/migrations/0001_initial.py:46:80: E501 line too long (137 > 79 characters)
+    ./checkout/migrations/0001_initial.py:47:80: E501 line too long (115 > 79 characters)
+    ./checkout/migrations/0002_order_user_profile.py:18:80: E501 line too long (155 > 79 characters)
+    ./checkout/models.py:64:80: E501 line too long (95 > 79 characters)
+    ./checkout/tests.py:4:1: F811 redefinition of unused 'Product' from line 2
+    ./checkout/views.py:75:80: E501 line too long (81 > 79 characters)
+    ./checkout/webhook_handler.py:79:80: E501 line too long (80 > 79 characters)
+    ./checkout/webhook_handler.py:80:80: E501 line too long (80 > 79 characters)
+    ./checkout/webhook_handler.py:140:80: E501 line too long (81 > 79 characters)
+    ./checkout/webhooks.py:28:5: F841 local variable 'e' is assigned to but never used
+    ./checkout/webhooks.py:31:5: F841 local variable 'e' is assigned to but never used
+    ./checkout/webhooks.py:43:80: E501 line too long (86 > 79 characters)
+    ./ecommerce/settings.py:95:80: E501 line too long (84 > 79 characters)
+    ./ecommerce/settings.py:155:80: E501 line too long (91 > 79 characters)
+    ./ecommerce/settings.py:158:80: E501 line too long (81 > 79 characters)
+    ./ecommerce/settings.py:161:80: E501 line too long (82 > 79 characters)
+    ./ecommerce/settings.py:164:80: E501 line too long (83 > 79 characters)
+    ./ecommerce/settings.py:249:80: E501 line too long (91 > 79 characters)
+    ./ecommerce/settings.py:252:80: E501 line too long (109 > 79 characters)
+    ./ecommerce/settings.py:255:80: E501 line too long (102 > 79 characters)
+    ./ecommerce/settings.py:258:80: E501 line too long (92 > 79 characters)
+    ./ecommerce/settings.py:261:80: E501 line too long (114 > 79 characters)
+    ./ecommerce/settings.py:276:80: E501 line too long (88 > 79 characters)
+    ./ecommerce/settings.py:277:80: E501 line too long (103 > 79 characters)
+    ./ecommerce/settings.py:289:80: E501 line too long (83 > 79 characters)
+    ./ecommerce/settings.py:294:80: E501 line too long (93 > 79 characters)
+    ./ecommerce/settings.py:303:80: E501 line too long (99 > 79 characters)
+    ./ecommerce/settings.py:312:80: E501 line too long (84 > 79 characters)
+    ./ecommerce/urls.py:35:1: F811 redefinition of unused 'handler404' from line 6
+    ./products/migrations/0001_initial.py:18:80: E501 line too long (117 > 79 characters)
+    ./products/migrations/0001_initial.py:20:80: E501 line too long (91 > 79 characters)
+    ./products/migrations/0001_initial.py:29:80: E501 line too long (117 > 79 characters)
+    ./products/migrations/0001_initial.py:30:80: E501 line too long (81 > 79 characters)
+    ./products/migrations/0001_initial.py:33:80: E501 line too long (89 > 79 characters)
+    ./products/migrations/0001_initial.py:35:80: E501 line too long (103 > 79 characters)
+    ./products/migrations/0001_initial.py:36:80: E501 line too long (87 > 79 characters)
+    ./products/migrations/0001_initial.py:37:80: E501 line too long (82 > 79 characters)
+    ./products/migrations/0001_initial.py:38:80: E501 line too long (141 > 79 characters)
+    ./products/views.py:49:80: E501 line too long (80 > 79 characters)
+    ./products/widgets.py:9:80: E501 line too long (87 > 79 characters)
+    ./profiles/forms.py:33:80: E501 line too long (98 > 79 characters)
+    ./profiles/migrations/0001_initial.py:21:80: E501 line too long (117 > 79 characters)
+    ./profiles/migrations/0001_initial.py:22:80: E501 line too long (97 > 79 characters)
+    ./profiles/migrations/0001_initial.py:23:80: E501 line too long (100 > 79 characters)
+    ./profiles/migrations/0001_initial.py:24:80: E501 line too long (100 > 79 characters)
+    ./profiles/migrations/0001_initial.py:25:80: E501 line too long (97 > 79 characters)
+    ./profiles/migrations/0001_initial.py:26:80: E501 line too long (91 > 79 characters)
+    ./profiles/migrations/0001_initial.py:27:80: E501 line too long (111 > 79 characters)
+    ./profiles/migrations/0001_initial.py:28:80: E501 line too long (93 > 79 characters)
+    ./profiles/migrations/0001_initial.py:29:80: E501 line too long (121 > 79 characters)
+    ./profiles/migrations/0002_userprofile_avatar.py:16:80: E501 line too long (81 > 79 characters)
 
 ---
 
@@ -2214,36 +2428,27 @@ Throughout the development, I have aimed to meet the following learning outcomes
 
 Here is a list of useful links that were used as part of the project. Thanks to all contributers to the below content and services.
 
-| Name                                                                               | Use                                    |
-| ---------------------------------------------------------------------------------- | -------------------------------------- |
-| [AWS](https://aws.amazon.com/)                                                     | Cloud storage services                 |
-| [Figma](https://figma.com/)                                                        | Used to create wireframes              |
-| [Bootstrap Documentation](https://getbootstrap.com/docs/)                          | Official Bootstrap documentation       |
-| [Canva](https://canva.com/)                                                        | Graphic design and photo editing       |
-| [Django Documentation](https://docs.djangoproject.com/)                            | Official Django documentation          |
-| [Django Jazzmin](https://django-jazzmin.readthedocs.io/)                           | Customize the Django admin panel       |
-| [ElephantSQL](https://www.elephantsql.com/)                                        | Managed PostgreSQL hosting             |
-| [Favicon.io](https://favicon.io/favicon-generator/)                                | To create the favicon                  |
-| [Git](https://git-scm.com/)                                                        | For version control                    |
-| [GitHub](https://github.com/)                                                      | To save and store the files for this project |
-| [Gitpod Workspaces](https://gitpod.io/)                                            | Online development environment         |
-| [Google Dev Tools](https://developer.chrome.com/docs/devtools/)                    | To troubleshoot, test features and solve issues with responsiveness and styling |
-| [Heroku](https://www.heroku.com/)                                                  | Platform as a Service (PaaS)           |
-| [Pip](https://pypi.org/project/pip/)                                               | A tool for installing Python packages   |
-| [Shields.io](https://shields.io/)                                                  | To add badges to the projects documentation |
-
--------------
-
-- Custom Domain:
-[Youtube: Use namecheap domain with Heroku hosting](https://www.youtube.com/watch?v=51j_mhje9Kk)
-[Youtube: Free SSL cert with Cloudflare](https://www.youtube.com/watch?v=Y4iHXhRkpO4)
-
-[CKEditor: ]()
-[Markdown Table of Contents Generator](http://ecotrust-canada.github.io/markdown-toc/)
-[]()
-[]()
-
-TBC
+| Name                                                                                     | Use                                    |
+| ---------------------------------------------------------------------------------------- | -------------------------------------- |
+| [AWS](https://aws.amazon.com/)                                                           | Cloud storage services                 |
+| [Figma](https://figma.com/)                                                              | Used to create wireframes              |
+| [Bootstrap Documentation](https://getbootstrap.com/docs/)                                | Official Bootstrap documentation       |
+| [Canva](https://canva.com/)                                                              | Graphic design and photo editing       |
+| [Django Documentation](https://docs.djangoproject.com/)                                  | Official Django documentation          |
+| [Django Jazzmin](https://django-jazzmin.readthedocs.io/)                                 | Customize the Django admin panel       |
+| [ElephantSQL](https://www.elephantsql.com/)                                              | Managed PostgreSQL hosting             |
+| [Favicon.io](https://favicon.io/favicon-generator/)                                      | To create the favicon                  |
+| [Git](https://git-scm.com/)                                                              | For version control                    |
+| [GitHub](https://github.com/)                                                            | To save and store the files for this project |
+| [Gitpod Workspaces](https://gitpod.io/)                                                  | Online development environment         |
+| [Google Dev Tools](https://developer.chrome.com/docs/devtools/)                          | Troubleshooting and testing            |
+| [Heroku](https://www.heroku.com/)                                                        | Platform as a Service (PaaS)           |
+| [Pip](https://pypi.org/project/pip/)                                                     | A tool for installing Python packages  |
+| [Shields.io](https://shields.io/)                                                        | To add badges to the project's documentation |
+| [Youtube: Use namecheap domain with Heroku hosting](https://www.youtube.com/watch?v=51j_mhje9Kk) | Guide to using Namecheap with Heroku  |
+| [Youtube: Free SSL cert with Cloudflare](https://www.youtube.com/watch?v=Y4iHXhRkpO4)    | Guide to getting free SSL with Cloudflare |
+| [CKEditor](https://ckeditor.com/docs/ckeditor5/latest/index.html)                        | Rich-text editor for web browsers     |
+| [Markdown Table of Contents Generator](http://ecotrust-canada.github.io/markdown-toc/)   | Generate Table of Contents in Markdown |
 
 ---
 
@@ -2265,10 +2470,10 @@ I would like to give special thanks to the following:
  - Creating all of the product descriptions and formatting the new fixtures file
  - Creating the about pages content
  - Creating the blog page content
- - Creating or formatting some tables in this readme such as: Useful links, learning outcomes, dependancies
+ - Creating or formatting some tables in this readme such as: Useful links, learning outcomes, dependancies, Models listed in Data Schema
  - I used it to format my external excel file that I was using to track the user stories
  - It was useful when troubleshooting errors while setting up the django app for the aiPunk generations
- - It was used when creating the automated tests although most of which requires modifcations to work
+ - It was used when creating the automated tests although they required modifcations to work
  - 
 
  - Despite having previously set up an [django app with DALL-E 2 integrated for creating custom images](cre8ai.art), I decided to use newly created open source, free to use, local, ai image generation software to create the images. I used model SDXL 0.9 was only released a couple of weeks ago with its refiner model as well using ComfyUI interface. You will need a nVidea graphic card with atleast 10gb vram to run the application. I found the images generated with this app are currently ahead of the images created by Dall-E and since its run locally, it has no API charges. I have also used different models on Automatic1111 (A1111) UI for creating images locally but found ComfyUI and the new SD_XL model provided better quality generation alongside increased resolution size which is great for custom printed products. Unfortuntly ComfyUI using the SDXL model with refiner is quiete slow, especially in comparison to the standard model on A111. ------------------------- PROVIDE MORE DETAIL, Create section in readme, how to etc..................
