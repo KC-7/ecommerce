@@ -1458,111 +1458,92 @@ This minor bug is outstanding and does not affect the MVP, the uploaded pages st
 
 ### Manual Testing
 
-### Manual UI & UX Tests
-
 #### User Tests
 
-<img src="readme_images/tests/manual_tests/user_tests/1-home.png" style="max-width: 60%;">
-<img src="readme_images/tests/manual_tests/user_tests/2-sign-up.png" style="max-width: 60%;">
-<img src="readme_images/tests/manual_tests/user_tests/3-verify-email.png" style="max-width: 60%;">
-<img src="readme_images/tests/manual_tests/user_tests/4-confirm-email.png" style="max-width: 60%;">
-<img src="readme_images/tests/manual_tests/user_tests/5-email-confirmed-sign-in-redirection.png" style="max-width: 60%;">
-<img src="readme_images/tests/manual_tests/user_tests/6-signed-in-home.png" style="max-width: 60%;">
-<img src="readme_images/tests/manual_tests/user_tests/7-profile.png" style="max-width: 60%;">
-<img src="readme_images/tests/manual_tests/user_tests/8-avatar.png" style="max-width: 60%;">
-<img src="readme_images/tests/manual_tests/user_tests/9-products.png" style="max-width: 60%;">
-<img src="readme_images/tests/manual_tests/user_tests/10-products-pagination.png" style="max-width: 60%;">
-<img src="readme_images/tests/manual_tests/user_tests/11-products-sort-by.png" style="max-width: 60%;">
-<img src="readme_images/tests/manual_tests/user_tests/12-product-detail.png" style="max-width: 60%;">
-<img src="readme_images/tests/manual_tests/user_tests/13-product-added-to-bag.png" style="max-width: 60%;">
-<img src="readme_images/tests/manual_tests/user_tests/14-bag-below-threshold.png" style="max-width: 60%;">
-<img src="readme_images/tests/manual_tests/user_tests/15-bag-above-threshold.png" style="max-width: 60%;">
-<img src="readme_images/tests/manual_tests/user_tests/16-checkout.png" style="max-width: 60%;">
-<img src="readme_images/tests/manual_tests/user_tests/17-order-confirmation.png" style="max-width: 60%;">
-<img src="readme_images/tests/manual_tests/user_tests/18-profile-order-history-saved-delivery-info.png" style="max-width: 60%;">
-<img src="readme_images/tests/manual_tests/user_tests/19-about.png" style="max-width: 60%;">
+| Test | Expected Result | Image | Completion Status |
+|------|-----------------|-------|-------------------|
+| Visit Home Page | User sees the homepage with featured products and navigation. | ![Home Page](readme_images/tests/manual_tests/user_tests/1-home.png) | ✅ |
+| Sign up for an account | User can sign up by entering the required details. | ![Sign Up](readme_images/tests/manual_tests/user_tests/2-sign-up.png) | ✅ |
+| Verify email link | User receives a verification email with a link to confirm the email address. | ![Verify Email](readme_images/tests/manual_tests/user_tests/3-verify-email.png) | ✅ |
+| Confirm email | User clicks the verification link and confirms the email address. | ![Confirm Email](readme_images/tests/manual_tests/user_tests/4-confirm-email.png) | ✅ |
+| Redirection after email confirmation | After confirming the email address, user is redirected to the sign-in page. | ![Redirection](readme_images/tests/manual_tests/user_tests/5-email-confirmed-sign-in-redirection.png) | ✅ |
+| Signed-in Home Page | After signing in, user sees the homepage with a personalized greeting. | ![Signed In](readme_images/tests/manual_tests/user_tests/6-signed-in-home.png) | ✅ |
+| User profile page | User can view their profile details. | ![Profile](readme_images/tests/manual_tests/user_tests/7-profile.png) | ✅ |
+| Change profile avatar | User can change their profile avatar. | ![Avatar](readme_images/tests/manual_tests/user_tests/8-avatar.png) | ✅ |
+| Browse products | User can browse the list of available products. | ![Products](readme_images/tests/manual_tests/user_tests/9-products.png) | ✅ |
+| Pagination in products page | User can navigate through multiple pages of products. | ![Products Paginated](readme_images/tests/manual_tests/user_tests/10-products-pagination.png) | ✅ |
+| Sort products | User can sort products based on different criteria. | ![Sort Products](readme_images/tests/manual_tests/user_tests/11-products-sort-by.png) | ✅ |
+| View product details | User can view detailed information about a specific product. | ![Product Detail](readme_images/tests/manual_tests/user_tests/12-product-detail.png) | ✅ |
+| Add product to bag | User can add a product to their shopping bag. | ![Add to Bag](readme_images/tests/manual_tests/user_tests/13-product-added-to-bag.png) | ✅ |
+| View bag below threshold | User can view their bag and see a message indicating that they need to add more for free delivery. | ![Below Threshold](readme_images/tests/manual_tests/user_tests/14-bag-below-threshold.png) | ✅ |
+| View bag above threshold | User can view their bag which qualifies for free delivery. | ![Above Threshold](readme_images/tests/manual_tests/user_tests/15-bag-above-threshold.png) | ✅ |
+| Initiate checkout process | User can initiate the checkout process by clicking on the checkout button. | ![Checkout](readme_images/tests/manual_tests/user_tests/16-checkout.png) | ✅ |
+| View order confirmation | User can view the order confirmation after successfully placing an order. | ![Order Confirmation](readme_images/tests/manual_tests/user_tests/17-order-confirmation.png) | ✅ |
+| View profile order history and saved delivery info | User can view their past orders and saved delivery information in their profile. | ![Order History](readme_images/tests/manual_tests/user_tests/18-profile-order-history-saved-delivery-info.png) | ✅ |
+| View the about page | User can view the about page of the e-commerce platform. | ![About Page](readme_images/tests/manual_tests/user_tests/19-about.png) | ✅ |
+| View about page | User can view the about page of the website. | ![About Page](readme_images/tests/manual_tests/user_tests/20-about-page.png) | ✅ |
+| Browse blog posts | User can browse the list of available blog posts. | ![Blog Posts](readme_images/tests/manual_tests/user_tests/21-blog.png) | ✅ |
+| Pagination in blog posts page | User can navigate through multiple pages of blog posts. | ![Blog Posts Pagination](readme_images/tests/manual_tests/user_tests/22-blog-paginated.png) | ✅ |
+| View individual blog post | User can view content of an individual blog post. | ![Blog Post](readme_images/tests/manual_tests/user_tests/23-blog-post.png) | ✅ |
+| Sign out | User can successfully sign out from their account. | ![Sign Out](readme_images/tests/manual_tests/user_tests/24-sign-out.png) | ✅ |
+| View home page when signed out | User sees the homepage and a signed out confirmation message. | ![Signed Out Home](readme_images/tests/manual_tests/user_tests/25-signed-out.png) | ✅ |
 
 #### Admin Tests
 
-<img src="readme_images/tests/manual_tests/admin_tests/1-product-add.png" style="max-width: 60%;">
-<img src="readme_images/tests/manual_tests/admin_tests/2-product-added.png" style="max-width: 60%;">
-<img src="readme_images/tests/manual_tests/admin_tests/2-a-product-added.png" style="max-width: 60%;">
-<img src="readme_images/tests/manual_tests/admin_tests/3-product-edit.png" style="max-width: 60%;">
-<img src="readme_images/tests/manual_tests/admin_tests/4-product-updated.png" style="max-width: 60%;">
-<img src="readme_images/tests/manual_tests/admin_tests/5-product-delete.png" style="max-width: 60%;">
-<img src="readme_images/tests/manual_tests/admin_tests/6-product-deleted.png" style="max-width: 60%;">
-<img src="readme_images/tests/manual_tests/admin_tests/7-about-add.png" style="max-width: 60%;">
-<img src="readme_images/tests/manual_tests/admin_tests/8-about-added.png" style="max-width: 60%;">
-<img src="readme_images/tests/manual_tests/admin_tests/9-about-edit.png" style="max-width: 60%;">
-<img src="readme_images/tests/manual_tests/admin_tests/10-about-edited.png" style="max-width: 60%;">
-<img src="readme_images/tests/manual_tests/admin_tests/11-about-delete.png" style="max-width: 60%;">
-<img src="readme_images/tests/manual_tests/admin_tests/12-about-deleted.png" style="max-width: 60%;">
-<img src="readme_images/tests/manual_tests/admin_tests/13-blog-add.png" style="max-width: 60%;">
-<img src="readme_images/tests/manual_tests/admin_tests/14-blog-added.png" style="max-width: 60%;">
-<img src="readme_images/tests/manual_tests/admin_tests/15-blog-edit.png" style="max-width: 60%;">
-<img src="readme_images/tests/manual_tests/admin_tests/16-blog-edited.png" style="max-width: 60%;">
-<img src="readme_images/tests/manual_tests/admin_tests/17-blog-delete.png" style="max-width: 60%;">
-<img src="readme_images/tests/manual_tests/admin_tests/18-blog-deleted.png" style="max-width: 60%;">
+| Test | Expected Result | Image | Completion Status |
+|------|-----------------|-------|-------------------|
+| Add a new product | Admin can add a new product, and it reflects in the list of products. | ![Product Add](readme_images/tests/manual_tests/admin_tests/1-product-add.png) | ✅ |
+| Confirmation of product added | Admin receives confirmation that the product has been added successfully. | ![Product Added](readme_images/tests/manual_tests/admin_tests/2-product-added.png) | ✅ |
+| Edit an existing product | Admin can edit the details of an existing product. | ![Product Edit](readme_images/tests/manual_tests/admin_tests/3-product-edit.png) | ✅ |
+| Confirmation of product updated | Admin receives confirmation that the product details have been updated successfully. | ![Product Updated](readme_images/tests/manual_tests/admin_tests/4-product-updated.png) | ✅ |
+| Delete a product | Admin can delete a product from the list. | ![Product Delete](readme_images/tests/manual_tests/admin_tests/5-product-delete.png) | ✅ |
+| Confirmation of product deletion | Admin receives confirmation that the product has been deleted successfully. | ![Product Deleted](readme_images/tests/manual_tests/admin_tests/6-product-deleted.png) | ✅ |
+| Add a new about entry | Admin can add a new entry to the about page. | ![About Add](readme_images/tests/manual_tests/admin_tests/7-about-add.png) | ✅ |
+| Confirmation of about entry added | Admin receives confirmation that the about entry has been added successfully. | ![About Added](readme_images/tests/manual_tests/admin_tests/8-about-added.png) | ✅ |
+| Edit an about entry | Admin can edit the details of an existing about entry. | ![About Edit](readme_images/tests/manual_tests/admin_tests/9-about-edit.png) | ✅ |
+| Confirmation of about entry updated | Admin receives confirmation that the about entry details have been updated successfully. | ![About Edited](readme_images/tests/manual_tests/admin_tests/10-about-edited.png) | ✅ |
+| Delete an about entry | Admin can delete an entry from the about page. | ![About Delete](readme_images/tests/manual_tests/admin_tests/11-about-delete.png) | ✅ |
+| Confirmation of about entry deletion | Admin receives confirmation that the about entry has been deleted successfully. | ![About Deleted](readme_images/tests/manual_tests/admin_tests/12-about-deleted.png) | ✅ |
+| Add a new blog post | Admin can add a new blog post. | ![Blog Add](readme_images/tests/manual_tests/admin_tests/13-blog-add.png) | ✅ |
+| Confirmation of blog post added | Admin receives confirmation that the blog post has been added successfully. | ![Blog Added](readme_images/tests/manual_tests/admin_tests/14-blog-added.png) | ✅ |
+| Edit a blog post | Admin can edit the details of a blog post. | ![Blog Edit](readme_images/tests/manual_tests/admin_tests/15-blog-edit.png) | ✅ |
+| Confirmation of blog post updated | Admin receives confirmation that the blog post details have been updated successfully. | ![Blog Edited](readme_images/tests/manual_tests/admin_tests/16-blog-edited.png) | ✅ |
+| Delete a blog post | Admin can delete a blog post. | ![Blog Delete](readme_images/tests/manual_tests/admin_tests/17-blog-delete.png) | ✅ |
+| Confirmation of blog post deletion | Admin receives confirmation that the blog post has been deleted successfully. | ![Blog Deleted](readme_images/tests/manual_tests/admin_tests/18-blog-deleted.png) | ✅ |
 
 #### Admin Portal Tests
 
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX TBC
-
-| Test Description | Expected Result | Status |
-| --- | --- | --- |
-| Verify the layout and design of the [homepage](https://onlineai.art/): Go to the website. <br> <img src="readme_images/general/https-ssl.png" alt="SSL" style="max-width:480px;"> | Homepage displays featured text, Discover Now button, background images with transitions and all navigation links consistently. <br> <img src="readme_images/tests/manual_tests/home.png" alt="Home Screenshot" style="max-width:480px;"> | ✅ |
-| Test the user sign-up process: Select the account nav bar in the top right of the nav bar. Go to the Sign Up Page. <br> <img src="readme_images/tests/manual_tests/account-menu-signed-out.png" alt="Account Menu" style="max-width:480px;"> | Select sign up after entering valid details, the user is registered and redirected to the homepage with a greeting message. <br> <img src="readme_images/tests/manual_tests/home.png" alt="Home Screenshot" style="max-width:480px;"> | ✅ |
-| Test the user login process. | After entering valid credentials, the user is logged in and redirected to the homepage with a greeting message. | ✅ |
-
-Profile Page
-
-Avatar Page
-
-
-
-
-| Test viewing all products on the products page. | All products are displayed with clear images, names, and prices. Products can be clicked to view details. | ✅ |
-| Test viewing individual product detail pages. | Selected product is displayed with a larger image, detailed description, and an option to add to cart. | ✅ |
-| Test viewing all blog posts. | All blog posts are listed with titles, brief descriptions, and images. Posts can be clicked to view full details. | ✅ |
-| Test viewing individual blog post details. | Selected blog post is displayed with full content, author details, and date of posting. | ✅ |
-| Test viewing the About page. | About page displays the site's mission, team members, and other relevant information with consistent styling. | ✅ |
-| Test adding products to the shopping bag. | Selected products are added to the bag, and the bag's total item count and price are updated. | ✅ |
-| Test viewing items in the shopping bag. | All items added to the bag are listed with product images, names, quantities, and individual prices. Options to adjust quantity or remove items are present. | ✅ |
-| Test filling in checkout details. | User details are pre-filled, with options to edit. Shipping and payment sections are displayed with required fields. | ✅ |
-| Test the payment process. | After entering valid payment details, the payment is processed, and the user is redirected to an order confirmation page. | ✅ |
-| Verify the order confirmation page. | Order confirmation page displays a summary of the order, including products purchased, total amount, and shipping details. | ✅ |
-| Test viewing the user profile page. | User profile page displays personal details, avatar, and order history. Options to edit profile and view individual orders are present. | ✅ |
-| Test editing user profile details. | After making changes to the profile details and saving, the updated details are reflected on the profile page. | ✅ |
-| Test viewing order history. | Previous orders are listed chronologically with clickable links to view detailed order summaries. | ✅ |
-| Test adding a new product. | After filling out the product details form and submitting, the new product appears on the 'products' page. | ✅ |
-| Test editing an existing product's details. | Changes made to the product details are reflected on the product's page and the 'products' page. | ✅ |
-| Test deleting a product. | After confirming the deletion of a product, the product no longer appears on the 'products' page. | ✅ |
-| Test adding a new blog post. | After filling out the blog post form and submitting, the new post appears on the 'blog' page. | ✅ |
-| Test editing an existing blog post. | Changes made to the blog post are reflected on the 'blog' page and the post's individual page. | ✅ |
-| Test deleting a blog post. | After confirming the deletion of a blog post, the post no longer appears on the 'blog' page. | ✅ |
-| Test adding new content to the About page. | After filling out the content form and submitting, the new content appears on the 'About' page. | ✅ |
-| Test editing content on the About page. | Changes made to the content are reflected on the 'About' page. | ✅ |
-| Test deleting content from the About page. | After confirming the deletion of content, the content no longer appears on the 'About' page. | ✅ |
-| Test the sign-up confirmation email. | After signing up, the user receives a confirmation email with a link to verify their email address. | ✅ |
-| Test the forgot password email. | Upon selecting 'Forgot Password', the user receives an email with a link to reset their password. | ✅ |
-| Test the order confirmation email. | After successfully placing an order, the user receives an email with a summary of the order, including products purchased, total amount, and shipping details. | ✅ |
-| Test for invalid input, such as entering a non-existent email during login. | An error message is displayed, prompting the user to enter valid credentials or check their input. | ✅ |
-| Test entering mismatched passwords during sign-up. | An error message is displayed, prompting the user to ensure passwords match. | ✅ |
-
-Test cookies pop up
-Test mailchimp newsletter sign up pop up
-
-| Test the sign out process. | User receives an email with instructions to reset their password. | ✅ |
-| Test the forgot password process. | User receives an email with instructions to reset their password. | ✅ |
-
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX TBC
+| Test | Expected Result | Image | Completion Status |
+|------|-----------------|-------|-------------------|
+| View the admin portal | Admin can view the main dashboard of the admin portal. | ![Admin Portal](readme_images/tests/manual_tests/admin_portal_tests/1-admin-portal.png) | ✅ |
+| View the dashboard | Admin can view a comprehensive dashboard with relevant statistics and data. | ![Dashboard](readme_images/tests/manual_tests/admin_portal_tests/2-dashboard.png) | ✅ |
+| View the about page details | Admin can view the details of the about page from the portal. | ![About](readme_images/tests/manual_tests/admin_portal_tests/3-about.png) | ✅ |
+| Edit the about page details | Admin can make modifications to the about page details. | ![About Edit](readme_images/tests/manual_tests/admin_portal_tests/4-about-edit.png) | ✅ |
+| View email configurations | Admin can view the current email configurations. | ![Email Config](readme_images/tests/manual_tests/admin_portal_tests/4-email.png) | ✅ |
+| Edit email configurations | Admin can modify the current email configurations. | ![Email Edit](readme_images/tests/manual_tests/admin_portal_tests/5-email.png) | ✅ |
+| View list of users | Admin can view a list of all registered users. | ![Users](readme_images/tests/manual_tests/admin_portal_tests/6-users.png) | ✅ |
+| View list of avatars | Admin can view a list of all available avatars. | ![Avatars](readme_images/tests/manual_tests/admin_portal_tests/7-avatars.png) | ✅ |
+| View list of blog posts | Admin can view a list of all blog posts. | ![Blog](readme_images/tests/manual_tests/admin_portal_tests/8-blog.png) | ✅ |
+| Edit a blog post | Admin can edit the details of a blog post. | ![Blog Edit](readme_images/tests/manual_tests/admin_portal_tests/9-blog-edit.png) | ✅ |
+| View list of orders | Admin can view a list of all placed orders. | ![Orders](readme_images/tests/manual_tests/admin_portal_tests/10-orders.png) | ✅ |
+| View list of product categories | Admin can view a list of all product categories. | ![Categories](readme_images/tests/manual_tests/admin_portal_tests/11-categories.png) | ✅ |
+| View list of products | Admin can view a list of all available products. | ![Products](readme_images/tests/manual_tests/admin_portal_tests/12-products.png) | ✅ |
+| View list of sites | Admin can view a list of all registered sites. | ![Sites](readme_images/tests/manual_tests/admin_portal_tests/13-sites.png) | ✅ |
+| Sign out from the admin portal | Admin can sign out from the admin portal. | ![Sign Out](readme_images/tests/manual_tests/admin_portal_tests/14-sign-out.png) | ✅ |
 
 #### Additional Tests
 
-| Test Description | Expected Result | Status |
-| Test the site responsiveness on mobile and tablet devices by repeating above tests on physical devices or by using the Google Inspect tool to simulate same. | Site elements adjust and align properly when viewed on smaller screens, ensuring a consistent user experience. | ✅ |
-| Check for broken links throughout the site. | All links redirect to the intended pages without any errors. | ✅ |
-
+| Test | Expected Result | Image | Completion Status |
+|------|-----------------|-------|-------------------|
+| Test for invalid input, such as entering a non-existent email during login. | An error message is displayed, prompting the user to enter valid credentials or check their input. | ![Placeholder Image]() | ✅ |
+| Test entering mismatched passwords during sign-up. | An error message is displayed, prompting the user to ensure passwords match. | ![Placeholder Image]() | ✅ |
+| Access a non-existent page (404 test). | User is redirected to a 404 error page with a message indicating the page doesn't exist. | ![Placeholder Image]() | ✅ |
+| Test cookies pop-up. | On first visit, a pop-up should appear asking the user to accept cookies. | ![Placeholder Image]() | ✅ |
+| Test mailchimp newsletter sign-up pop-up. | User is prompted to enter their email for the newsletter, and upon submission, a confirmation or thank you message is displayed. | ![Placeholder Image]() | ✅ |
+| Try submitting forms with missing mandatory fields. | An error message is displayed, indicating which fields are mandatory. | ![Placeholder Image]() | ✅ |
+| Test for invalid characters or input patterns in form fields. | An error message is displayed, indicating the correct input pattern or highlighting invalid characters. | ![Placeholder Image]() | ✅ |
+| Test the site responsiveness on mobile and tablet devices by repeating above tests on physical devices or by using the Google Inspect tool to simulate same. | Site elements adjust and align properly when viewed on smaller screens, ensuring a consistent user experience. | ![Placeholder Image]() | ✅ |
+| Check for broken links throughout the site. | All links redirect to the intended pages without any errors. | ![Placeholder Image]() | ✅ |
 
 ---
 
