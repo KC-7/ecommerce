@@ -19,6 +19,8 @@
 
 ---
 
+<img src="readme_images/general/hr.gif" alt="Color Palette" style="min-width: 100%;">
+
 ## Project Preview 
 
 ### Project Description
@@ -43,7 +45,7 @@ Admin users can create, modify or delete the about pages, blog posts and product
 
 ---
 
-<img src="readme_images/general/hr.gif" alt="Color Palette" style="width: 100%;">
+<img src="readme_images/general/hr.gif" alt="Color Palette" style="min-width: 100%;">
 
 ## Technologies and Services
 
@@ -68,7 +70,7 @@ Admin users can create, modify or delete the about pages, blog posts and product
 
 ---
 
-<img src="readme_images/general/hr.gif" alt="Color Palette" style="width: 100%;">
+<img src="readme_images/general/hr.gif" alt="Color Palette" style="min-width: 100%;">
 
 ## Table of Contents
 
@@ -218,7 +220,7 @@ Admin users can create, modify or delete the about pages, blog posts and product
 
 ---
 
-<img src="readme_images/general/hr.gif" alt="Color Palette" style="width: 100%;">
+<img src="readme_images/general/hr.gif" alt="Color Palette" style="min-width: 100%;">
 
 ## Business Overview
 
@@ -264,7 +266,7 @@ Alongside our primary marketing strategies we will implement additional marketin
 
 ---
 
-<img src="readme_images/general/hr.gif" alt="Color Palette" style="width: 100%;">
+<img src="readme_images/general/hr.gif" alt="Color Palette" style="min-width: 100%;">
 
 ## User Story Test Cases
 
@@ -347,7 +349,7 @@ Six milestones where set up for the project and closed off after completion.
 
 ---
 
-<img src="readme_images/general/hr.gif" alt="Color Palette" style="width: 100%;">
+<img src="readme_images/general/hr.gif" alt="Color Palette" style="min-width: 100%;">
 
 ## Design
 
@@ -544,7 +546,7 @@ I used [Lucid Chart](https://lucid.app/) to create the Entity Relationship Diagr
 
 ---
 
-<img src="readme_images/general/hr.gif" alt="Color Palette" style="width: 100%;">
+<img src="readme_images/general/hr.gif" alt="Color Palette" style="min-width: 100%;">
 
 ## Site Features
 
@@ -879,7 +881,7 @@ The site has integrated user feedback by displaying toast messages for info, suc
 
 ---
 
-<img src="readme_images/general/hr.gif" alt="Color Palette" style="width: 100%;">
+<img src="readme_images/general/hr.gif" alt="Color Palette" style="min-width: 100%;">
 
 ## Dependencies & Their Use Cases
 
@@ -926,7 +928,7 @@ For installation, simply run `pip3 install -r requirements.txt`.
 
 ---
 
-<img src="readme_images/general/hr.gif" alt="Color Palette" style="width: 100%;">
+<img src="readme_images/general/hr.gif" alt="Color Palette" style="min-width: 100%;">
 
 ## Deployment & Local Development
 
@@ -1250,7 +1252,7 @@ I have set up the deployed Environment Config Variables on Heroku, see below for
 
 ---
 
-<img src="readme_images/general/hr.gif" alt="Color Palette" style="width: 100%;">
+<img src="readme_images/general/hr.gif" alt="Color Palette" style="min-width: 100%;">
 
 ## Custom Domain & SSL Cert
 
@@ -1338,7 +1340,7 @@ Alongside threat alerts, it also shows bot and crawler traffic, example google a
 
 ---
 
-<img src="readme_images/general/hr.gif" alt="Color Palette" style="width: 100%;">
+<img src="readme_images/general/hr.gif" alt="Color Palette" style="min-width: 100%;">
 
 ## Product Creation Process
 
@@ -1450,7 +1452,7 @@ The fixtures are located in the following path: `products/fixtures/`.
 
 ---
 
-<img src="readme_images/general/hr.gif" alt="Color Palette" style="width: 100%;">
+<img src="readme_images/general/hr.gif" alt="Color Palette" style="min-width: 100%;">
 
 ## Web Marketing & Search Engine Optimization (SEO)
 
@@ -1546,7 +1548,7 @@ The site's custom privacy policy is included on the More Information Tab on the 
 
 ---
 
-<img src="readme_images/general/hr.gif" alt="Color Palette" style="width: 100%;">
+<img src="readme_images/general/hr.gif" alt="Color Palette" style="min-width: 100%;">
 
 ## Automated, Manual & Validation Testing
 
@@ -2070,7 +2072,7 @@ I used [AmIResponsive](https://amiresponsive.co.uk/) to create the below visual 
 
 ---
 
-<img src="readme_images/general/hr.gif" alt="Color Palette" style="width: 100%;">
+<img src="readme_images/general/hr.gif" alt="Color Palette" style="min-width: 100%;">
 
 ## Bugs & Issues
 
@@ -2326,7 +2328,7 @@ As this link is not intended to be crawlable, I resolved the issue by adding the
 
 ---
 
-<img src="readme_images/general/hr.gif" alt="Color Palette" style="width: 100%;">
+<img src="readme_images/general/hr.gif" alt="Color Palette" style="min-width: 100%;">
 
 ## Future Development
 
@@ -2366,7 +2368,7 @@ As this link is not intended to be crawlable, I resolved the issue by adding the
 
 ---
 
-<img src="readme_images/general/hr.gif" alt="Color Palette" style="width: 100%;">
+<img src="readme_images/general/hr.gif" alt="Color Palette" style="min-width: 100%;">
 
 ## Learning Goals
 
@@ -2507,7 +2509,7 @@ Throughout the development, I have aimed to meet the following learning outcomes
 
 ---
 
-<img src="readme_images/general/hr.gif" alt="Color Palette" style="width: 100%;">
+<img src="readme_images/general/hr.gif" alt="Color Palette" style="min-width: 100%;">
 
 ## Resources & Credits
 
@@ -2586,7 +2588,7 @@ I would like to give special thanks to the following:
 
 --- 
 
-<img src="readme_images/general/hr.gif" alt="Color Palette" style="width: 100%;">
+<img src="readme_images/general/hr.gif" alt="Color Palette" style="min-width: 100%;">
 
 ## Conclusion & Contact
 
