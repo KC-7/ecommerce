@@ -102,7 +102,7 @@ Admin users can create, modify or delete the about pages, blog posts and product
       - [Order](#order)
       - [OrderLineItem](#orderlineitem)
       - [BlogPost](#blogpost)
-    + [Relationships](#relationships)
+    + [Entity Relationships](#entity-relationships)
     + [Entity Relationship Diagram](#entity-relationship-diagram)
   * [Site Features](#site-features)
     + [Custom Admin Portal](#custom-admin-portal)
@@ -392,7 +392,7 @@ I created the wireframes for the Home, Products and Product Page using [Figma](h
 
 <img src="readme_images/wireframes/wireframe-product.png" style="max-width: 60%;">
 
-### Database Schema
+### Data Schema
 
 #### User
 - `id`: Integer (Primary Key)
@@ -498,6 +498,19 @@ I created the wireframes for the Home, Products and Product Page using [Figma](h
 - `date`: Datetime
 - `amount`: Decimal
 - `user_id`: Integer (Foreign Key to User)
+
+### Entity Relationships
+
+1. Each **User** has one **UserProfile**.
+2. Each **User** has one **Avatar**.
+3. Each **Category** can have multiple **Products**.
+4. Each **User** can have multiple **Bags**.
+5. Each **Product** can be in multiple **BagItems**.
+6. Each **Bag** can have multiple **BagItems**.
+7. Each **UserProfile** can have multiple **Orders**.
+8. Each **Order** can have multiple **OrderLineItems**.
+9. Each **Product** can be in multiple **OrderLineItems**.
+10. Each **User** can make multiple **Payments**.
 
 ### Entity Relationship Diagram
 
