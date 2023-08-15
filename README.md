@@ -29,7 +29,7 @@ This is a project for an E-Commerce Store which specializes in offering custom p
 
 ### Main Site - User Preview
 
-<img src="readme_images/gifs/user-preview.gif" style="max-width: 60%;">
+<img src="readme_images/gifs/site-preview.gif" style="max-width: 60%;">
 
 The platform is a robust, web-based application e-commerce application developed using the Django framework. This platform provides users with a seamless shopping experience, from product browsing to secure checkout. Admin features offer comprehensive management tools for products, blogs, and other site content. Integrated with Stripe for payment processing and AWS S3 for static and media file hosting, the platform is scalable and optimized for performance. An Algorithmically Generated Pixel Art Avatar is generated for each new user. This platform is designed to be intuitive for users while providing developers with a clean and modular codebase for further enhancements. Regular and detailed git commits have been used for version control.
 
@@ -805,7 +805,7 @@ I felt the standard text editor was insufficent for creating and modifying about
 
 ---
 
-### Custom Blog Posts (CRUD)
+### Custom Blog Posts with CRUD
 
 <img src="readme_images/tests/manual_tests/user_tests/21-blog.png" style="max-width: 60%;">
 
@@ -819,7 +819,7 @@ All site users can read the blog pages, they are accessible by the footer nav li
 
 ### CRUD Operations
 
-This application offers full CRUD functionality for the admin users to Create, Read, Update & Destroy about pages, both on the main site and the admin portal.
+This application offers full CRUD functionality for the admin users to Create, Read, Update & Destroy blog pages, both on the main site and the admin portal.
 
 #### Custom Editor
 
@@ -873,7 +873,7 @@ The site has integrated user feedback by displaying toast messages for info, suc
 
 <img src="readme_images/tests/manual_tests/user_tests/bag-success.png" style="max-width: 60%;">
 
-<img src="readme_images/general/404.png" style="max-width: 60%;">
+<img src="readme_images/tests/manual_tests/user_tests/26-404.png" style="max-width: 60%;">
 
 [Click here to go back up to the Table of Contents 📗 ⤴️](#table-of-contents)
 
@@ -1320,9 +1320,9 @@ I set up a custom domain with SSL certification to improve the authencity of the
 
 <img src="readme_images/cloudflare/cloudflare-traffic.png" style="max-width: 60%;">
 
-### Cloudflare Scecurity
+### Cloudflare Security
 
-Cloudlfare offers a range of options to provide additional protection for your site against malicous traffic. 
+Cloudfare offers a range of options to provide additional protection for your site against malicious traffic. 
 
 It has notified me about a lot of bot traffic, presumably due to registering the site on a custom domain, that have tried to gain root or env access such as the below example, there has also been a noticable amount of traffic from Tor:
 
@@ -1375,7 +1375,7 @@ To create images using SDXL v1.0 and the node-based interface ComfyUI, follow th
    - For image upscaling, use NMKD Superscale x4, available at Icedrive.net using [this link](https://icedrive.net/s/14BM8qlGO6).
 
 2. **Get ComfyUI:**
-   - Download ComfyUI using this [direct download GitHub link](#https://github.com/comfyanonymous/ComfyUI/releases/download/latest/ComfyUI_windows_portable_nvidia_cu118_or_cpu.7z).
+   - Download ComfyUI using this [direct download GitHub link](https://github.com/comfyanonymous/ComfyUI/releases/download/latest/ComfyUI_windows_portable_nvidia_cu118_or_cpu.7z).
    - Extract the downloaded file using 7-Zip.
    - Place the downloaded models in the folder: `ComfyUI_windows_portable\ComfyUI\models\checkpoints`.
    - If you downloaded the upscaler, place it in the folder: `ComfyUI_windows_portable\ComfyUI\models\upscale_models`.
@@ -1422,7 +1422,7 @@ You can find more information on setting up this application using the following
 
 ### Custom Product using Printify
 
-I created the product images by adding the gennerated AI images to print on demand products using [Printful](https://www.printful.com/)
+I created the product images by adding the generated AI images to print on demand products using [Printful](https://www.printful.com/).
 
 To do this, simply set up an account, go to the product catalogue, select your product to edit, import image and adjust positioning then save the modifed product with images.
 
@@ -1438,7 +1438,7 @@ I used ChatGPT to create meaningful, creative, SEO friendly, product description
 
 ### Custom Products Fixtures
 
-I added all of the images, titles and description to the custom products fixtures file, `products.json`. This allowed me to dd the majority of the listed products simultaneously. I later added additional products using the admin accounts.
+I added all of the images, titles and description to the custom products fixtures file, `products.json`. This allowed me to add the majority of the listed products simultaneously. I later added additional products using the admin accounts.
 
 I loaded the custom product fixtures file to Heroku using the following command: 
 
@@ -2528,6 +2528,7 @@ Here is a list of useful links that were used as part of the project. Thanks to 
 | [Bootstrap Documentation](https://getbootstrap.com/docs/)                                | Official Bootstrap documentation                 |
 | [Canva](https://canva.com/)                                                              | Graphic design and photo editing                 |
 | [CKEditor](https://ckeditor.com/docs/ckeditor5/latest/index.html)                        | Rich-text editor for web browsers                |
+| [ComfyUI](https://github.com/comfyanonymous/ComfyUI/)                                    | Github repo for ComfyUI                          |
 | [Convertio](https://convertio.co/png-webp/)                                              | Convert images between PNG and WebP formats      |
 | [Django Documentation](https://docs.djangoproject.com/)                                  | Official Django documentation                    |
 | [Django Jazzmin](https://django-jazzmin.readthedocs.io/)                                 | Customize the Django admin panel                 |
