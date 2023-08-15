@@ -198,7 +198,6 @@ Admin users can create, modify or delete the about pages, blog posts and product
     + [Unable to view saved embeded HTML with CKEditor](#unable-to-view-saved-embeded-html-with-ckeditor)
     + [Back to top button not crawlable](#back-to-top-button-not-crawlable)
   * [Future Development](#future-development)
-  * [Summary of charges and monitoring costs](#summary-of-charges-and-monitoring-costs)
   * [Learning Goals](#learning-goals)
     + [Learning Goals 1: Integrate an e-commerce payment system and product structure in a cloud-hosted Full-Stack web application](#learning-goals-1--integrate-an-e-commerce-payment-system-and-product-structure-in-a-cloud-hosted-full-stack-web-application)
     + [Learning Goals 2: Employ advanced User Experience Design to build a commercial-grade Full Stack Web Application](#learning-goals-2--employ-advanced-user-experience-design-to-build-a-commercial-grade-full-stack-web-application)
@@ -393,104 +392,118 @@ I created the wireframes for the Home, Products and Product Page using [Figma](h
 
 <img src="readme_images/wireframes/wireframe-product.png" style="max-width: 60%;">
 
-### Data Schema
+### Database Schema
 
-See the models in the project below: 
+#### User
+- `id`: Integer (Primary Key)
+- `password`: Varchar
+- `last_login`: Datetime
+- `is_superuser`: Boolean
+- `username`: Varchar
+- `first_name`: Varchar
+- `last_name`: Varchar
+- `email`: Varchar
+- `is_staff`: Boolean
+- `is_active`: Boolean
+- `date_joined`: Datetime
 
 #### UserProfile
-
-This model contains the user profile data.
-
-| Field(s)                                         | Description                                               |
-|--------------------------------------------------|-----------------------------------------------------------|
-| user                                             | A one-to-one field with Django's built-in User model. This establishes a unique profile for each user. |
-| default_phone_number, default_street_address1, default_street_address2, default_town_or_city, default_county, default_postcode, default_country | These fields store the default shipping information for the user. |
+- `id`: Integer (Primary Key)
+- `user_id`: Integer (Foreign Key to User)
+- `default_phone_number`: Varchar
+- `default_street_address1`: Varchar
+- `default_street_address2`: Varchar
+- `default_town_or_city`: Varchar
+- `default_county`: Varchar
+- `default_postcode`: Varchar
+- `default_country`: Varchar
 
 #### Category
-
-This model defines the different categories for products.
-
-| Field(s)    | Description |
-|-------------|-------------|
-| name        | A char field that holds the category name. |
-| friendly_name | A char field that holds a user-friendly version of the category name. |
+- `id`: Integer (Primary Key)
+- `name`: Varchar
+- `friendly_name`: Varchar
 
 #### Product
-
-This model contains the details of products.
-
-| Field(s)   | Description |
-|------------|-------------|
-| category   | A foreign key to the Category model. This sets a many-to-one relationship between products and their categories. |
-| name       | A char field that holds the product name. |
-| description | A text field that provides a description of the product. |
-| price      | A decimal field for the product's price. |
-| rating     | A decimal field to store the average rating for the product. |
-| image_url  | A URL field to hold the link to the product's image. |
-| image      | An image field to store the product's image. |
+- `id`: Integer (Primary Key)
+- `name`: Varchar
+- `description`: Text
+- `price`: Decimal
+- `rating`: Decimal
+- `image_url`: Varchar
+- `image`: Varchar
+- `category_id`: Integer (Foreign Key to Category)
 
 #### Order
-
-This model maintains the details of customer orders.
-
-| Field(s)   | Description |
-|------------|-------------|
-| order_number | A char field that stores a unique order number. |
-| user_profile | A foreign key to the UserProfile model. This establishes a connection between orders and user profiles. |
-| full_name   | A char field that stores the full name of the customer. |
-| email       | An email field that stores the customer's email address. |
-| phone_number, street_address1, street_address2, town_or_city, county, postcode, country | These fields store the shipping information for the order. |
-| date        | A date field that keeps track of when the order was made. |
-| delivery_cost | A decimal field to store the cost of delivery. |
-| order_total | A decimal field that stores the total cost of the order. |
-| grand_total | A decimal field that combines the order_total and delivery_cost. |
-| original_bag | A text field to store the contents of the shopping bag when the order was made. |
-| stripe_pid  | A char field to store the customer's Stripe payment ID. |
+- `id`: Integer (Primary Key)
+- `order_number`: Varchar
+- `user_profile_id`: Integer (Foreign Key to UserProfile)
+- `full_name`: Varchar
+- `email`: Varchar
+- `phone_number`: Varchar
+- `street_address1`: Varchar
+- `street_address2`: Varchar
+- `town_or_city`: Varchar
+- `county`: Varchar
+- `postcode`: Varchar
+- `country`: Varchar
+- `date`: Date
+- `delivery_cost`: Decimal
+- `order_total`: Decimal
+- `grand_total`: Decimal
+- `original_bag`: Text
+- `stripe_pid`: Varchar
 
 #### OrderLineItem
+- `id`: Integer (Primary Key)
+- `order_id`: Integer (Foreign Key to Order)
+- `product_id`: Integer (Foreign Key to Product)
+- `product_size`: Varchar
+- `quantity`: Integer
+- `lineitem_total`: Decimal
 
-This model keeps track of individual order line items.
+#### BlogPage
+- `id`: Integer (Primary Key)
+- `title`: Varchar
+- `content`: Text
+- `created_at`: Datetime
+- `image`: Varchar
 
-| Field(s)   | Description |
-|------------|-------------|
-| order      | A foreign key to the Order model. This sets a many-to-one relationship between line items and orders. |
-| product    | A foreign key to the Product model. This sets a many-to-one relationship between line items and products. |
-| product_size | A char field to store the size of the product. |
-| quantity   | An integer field to store the quantity of the product. |
-| lineitem_total | A decimal field to store the total cost of the line item. |
+#### AboutPage
+- `id`: Integer (Primary Key)
+- `title`: Varchar
+- `created_at`: Datetime
+- `content`: Text
 
-#### BlogPost
+#### Avatar
+- `id`: Integer (Primary Key)
+- `punk_type`: Varchar
+- `attributes`: Text
+- `user_id`: Integer (Foreign Key to User)
+- `image`: Varchar
 
-This model maintains the details of blog posts.
+### Bag
+- `id`: Integer (Primary Key)
+- `date_added`: Datetime
+- `product_id`: Integer (Foreign Key to Product)
+- `user_id`: Integer (Foreign Key to User)
 
-| Field(s)   | Description |
-|------------|-------------|
-| title      | A char field that stores the title of the blog post. |
-| slug       | A slug field that holds a URL-friendly version of the blog post title. |
-| introduction | A char field that provides an introduction to the blog post. |
-| content    | A rich text field to store the main content of the blog post. |
-| created_date | A date field that keeps track of when the blog post was created. |
-| published_date | A date field that keeps track of when the blog post was published. |
-| views      | An integer field to store the number of times the blog post has been viewed. |
-| tag        | A char field to store tags related to the blog post. |
-| image      | An image field to store the blog post's image. |
+### BagItem
+- `id`: Integer (Primary Key)
+- `product_id`: Integer (Foreign Key to Product)
+- `quantity`: Integer
+- `bag_id`: Integer (Foreign Key to Bag)
 
-### Relationships
-
-Relationships:
-
-- A User has one UserProfile.
-- A UserProfile can have multiple Orders.
-- Each Order can have multiple OrderLineItems.
-- Each OrderLineItem refers to a single Product.
-- Each Product belongs to a Category.
-- A UserProfile can have one Avatar.
+### Payment
+- `id`: Integer (Primary Key)
+- `date`: Datetime
+- `amount`: Decimal
+- `user_id`: Integer (Foreign Key to User)
 
 ### Entity Relationship Diagram
 
 I used [Lucid Chart](https://lucid.app/) to create the Entity Relationship Diagram:
 
-<img src="readme_images/data_schema/entity-relationship-diagram.png" style="max-width: 60%;">
+<img src="readme_images/data_schema/entity-relationship-diagram.png" style="max-width: 100%;">
 
 [Click here to go back up to the Table of Contents 📗 ⤴️](#table-of-contents)
 
@@ -1369,8 +1382,6 @@ To do this, simply set up an account, go to the product catalogue, select your p
 <img src="readme_images/general/printify.png" style="max-width: 60%;">
 
 <img src="readme_images/general/suitcase.png" style="max-width: 60%;">
-
-TBC
 
 ### Product Descriptions using ChatGPT
 
@@ -2290,24 +2301,6 @@ As this link is not intended to be crawlable, I resolved the issue by adding the
 
 - Look into adding services such as Hotjar and Facebook Pixel.
 
-TBC
-
-[Click here to go back up to the Table of Contents 📗 ⤴️](#table-of-contents)
-
-</details>
-
----
-
-## Summary of charges and monitoring costs
-
-<details open>
-
-<summary><b>Click here to minimize this section ➖ ⬆️</b></summary>
-
-<img src="readme_images/general/tbc.png" style="max-width: 60%;">
-
-TBC
-
 [Click here to go back up to the Table of Contents 📗 ⤴️](#table-of-contents)
 
 </details>
@@ -2324,73 +2317,73 @@ Throughout the development, I have aimed to meet the following learning outcomes
 
 ### Learning Goals 1: Integrate an e-commerce payment system and product structure in a cloud-hosted Full-Stack web application
 
-| Criteria Description                                                                                                     | Completion Status   |
-|--------------------------------------------------------------------------------------------------------------------------|---------------------|
-| Implement at least one Django app with e-commerce functionality using an online payment processing system (e.g. Stripe). | ✅ Implemented Stripe payments system.              |
-| Implement a feedback system for successful and unsuccessful purchases with helpful messages.                             | ✅ Set up toast messages and email order confirmation alongside an order success page.              |
+| Criteria Description                                                                                                     | Completion Status                                                                                                                     |
+|--------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
+| Implement at least one Django app with e-commerce functionality using an online payment processing system (e.g. Stripe). | ✅ Implemented Stripe payments system.                                                                                               |
+| Implement a feedback system for successful and unsuccessful purchases with helpful messages.                             | ✅ Set up toast messages and email order confirmation alongside an order success page.                                               |
 | Develop and implement a Full-Stack web application using Django, relational database, and interactive Front-End.         | ✅ Created and deployed a Django-based full-stack web app with interactive front-end, backed by a relational database.               |
-| Implement at least one form with validation for creating and editing models in the backend.                              | ✅ Implemented forms with validation to create and edit models in the backend.              |
-| Build a Django file structure following Django conventions.                                                              | ✅ Followed Django conventions when structuring the file layout.              |
-| Write code demonstrating characteristics of 'clean code.'                                                                | ✅ Aimed to write clean, well commented and clear code.              |
-| Define application URLs consistently.                                                                                    | ✅ Consistent approach when defining URLs.              |
-| Incorporate main navigation menu and structured layout.                                                                  | ✅ Incorporated nav bar for mobile and desktop. Add additional navigation in footer.              |
-| Demonstrate proficiency in Python language with sufficient custom logic.                                                 | ✅ Python was used extensively through out the project & accounts for 40% of the overall coding languages used in the project.      |
-| Write Python code with compound statements (if conditions, loops, etc.).                                                 | ✅ Compound statements implemented as required and practical.              |
-| Design a relational database schema with clear relationships between entities.                                           | ✅ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX   TBC           |
-| Create at least THREE original custom Django models.                                                                     | ✅ A variety of custom model where created such as the about, avatar and blog apps.              |
-| Implement CRUD functionality for models.                                                                                 | ✅ CRUD has been implemented in the about, blog and products apps (note: avatars are intentionally creation only)              |
-| Deploy the final version to a hosting platform and test against the development version.                                 | ✅ The site is hosted on Heroku. It's also set up with a custom namecheap domain. I used Cloudflare for the SSL Cert and Security.     |
-| Remove commented-out code and broken internal links from the deployed code.                                              | ✅ Commented out code removed prior to final deployment.              |
-| Ensure security of the deployed version by handling passwords and secret keys properly.                                  | ✅ Passwords and secret keys stored securly on Heroku Config Vars for the deployed site.              |
-| Use a git-based version control system with regular commits and project documentation in README.                         | ✅ Coding carried out using GitPod IDE. Regular git commits to GitHub with clear messages. Project documented in README file.   |
-| Document the complete deployment and testing procedures in README, explaining the application's purpose.                 | ✅ Thorough documentation has been created for the deployment & testing procedures alongside details on applications purpose.  |
+| Implement at least one form with validation for creating and editing models in the backend.                              | ✅ Implemented forms with validation to create and edit models in the backend.                                                       |
+| Build a Django file structure following Django conventions.                                                              | ✅ Followed Django conventions when structuring the file layout.                                                                     |
+| Write code demonstrating characteristics of 'clean code.'                                                                | ✅ Aimed to write clean, well commented and clear code.                                                                              |
+| Define application URLs consistently.                                                                                    | ✅ Consistent approach when defining URLs.                                                                                           |
+| Incorporate main navigation menu and structured layout.                                                                  | ✅ Incorporated nav bar for mobile and desktop. Add additional navigation in footer.                                                 |
+| Demonstrate proficiency in Python language with sufficient custom logic.                                                 | ✅ Python was used extensively through out the project & accounts for 40% of the overall coding languages used in the project.       |
+| Write Python code with compound statements (if conditions, loops, etc.).                                                 | ✅ Compound statements implemented as required and practical.                                                                        |
+| Design a relational database schema with clear relationships between entities.                                           | ✅ Database schema and relationship between enetities has been clearly defined.                                                      |
+| Create at least THREE original custom Django models.                                                                     | ✅ A variety of custom model where created such as the about, avatar and blog apps.                                                  |
+| Implement CRUD functionality for models.                                                                                 | ✅ CRUD has been implemented in the about, blog and products apps (note: avatars are intentionally creation only)                    |
+| Deploy the final version to a hosting platform and test against the development version.                                 | ✅ The site is hosted on Heroku. It's also set up with a custom namecheap domain. I used Cloudflare for the SSL Cert and Security.   |
+| Remove commented-out code and broken internal links from the deployed code.                                              | ✅ Commented out code removed prior to final deployment.                                                                             |
+| Ensure security of the deployed version by handling passwords and secret keys properly.                                  | ✅ Passwords and secret keys stored securly on Heroku Config Vars for the deployed site.                                             |
+| Use a git-based version control system with regular commits and project documentation in README.                         | ✅ Coding carried out using GitPod IDE. Regular git commits to GitHub with clear messages. Project documented in README file.        |
+| Document the complete deployment and testing procedures in README, explaining the application's purpose.                 | ✅ Thorough documentation has been created for the deployment & testing procedures alongside details on applications purpose.        |
 
 ### Learning Goals 2: Employ advanced User Experience Design to build a commercial-grade Full Stack Web Application
 
 | Criteria Description                                                                                                                       | Completion Status |
 |--------------------------------------------------------------------------------------------------------------------------------------------|-------------------|
 | Design a Front-End meeting accessibility guidelines, UX principles, and addressing specific user interactions.                             | ✅ Careful consideration has been given to ensure the site meets accessibility, UX and user interaction expectations. |
-| Document and implement all User Stories in an Agile tool, mapping them to project goals.                                                   | ✅ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx TBC              |
+| Document and implement all User Stories in an Agile tool, mapping them to project goals.                                                   | ✅ All user stories have beed included on the Agile User Story board on Github. All user stories have been assigned to me. All have a milestone and label. All completed user stories and milestones have been closed accordingly.             |
 | Design and implement manual or automated test procedures to assess functionality, usability, responsiveness, and data management.          | ✅ Manual and automated tests have been added to ensure the site operates as intended.              |
 | Present a clear rationale for the development of the project in the README, addressing the needs of the target audience and user stories.  | ✅ Clear rational for developing the project alongside addressing the needs of the users & the target audience has been documented. |
-| Document the UX design work, including wireframes, mockups, diagrams, etc., and demonstrate implementation following the design process.   | ✅ The UX design has been documented and includes wireframe mockups. XXXXXXXXXXXXXXX TBC              |
-| Use an Agile tool effectively for managing planning and implementation of primary functionality.                                           | ✅ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX TBC              |
-| Document and implement all User Stories and map them to the project within an Agile tool.                                                  | ✅ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX TBC              |
+| Document the UX design work, including wireframes, mockups, diagrams, etc., and demonstrate implementation following the design process.   | ✅ The UX design has been documented and includes wireframe mockups.             |
+| Use an Agile tool effectively for managing planning and implementation of primary functionality.                                           | ✅ An Agile board was set up on Github to map out and track primary functionality.             |
+| Document and implement all User Stories and map them to the project within an Agile tool.                                                  | ✅ All user stories have been added to the project with applicable label and corrsonding milestone. All completed user stories and milestones have been closed.              |
 
 ### Learning Goals 3: Employ Search Engine Optimisation (SEO) techniques to improve audience reach
 
-| Criteria Description                                                                              | Completion Status |
-|---------------------------------------------------------------------------------------------------|-------------------|
-| Ensure all pages can be reached by a link from another findable page.                             | ✅ All pages are reachable on the site.              |
+| Criteria Description                                                                              | Completion Status                                                                                                                                            |
+|---------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Ensure all pages can be reached by a link from another findable page.                             | ✅ All pages are reachable on the site.                                                                                                                     |
 | Include Meta Description tags in the application HTML.                                            | ✅ Meta description tag added to the base template, its overwritten by certain pages with additional more page specific meta description tags.              |
-| Include a site title on the parent template.                                                      | ✅ A site title is include in the base template. Specific pages add to it using blocks.              |
-| Use appropriate "nofollow" and "sponsored" attributes for links.                                  | ✅ "nofollow" attributes added through site as required.              |
-| Include a sitemap and robots.txt file for search engine crawling.                                 | ✅ Sitemap and robots file added to route directory.              |
-| Include a 404 response page with appropriate redirect.                                            | ✅ 404 page included with necessary redirection for same.              |
+| Include a site title on the parent template.                                                      | ✅ A site title is include in the base template. Specific pages add to it using blocks.                                                                     |
+| Use appropriate "nofollow" and "sponsored" attributes for links.                                  | ✅ "nofollow" attributes added through site as required.                                                                                                    |
+| Include a sitemap and robots.txt file for search engine crawling.                                 | ✅ Sitemap and robots file added to route directory.                                                                                                        |
+| Include a 404 response page with appropriate redirect.                                            | ✅ 404 page included with necessary redirection for same.                                                                                                   |
 | Use meaningful text content supporting the application's purpose (no Lorem Ipsum).                | ✅ Meaningful, descriptive, SEO friendly text content has been added throughout the site to support purpose. ChatGPT was very useful for this.              |
 
 ### Learning Goals 4: Create a secure Full Stack Web application with Authentication and role-based Authorization functionality
 
-| Criteria Description                                                                           | Completion Status |
-|------------------------------------------------------------------------------------------------|-------------------|
-| Implement authentication mechanism allowing user registration and login for specific reasons.  | ✅ Authentification has been implemented for registration and as required.              |
-| Implement login and registration pages available only to anonymous users.                      | ✅ Login and registration has been implemented and is only visible to logged out or un-signed up users.              |
-| Prevent non-admin users from accessing the data store directly without going through the code. | ✅ Non admin users cant access data store without going through the code.              |
-| Apply role-based login and registration functionality.                                         | ✅ Admin users have additional privilages on main site such as edit or create alongside access to the admin portal with more features. |
-| Ensure current login state is reflected to the user.                                           | ✅ Login state is clearly identifable by the Account dropmenu as the options are modified based on login state.              |
-| Restrict access to restricted content/functionality before role-based login.                   | ✅ Access to content is restricted as required.              |
+| Criteria Description                                                                           | Completion Status                                                                                                                                 |
+|------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
+| Implement authentication mechanism allowing user registration and login for specific reasons.  | ✅ Authentification has been implemented for registration and as required.                                                                       |
+| Implement login and registration pages available only to anonymous users.                      | ✅ Login and registration has been implemented and is only visible to logged out or un-signed up users.                                          |
+| Prevent non-admin users from accessing the data store directly without going through the code. | ✅ Non admin users cant access data store without going through the code.                                                                        |
+| Apply role-based login and registration functionality.                                         | ✅ Admin users have additional privilages on main site such as edit or create alongside access to the admin portal with more features.           |
+| Ensure current login state is reflected to the user.                                           | ✅ Login state is clearly identifable by the Account dropmenu as the options are modified based on login state.                                  |
+| Restrict access to restricted content/functionality before role-based login.                   | ✅ Access to content is restricted as required.                                                                                                  |
 
 ### Learning Goals 5: Employ marketing techniques to create brand reach
 
-| Criteria Description                                       | Completion Status |
-|------------------------------------------------------------|-------------------|
-| Create a Facebook Business Page dedicated to the product.  | ✅ A Facebook page has been created for the site.              |
-| Add a newsletter signup form to the application.           | ✅ A MailChimp newsletter has been added to the site as a pop up on the products page.            |
+| Criteria Description                                       | Completion Status                                                                            |
+|------------------------------------------------------------|----------------------------------------------------------------------------------------------|
+| Create a Facebook Business Page dedicated to the product.  | ✅ A Facebook page has been created for the site.                                           |
+| Add a newsletter signup form to the application.           | ✅ A MailChimp newsletter has been added to the site as a pop up on the products page.      |
 
 ### Learning Goals 6: Understand the fundamentals of E-commerce applications
 
-| Criteria Description                                                   | Completion Status |
-|------------------------------------------------------------------------|-------------------|
+| Criteria Description                                                   | Completion Status                                                                |
+|------------------------------------------------------------------------|----------------------------------------------------------------------------------|
 | Document the e-commerce business model underlying the application.     | ✅ The e-commerce busines model has been documented in the readme.              |
 
 ### Learning Goals 7: Additional Learning Outcomes (M)
@@ -2401,7 +2394,7 @@ Throughout the development, I have aimed to meet the following learning outcomes
 | Produce a fully robust codebase with CRUD actions immediately reflected in the user interface.                                       | ✅ Robust codebase enabling Create, Read, Update, & Delete (CRUD) operations with real-time updates reflected in the UI. |
 | Follow thorough manual and/or automated test procedures demonstrated in git commits.                                                 | ✅ Thorough manual and automated testing has been implemented and documented.              |
 | Efficiently configure the project through well-kept Procfile, requirements.txt file, settings files, and data store configuration.   | ✅ Procfile, rerquirements, settings and data store config has been efficiently configured.             |
-| Fully describe the data schema in the project README file.                                                                           | ✅ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX TBC              |
+| Fully describe the data schema in the project README file.                                                                           | ✅ The data schema is well documented and includes a detailed Entity Relationship Diagram.             |
 | Use version control software effectively with a record of the development process.                                                   | ✅ Detailed git commits have been added regularly throughout the project to record the development process.              |
 | Ensure users have full control of their interaction with the application and the site's purpose is immediately evident to new users. | ✅ Sites pupose is immediately event to users and the UI allows them full control of their permitted interactions. |
 | Control access to sitemap via a robots.txt file and ensure all sitemap links are canonical.                                          | ✅ Access to the sitemap is controlled by the robots file and all sitemap links are canonical.              |
@@ -2442,7 +2435,7 @@ Throughout the development, I have aimed to meet the following learning outcomes
 | Configuration and settings files are well-organised. | ✅ Config and settings files are well organised and allow the site to operate as intended.              |
 | Security features and practice are evidenced. | ✅ Security features have been implemented inline with best practises.              |
 | Data is well structured. | ✅ The data is well structured to improve readability.              |
-| Data is fully modelled and matches the schema. | ✅ ############################################################################################################################################################ TBC              |
+| Data is fully modelled and matches the schema. | ✅ The data is fully modelled and matched the data schema.             |
 | Datastore configuration is kept in a single location where it can be changed easily. | ✅ Centralized datastore configuration in a settings file for easy and convenient modification.              |
 | Configuration and dependencies files are kept up to date. Separate versions/branches of these are commits where relevant. The datastore is not accessible to the regular user without going through the code. | ✅ Maintained up to date configuration and dependency files. Ensured that the datastore remains inaccessible to regular users unless accessed through the application's code.              |
 | Testing procedures are comprehensive, with a good level of coverage, and have been followed. There is clear evidence of testing, and this is demonstrated in git commits. All noticeable errors have been corrected or documented. | ✅ Comprehensive testing carried out with substantial coverage though manual and automated tests, evident through well-documented testing in README and Git commits. Addressed and rectified or documented any noticeable errors encountered.              |
@@ -2463,27 +2456,27 @@ Throughout the development, I have aimed to meet the following learning outcomes
 
 Here is a list of useful links that were used as part of the project. Thanks to all contributers to the below content and services.
 
-| Name                                                                                     | Use                                    |
-| ---------------------------------------------------------------------------------------- | -------------------------------------- |
-| [AWS](https://aws.amazon.com/)                                                           | Cloud storage services                 |
-| [Figma](https://figma.com/)                                                              | Used to create wireframes              |
-| [Bootstrap Documentation](https://getbootstrap.com/docs/)                                | Official Bootstrap documentation       |
-| [Canva](https://canva.com/)                                                              | Graphic design and photo editing       |
-| [Django Documentation](https://docs.djangoproject.com/)                                  | Official Django documentation          |
-| [Django Jazzmin](https://django-jazzmin.readthedocs.io/)                                 | Customize the Django admin panel       |
-| [ElephantSQL](https://www.elephantsql.com/)                                              | Managed PostgreSQL hosting             |
-| [Favicon.io](https://favicon.io/favicon-generator/)                                      | To create the favicon                  |
-| [Git](https://git-scm.com/)                                                              | For version control                    |
-| [GitHub](https://github.com/)                                                            | To save and store the files for this project |
-| [Gitpod Workspaces](https://gitpod.io/)                                                  | Online development environment         |
-| [Google Dev Tools](https://developer.chrome.com/docs/devtools/)                          | Troubleshooting and testing            |
-| [Heroku](https://www.heroku.com/)                                                        | Platform as a Service (PaaS)           |
-| [Pip](https://pypi.org/project/pip/)                                                     | A tool for installing Python packages  |
-| [Shields.io](https://shields.io/)                                                        | To add badges to the project's documentation |
-| [Youtube: Use namecheap domain with Heroku hosting](https://www.youtube.com/watch?v=51j_mhje9Kk) | Guide to using Namecheap with Heroku  |
-| [Youtube: Free SSL cert with Cloudflare](https://www.youtube.com/watch?v=Y4iHXhRkpO4)    | Guide to getting free SSL with Cloudflare |
-| [CKEditor](https://ckeditor.com/docs/ckeditor5/latest/index.html)                        | Rich-text editor for web browsers     |
-| [Markdown Table of Contents Generator](http://ecotrust-canada.github.io/markdown-toc/)   | Generate Table of Contents in Markdown |
+| Name                                                                                     | Use                                              |
+| ---------------------------------------------------------------------------------------- | ------------------------------------------------ |
+| [AWS](https://aws.amazon.com/)                                                           | Cloud storage services                           |
+| [Figma](https://figma.com/)                                                              | Used to create wireframes                        |
+| [Bootstrap Documentation](https://getbootstrap.com/docs/)                                | Official Bootstrap documentation                 |
+| [Canva](https://canva.com/)                                                              | Graphic design and photo editing                 |
+| [Django Documentation](https://docs.djangoproject.com/)                                  | Official Django documentation                    |
+| [Django Jazzmin](https://django-jazzmin.readthedocs.io/)                                 | Customize the Django admin panel                 |
+| [ElephantSQL](https://www.elephantsql.com/)                                              | Managed PostgreSQL hosting                       |
+| [Favicon.io](https://favicon.io/favicon-generator/)                                      | To create the favicon                            |
+| [Git](https://git-scm.com/)                                                              | For version control                              |
+| [GitHub](https://github.com/)                                                            | To save and store the files for this project     |
+| [Gitpod Workspaces](https://gitpod.io/)                                                  | Online development environment                   |
+| [Google Dev Tools](https://developer.chrome.com/docs/devtools/)                          | Troubleshooting and testing                      |
+| [Heroku](https://www.heroku.com/)                                                        | Platform as a Service (PaaS)                     |
+| [Pip](https://pypi.org/project/pip/)                                                     | A tool for installing Python packages            |
+| [Shields.io](https://shields.io/)                                                        | To add badges to the project's documentation     |
+| [Youtube: Use namecheap domain with Heroku hosting](https://www.youtube.com/watch?v=51j_mhje9Kk) | Guide to using Namecheap with Heroku     |
+| [Youtube: Free SSL cert with Cloudflare](https://www.youtube.com/watch?v=Y4iHXhRkpO4)    | Guide to getting free SSL with Cloudflare        |
+| [CKEditor](https://ckeditor.com/docs/ckeditor5/latest/index.html)                        | Rich-text editor for web browsers                |
+| [Markdown Table of Contents Generator](http://ecotrust-canada.github.io/markdown-toc/)   | Generate Table of Contents in Markdown           |
 
 ---
 
