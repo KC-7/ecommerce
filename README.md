@@ -31,7 +31,7 @@ This is a project for an E-Commerce Store which specializes in offering custom p
 
 <img src="readme_images/gifs/site-preview.gif" style="max-width: 60%;">
 
-The platform is a robust, web-based application e-commerce application developed using the Django framework. This platform provides users with a seamless shopping experience, from product browsing to secure checkout. Admin features offer comprehensive management tools for products, blogs, and other site content. Integrated with Stripe for payment processing and AWS S3 for static and media file hosting, the platform is scalable and optimized for performance. An Algorithmically Generated Pixel Art Avatar is generated for each new user. This platform is designed to be intuitive for users while providing developers with a clean and modular codebase for further enhancements. Regular and detailed git commits have been used for version control.
+The platform is a robust, web-based application e-commerce application developed using the Django framework. This platform provides users with a seamless shopping experience, from product browsing to secure checkout. Admin features offer comprehensive management tools for products, blogs, and other site content. Integrated with Stripe for payment processing and AWS S3 for static and media file hosting, the platform is scalable and optimized for performance. An Algorithmically Generated Pixel Art Avatar is generated for each new user. This platform is designed to be intuitive for users while providing developers with a clean and modular codebase for further enhancements. Regular and [detailed git commits](https://github.com/KC-7/ecommerce/commits/main) have been used for version control.
 
 ### Main Site - Admin Preview
 
