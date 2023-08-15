@@ -315,7 +315,7 @@ Alongside our primary marketing strategies we will implement additional marketin
 
 <img src="readme_images/general/user-story-board.png" style="max-width: 60%;">
 
-I initially tracked all of my user stories but on excel tracker spreadsheet but I later added them to an Agile board.
+I initially tracked all of my user stories on excel tracker spreadsheet but updated them onto the Agile board.
 
 A [project board was set up on GitHub](https://github.com/users/KC-7/projects/5) to display the user stories.
 
@@ -326,6 +326,8 @@ A custom templates was set up for the user stories.
 A custom label was set up to add stories as features. 
 
 Thirty three user stories were added to the board and marked as complete.
+
+The user stories were carried out in sprints to build the website.
 
 Six milestones where set up for the project and closed off after completion.
 

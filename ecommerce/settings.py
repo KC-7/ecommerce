@@ -31,7 +31,7 @@ ALLOWED_HOSTS = ['.onlineai.art', '.herokuapp.com', '.gitpod.io', 'localhost']
 
 # Live Site Link
 if 'DEVELOPMENT' in os.environ:
-    LIVE_LINK = 'https://8000-kc7-ecommerce-lpopmyy4k0s.ws-eu102.gitpod.io/'
+    LIVE_LINK = 'http://127.0.0.1:8000/'
 else:
     LIVE_LINK = 'https://onlineAI.art/'
 
