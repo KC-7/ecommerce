@@ -386,13 +386,23 @@ The font Audiowide has been used throughout the site to give it a modern, futuri
 
 ### Wireframes
 
-I created the wireframes for the Home, Products and Product Page using [Figma](https://www.figma.com/)
+I created the wireframes for the Home, Products and Product Page using [Figma](https://www.figma.com/).
+
+### Desktop Wireframes
 
 <img src="readme_images/wireframes/wireframe-home.png" style="max-width: 60%;">
 
 <img src="readme_images/wireframes/wireframe-products.png" style="max-width: 60%;">
 
 <img src="readme_images/wireframes/wireframe-product.png" style="max-width: 60%;">
+
+### Mobile Wireframes
+
+<img src="readme_images/wireframes/wireframe-home-mobile.png" style="max-width: 60%;">
+
+<img src="readme_images/wireframes/wireframe-products-mobile.png" style="max-width: 60%;">
+
+<img src="readme_images/wireframes/wireframe-product-mobile.png" style="max-width: 60%;">
 
 ### Data Schema
 
@@ -1081,15 +1091,15 @@ In development, we have been using the sqlite3 database. However, this is only s
 #### Creating AWS groups, policies and users
 
 1. Click the services icon on the top right of the page and navigate to IAM - manage access to AWS services. On the left hand navigation menu click user groups and then click the create group button in the top right. This will create the group that our user will be placed in.
-2. Choose a name for your group - for example manage-boutique-ado, and click the create policy button on the right. This will open a new page.
+2. Choose a name for your group - for example manage-kc-ecommerce, and click the create policy button on the right. This will open a new page.
 3. Click on the JSON tab and then click the link for import managed policy on the top right of the page.
 4. Search for S3 and select the one called AmazonS3FullAccess, then click import.
 5. We need to make a change to the resources, we need to make resources an array and then change the value for resources. Instead of a `*` which allows all access, we want to paste in our ARN. followed by a comma, and then paste the ARN in again on the next line with `/*` at the end. This allows all actions on our bucket, and all the resources in it.
 6. Click the next: tags button and then the next:review .
-7. Give the policy a name and description (e.g. boutique-ado-policy | Access to S3 bucket for boutique ado static files.) Click the create policy button.
+7. Give the policy a name and description (e.g. kc-ecommerce-policy | Access to S3 bucket for kc-ecommerce static files.) Click the create policy button.
 8. Now we need to attach the policy we just created. On the left hand navigation menu click user groups, select the group and go to the permissions tab. Click the add permissions button on the right and choose attach policies from the dropdown.
 9. Select the policy you just created and then click add permissions at the bottom.
-10. Now we'll create a user for the group by clicking on the user link in the left hand navigation menu, clicking the add users button on the top right and giving our user a username (e.g. boutique-ado-staticfiles-user). Select programmatic access and then click the next: permissions button.
+10. Now we'll create a user for the group by clicking on the user link in the left hand navigation menu, clicking the add users button on the top right and giving our user a username (e.g. kc-ecommerce-staticfiles-user). Select programmatic access and then click the next: permissions button.
 11. Add the user to the group you just created and then click next:tags button, next:review button and then create user button.
 12. You will now need to download the CSV file as this contains the user access key and secret access key that we need to insert into the Heroku config vars. Make sure you download the CSV now as you won't be able to access it again.
 
@@ -1290,17 +1300,19 @@ I set up a custom domain with SSL certification to improve the authencity of the
 
 <img src="readme_images/cloudflare/cloudflare-overview.png" style="max-width: 60%;">
 
+<img src="readme_images/cloudflare/cloudflare-traffic.png" style="max-width: 60%;">
+
 ### Cloudflare Scecurity
 
-Cloudlfare options a range of options to provide additional protection for your site against malicous traffic. 
+Cloudlfare offers a range of options to provide additional protection for your site against malicous traffic. 
 
-It has notified me about a lot of bot traffic, presumably due to registering the site on a custom domain, that have tried to gain root or env access such as the below example, there has also been a noticable amount of traffic from Tor and Russia:
+It has notified me about a lot of bot traffic, presumably due to registering the site on a custom domain, that have tried to gain root or env access such as the below example, there has also been a noticable amount of traffic from Tor:
 
 <img src="readme_images/cloudflare/firewall-alert-get-env-cloudflare.png" style="max-width: 60%;">
 
 <img src="readme_images/cloudflare/firewall-alert-cloudflare.png" style="max-width: 60%;">
 
-Alonside threat alerts, it also shows bot and crawler traffic, example google and apple bots:
+Alongside threat alerts, it also shows bot and crawler traffic, example google and apple bots:
 
 <img src="readme_images/cloudflare/cloudflare-threats-crawlers.png" style="max-width: 60%;">
 
@@ -1464,6 +1476,10 @@ It's easy to set up, just follow the simple [registration process here](https://
 
 <img src="readme_images/google/google-search-console-url-inspection.png" style="max-width: 60%;">
 
+**Google Search Result:**
+
+<img src="readme_images/google/google-search-listing.png" style="max-width: 60%;">
+
 ### Google Business
 
 I took a look at the set up procedure for registering the website with Google Business, I entered the set up information but did not verify the account with my personal information as its not an actual business.
@@ -1594,17 +1610,15 @@ The site's custom privacy policy is included on the More Information Tab on the 
 
 | Test | Expected Result | Image | Completion Status |
 |------|-----------------|-------|-------------------|
-| Repeat all user and admin manual tests on mobile or tablet device or simulate using Google Inspect. | All pages should respond well on all devices with a screen width as low as 280px. | ![Placeholder Image]() | ✅ |
-| Test for invalid input, such as entering a non-existent email during login. | An error message is displayed, prompting the user to enter valid credentials or check their input. | ![Placeholder Image]() | ✅ |
-| Test entering mismatched passwords during sign-up. | An error message is displayed, prompting the user to ensure passwords match. | ![Placeholder Image]() | ✅ |
-| Access a non-existent page (404 test). | User is redirected to a 404 error page with a message indicating the page doesn't exist. | ![Placeholder Image]() | ✅ |
-| Test cookies pop-up. | On first visit, a pop-up should appear asking the user to accept cookies. You can access the sites privacy policy by clicking `Change my preferences` --> `More information` --> `Privacy Policy` | ![Placeholder Image]() | ✅ |
-| Test mailchimp newsletter sign-up pop-up. | User is prompted to enter their email for the newsletter, and upon submission, a confirmation or thank you message is displayed. | ![Placeholder Image]() | ✅ |
-| Try submitting forms with missing mandatory fields. | An error message is displayed, indicating which fields are mandatory. | ![Placeholder Image]() | ✅ |
-| Test for invalid characters or input patterns in form fields. | An error message is displayed, indicating the correct input pattern or highlighting invalid characters. | ![Placeholder Image]() | ✅ |
-| Test the site responsiveness on mobile and tablet devices by repeating above tests on physical devices or by using the Google Inspect tool to simulate same. | Site elements adjust and align properly when viewed on smaller screens, ensuring a consistent user experience. | ![Placeholder Image]() | ✅ |
-| Check for broken links throughout the site. | All links redirect to the intended pages without any errors. | ![Placeholder Image]() | ✅ |
-| Test 404 page by entering a URL that wont be found, [example](https://onlineai.art/123456789/) | The user will be redirected to the 404 page which will give them an option to return back to the homepage. | ![Placeholder Image]() | ✅ |
+| Repeat all user and admin manual tests on mobile or tablet device or simulate using Google Inspect. | All pages should respond well on all devices with a screen width as low as 280px. | ![Readme Image](readme_images/tests/manual_tests/additional_tests/mobile-responsive-280px.png) | ✅ |
+| Test for invalid input, such as entering a non-existent email during login. | An error message is displayed, prompting the user to enter valid credentials or check their input. | ![Readme Image](readme_images/tests/manual_tests/additional_tests/incorrect-input.png) | ✅ |
+| Test entering mismatched passwords during sign-up. | An error message is displayed, prompting the user to ensure passwords match. | ![Readme Image](readme_images/tests/manual_tests/additional_tests/password-mismatch.png) | ✅ |
+| Test cookies pop-up. | On first visit, a pop-up should appear asking the user to accept cookies. You can access the sites privacy policy by clicking `Change my preferences` --> `More information` --> `Privacy Policy` | ![Readme Image](readme_images/general/cookies-consent-3.png) | ✅ |
+| Test mailchimp newsletter sign-up pop-up. | User is prompted to enter their email for the newsletter, and upon submission, a confirmation or thank you message is displayed. | ![Readme Image](readme_images/general/mailchimp-popup.png) | ✅ |
+| Try submitting forms with missing mandatory fields. | An error message is displayed, indicating which fields are mandatory. | ![Readme Image](readme_images/tests/manual_tests/additional_tests/missing-required-info.png) | ✅ |
+| Test for invalid characters or input patterns in form fields. | An error message is displayed, indicating the correct input pattern or highlighting invalid characters. | ![Readme Image](readme_images/tests/manual_tests/additional_tests/missing-required-info.png) | ✅ |
+| Check for broken links throughout the site. | All links redirect to the intended pages without any errors. | ![Readme Image](readme_images/tests/manual_tests/user_tests/1-home.png) | ✅ |
+| Test 404 page by entering a URL that wont be found, [example](https://onlineai.art/123456789/) | The user will be redirected to the 404 page which will give them an option to return back to the homepage. | ![Readme Image](readme_images/tests/manual_tests/user_tests/26-404.png) | ✅ |
 
 ---
 
@@ -2042,7 +2056,7 @@ I have documented some of the bugs and issues I have encountered through out the
 
 **Issue**
 
-The following file path used in the Boutique Ado tutorial that I was following to set up the basics does not exist in the project directories:
+The following file path used in the Boutique Ado tutorial that I was following to set up allauth does not exist in the project directories:
 
     cp -r ../.pip-modules/lib/python3.7/site-packages/alluth/templates/* ./templates/allauth/
 
@@ -2136,7 +2150,7 @@ Use the following commands to interact with Heroku once logged in:
 
 **Issue**
 
-Since the walkthrough Boutique Ado video tutorial and updated text guide by the Code Institute, the AWS layout has changed.
+The AWS layout has changed since the walkthrough Boutique Ado video tutorial and updated text guide by the Code Institute.
 
 Previously setting up programmatic access was an option during User set up however now you need to set it up after the account has been created so that you can get your `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`.
 
@@ -2474,24 +2488,37 @@ Here is a list of useful links that were used as part of the project. Thanks to 
 | Name                                                                                     | Use                                              |
 | ---------------------------------------------------------------------------------------- | ------------------------------------------------ |
 | [AWS](https://aws.amazon.com/)                                                           | Cloud storage services                           |
-| [Figma](https://figma.com/)                                                              | Used to create wireframes                        |
 | [Bootstrap Documentation](https://getbootstrap.com/docs/)                                | Official Bootstrap documentation                 |
 | [Canva](https://canva.com/)                                                              | Graphic design and photo editing                 |
+| [CKEditor](https://ckeditor.com/docs/ckeditor5/latest/index.html)                        | Rich-text editor for web browsers                |
+| [Convertio](https://convertio.co/png-webp/)                                              | Convert images between PNG and WebP formats      |
 | [Django Documentation](https://docs.djangoproject.com/)                                  | Official Django documentation                    |
 | [Django Jazzmin](https://django-jazzmin.readthedocs.io/)                                 | Customize the Django admin panel                 |
+| [Djecrety's Django Secret Key Generator](https://djecrety.ir/)                           | Generate Django secret keys                      |
 | [ElephantSQL](https://www.elephantsql.com/)                                              | Managed PostgreSQL hosting                       |
 | [Favicon.io](https://favicon.io/favicon-generator/)                                      | To create the favicon                            |
+| [Figma](https://figma.com/)                                                              | Used to create wireframes                        |
+| [Figma](https://www.figma.com/)                                                          | Design and prototyping tool                      |
 | [Git](https://git-scm.com/)                                                              | For version control                              |
 | [GitHub](https://github.com/)                                                            | To save and store the files for this project     |
 | [Gitpod Workspaces](https://gitpod.io/)                                                  | Online development environment                   |
 | [Google Dev Tools](https://developer.chrome.com/docs/devtools/)                          | Troubleshooting and testing                      |
+| [Google Fonts](https://fonts.google.com/)                                                | Access a wide variety of fonts                   |
 | [Heroku](https://www.heroku.com/)                                                        | Platform as a Service (PaaS)                     |
+| [Hugging Face](https://huggingface.co/)                                                  | Natural language processing models               |
+| [JSHint](https://jshint.com/)                                                            | JavaScript code quality tool                     |
+| [Jigsaw W3C CSS Validator](https://jigsaw.w3.org/css-validator/)                         | Validate CSS code according to W3C standards     |
+| [Lucid Charts](https://lucid.app/)                                                       | Create diagrams and flowcharts                   |
+| [Markdown Table of Contents Generator](http://ecotrust-canada.github.io/markdown-toc/)   | Generate Table of Contents in Markdown           |
 | [Pip](https://pypi.org/project/pip/)                                                     | A tool for installing Python packages            |
 | [Shields.io](https://shields.io/)                                                        | To add badges to the project's documentation     |
-| [Youtube: Use namecheap domain with Heroku hosting](https://www.youtube.com/watch?v=51j_mhje9Kk) | Guide to using Namecheap with Heroku     |
+| [Stripe Documentation](https://stripe.com/docs/)                                         | Stripe Documentation                             |
+| [TinyPNG](https://tinypng.com/)                                                          | Compress and optimize PNG images                 |
+| [W3 Nu HTML Checker](https://validator.w3.org/nu/)                                       | Validate HTML code according to W3C standards    |
+| [W3C Jigsaw Validator](https://jigsaw.w3.org/css-validator/)                             | Validate CSS code according to W3C standards     |
 | [Youtube: Free SSL cert with Cloudflare](https://www.youtube.com/watch?v=Y4iHXhRkpO4)    | Guide to getting free SSL with Cloudflare        |
-| [CKEditor](https://ckeditor.com/docs/ckeditor5/latest/index.html)                        | Rich-text editor for web browsers                |
-| [Markdown Table of Contents Generator](http://ecotrust-canada.github.io/markdown-toc/)   | Generate Table of Contents in Markdown           |
+| [Youtube: Set up SDXL 0.9 on ComfyUI](https://www.youtube.com/watch?v=Q8eG6lG4eGw)       | Local image generation tutorial                  |
+| [Youtube: Namecheap domain with Heroku hosting](https://www.youtube.com/watch?v=51j_mhje9Kk) | Guide to using Namecheap with Heroku         |
 
 ---
 
@@ -2499,7 +2526,7 @@ Here is a list of useful links that were used as part of the project. Thanks to 
 
 I would like to give special thanks to the following: 
 
-- [The Code Institute's Boutique Ado Walkthrough Project](), this project is the final tutorial project in their Diploma in Full Stack Software Development (E-commerce Applications) course. I used this project as a basis for the project and expanded on it by customising how it works, how its styled, its products, categories, styling, branding, functionality, etc. I found this project very useful for setting up the overall site infrastructure such as setting up and deploying the application alongside setting up the bag, checkout and stripe functionality.
+- [The Code Institute's Boutique Ado Walkthrough Project](https://github.com/KC-7/boutique_ado), this project is the final tutorial project in their Diploma in Full Stack Software Development (E-commerce Applications) course. I used this project as a basis for the project and expanded on it by customising how it works, how its styled, its products, categories, branding, functionality, etc. I found this project very useful for setting up the overall site infrastructure such as setting up and deploying the application alongside setting up the bag, checkout and stripe functionality.
 
 - I have had the same mentor, Rohit, throughtout my course in The Code Institute and get 3 sessions with him for each of the 5 milestone projects, as usual, I have found his insight and time as a very valuble contribution to the project.
 
@@ -2507,16 +2534,16 @@ I would like to give special thanks to the following:
 
 - I used the styling, logic and probailities to create the aiPunks using the code and file from this [Crypto Punk Styled Generator on Github](https://github.com/snoozesecurity/cryptopunkgenerator) as the foundation for the avatar app, although the logic, probabilities and images all remain the same, the code has been extensively modified to turn it into this django app. I would like to thank the creator of this repository on Github as it was an interesting way to explore the logic behind the generation of custom NFT series. I also watched this 50 min [Youtube video on creating crypto punk style images using python](https://www.youtube.com/watch?v=o0qNS_pOVqw)
 
-- I would like to give credit to Code Institute for creating the deployment guide in their Boutique Ado Walkthrough Project and to github user and CI Alumna, [kera-kudmore](https://github.com/kera-cudmore), for documenting the deployment and local development process in her [README](https://github.com/kera-cudmore/Boutique-Ado/commit/f0170c57a0d92d80cc14bdefa8f281020469a406) which I have copied and adapted to suit the documentation of [development process section](#deployment) for this project.
+- I would like to give credit to Code Institute for creating the deployment guide in their Boutique Ado Walkthrough Project and to github user and CI Alumna, [kera-kudmore](https://github.com/kera-cudmore), for documenting the deployment and local development process in her [README](https://github.com/kera-cudmore/Boutique-Ado/commit/f0170c57a0d92d80cc14bdefa8f281020469a406). I have copied and adapted the deployment process from her readme to suit the documentation of the [development process section](#deployment) for this project.
 
-- I found the use of ChatGPT 4 useful while creating parts of this project such as the following: 
+- I found ChatGPT 4 useful while creating certain parts of this project. I minimized its usuage for actual code but used it a lot for generating site content. I have listed its main uses below: 
  - Creating all of the product descriptions and formatting the new fixtures file
  - Creating the about pages content
  - Creating the blog page content
- - Creating or formatting some tables in this readme such as: Useful links, learning outcomes, dependancies, Models listed in Data Schema
- - I used it to format my external excel file that I was using to track the user stories
+ - Creating or formatting some tables in this readme such as: Useful links, learning outcomes, dependancies, entities listed in Data Schema
+ - I used it to format my external excel file that I was using to track the user stories anlongside standard Excel formatting
  - It was useful when troubleshooting errors while setting up the django app for the aiPunk generations
- - It was used when creating the automated tests although they required modifcations to work
+ - It was exceptionally useful when creating the automated tests, I used it to create the majority of tests and then adapted them to get them to work as intended
 
 [Click here to go back up to the Table of Contents 📗 ⤴️](#table-of-contents)
 
