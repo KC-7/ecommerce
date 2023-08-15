@@ -1375,7 +1375,7 @@ To create images using SDXL v1.0 and the node-based interface ComfyUI, follow th
    - For image upscaling, use NMKD Superscale x4, available at Icedrive.net using [this link](https://icedrive.net/s/14BM8qlGO6).
 
 2. **Get ComfyUI:**
-   - Download ComfyUI using this [direct download GitHub link](https://github.com/comfyanonymous/ComfyUI/releases/download/latest/ComfyUI_windows_portable_nvidia_cu118_or_cpu.7z).
+   - Download ComfyUI using this [GitHub link](https://github.com/comfyanonymous/ComfyUI/).
    - Extract the downloaded file using 7-Zip.
    - Place the downloaded models in the folder: `ComfyUI_windows_portable\ComfyUI\models\checkpoints`.
    - If you downloaded the upscaler, place it in the folder: `ComfyUI_windows_portable\ComfyUI\models\upscale_models`.
