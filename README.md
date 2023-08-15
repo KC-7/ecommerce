@@ -23,13 +23,13 @@
 
 ### Project Description
 
-This is a django project for an E-Commerce Store which specializes in offering custom printed products, each designed uniquely using AI image generation.
+This is a project for an E-Commerce Store which specializes in offering custom printed products, each designed uniquely using AI image generative technology. An agile approach was taken and the project was created using Django and Bootstrap.
 
 ### Main Site - User Preview
 
 <img src="readme_images/gifs/user-preview.gif" style="max-width: 60%;">
 
-The platform is a robust, web-based application developed using the Django framework. This platform provides users with a seamless shopping experience, from product browsing to secure checkout. Admin features offer comprehensive management tools for products, blogs, and other site content. Integrated with Stripe for payment processing and AWS S3 for static and media file hosting, the platform is scalable and optimized for performance. The use of modern web technologies, combined with best coding practices, ensures a reliable and efficient system for both users and administrators. This platform is designed to be intuitive for users while providing developers with a clean and modular codebase for further enhancements.
+The platform is a robust, web-based application e-commerce application developed using the Django framework. This platform provides users with a seamless shopping experience, from product browsing to secure checkout. Admin features offer comprehensive management tools for products, blogs, and other site content. Integrated with Stripe for payment processing and AWS S3 for static and media file hosting, the platform is scalable and optimized for performance. An Algorithmically Generated Pixel Art Avatar is generated for each new user. This platform is designed to be intuitive for users while providing developers with a clean and modular codebase for further enhancements. Regular and detailed git commits have been used for version control.
 
 ### Main Site - Admin Preview
 
@@ -43,28 +43,32 @@ Admin users can create, modify or delete the about pages, blog posts and product
 
 ---
 
+<img src="readme_images/general/hr.gif" alt="Color Palette" style="width: 100%;">
+
 ## Technologies and Services
 
-| Technology / Service | Description |
-|-------------------|-------------|
-| Django            | A high-level Python Web Framework that encourages rapid design and clean, pragmatic design. |
-| Python            | A versatile, high-level programming language used for web development and various other applications. |
-| HTML              | The standard markup language used for structuring web content. |
-| CSS               | A stylesheet language used for describing the look and formatting of a document written in HTML. |
-| JavaScript        | A programming language that enables interactive web pages and is a part of most web browsers. |
-| AWS (Amazon Web Services) | A subsidiary of Amazon providing on-demand cloud computing platforms and APIs. |
-| ElephantSQL       | A fully managed PostgreSQL database hosting service with automated backups, scaling, and high availability. |
-| Stripe            | An online payment processing platform that supports online money transfers. |
-| Git               | A distributed version control system used to track changes in any set of files. |
-| GitHub            | A platform that provides hosting for software development and a community of developers to discover, share, and build better software. |
-| GitPod            | An online integrated development environment for GitHub. It provides a complete dev environment, enabling you to start coding immediately. |
-| Cloudflare        | A web performance and security company that provides online services to protect and accelerate websites online. |
-| NameCheap         | An ICANN-accredited domain name registrar, which provides domain name registration and web hosting. |
-| Bootstrap         | A free and open-source CSS framework used for responsive, mobile-first front-end web development. |
-| CKEditor          | A popular WYSIWYG editor that brings common word processor features directly to web pages. |
-| Jazzmin           | A fresh lick of paint for the Django admin interface. |
+| Technology / Service | Description                                                                                                                               |
+|-------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
+| Django            | A high-level Python Web Framework that encourages rapid design and clean, pragmatic design.                                                  |
+| Python            | A versatile, high-level programming language used for web development and various other applications.                                        |
+| HTML              | The standard markup language used for structuring web content.                                                                               |
+| CSS               | A stylesheet language used for describing the look and formatting of a document written in HTML.                                             |
+| JavaScript        | A programming language that enables interactive web pages and is a part of most web browsers.                                                |
+| AWS (Amazon Web Services) | A subsidiary of Amazon providing on-demand cloud computing platforms and APIs.                                                       |
+| ElephantSQL       | A fully managed PostgreSQL database hosting service with automated backups, scaling, and high availability.                                  |
+| Stripe            | An online payment processing platform that supports online money transfers.                                                                  |
+| Git               | A distributed version control system used to track changes in any set of files.                                                              |
+| GitHub            | A platform that provides hosting for software development and a community of developers to discover, share, and build better software.       |
+| GitPod            | An online integrated development environment for GitHub. It provides a complete dev environment, enabling you to start coding immediately.   |
+| Cloudflare        | A web performance and security company that provides online services to protect and accelerate websites online.                              |
+| NameCheap         | An ICANN-accredited domain name registrar, which provides domain name registration and web hosting.                                          |
+| Bootstrap         | A free and open-source CSS framework used for responsive, mobile-first front-end web development.                                            |
+| CKEditor          | A popular WYSIWYG editor that brings common word processor features directly to web pages.                                                   |
+| Jazzmin           | A fresh lick of paint for the Django admin interface.                                                                                        |
 
 ---
+
+<img src="readme_images/general/hr.gif" alt="Color Palette" style="width: 100%;">
 
 ## Table of Contents
 
@@ -214,6 +218,8 @@ Admin users can create, modify or delete the about pages, blog posts and product
 
 ---
 
+<img src="readme_images/general/hr.gif" alt="Color Palette" style="width: 100%;">
+
 ## Business Overview
 
 <details open>
@@ -257,6 +263,8 @@ Alongside our primary marketing strategies we will implement additional marketin
 </details>
 
 ---
+
+<img src="readme_images/general/hr.gif" alt="Color Palette" style="width: 100%;">
 
 ## User Story Test Cases
 
@@ -339,6 +347,8 @@ Six milestones where set up for the project and closed off after completion.
 
 ---
 
+<img src="readme_images/general/hr.gif" alt="Color Palette" style="width: 100%;">
+
 ## Design
 
 <details open>
@@ -348,8 +358,6 @@ Six milestones where set up for the project and closed off after completion.
 ### Colour Scheme
 
 The below custom colour scheme was designed and set up for the site. 
-
-<img src="readme_images/general/color-palette.png" alt="Color Palette" style="width: 100%;">
 
     :root {
         /* Electric Pink */
@@ -374,7 +382,7 @@ The below custom colour scheme was designed and set up for the site.
         --white: #FFFFFF;
     }
 
-<img src="readme_images/general/color-3s.gif" alt="Color Palette" style="width: 100%;">
+<img src="readme_images/general/color-palette.png" alt="Color Palette" style="width: 100%;">
 
 ### Typography
 
@@ -535,6 +543,8 @@ I used [Lucid Chart](https://lucid.app/) to create the Entity Relationship Diagr
 </details>
 
 ---
+
+<img src="readme_images/general/hr.gif" alt="Color Palette" style="width: 100%;">
 
 ## Site Features
 
@@ -869,6 +879,8 @@ The site has integrated user feedback by displaying toast messages for info, suc
 
 ---
 
+<img src="readme_images/general/hr.gif" alt="Color Palette" style="width: 100%;">
+
 ## Dependencies & Their Use Cases
 
 <details open>
@@ -913,6 +925,8 @@ For installation, simply run `pip3 install -r requirements.txt`.
 </details>
 
 ---
+
+<img src="readme_images/general/hr.gif" alt="Color Palette" style="width: 100%;">
 
 ## Deployment & Local Development
 
@@ -1212,13 +1226,13 @@ To clone the repository:
 
 10. Apply database migrations and create a superuser account.
 
-        python manage.py migrate
+        python3 manage.py migrate
 
-        python manage.py createsuperuser
+        python3 manage.py createsuperuser
 
 11. Run the Django development server.
 
-        python manage.py runserver
+        python3 manage.py runserver
 
 ---
 
@@ -1235,6 +1249,8 @@ I have set up the deployed Environment Config Variables on Heroku, see below for
 </details>
 
 ---
+
+<img src="readme_images/general/hr.gif" alt="Color Palette" style="width: 100%;">
 
 ## Custom Domain & SSL Cert
 
@@ -1321,6 +1337,8 @@ Alongside threat alerts, it also shows bot and crawler traffic, example google a
 </details>
 
 ---
+
+<img src="readme_images/general/hr.gif" alt="Color Palette" style="width: 100%;">
 
 ## Product Creation Process
 
@@ -1432,6 +1450,8 @@ The fixtures are located in the following path: `products/fixtures/`.
 
 ---
 
+<img src="readme_images/general/hr.gif" alt="Color Palette" style="width: 100%;">
+
 ## Web Marketing & Search Engine Optimization (SEO)
 
 <details open>
@@ -1525,6 +1545,8 @@ The site's custom privacy policy is included on the More Information Tab on the 
 </details>
 
 ---
+
+<img src="readme_images/general/hr.gif" alt="Color Palette" style="width: 100%;">
 
 ## Automated, Manual & Validation Testing
 
@@ -2027,7 +2049,11 @@ Its important that the website responds well across a variety of device sizes su
 | **Nest Hub**                 | 1024          | 600              |
 | **Nest Hub Max**             | 1280          | 800              |
 
+<img src="readme_images/tests/manual_tests/additional_tests/mobile-responsive-280px.png" style="max-width: 60%;">
+
 #### Visual Testing using AmIRepsponsive
+
+I used [AmIResponsive](https://amiresponsive.co.uk/) to create the below visual image, it simulates the following device sizes:
 
 | **Device**  | **Width (px)** | **Height (px)** | **Scale** |
 |-------------|----------------|-----------------|-----------|
@@ -2043,6 +2069,8 @@ Its important that the website responds well across a variety of device sizes su
 </details>
 
 ---
+
+<img src="readme_images/general/hr.gif" alt="Color Palette" style="width: 100%;">
 
 ## Bugs & Issues
 
@@ -2298,6 +2326,8 @@ As this link is not intended to be crawlable, I resolved the issue by adding the
 
 ---
 
+<img src="readme_images/general/hr.gif" alt="Color Palette" style="width: 100%;">
+
 ## Future Development
 
 <details open>
@@ -2335,6 +2365,8 @@ As this link is not intended to be crawlable, I resolved the issue by adding the
 </details>
 
 ---
+
+<img src="readme_images/general/hr.gif" alt="Color Palette" style="width: 100%;">
 
 ## Learning Goals
 
@@ -2475,6 +2507,8 @@ Throughout the development, I have aimed to meet the following learning outcomes
 
 ---
 
+<img src="readme_images/general/hr.gif" alt="Color Palette" style="width: 100%;">
+
 ## Resources & Credits
 
 <details open>
@@ -2487,6 +2521,7 @@ Here is a list of useful links that were used as part of the project. Thanks to 
 
 | Name                                                                                     | Use                                              |
 | ---------------------------------------------------------------------------------------- | ------------------------------------------------ |
+| [AmIResponsive](https://amiresponsive.co.uk/)                                            | Render website on different device sizes         |
 | [AWS](https://aws.amazon.com/)                                                           | Cloud storage services                           |
 | [Bootstrap Documentation](https://getbootstrap.com/docs/)                                | Official Bootstrap documentation                 |
 | [Canva](https://canva.com/)                                                              | Graphic design and photo editing                 |
@@ -2551,11 +2586,13 @@ I would like to give special thanks to the following:
 
 --- 
 
+<img src="readme_images/general/hr.gif" alt="Color Palette" style="width: 100%;">
+
 ## Conclusion & Contact
 
 Thanks for checking out my project!
 
-I can be reached directly at <a href="mailto:kieran@kc-7.com">kieran@kc-7.com</a>.
+I can be reached directly at <a href="mailto:kieran@kc-7.com">kieran@kc-7.com</a> if you would like to get in contact or have any questions.
 
 Checkout my other projects at [repos.kc-7.com](repos.kc-7.com).
 
