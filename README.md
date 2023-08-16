@@ -247,7 +247,7 @@ The site primarily uses a B2C (business to consumer) business model. The site ca
 
 ### Target Audience
 
-The target audience is fulti-faceted and includes but is not limited to the below consumer types. We envisage our target audience will be both male and female, mainly ranging from 18 to 60 years old. 
+The target audience is multi-faceted and includes but is not limited to the below consumer types. We envisage our target audience will be both male and female, mainly ranging from 18 to 60 years old. 
 
 - **Tech Enthusiasts:** Indviduals interested in AI technology and generative art
 - **Design and Art Enthusiasts:** Individuals interested in art and design
@@ -285,14 +285,14 @@ Alongside our primary marketing strategies we will implement additional marketin
 
 <summary><b>Click here to minimize this section ➖ ⬆️</b></summary>
 
-#### View and Navigation
+#### Epic: View and Navigation
 1. As a Shopper, I want to be able to view a list of products so that I can select some to purchase.
 2. As a Shopper, I want to be able to view a list of products so that I can quickly find products I'm interested in without having to filter through all products.
 3. As a Shopper, I want to be able to view individual product details so that I can identify the price, description, product rating, product image, and available sizes.
 4. As a Shopper, I want to be able to quickly identify deals, clearance items, and special offers so that I can take advantage of special savings on products I'd like to purchase.
 5. As a Shopper, I want to be able to easily view the total of my purchases at any time so that I can avoid spending too much.
 
-#### Registration and User Accounts
+#### Epic: Registration and User Accounts
 6. As a Site User, I want to be able to easily register for an account so that I can have a personal account and be able to view my profile.
 7. As a Site User, I want to be able to easily login and logout so that I can access my personal account information.
 8. As a Site User, I want to be able to easily recover my password in case I forget it so that I can recover access to my account.
@@ -338,13 +338,13 @@ I initially tracked all of my user stories on excel tracker spreadsheet but upda
 
 A [project board was set up on GitHub](https://github.com/users/KC-7/projects/5) to display the user stories.
 
-The Agile board is publicly accessible and linked to the ecommerce repository for this project. 
+The Agile board is publicly accessible and linked to the "ecommerce" repository for this project. 
 
 A custom templates was set up for the user stories.
 
 A custom label was set up to add stories as features. 
 
-Thirty three user stories were added to the board and marked as complete.
+Thirty three user stories were added to the board and closed post completion.
 
 The user stories were carried out in sprints to build the website.
 
@@ -1495,6 +1495,10 @@ It has been styled to integrate well with the site.
 
 <img src="readme_images/general/mailchimp-popup.png" style="max-width: 60%;">
 
+An embeded MailChimp sign up form has been added as an About Page.
+
+<img src="readme_images/general/mailchimp-about-page.png" style="max-width: 60%;">
+
 ### Google Search Console
 
 <img src="readme_images/google/google-search-console.png" style="max-width: 60%;">
@@ -2339,7 +2343,7 @@ As this link is not intended to be crawlable, I resolved the issue by adding the
 
 This issue occured final day before project sumbission. I noticed the issue when reviewing the readme documentation from another device and the issue is easy to reacreate.
 
-It only affects logged out GitHub users who access content on my projects github page. 
+It only affects logged out GitHub users who access content on my projects github page, it sometimes displays *"Failed to load latest commint information"*, none of these issues occur when signed it to GitHub.
 
 <img src="readme_images/general/github-access-restricted.png" style="max-width: 60%;">
 
@@ -2359,6 +2363,8 @@ I created another GitHub account and can access the repo without encountering th
 I got back to GitHub regarding this issue to try and acertain root cause as this unusual issue only affects this project and I'd like to find out why its happening and how long the anti-abuse limits will be enforced for logged out users accessing the readme and coding files.
 
 Awaiting final update to close issue with Github support.
+
+None of the issues occur when accessing the project repo while logged into any Github account, it seems to only occure for logged out users.
 
 [Click here to go back up to the Table of Contents 📗 ⤴️](#table-of-contents)
 
