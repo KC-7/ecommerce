@@ -101,13 +101,21 @@ Admin users can create, modify or delete the about pages, blog posts and product
     + [Colour Scheme](#colour-scheme)
     + [Typography](#typography)
     + [Wireframes](#wireframes)
+    + [Desktop Wireframes](#desktop-wireframes)
+    + [Mobile Wireframes](#mobile-wireframes)
     + [Data Schema](#data-schema)
+      - [User](#user)
       - [UserProfile](#userprofile)
       - [Category](#category)
       - [Product](#product)
       - [Order](#order)
       - [OrderLineItem](#orderlineitem)
-      - [BlogPost](#blogpost)
+      - [BlogPage](#blogpage)
+      - [AboutPage](#aboutpage)
+      - [Avatar](#avatar)
+    + [Bag](#bag)
+    + [BagItem](#bagitem)
+    + [Payment](#payment)
     + [Entity Relationships](#entity-relationships)
     + [Entity Relationship Diagram](#entity-relationship-diagram)
   * [Site Features](#site-features)
@@ -122,7 +130,7 @@ Admin users can create, modify or delete the about pages, blog posts and product
       - [Usability](#usability)
     + [CRUD Operations](#crud-operations)
       - [Custom Editor](#custom-editor)
-    + [Custom Blog Posts (CRUD)](#custom-blog-posts--crud-)
+    + [Custom Blog Posts with CRUD](#custom-blog-posts-with-crud)
       - [Project Conception](#project-conception-1)
       - [Usability](#usability-1)
     + [CRUD Operations](#crud-operations-1)
@@ -153,7 +161,7 @@ Admin users can create, modify or delete the about pages, blog posts and product
   * [Custom Domain & SSL Cert](#custom-domain---ssl-cert)
     + [Custom Domain Set Up on Namecheap](#custom-domain-set-up-on-namecheap)
     + [SSL Cert & HTTPS Redirection Set Up on Cloudflare](#ssl-cert---https-redirection-set-up-on-cloudflare)
-    + [Cloudflare Scecurity](#cloudflare-scecurity)
+    + [Cloudflare Security](#cloudflare-security)
   * [Product Creation Process](#product-creation-process)
     + [AI Images usign ComfyUI with Stable Diffusion XL](#ai-images-usign-comfyui-with-stable-diffusion-xl)
       - [Setup Guide for Comfy UI with SDXL 1.0 base and refiner models](#setup-guide-for-comfy-ui-with-sdxl-10-base-and-refiner-models)
@@ -203,6 +211,7 @@ Admin users can create, modify or delete the about pages, blog posts and product
     + [Custom CKEditor not responding well on small mobile devices](#custom-ckeditor-not-responding-well-on-small-mobile-devices)
     + [Unable to view saved embeded HTML with CKEditor](#unable-to-view-saved-embeded-html-with-ckeditor)
     + [Back to top button not crawlable](#back-to-top-button-not-crawlable)
+    + [Access Restricted Message on GitHub when Accessing Repo Anonymously](#access-restricted-message-on-github-when-accessing-repo-anonymously)
   * [Future Development](#future-development)
   * [Learning Goals](#learning-goals)
     + [Learning Goals 1: Integrate an e-commerce payment system and product structure in a cloud-hosted Full-Stack web application](#learning-goals-1--integrate-an-e-commerce-payment-system-and-product-structure-in-a-cloud-hosted-full-stack-web-application)
@@ -2320,7 +2329,36 @@ The back to top of page button was negativly affecting the SEO lighthouse score 
 
 As this link is not intended to be crawlable, I resolved the issue by adding the following highlight code. 
 
-<img src="readme_images/tests/lighthouse/seo-issue-fix.png" style="max-width: 60%;">
+---
+
+### Access Restricted Message on GitHub when Accessing Repo Anonymously
+
+**Issue**
+
+"*Access to this site has been restricted"* message and temporary GitHub block is triggered when making multiple requests to my GitHub Repo from a signed out account. 
+
+This issue occured final day before project sumbission. I noticed the issue when reviewing the readme documentation from another device and the issue is easy to reacreate.
+
+It only affects logged out GitHub users who access content on my projects github page. 
+
+<img src="readme_images/general/github-access-restricted.png" style="max-width: 60%;">
+
+**Resolution**
+
+I recreated the issue multiple times using different browsers, IP addresses and physical devices to ensure it wasn't a one off issue. 
+
+As I was able to trigger this issue again, I reported it to GitHub support as recommended by the restriction message. 
+
+GitHub support advised the following: 
+
+> Sorry to hear about the issue you are experiencing when connecting to GitHub.com. We most often see that Access to this site has been restricted error message when users make anonymous requests. This is especially true if you are working behind a corporate network, and only have a single public facing IP address (NATed IP) shared among several users, this can mean that the actions of one user impact many others.
+> The anti-abuse limits are much lower for anonymous users (i.e. users that are not signed in to GitHub with their account) so it's helpful if you remain logged in as much as possible.
+
+I created another GitHub account and can access the repo without encountering the access restriction so the above issue does not affect signed in users, only logged out (anonymous) users.
+
+I got back to GitHub regarding this issue to try and acertain root cause as this unusual issue only affects this project and I'd like to find out why its happening and how long the anti-abuse limits will be enforced for logged out users accessing the readme and coding files.
+
+Awaiting final update to close issue with Github support.
 
 [Click here to go back up to the Table of Contents 📗 ⤴️](#table-of-contents)
 
@@ -2570,7 +2608,7 @@ I would like to give special thanks to the following:
 
 - I reused some code where possible from my previous project, [Cre8AI.art](https://cre8ai.art). I reused the color set up in the CSS as I found this was an effecient way to apply colours except I updated the colours to using the sits custom colour pallette. I also used the footer and updated the styling, layout and links to suit the site.
 
-- I used the styling, logic and probailities to create the aiPunks using the code and file from this [Crypto Punk Styled Generator on Github](https://github.com/snoozesecurity/cryptopunkgenerator) as the foundation for the avatar app, although the logic, probabilities and images all remain the same, the code has been extensively modified to turn it into this django app. I would like to thank the creator of this repository on Github as it was an interesting way to explore the logic behind the generation of custom NFT series. I also watched this 50 min [Youtube video on creating crypto punk style images using python](https://www.youtube.com/watch?v=o0qNS_pOVqw)
+- I used the styling, logic and probailities to create the aiPunks using the code and file from this [Crypto Punk Styled Generator on Github](https://github.com/snoozesecurity/cryptopunkgenerator) as the foundation for the avatar app, although the logic, probabilities and images all remain the same, the code has been extensively modified to turn it into this django app. I would like to thank the creator of this repository on Github as it was an interesting way to explore the logic behind the generation of custom NFT series. I also watched this 50 min [Youtube video on creating crypto punk style images using python](https://www.youtube.com/watch?v=o0qNS_pOVqw).
 
 - I would like to give credit to Code Institute for creating the deployment guide in their Boutique Ado Walkthrough Project and to github user and CI Alumna, [kera-kudmore](https://github.com/kera-cudmore), for documenting the deployment and local development process in her [README](https://github.com/kera-cudmore/Boutique-Ado/commit/f0170c57a0d92d80cc14bdefa8f281020469a406). I have copied and adapted the deployment process from her readme to suit the documentation of the [development process section](#deployment) for this project.
 
@@ -2593,11 +2631,11 @@ I would like to give special thanks to the following:
 
 ## Conclusion & Contact
 
-Thanks for checking out my project!
-
-I can be reached directly at <a href="mailto:kieran@kc-7.com">kieran@kc-7.com</a> if you would like to get in contact or have any questions.
+I can be reached directly at <a href="mailto:kieran@kc-7.com">kieran@kc-7.com</a> if you would like to get in contact or if you have any sugestions or have any questions.
 
 Checkout my other projects at [repos.kc-7.com](repos.kc-7.com).
+
+Thanks for checking out my project!
 
 [Click here to go back up to the Table of Contents 📗 ⤴️](#table-of-contents)
 
