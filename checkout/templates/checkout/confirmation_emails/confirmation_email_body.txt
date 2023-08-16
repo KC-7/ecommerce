@@ -9,9 +9,9 @@ We're thrilled to confirm your recent expedition into our collection has resulte
 
 Here's a glimpse of the treasure map (don't worry, no hidden costs or mysterious riddles!):
 
-💶 Subtotal of Treasures: €{{ order.order_total }}
-🚚 Voyage Costs (Delivery): €{{ order.delivery_cost }}
-🏷️ Grand Total of Expedition: €{{ order.grand_total }}
+💶 Subtotal of Treasures: €{{ order.order_total|floatformat:2  }}
+🚚 Voyage Costs (Delivery): €{{ order.delivery_cost|floatformat:2  }}
+🏷️ Grand Total of Expedition: €{{ order.grand_total|floatformat:2  }}
 
 Your order is soon to embark on its journey, destined for its new home at {{ order.street_address1 }}, in the vibrant heart of {{ order.town_or_city }}, {{ order.country }}.
 
